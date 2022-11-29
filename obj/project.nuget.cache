@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "NhK2qgNX/Vll3/pIoko2sJumbP89D9y6Z9wjctlto148N3qKq1R5gV0uyITp9RQT7KESz79k0YDpFb5Y6VHcrA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\fdkir\\OneDrive\\Рабочий стол\\Диплом\\Project\\ChatbotConstructorTelegram\\ChatbotConstructorTelegram\\ChatbotConstructorTelegram.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\fdkir\\.nuget\\packages\\fontawesome5\\2.1.11\\fontawesome5.2.1.11.nupkg.sha512",
+    "C:\\Users\\fdkir\\.nuget\\packages\\materialdesigncolors\\2.0.9\\materialdesigncolors.2.0.9.nupkg.sha512",
+    "C:\\Users\\fdkir\\.nuget\\packages\\materialdesignthemes\\4.6.1\\materialdesignthemes.4.6.1.nupkg.sha512"
+  ],
+  "logs": []
+}

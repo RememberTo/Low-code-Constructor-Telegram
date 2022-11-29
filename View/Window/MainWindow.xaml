@@ -1,0 +1,27 @@
+﻿<Window x:Class="ChatbotConstructorTelegram.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" mc:Ignorable="d"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ChatbotConstructorTelegram"
+        xmlns:cmd ="clr-namespace:ChatbotConstructorTelegram.Infastructure.Commands"
+        xmlns:fa ="http://schemas.fontawesome.com/icons/"
+        xmlns:vm ="clr-namespace:TaskList.ViewModels"
+        Title="{Binding Title}" 
+
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="15"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"   Height="470" Width="795">
+
+    <Window.DataContext>
+        <vm:MainWindowViewModel/>
+    </Window.DataContext>
+
+    <Grid Background="Black">
+        <Button Margin="71,109,103,313">fsdfsdfsf</Button>
+    </Grid>
+</Window>
