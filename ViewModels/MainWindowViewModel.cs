@@ -1,23 +1,22 @@
-﻿using ChatbotConstructorTelegram.Infrastructure.Commands;
+﻿using System.Configuration;
+using ChatbotConstructorTelegram.Infrastructure.Commands;
+using ChatbotConstructorTelegram.View.Window;
 using ChatbotConstructorTelegram.ViewModels.Base;
-using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.IO;
-using System.Linq;
-using System.Net.Http;
-using System.Threading.Tasks;
+using ChatbotConstructorTelegram.Model.Bot;
 using System.Windows;
 using System.Windows.Input;
-using ChatbotConstructorTelegram.Infrastructure;
-using ChatbotConstructorTelegram.View.Window;
 
 
-namespace TaskList.ViewModels
+namespace ChatbotConstructorTelegram.ViewModels
 {
     internal class MainWindowViewModel: ViewModel
     {
-        private string _title = "Список задач";
+        #region Private Property
+
+        private Bot _bot;
+        #endregion
+
+        private string _title = "Конструктор бота";
         public string Title
         {
             get => _title;
@@ -45,18 +44,26 @@ namespace TaskList.ViewModels
 
         private void CanCreateBotCommandExecuted(object p)
         {
-            var start = new BotCreationWindow();
-            var dialogResult = start.ShowDialog();
+            var createBotWnd = new BotCreationWindow();
+            var dialogResult = createBotWnd.ShowDialog();
             switch (dialogResult)
             {
                 case true:
-                    Status = "Норм";
+                    Status = "Создание проекта";
+                    
+                    _bot = new Bot()
+                    {
+                        Name = createBotWnd.NameProject, 
+                        PathDirectory = createBotWnd.PathDirectory, 
+                        Token = createBotWnd.Token
+                    };
+
                     break;
                 case false:
-                    Status = "Окно закрыто";
+                    Status = "Отмена";
                     break;
                 default:
-                    // Indeterminate
+                    Status = "Ошибка";
                     break;
             }
         }
@@ -84,7 +91,6 @@ namespace TaskList.ViewModels
             CloseApplicationCommand = new LambdaCommand(OnCloseApplicationCommandExecuted, OnCloseApplicationCommandExecute);
 
             #endregion
-
         }
 
     }

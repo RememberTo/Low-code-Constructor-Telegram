@@ -28,3 +28,7 @@ C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotCons
 C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\obj\Debug\net6.0-windows\ref\ChatbotConstructorTelegram.dll
 C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\obj\Debug\net6.0-windows\View\Window\BotCreationWindow.g.cs
 C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\obj\Debug\net6.0-windows\View\Window\BotCreationWindow.baml
+C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\obj\Debug\net6.0-windows\View\UserControls\CustomTextBox.g.cs
+C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\obj\Debug\net6.0-windows\View\UserControls\CustomTextBox.baml
+C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\Microsoft.WindowsAPICodePack.dll
+C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\Microsoft.WindowsAPICodePack.Shell.dll

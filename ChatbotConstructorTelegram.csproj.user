@@ -7,11 +7,17 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="View\UserControls\CustomTextBox.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\Window\BotCreationWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="View\UserControls\CustomTextBox.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="View\Window\BotCreationWindow.xaml">
       <SubType>Designer</SubType>
     </Page>

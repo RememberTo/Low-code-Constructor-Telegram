@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:ChatbotConstructorTelegram"
         xmlns:cmd ="clr-namespace:ChatbotConstructorTelegram.Infrastructure.Commands"
         xmlns:fa ="http://schemas.fontawesome.com/icons/"
-        xmlns:vm ="clr-namespace:TaskList.ViewModels"
+        xmlns:vm ="clr-namespace:ChatbotConstructorTelegram.ViewModels"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         Title="{Binding Title}" 
 
         Background="#FF17293A"
@@ -16,7 +17,7 @@
         TextOptions.TextFormattingMode="Ideal"
         TextOptions.TextRenderingMode="Auto"
         
-        FontFamily="{DynamicResource MaterialDesignFont}"   Height="470" Width="795" >
+        FontFamily="{DynamicResource MaterialDesignFont}" WindowStartupLocation="CenterScreen" WindowState="Maximized" MinHeight="600" MinWidth="1000">
 
     <Window.DataContext>
         <vm:MainWindowViewModel/>
@@ -36,6 +37,7 @@
             <Button Content="Создать бота"
                     Command="{Binding CreateBotCommand}" Cursor="Hand"
                     />
+            
         </Grid>
 
     </DockPanel>
