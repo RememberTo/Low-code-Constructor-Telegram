@@ -26,3 +26,5 @@ C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotCons
 C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\obj\Debug\net6.0-windows\ChatbotConstructorTelegram.pdb
 C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\obj\Debug\net6.0-windows\ChatbotConstructorTelegram.genruntimeconfig.cache
 C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\obj\Debug\net6.0-windows\ref\ChatbotConstructorTelegram.dll
+C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\obj\Debug\net6.0-windows\View\Window\BotCreationWindow.g.cs
+C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\obj\Debug\net6.0-windows\View\Window\BotCreationWindow.baml

@@ -1,7 +1,7 @@
 ﻿using System;
-using ChatbotConstructorTelegram.Infastructure.Commands.Base;
+using ChatbotConstructorTelegram.Infrastructure.Commands.Base;
 
-namespace ChatbotConstructorTelegram.Infastructure.Commands
+namespace ChatbotConstructorTelegram.Infrastructure.Commands
 {
     internal class LambdaCommand: Command
     {

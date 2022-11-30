@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Input;
 
-namespace ChatbotConstructorTelegram.Infastructure.Commands.Base
+namespace ChatbotConstructorTelegram.Infrastructure.Commands.Base
 {
     internal abstract class Command : ICommand
     {

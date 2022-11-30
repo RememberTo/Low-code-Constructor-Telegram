@@ -4,24 +4,39 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ChatbotConstructorTelegram"
-        xmlns:cmd ="clr-namespace:ChatbotConstructorTelegram.Infastructure.Commands"
+        xmlns:cmd ="clr-namespace:ChatbotConstructorTelegram.Infrastructure.Commands"
         xmlns:fa ="http://schemas.fontawesome.com/icons/"
         xmlns:vm ="clr-namespace:TaskList.ViewModels"
         Title="{Binding Title}" 
 
+        Background="#FF17293A"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
         TextElement.FontSize="15"
         TextOptions.TextFormattingMode="Ideal"
         TextOptions.TextRenderingMode="Auto"
-        Background="{DynamicResource MaterialDesignPaper}"
-        FontFamily="{DynamicResource MaterialDesignFont}"   Height="470" Width="795">
+        
+        FontFamily="{DynamicResource MaterialDesignFont}"   Height="470" Width="795" >
 
     <Window.DataContext>
         <vm:MainWindowViewModel/>
     </Window.DataContext>
 
-    <Grid Background="Black">
-        <Button Margin="71,109,103,313">fsdfsdfsf</Button>
-    </Grid>
+    <DockPanel LastChildFill="True">
+
+        <StatusBar Height="24" DockPanel.Dock="Bottom" Background="#FF263A50">
+            <StackPanel Orientation="Horizontal">
+                <fa:ImageAwesome Icon="Brands_Telegram" Height="16" Foreground="WhiteSmoke"></fa:ImageAwesome>
+                <TextBlock Text="{Binding Status}" Foreground="WhiteSmoke" Margin="10,0,0,0"></TextBlock>
+                <StatusBar></StatusBar>
+            </StackPanel>
+        </StatusBar>
+
+        <Grid DockPanel.Dock="Top">
+            <Button Content="Создать бота"
+                    Command="{Binding CreateBotCommand}" Cursor="Hand"
+                    />
+        </Grid>
+
+    </DockPanel>
 </Window>

@@ -1,4 +1,4 @@
-﻿using ChatbotConstructorTelegram.Infastructure.Commands;
+﻿using ChatbotConstructorTelegram.Infrastructure.Commands;
 using ChatbotConstructorTelegram.ViewModels.Base;
 using System;
 using System.Collections.Generic;
@@ -9,7 +9,8 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
-using ChatbotConstructorTelegram.Infastructure;
+using ChatbotConstructorTelegram.Infrastructure;
+using ChatbotConstructorTelegram.View.Window;
 
 
 namespace TaskList.ViewModels
@@ -33,20 +34,31 @@ namespace TaskList.ViewModels
 
         #region Command
 
-        #region ResizeMenuCommand
-        public ICommand ResizeMenuCommand { get; }
+        #region CreateBotCommand
+        public ICommand CreateBotCommand { get; }
 
-        private bool OnResizeMenuCommandExecute(object p)
+
+        private bool OnCreateBotCommandExecute(object p)
         {
             return true;
         }
 
-        private void CanResizeMenuCommandExecuted(object p)
+        private void CanCreateBotCommandExecuted(object p)
         {
-            //if (WidthMenu != 150)
-            //    WidthMenu = 150;
-            //else
-            //    this.WidthMenu = 50;
+            var start = new BotCreationWindow();
+            var dialogResult = start.ShowDialog();
+            switch (dialogResult)
+            {
+                case true:
+                    Status = "Норм";
+                    break;
+                case false:
+                    Status = "Окно закрыто";
+                    break;
+                default:
+                    // Indeterminate
+                    break;
+            }
         }
 
         #endregion
@@ -68,9 +80,8 @@ namespace TaskList.ViewModels
         {
             #region Command
 
-            ResizeMenuCommand = new LambdaCommand(CanResizeMenuCommandExecuted,OnResizeMenuCommandExecute);
-            CloseApplicationCommand =
-                new LambdaCommand(OnCloseApplicationCommandExecuted, OnCloseApplicationCommandExecute);
+            CreateBotCommand = new LambdaCommand(CanCreateBotCommandExecuted, OnCreateBotCommandExecute);
+            CloseApplicationCommand = new LambdaCommand(OnCloseApplicationCommandExecuted, OnCloseApplicationCommandExecute);
 
             #endregion
 
