@@ -1,20 +1,21 @@
-﻿using System.Configuration;
+﻿using System;
+using System.Collections.Generic;
+using System.Configuration;
 using ChatbotConstructorTelegram.Infrastructure.Commands;
 using ChatbotConstructorTelegram.View.Window;
 using ChatbotConstructorTelegram.ViewModels.Base;
 using ChatbotConstructorTelegram.Model.Bot;
 using System.Windows;
 using System.Windows.Input;
+using ChatbotConstructorTelegram.Model.ViewData;
+using NLog;
 
 
 namespace ChatbotConstructorTelegram.ViewModels
 {
     internal class MainWindowViewModel: ViewModel
     {
-        #region Private Property
-
-        private Bot _bot;
-        #endregion
+        private static Logger Log = LogManager.GetCurrentClassLogger();
 
         private string _title = "Конструктор бота";
         public string Title
@@ -31,44 +32,14 @@ namespace ChatbotConstructorTelegram.ViewModels
             set => Set(ref _status, value);
         }
 
+        private List<RecentProject> _recentProjects;
+
+        public List<RecentProject> RecentProjects
+        {
+            get => _recentProjects;
+            set => Set(ref _recentProjects, value);
+        }
         #region Command
-
-        #region CreateBotCommand
-        public ICommand CreateBotCommand { get; }
-
-
-        private bool OnCreateBotCommandExecute(object p)
-        {
-            return true;
-        }
-
-        private void CanCreateBotCommandExecuted(object p)
-        {
-            var createBotWnd = new BotCreationWindow();
-            var dialogResult = createBotWnd.ShowDialog();
-            switch (dialogResult)
-            {
-                case true:
-                    Status = "Создание проекта";
-                    
-                    _bot = new Bot()
-                    {
-                        Name = createBotWnd.NameProject, 
-                        PathDirectory = createBotWnd.PathDirectory, 
-                        Token = createBotWnd.Token
-                    };
-
-                    break;
-                case false:
-                    Status = "Отмена";
-                    break;
-                default:
-                    Status = "Ошибка";
-                    break;
-            }
-        }
-
-        #endregion
 
         public ICommand CloseApplicationCommand { get; }
 
@@ -87,10 +58,17 @@ namespace ChatbotConstructorTelegram.ViewModels
         {
             #region Command
 
-            CreateBotCommand = new LambdaCommand(CanCreateBotCommandExecuted, OnCreateBotCommandExecute);
             CloseApplicationCommand = new LambdaCommand(OnCloseApplicationCommandExecuted, OnCloseApplicationCommandExecute);
 
             #endregion
+
+            RecentProjects = new List<RecentProject>()
+            {
+                new RecentProject() { ProjectName = "Hello", Path = @"C:\\Koren\Tut\Lezit\Files\a\Project", Date = DateTime.Now},
+                new RecentProject() { ProjectName = "Eazy", Path = @"C:\Koren\delo", Date = DateTime.MinValue},
+            };
+
+            Log.Info("Главное окно успешно запущено");
         }
 
     }

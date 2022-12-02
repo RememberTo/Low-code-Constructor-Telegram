@@ -7,21 +7,27 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="View\UserControls\CustomTextBox.xaml.cs">
+    <Compile Update="View\ModalWindow\ChangeTokenModalWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="View\Window\BotCreationWindow.xaml.cs">
+    <Compile Update="View\Window\CreationProjectWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Window\ProjectWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="View\UserControls\CustomTextBox.xaml">
+    <Page Update="View\ModalWindow\ChangeTokenModalWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="View\Window\BotCreationWindow.xaml">
+    <Page Update="View\Window\CreationProjectWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\Window\MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Window\ProjectWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
