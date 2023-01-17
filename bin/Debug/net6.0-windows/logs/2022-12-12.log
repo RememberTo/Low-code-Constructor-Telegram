@@ -1,0 +1,10 @@
+2022-12-12 18:53:09.6922|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2022-12-12 18:53:20.8642|ERROR|ChatbotConstructorTelegram.View.Window.MainWindow|An error occurred trying to start process 'C:\\Koren\Tut\Lezit\Files\a\Project' with working directory 'C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows'. Не удается найти указанный файл.| 
+2022-12-12 18:53:23.7514|INFO|ChatbotConstructorTelegram.View.Window.MainWindow|Создание проекта| 
+2022-12-12 18:53:32.4180|ERROR|ChatbotConstructorTelegram.ViewModels.CreationProjectViewModel|Введенные данные не сохранены, неправильно заполнены поля| 
+2022-12-12 18:54:35.7561|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2022-12-12 18:54:37.7621|INFO|ChatbotConstructorTelegram.View.Window.MainWindow|Создание проекта| 
+2022-12-12 18:54:54.7787|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2022-12-12 18:56:28.8690|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2022-12-12 18:56:30.5911|INFO|ChatbotConstructorTelegram.View.Window.MainWindow|Создание проекта| 
+2022-12-12 18:56:50.5923|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 

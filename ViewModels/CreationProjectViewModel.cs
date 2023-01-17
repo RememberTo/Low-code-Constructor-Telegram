@@ -1,23 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Input;
-using System.Windows.Threading;
-using ChatbotConstructorTelegram.Infrastructure.Commands;
+﻿using ChatbotConstructorTelegram.Infrastructure.Commands;
 using ChatbotConstructorTelegram.Model.Bot;
 using ChatbotConstructorTelegram.ViewModels.Base;
 using Microsoft.WindowsAPICodePack.Dialogs;
 using NLog;
+using System;
+using System.IO;
+using System.Windows;
+using System.Windows.Input;
+using System.Windows.Threading;
+using ChatbotConstructorTelegram.Infrastructure.Manager;
 
 namespace ChatbotConstructorTelegram.ViewModels
 {
     internal class CreationProjectViewModel : ViewModel
     {
         private static Logger Log = LogManager.GetCurrentClassLogger();
+        private readonly DispatcherTimer _timer;
 
         private string _textWarning = string.Empty;
         public string TextWarning
@@ -33,22 +31,22 @@ namespace ChatbotConstructorTelegram.ViewModels
             set => Set(ref _textVisibilityWarning, value);
         }
 
-        private string _textNameProject = string.Empty;
-        public string TextNameProject
+        private string? _textNameProject = string.Empty;
+        public string? TextNameProject
         {
             get => _textNameProject;
             set => Set(ref _textNameProject, value);
         }
 
-        private string _textPath = string.Empty;
-        public string TextPath
+        private string? _textPath = string.Empty;
+        public string? TextPath
         {
             get => _textPath;
             set => Set(ref _textPath, value);
         }
 
-        private string _textToken = string.Empty;
-        public string TextToken
+        private string? _textToken = string.Empty;
+        public string? TextToken
         {
             get => _textToken;
             set => Set(ref _textToken, value);
@@ -88,23 +86,22 @@ namespace ChatbotConstructorTelegram.ViewModels
 
         private void OnCreateProjectCommandExecuted(object p)
         {
-            Token = TextToken;
-            NameProject = TextNameProject;
-            PathDirectory = TextPath;
 
-            if (Directory.Exists(PathDirectory) && Token != string.Empty && NameProject != string.Empty)
+            if (Directory.Exists(TextPath) && TextToken != string.Empty && TextNameProject != string.Empty)
             {
                 Log.Info("Введенные данные успешно сохранены");
-                StaticDataBot.PathDirectory = PathDirectory;
-                StaticDataBot.Name = NameProject;
-                StaticDataBot.Token = Token;
+                DataProject.PathDirectory = TextPath;
+                DataProject.Name = TextNameProject;
+                DataProject.Token = TextToken;
+                WriteProjectInList();
+                CreateFileProjectAsync();
             }
             else
             {
                 TextVisibilityWarning = Visibility.Visible;
                 _timer.Start();
 
-                if (!Directory.Exists(PathDirectory))
+                if (!Directory.Exists(TextPath))
                     TextWarning = "Введенной директории не существует";
                 else
                     TextWarning = "Заполните все поля";
@@ -115,16 +112,20 @@ namespace ChatbotConstructorTelegram.ViewModels
 
         #endregion
 
-        public string PathDirectory { get; private set; }
-        public string Token { get; private set; }
-        public string NameProject { get; private set; }
-        private DispatcherTimer _timer;
-
-
-
-        private void timer_Tick(object sender, EventArgs e)
+        private void Timer_Tick(object? sender, EventArgs e)
         {
             TextVisibilityWarning = Visibility.Hidden;
+        }
+
+        private void WriteProjectInList()
+        {
+            var note = "$" + DataProject.PathDirectory + "\\" + DataProject.Name + ".xml" + $"%{DateTime.Now}%";
+            FileProjectManager.AppendNoteInFileListProject(ExplorerManager.LocationListProjects, note);
+        }
+
+        private async void CreateFileProjectAsync()
+        {
+            await using var fs = new FileStream(DataProject.PathDirectory + "\\" + DataProject.Name + ".xml", FileMode.Create);
         }
 
         public CreationProjectViewModel()
@@ -136,7 +137,7 @@ namespace ChatbotConstructorTelegram.ViewModels
             #endregion
 
             _timer = new DispatcherTimer();
-            _timer.Tick += new EventHandler(timer_Tick);
+            _timer.Tick += Timer_Tick;
             _timer.Interval = new TimeSpan(0, 0, 5);
         }
     }

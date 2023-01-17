@@ -1,24 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ChatbotConstructorTelegram.ViewModels;
+using NLog;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace ChatbotConstructorTelegram.View.Window
 {
     public partial class ProjectWindow : System.Windows.Window
     {
+        private readonly Logger _logger = LogManager.GetCurrentClassLogger();
         public ProjectWindow()
         {
             InitializeComponent();
+            //this.DataContext = new ProjectWindowViewModel();
+        }
+
+        public ProjectWindow(string path)
+        {
+            InitializeComponent();
+            this.DataContext = new ProjectWindowViewModel(path);
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }

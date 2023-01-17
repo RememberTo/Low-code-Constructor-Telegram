@@ -1,0 +1,128 @@
+2023-01-13 20:33:22.6890|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-01-13 20:48:53.9692|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-01-13 20:49:03.4471|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\MyProject.xml передан в окно конструктора| 
+2023-01-13 20:49:15.8361|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\MyProject.xml передан в окно конструктора| 
+2023-01-13 21:02:37.9430|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-01-13 21:03:01.6110|INFO|ChatbotConstructorTelegram.View.Window.MainWindow|Создание проекта| 
+2023-01-13 21:03:02.8934|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-01-13 21:03:45.5163|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-01-13 21:06:22.3417|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-01-13 21:06:26.4083|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\MyProject.xml передан в окно конструктора| 
+2023-01-13 21:06:32.7412|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-01-13 21:06:42.4076|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\MyProject.xml передан в окно конструктора| 
+2023-01-13 21:06:44.7747|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\MyProject.xml передан в окно конструктора| 
+2023-01-13 21:10:34.0617|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-01-13 21:11:14.2465|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-01-13 21:11:20.3024|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-01-13 21:11:22.1185|INFO|ChatbotConstructorTelegram.View.Window.MainWindow|Создание проекта| 
+2023-01-13 21:11:40.5942|INFO|ChatbotConstructorTelegram.View.Window.CreationProjectWindow|Проверка пройдена запущен проект Test путь C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject| 
+2023-01-13 21:11:40.7047|INFO|ChatbotConstructorTelegram.ViewModels.CreationProjectViewModel|Введенные данные успешно сохранены| 
+2023-01-13 21:11:47.7804|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-01-13 21:12:21.2492|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-01-13 21:19:01.4633|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-01-13 21:19:04.0660|INFO|ChatbotConstructorTelegram.View.Window.MainWindow|Создание проекта| 
+2023-01-13 21:19:11.8919|INFO|ChatbotConstructorTelegram.View.Window.CreationProjectWindow|Проверка пройдена запущен проект Treeee путь C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject| 
+2023-01-13 21:19:11.9999|INFO|ChatbotConstructorTelegram.ViewModels.CreationProjectViewModel|Введенные данные успешно сохранены| 
+2023-01-13 21:19:17.2308|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-01-13 21:19:19.2834|ERROR|ChatbotConstructorTelegram.Infrastructure.Manager.FileProjectManager|System.InvalidOperationException: There is an error in XML document (0, 0).| System.InvalidOperationException: There is an error in XML document (0, 0).
+ ---> System.Xml.XmlException: Root element is missing.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderWrapperDataBot.Read9_WrapperDataBot()
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(Stream stream)
+   at ChatbotConstructorTelegram.Infrastructure.Manager.FileProjectManager.GetWrapperDataBot(String pathFile) in C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\Infrastructure\Manager\FileProjectManager.cs:line 31
+2023-01-13 21:20:12.3374|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-01-13 21:20:14.0264|ERROR|ChatbotConstructorTelegram.Infrastructure.Manager.FileProjectManager|System.InvalidOperationException: There is an error in XML document (0, 0).| System.InvalidOperationException: There is an error in XML document (0, 0).
+ ---> System.Xml.XmlException: Root element is missing.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderWrapperDataBot.Read9_WrapperDataBot()
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(Stream stream)
+   at ChatbotConstructorTelegram.Infrastructure.Manager.FileProjectManager.GetWrapperDataBot(String pathFile) in C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\Infrastructure\Manager\FileProjectManager.cs:line 31
+2023-01-13 21:20:14.2109|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\Treeee.xml передан в окно конструктора| 
+2023-01-13 21:21:14.8092|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-01-13 21:21:16.3555|ERROR|ChatbotConstructorTelegram.Infrastructure.Manager.FileProjectManager|System.InvalidOperationException: There is an error in XML document (0, 0).| System.InvalidOperationException: There is an error in XML document (0, 0).
+ ---> System.Xml.XmlException: Root element is missing.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderWrapperDataBot.Read9_WrapperDataBot()
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(Stream stream)
+   at ChatbotConstructorTelegram.Infrastructure.Manager.FileProjectManager.GetWrapperDataBot(String pathFile) in C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\Infrastructure\Manager\FileProjectManager.cs:line 31
+2023-01-13 21:21:16.5512|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\Treeee.xml передан в окно конструктора| 
+2023-01-13 21:22:31.7763|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-01-13 21:22:33.7045|ERROR|ChatbotConstructorTelegram.Infrastructure.Manager.FileProjectManager|System.InvalidOperationException: There is an error in XML document (0, 0).| System.InvalidOperationException: There is an error in XML document (0, 0).
+ ---> System.Xml.XmlException: Root element is missing.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderWrapperDataBot.Read9_WrapperDataBot()
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(Stream stream)
+   at ChatbotConstructorTelegram.Infrastructure.Manager.FileProjectManager.GetWrapperDataBot(String pathFile) in C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\Infrastructure\Manager\FileProjectManager.cs:line 31
+2023-01-13 21:22:33.9115|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\Treeee.xml передан в окно конструктора| 
+2023-01-13 21:25:57.0464|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-01-13 21:26:39.0486|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-01-13 21:27:05.7117|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-01-13 21:28:16.2170|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-01-13 21:28:30.7431|ERROR|ChatbotConstructorTelegram.Infrastructure.Manager.FileProjectManager|System.InvalidOperationException: There is an error in XML document (0, 0).| System.InvalidOperationException: There is an error in XML document (0, 0).
+ ---> System.Xml.XmlException: Root element is missing.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderWrapperDataBot.Read9_WrapperDataBot()
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(Stream stream)
+   at ChatbotConstructorTelegram.Infrastructure.Manager.FileProjectManager.GetWrapperDataBot(String pathFile) in C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\Infrastructure\Manager\FileProjectManager.cs:line 31
+2023-01-13 21:28:30.9411|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\Treeee.xml передан в окно конструктора| 
+2023-01-13 22:14:07.6116|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-01-13 22:16:28.5866|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-01-13 22:20:52.9089|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-01-13 22:21:15.2599|ERROR|ChatbotConstructorTelegram.Infrastructure.Manager.FileProjectManager|System.InvalidOperationException: There is an error in XML document (0, 0).| System.InvalidOperationException: There is an error in XML document (0, 0).
+ ---> System.Xml.XmlException: Root element is missing.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderWrapperDataBot.Read9_WrapperDataBot()
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(Stream stream)
+   at ChatbotConstructorTelegram.Infrastructure.Manager.FileProjectManager.GetWrapperDataBot(String pathFile) in C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\Infrastructure\Manager\FileProjectManager.cs:line 33
+2023-01-13 22:21:15.4801|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\Treeee.xml передан в окно конструктора| 
+2023-01-13 22:22:55.7745|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-01-13 22:22:57.4801|ERROR|ChatbotConstructorTelegram.Infrastructure.Manager.FileProjectManager|System.InvalidOperationException: There is an error in XML document (0, 0).| System.InvalidOperationException: There is an error in XML document (0, 0).
+ ---> System.Xml.XmlException: Root element is missing.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderWrapperDataBot.Read9_WrapperDataBot()
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(Stream stream)
+   at ChatbotConstructorTelegram.Infrastructure.Manager.FileProjectManager.GetWrapperDataBot(String pathFile) in C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\Infrastructure\Manager\FileProjectManager.cs:line 33
+2023-01-13 22:22:57.6956|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\Treeee.xml передан в окно конструктора| 
+2023-01-13 22:23:12.2159|INFO|ChatbotConstructorTelegram.Infrastructure.Manager.FileProjectManager|Проект сериализован| 
+2023-01-13 22:23:15.9867|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\Treeee.xml передан в окно конструктора| 
+2023-01-13 22:24:41.7616|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-01-13 22:24:45.7189|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\Treeee.xml передан в окно конструктора| 
+2023-01-13 22:28:18.9531|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-01-13 22:28:20.5018|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\Treeee.xml передан в окно конструктора| 
+2023-01-13 22:30:10.0573|INFO|ChatbotConstructorTelegram.Infrastructure.Manager.FileProjectManager|Проект сериализован| 
+2023-01-13 22:30:56.5199|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 

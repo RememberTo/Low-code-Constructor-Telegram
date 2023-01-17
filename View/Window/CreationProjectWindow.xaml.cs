@@ -1,10 +1,6 @@
-﻿using System;
+﻿using NLog;
 using System.IO;
-using Microsoft.WindowsAPICodePack.Dialogs;
 using System.Windows;
-using System.Windows.Threading;
-using ChatbotConstructorTelegram.Model.Bot;
-using NLog;
 
 namespace ChatbotConstructorTelegram.View.Window
 {
@@ -13,7 +9,7 @@ namespace ChatbotConstructorTelegram.View.Window
     /// </summary>
     public partial class CreationProjectWindow : System.Windows.Window
     {
-        private static Logger Log = LogManager.GetCurrentClassLogger();
+        private static readonly Logger Log = LogManager.GetCurrentClassLogger();
         public CreationProjectWindow()
         {
             InitializeComponent();

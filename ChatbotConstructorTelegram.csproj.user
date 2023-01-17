@@ -10,6 +10,9 @@
     <Compile Update="View\ModalWindow\ChangeTokenModalWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\ModalWindow\QuestionSaveProject.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\Window\CreationProjectWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -19,6 +22,9 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="View\ModalWindow\ChangeTokenModalWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ModalWindow\QuestionSaveProject.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\Window\CreationProjectWindow.xaml">

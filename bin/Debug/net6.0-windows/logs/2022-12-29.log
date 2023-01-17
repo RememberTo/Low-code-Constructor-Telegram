@@ -1,0 +1,76 @@
+2022-12-29 16:52:27.1485|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2022-12-29 16:52:43.2318|INFO|ChatbotConstructorTelegram.View.Window.MainWindow|Создание проекта| 
+2022-12-29 16:52:52.4426|INFO|ChatbotConstructorTelegram.View.Window.CreationProjectWindow|Проверка пройдена запущен проект ваывваываыа путь D:\Images| 
+2022-12-29 16:52:52.5467|INFO|ChatbotConstructorTelegram.ViewModels.CreationProjectViewModel|Введенные данные успешно сохранены| 
+2022-12-29 21:09:30.5726|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2022-12-29 22:58:58.6712|INFO|ChatbotConstructorTelegram.Infrastructure.Manager.FileProjectManager|Проект сериализован| 
+2022-12-29 23:00:34.1334|INFO|ChatbotConstructorTelegram.Infrastructure.Manager.FileProjectManager|Проект сериализован| 
+2022-12-29 23:01:25.3713|INFO|ChatbotConstructorTelegram.Infrastructure.Manager.FileProjectManager|Проект сериализован| 
+2022-12-29 23:05:10.9987|INFO|ChatbotConstructorTelegram.Infrastructure.Manager.FileProjectManager|Проект сериализован| 
+2022-12-29 23:45:48.9571|INFO|ChatbotConstructorTelegram.Infrastructure.Manager.FileProjectManager|Проект сериализован| 
+2022-12-29 23:46:03.0505|ERROR|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|System.InvalidOperationException: There is an error in XML document (1, 942).| System.InvalidOperationException: There is an error in XML document (1, 942).
+ ---> System.Xml.XmlException: There are multiple root elements. Line 1, position 942.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlReader.ReadEndElement()
+   at System.Xml.Serialization.XmlSerializationReader.ReadEndElement()
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderWrapperDataBot.Read8_WrapperDataBot(Boolean isNullable, Boolean checkType)
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderWrapperDataBot.Read9_WrapperDataBot()
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(Stream stream)
+   at ChatbotConstructorTelegram.Infrastructure.Manager.FileProjectManager.GetWrapperDataBot(String pathFile) in C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\Infrastructure\Manager\FileProjectManager.cs:line 35
+   at ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel..ctor(String path) in C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\ViewModels\ProjectWindowViewModel.cs:line 360
+   at ChatbotConstructorTelegram.View.Window.ProjectWindow..ctor(String path) in C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\View\Window\ProjectWindow.xaml.cs:line 33
+   at ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel.OnOpenProjectCommandExecuted(Object p) in C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\ViewModels\ProjectWindowViewModel.cs:line 175
+2022-12-29 23:46:14.4121|ERROR|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|System.InvalidOperationException: There is an error in XML document (1, 942).| System.InvalidOperationException: There is an error in XML document (1, 942).
+ ---> System.Xml.XmlException: There are multiple root elements. Line 1, position 942.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlReader.ReadEndElement()
+   at System.Xml.Serialization.XmlSerializationReader.ReadEndElement()
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderWrapperDataBot.Read8_WrapperDataBot(Boolean isNullable, Boolean checkType)
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderWrapperDataBot.Read9_WrapperDataBot()
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(Stream stream)
+   at ChatbotConstructorTelegram.Infrastructure.Manager.FileProjectManager.GetWrapperDataBot(String pathFile) in C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\Infrastructure\Manager\FileProjectManager.cs:line 35
+   at ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel..ctor(String path) in C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\ViewModels\ProjectWindowViewModel.cs:line 360
+   at ChatbotConstructorTelegram.View.Window.ProjectWindow..ctor(String path) in C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\View\Window\ProjectWindow.xaml.cs:line 33
+   at ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel.OnOpenProjectCommandExecuted(Object p) in C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\ViewModels\ProjectWindowViewModel.cs:line 175
+2022-12-29 23:46:45.3373|ERROR|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|System.InvalidOperationException: There is an error in XML document (1, 942).| System.InvalidOperationException: There is an error in XML document (1, 942).
+ ---> System.Xml.XmlException: There are multiple root elements. Line 1, position 942.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlReader.ReadEndElement()
+   at System.Xml.Serialization.XmlSerializationReader.ReadEndElement()
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderWrapperDataBot.Read8_WrapperDataBot(Boolean isNullable, Boolean checkType)
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderWrapperDataBot.Read9_WrapperDataBot()
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(Stream stream)
+   at ChatbotConstructorTelegram.Infrastructure.Manager.FileProjectManager.GetWrapperDataBot(String pathFile) in C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\Infrastructure\Manager\FileProjectManager.cs:line 35
+   at ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel..ctor(String path) in C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\ViewModels\ProjectWindowViewModel.cs:line 360
+   at ChatbotConstructorTelegram.View.Window.ProjectWindow..ctor(String path) in C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\View\Window\ProjectWindow.xaml.cs:line 33
+   at ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel.OnOpenProjectCommandExecuted(Object p) in C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\ViewModels\ProjectWindowViewModel.cs:line 175
+2022-12-29 23:49:21.0751|ERROR|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|System.InvalidOperationException: There is an error in XML document (1, 942).| System.InvalidOperationException: There is an error in XML document (1, 942).
+ ---> System.Xml.XmlException: There are multiple root elements. Line 1, position 942.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlReader.ReadEndElement()
+   at System.Xml.Serialization.XmlSerializationReader.ReadEndElement()
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderWrapperDataBot.Read8_WrapperDataBot(Boolean isNullable, Boolean checkType)
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderWrapperDataBot.Read9_WrapperDataBot()
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(Stream stream)
+   at ChatbotConstructorTelegram.Infrastructure.Manager.FileProjectManager.GetWrapperDataBot(String pathFile) in C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\Infrastructure\Manager\FileProjectManager.cs:line 35
+   at ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel..ctor(String path) in C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\ViewModels\ProjectWindowViewModel.cs:line 360
+   at ChatbotConstructorTelegram.View.Window.ProjectWindow..ctor(String path) in C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\View\Window\ProjectWindow.xaml.cs:line 33
+   at ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel.OnOpenProjectCommandExecuted(Object p) in C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\ViewModels\ProjectWindowViewModel.cs:line 175
+2022-12-29 23:51:48.0781|INFO|ChatbotConstructorTelegram.Infrastructure.Manager.FileProjectManager|Проект сериализован| 
+2022-12-29 23:52:35.0275|INFO|ChatbotConstructorTelegram.Infrastructure.Manager.FileProjectManager|Проект сериализован| 

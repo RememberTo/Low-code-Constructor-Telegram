@@ -1,21 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using ChatbotConstructorTelegram.Infrastructure.Commands;
-using ChatbotConstructorTelegram.View.Window;
+﻿using ChatbotConstructorTelegram.Infrastructure.Commands;
+using ChatbotConstructorTelegram.Infrastructure.Manager;
+using ChatbotConstructorTelegram.Model.ViewData;
 using ChatbotConstructorTelegram.ViewModels.Base;
-using ChatbotConstructorTelegram.Model.Bot;
+using NLog;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Input;
-using ChatbotConstructorTelegram.Model.ViewData;
-using NLog;
 
 
 namespace ChatbotConstructorTelegram.ViewModels
 {
-    internal class MainWindowViewModel: ViewModel
+    internal class MainWindowViewModel : ViewModel
     {
-        private static Logger Log = LogManager.GetCurrentClassLogger();
+        private static readonly Logger Log = LogManager.GetCurrentClassLogger();
 
         private string _title = "Конструктор бота";
         public string Title
@@ -32,12 +32,12 @@ namespace ChatbotConstructorTelegram.ViewModels
             set => Set(ref _status, value);
         }
 
-        private List<RecentProject> _recentProjects;
+        private List<NoteProject> _recordsProject = null!;
 
-        public List<RecentProject> RecentProjects
+        public List<NoteProject> RecordsProject
         {
-            get => _recentProjects;
-            set => Set(ref _recentProjects, value);
+            get => _recordsProject;
+            set => Set(ref _recordsProject, value);
         }
         #region Command
 
@@ -54,6 +54,7 @@ namespace ChatbotConstructorTelegram.ViewModels
         }
         #endregion
 
+
         public MainWindowViewModel()
         {
             #region Command
@@ -62,13 +63,57 @@ namespace ChatbotConstructorTelegram.ViewModels
 
             #endregion
 
-            RecentProjects = new List<RecentProject>()
-            {
-                new RecentProject() { ProjectName = "Hello", Path = @"C:\\Koren\Tut\Lezit\Files\a\Project", Date = DateTime.Now},
-                new RecentProject() { ProjectName = "Eazy", Path = @"C:\Koren\delo", Date = DateTime.MinValue},
-            };
+            RecordsProject = GetParseRecordsProjects();
 
             Log.Info("Главное окно успешно запущено");
+        }
+
+        public MainWindowViewModel(string filePath)
+        {
+            #region Command
+
+            CloseApplicationCommand = new LambdaCommand(OnCloseApplicationCommandExecuted, OnCloseApplicationCommandExecute);
+
+            #endregion
+
+            RecordsProject = GetParseRecordsProjects();
+
+            Log.Info("Главное окно успешно запущено");
+        }
+
+        private List<NoteProject> GetParseRecordsProjects()
+        {
+            var note = new List<NoteProject>();
+            const string patternNameFile = @".*?\.";
+            const string patternPathFile = @".*?%";
+            const string patternDate = @"%.*?%";
+
+            using var streamReader = new StreamReader(new FileStream(ExplorerManager.LocationListProjects, FileMode.Open, FileAccess.Read));
+            while (!streamReader.EndOfStream)
+            {
+                var line = streamReader.ReadLine();
+
+                if (line != null)
+                    note.Add(new NoteProject()
+                    {
+                        ProjectName = GetSearchStringPattern(patternNameFile, line.Substring(line.LastIndexOf(@"\", StringComparison.Ordinal))),
+                        Path = GetSearchStringPattern(patternPathFile, line),
+                        Date = Convert.ToDateTime(GetSearchStringPattern(patternDate, line))
+                    });
+            }
+
+            return note;
+        }
+
+        private string? GetSearchStringPattern(string pattern, string s)
+        {
+            var regex = new Regex(pattern);
+            var matches = regex.Matches(s);
+            if (matches.Count > 0)
+            {
+                return matches[0].Value.Substring(1, matches[0].Value.Length - 2);
+            }
+            return null;
         }
 
     }

@@ -91,7 +91,7 @@
                             Foreground="#FFB2DFF3">
 
                 </TextBlock>
-                <ListView ItemsSource="{Binding RecentProjects}" HorizontalContentAlignment="Stretch" HorizontalAlignment="Stretch"
+                <ListView ItemsSource="{Binding RecordsProject}" HorizontalContentAlignment="Stretch" HorizontalAlignment="Stretch"
                           Margin="30,30,0,0" Padding="0" ScrollViewer.VerticalScrollBarVisibility="Disabled" 
                 >
                     
@@ -105,8 +105,9 @@
                         <DataTemplate >
                             <Button Style="{DynamicResource MaterialDesignFlatButton}"  
                                 HorizontalAlignment="Stretch" MinWidth="200" MaxWidth="1800" Height="50" 
-                                   Margin="0" HorizontalContentAlignment="Stretch" Click="ButtonBase_OnClick"
-                                 Cursor="Hand" Command="{Binding }"
+                                   Margin="0" HorizontalContentAlignment="Stretch"
+                                 Cursor="Hand" Command="{Binding OpenProjectCommand }"
+                                CommandParameter="{Binding Path}"
                             >
 
                                 <Grid Margin="-11,0,0,0">
@@ -123,7 +124,7 @@
                                 <fa:ImageAwesome Grid.RowSpan="2" Icon="Brands_FacebookMessenger" Height="30" Foreground="#FF6060CE"/>
                                 <TextBlock Grid.Column="1" Grid.Row="0" Foreground="GhostWhite" FontSize="19" 
                                            Margin="15,0,0,0" VerticalAlignment="Bottom"
-                                           Text="{Binding ProjectName}" 
+                                           Text="{Binding ProjectName, StringFormat=#.###.##}" 
                                            FontFamily="Bahnschrift SemiLight" 
                                 />
                                 <TextBlock Foreground="#FFB2DFF3" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2"

@@ -231,3 +231,4 @@
 2022-12-02 17:18:01.4834|DEBUG|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Debug| 
 2022-12-02 17:18:01.5059|INFO|ChatbotConstructorTelegram.View.Window.CreationProjectWindow|Проверка пройдена запущен проект gsfdfsdfsdfsdf путь C:\Users\fdkir\OneDrive\Рабочий стол\EasyBot\Project\MVVM| 
 2022-12-02 17:18:01.5472|INFO|ChatbotConstructorTelegram.ViewModels.CreationProjectViewModel|Введенные данные успешно сохранены| 
+2022-12-02 17:48:18.2926|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 

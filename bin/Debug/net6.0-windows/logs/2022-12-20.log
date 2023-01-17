@@ -1,0 +1,23 @@
+2022-12-20 03:15:09.7729|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2022-12-20 03:18:35.9378|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2022-12-20 03:22:28.1935|INFO|ChatbotConstructorTelegram.View.Window.MainWindow|Создание проекта| 
+2022-12-20 03:28:30.6474|ERROR|ChatbotConstructorTelegram.ViewModels.CreationProjectViewModel|Введенные данные не сохранены, неправильно заполнены поля| 
+2022-12-20 03:28:37.8028|INFO|ChatbotConstructorTelegram.View.Window.CreationProjectWindow|Проверка пройдена запущен проект выаываыа путь C:\Users\fdkir\OneDrive\Рабочий стол\7 Семестр\Экономика\Домашняя работа| 
+2022-12-20 03:28:37.9577|INFO|ChatbotConstructorTelegram.ViewModels.CreationProjectViewModel|Введенные данные успешно сохранены| 
+2022-12-20 14:19:45.2723|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2022-12-20 14:19:48.3474|INFO|ChatbotConstructorTelegram.View.Window.MainWindow|Создание проекта| 
+2022-12-20 14:19:54.4145|ERROR|ChatbotConstructorTelegram.ViewModels.CreationProjectViewModel|Введенные данные не сохранены, неправильно заполнены поля| 
+2022-12-20 14:19:56.6187|ERROR|ChatbotConstructorTelegram.ViewModels.CreationProjectViewModel|Введенные данные не сохранены, неправильно заполнены поля| 
+2022-12-20 14:19:58.5459|INFO|ChatbotConstructorTelegram.View.Window.CreationProjectWindow|Проверка пройдена запущен проект ываываыа путь D:\Images| 
+2022-12-20 14:19:58.6551|INFO|ChatbotConstructorTelegram.ViewModels.CreationProjectViewModel|Введенные данные успешно сохранены| 
+2022-12-20 14:37:16.3736|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2022-12-20 14:37:44.1160|ERROR|ChatbotConstructorTelegram.View.Window.MainWindow|An error occurred trying to start process 'C:\Koren\delo' with working directory 'C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows'. Не удается найти указанный файл.| 
+2022-12-20 14:37:55.9454|ERROR|ChatbotConstructorTelegram.View.Window.MainWindow|An error occurred trying to start process 'C:\\Koren\Tut\Lezit\Files\a\Project' with working directory 'C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows'. Не удается найти указанный файл.| 
+2022-12-20 14:38:36.3426|INFO|ChatbotConstructorTelegram.View.Window.MainWindow|Создание проекта| 
+2022-12-20 14:38:55.6499|INFO|ChatbotConstructorTelegram.View.Window.CreationProjectWindow|Проверка пройдена запущен проект 21111111111 путь C:\Users\fdkir\OneDrive\Рабочий стол\7 Семестр\Экономика\Домашняя работа| 
+2022-12-20 14:38:55.8169|INFO|ChatbotConstructorTelegram.ViewModels.CreationProjectViewModel|Введенные данные успешно сохранены| 
+2022-12-20 21:31:55.6552|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2022-12-20 21:31:58.1028|INFO|ChatbotConstructorTelegram.View.Window.MainWindow|Создание проекта| 
+2022-12-20 21:32:00.4099|ERROR|ChatbotConstructorTelegram.ViewModels.CreationProjectViewModel|Введенные данные не сохранены, неправильно заполнены поля| 
+2022-12-20 21:32:04.0002|INFO|ChatbotConstructorTelegram.View.Window.CreationProjectWindow|Проверка пройдена запущен проект ывава путь C:\Users\fdkir\OneDrive\Рабочий стол\7 Семестр\Экономика\Домашняя работа| 
+2022-12-20 21:32:04.1122|INFO|ChatbotConstructorTelegram.ViewModels.CreationProjectViewModel|Введенные данные успешно сохранены| 

@@ -1,0 +1,4 @@
+2022-12-22 00:07:58.6205|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2022-12-22 00:08:01.5797|INFO|ChatbotConstructorTelegram.View.Window.MainWindow|Создание проекта| 
+2022-12-22 00:08:06.4556|INFO|ChatbotConstructorTelegram.View.Window.CreationProjectWindow|Проверка пройдена запущен проект 1111 путь C:\Users\fdkir\OneDrive\Рабочий стол\7 Семестр\Экономика\Домашняя работа| 
+2022-12-22 00:08:06.5610|INFO|ChatbotConstructorTelegram.ViewModels.CreationProjectViewModel|Введенные данные успешно сохранены| 

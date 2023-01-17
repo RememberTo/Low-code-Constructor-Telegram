@@ -14,7 +14,7 @@
         TextElement.FontWeight="Regular"
         TextElement.FontSize="15"
         TextOptions.TextFormattingMode="Ideal"
-        TextOptions.TextRenderingMode="Auto" Height="500" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        TextOptions.TextRenderingMode="Auto" Height="500" Width="700" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
 
     <Window.DataContext>
         <vm:CreationProjectViewModel/>
@@ -28,8 +28,8 @@
         <StackPanel Grid.Row="0" Orientation="Vertical">
             <StackPanel Height="60">
                 <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"  
-                           Foreground="WhiteSmoke" FontSize="24" Margin="0,30,300,0" 
-                           FontFamily="DejaVu Sans Light">Создание проекта</TextBlock>
+                           Foreground="WhiteSmoke" FontSize="24" Margin="0,30,200,0" 
+                           FontFamily="{DynamicResource MaterialDesignFont}">Создание проекта</TextBlock>
             </StackPanel>
             <StackPanel Margin="0,10,0,0">
                 <TextBlock Text="{Binding TextWarning}" HorizontalAlignment="Left" VerticalAlignment="Center"  
@@ -40,10 +40,10 @@
                 <TextBox x:Name="TextBox_NameProject"
                          materialDesign:HintAssist.Hint="Название проекта" Cursor="Arrow"  
                          Text="{Binding TextNameProject}"
-                         Padding="7,3,0,0" FontFamily="DejaVu Sans Light"
+                         Padding="7,3,0,0" 
                          materialDesign:HintAssist.Foreground="#7F93A9"
                          Background="#FF1D3348" Width="500" Margin="35,5,15,5"
-                         Foreground="WhiteSmoke"
+                         Foreground="WhiteSmoke"  FontFamily="{DynamicResource MaterialDesignFont}"
                          Style="{DynamicResource MaterialDesignFloatingHintTextBox}" CaretBrush="White" 
                          SelectionBrush="#FF528EBB" BorderBrush="Transparent"
                 />
@@ -53,7 +53,7 @@
                 <TextBox materialDesign:HintAssist.Hint="Расположение" Margin="35,5,15,5"
                          
                          x:Name="TextBox_Path" Cursor="Arrow" Text="{Binding TextPath}"
-                         Padding="7,3,0,0" FontFamily="DejaVu Sans Light"
+                         Padding="7,3,0,0"  FontFamily="{DynamicResource MaterialDesignFont}"
                          materialDesign:HintAssist.Foreground="#7F93A9"
                          Background="#FF1D3348" Width="500"
                          Foreground="WhiteSmoke"
@@ -70,7 +70,7 @@
                 <TextBox x:Name="TextBox_Token"
                          materialDesign:HintAssist.Hint="Токен" Cursor="Arrow" 
                          Text="{Binding TextToken}"
-                         Padding="7,3,0,0" FontFamily="DejaVu Sans Light"
+                         Padding="7,3,0,0"  FontFamily="{DynamicResource MaterialDesignFont}"
                          materialDesign:HintAssist.Foreground="#7F93A9"
                          Background="#FF1D3348" Width="500" Margin="35,5,15,5"
                          Foreground="WhiteSmoke"

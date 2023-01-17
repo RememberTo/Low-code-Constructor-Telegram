@@ -1,0 +1,8 @@
+2022-12-15 19:45:25.5519|ERROR|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|System.NullReferenceException: Object reference not set to an instance of an object.| System.NullReferenceException: Object reference not set to an instance of an object.
+   at ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel.OnChooseFileBotCommandExecuted(Object p) in C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\ViewModels\ProjectWindowViewModel.cs:line 187
+2022-12-15 21:15:57.7578|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2022-12-15 21:16:02.5393|ERROR|ChatbotConstructorTelegram.View.Window.MainWindow|An error occurred trying to start process 'C:\\Koren\Tut\Lezit\Files\a\Project' with working directory 'C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows'. Не удается найти указанный файл.| 
+2022-12-15 21:16:18.9443|INFO|ChatbotConstructorTelegram.View.Window.MainWindow|Создание проекта| 
+2022-12-15 21:16:30.8674|INFO|ChatbotConstructorTelegram.View.Window.CreationProjectWindow|Проверка пройдена запущен проект fdfsdfsdf путь D:\Images| 
+2022-12-15 21:16:30.9972|INFO|ChatbotConstructorTelegram.ViewModels.CreationProjectViewModel|Введенные данные успешно сохранены| 
+2022-12-15 21:19:06.3096|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 

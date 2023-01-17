@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:ChatbotConstructorTelegram.View.Window"
         xmlns:vm ="clr-namespace:ChatbotConstructorTelegram.ViewModels"
         xmlns:fa5="http://schemas.fontawesome.com/icons/"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:fa="clr-namespace:FontAwesome.WPF;assembly=FontAwesome.WPF"
         mc:Ignorable="d"
         Title="{Binding Title}" 
@@ -18,11 +19,12 @@
         TextOptions.TextRenderingMode="Auto"
         
         FontFamily="{DynamicResource MaterialDesignFont}" WindowStartupLocation="CenterScreen" 
-        WindowState="Maximized" MinHeight="600" MinWidth="900">
-
+        WindowState="Maximized" MinHeight="200" MinWidth="400" Height="600" Width="1000">
+    <!--Убрать на релизе-->
     <Window.DataContext>
         <vm:ProjectWindowViewModel/>
     </Window.DataContext>
+    <!--.................-->
 
     <DockPanel LastChildFill="True">
 
@@ -35,47 +37,400 @@
             </StackPanel>
         </StatusBar>
 
-        <Grid DockPanel.Dock="Top" Height="40" Background="#FF213556" >
+        <Grid DockPanel.Dock="Top" Height="70" Background="#FF1E364B" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="18*"/>
+            </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="41"/>
                 <ColumnDefinition Width="859*"/>
             </Grid.ColumnDefinitions>
-            <Grid>
-                <fa:ImageAwesome Icon="Spinner" Spin="True" SpinDuration="7" Foreground="Aqua" Height="30"></fa:ImageAwesome>
+            <Grid Grid.RowSpan="2">
+                <fa:ImageAwesome Icon="Spinner" Spin="True" SpinDuration="7"  Foreground="Aqua" Height="30"></fa:ImageAwesome>
             </Grid>
-            <StackPanel Orientation="Horizontal" Grid.Column="1">
-                <Button Width="119" Height="24" Margin="10,0,0,0" Padding="0" 
+            <Menu  Height="25" VerticalAlignment="Top"
+                   materialDesign:MenuAssist.TopLevelMenuItemHeight="0"
+                   Margin="0,0,0,0"  Grid.Row="0" Grid.Column="1"
+                   FontFamily="{DynamicResource MaterialDesignFont}"
+                   Foreground="#FFBACED7" FontSize="13">
+
+                <MenuItem Header="File" Height="22" 
+                          FontFamily="{DynamicResource MaterialDesignFont}" Padding="16,0,16,0" Margin="2,2,0,2">
+                    <MenuItem Header="Создать проект" 
+                              Padding="-13,0,0,0" 
+                              Margin="4,-12,4,1" 
+                              Width="230" Height="25" Command="{Binding CreateProjectCommand}">
+                        <MenuItem.Icon>
+                            <fa:ImageAwesome  Icon="FileCodeOutline" Foreground="WhiteSmoke" Height="9" Margin="0,0,-35,0"></fa:ImageAwesome>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="Открыть проект" Padding="-13,0,0,0" 
+                              Margin="4,1,4,1" Width="230" Height="25"
+                              Command="{Binding OpenProjectCommand}">
+                        <MenuItem.Icon>
+                            <fa:ImageAwesome  Icon="Opencart" Foreground="WhiteSmoke" Height="9" Margin="0,0,-35,0"></fa:ImageAwesome>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="Сохранить проект" Padding="-13,0,0,0" 
+                                  Margin="4,1,4,1" 
+                                  Width="230" Height="25" 
+                                  Command="{Binding SaveProjectCommand}" >
+                        <MenuItem.Icon>
+                            <fa:ImageAwesome Icon="Save" Height="9" Foreground="WhiteSmoke" Margin="0,0,-35,0" ></fa:ImageAwesome>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="Item" Padding="-13,0,0,0" 
+                              Margin="4,0,4,-4" Width="230" Height="25">
+                        <MenuItem.Icon>
+                            <fa:ImageAwesome Foreground="WhiteSmoke" Height="9" Margin="0,0,-35,0" Icon="Battery1"></fa:ImageAwesome>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <Separator />
+                    <MenuItem Header="Exit" Padding="-13,0,0,0"  Margin="4,-3,4,-12" Width="230" Height="25"
+                              Command="{Binding CloseApplicationCommand}">
+                        <MenuItem.Icon>
+                            <fa:ImageAwesome Icon="Close" Foreground="WhiteSmoke" Height="9" Margin="0,0,-35,0" ></fa:ImageAwesome>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    </MenuItem>
+
+                <MenuItem Height="25" Header="Edit" >
+                    <MenuItem Header="Item" 
+                              Padding="-13,0,0,0" 
+                              Margin="4,-12,4,1" 
+                              Width="230" Height="25" >
+                        <MenuItem.Icon>
+                            <fa:ImageAwesome  Icon="ProductHunt" Foreground="WhiteSmoke" Height="9" Margin="0,0,-35,0"></fa:ImageAwesome>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Padding="-13,0,0,0" 
+                              Margin="4,1,4,1" 
+                              Width="230" Height="25" Header="Item">
+                        <MenuItem.Icon>
+                            <fa:ImageAwesome Height="9" Foreground="WhiteSmoke" Margin="0,0,-35,0" Icon="Battery1"></fa:ImageAwesome>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="Item" Padding="-13,0,0,0" 
+                              Margin="4,0,4,-4" Width="230" Height="25">
+                        <MenuItem.Icon>
+                            <fa:ImageAwesome Foreground="WhiteSmoke" Height="9" Margin="0,0,-35,0" Icon="Battery1"></fa:ImageAwesome>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <Separator />
+                    <MenuItem Header="Изменить токен" Padding="-13,0,0,0"  Margin="4,-3,4,-12" Width="230" Height="25"
+                              Command="{Binding ChangeTokenCommand}"/>
+                </MenuItem>
+
+                <MenuItem Height="25" Header="View" ></MenuItem>
+            </Menu>
+
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,2" Grid.Row="1" Grid.Column="1">
+                <Button Width="119" Height="24" Margin="10,0,0, 0" Padding="0" 
                         Style="{DynamicResource MaterialDesignFlatButton}" 
                         FontFamily="{DynamicResource MaterialDesignFont}"
                         Command="{Binding ChangeTokenCommand}"
                         Content="{Binding TextChangeToken }" FontSize="13"
                         Foreground="#FFBACED7" Cursor="Hand"
-                        ></Button>
+                        />
+                <Button Width="90" Height="29" Margin="10,0,0, 0" Padding="0" 
+                        Style="{DynamicResource MaterialDesignFlatButton}" 
+                        FontFamily="{DynamicResource MaterialDesignFont}"
+                        Command="{Binding CreateBotCommand}"
+                        CommandParameter="{Binding BotCommands}"
+                        FontSize="13" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"
+                        Foreground="#FFBACED7" Cursor="Hand"
+                >
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="30"/>
+                            <ColumnDefinition Width="88*"/>
+                        </Grid.ColumnDefinitions>
+                        <fa5:ImageAwesome Height="20" Foreground="Aquamarine" Icon="Solid_Play" Grid.Column="0"/>
+                        <TextBlock HorizontalAlignment="Left"
+                                   VerticalAlignment="Center"
+                            Text="Создать" Grid.Column="1"></TextBlock>
+                    </Grid>
+                </Button>
             </StackPanel>
         </Grid>
 
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="7*"/>
-                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="8*"/>
+                <ColumnDefinition Width="3.4*"/>
             </Grid.ColumnDefinitions>
 
-            <Grid Grid.Column="0" Background="Black" Margin="5,5,6,5">
+            <Grid Grid.Column="0" Background="#FF1A2E41" Margin="5,5,8,5">
+                <Rectangle Stroke="#FF173F65"></Rectangle>
+                <GroupBox FontSize="14" Padding="0,0,0,0"
+                          materialDesign:ColorZoneAssist.Mode="Custom"
+                >
+                    <GroupBox.Header>
+                        <TextBlock Foreground="#FFBACED7" Padding="5,0,1,0"
+                                   Text="Панель элементов" 
+                                   Background="#FF173F65" Margin="1,1,1.2,1">
+                        </TextBlock>
+                    </GroupBox.Header>
+
+                    <StackPanel Orientation="Vertical" Margin="6">
+                        <Button FontFamily="{DynamicResource MaterialDesignFont}" Cursor="Hand"
+                                Style="{DynamicResource MaterialDesignFlatButton}" HorizontalAlignment="Stretch"
+                                HorizontalContentAlignment="Stretch" Padding="0" MaxWidth="250"
+                                Command="{Binding AddCommand}"
+                                Margin="0,0,0,10" Height="50" Background="#FF1F4A73">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="40"/>
+                                    <ColumnDefinition Width="50*"/>
+                                </Grid.ColumnDefinitions>
+                                <fa:ImageAwesome Grid.Column="0" Height="30" Width="30" Icon="Comments" Margin="10,0,0,0" Foreground="#FFD8ECED"/>
+                                <TextBlock Text="Команда" Grid.Column="1"
+                                           HorizontalAlignment="Left"  VerticalAlignment="Center"
+                                           Margin="10,0,0,0" Foreground="#FFD3D6D7" Width="59"/>
+                            </Grid>
+                        </Button>
+                        <Button FontFamily="{DynamicResource MaterialDesignFont}" Cursor="Hand"
+                                Style="{DynamicResource MaterialDesignFlatButton}" HorizontalAlignment="Stretch"
+                                HorizontalContentAlignment="Stretch" Padding="0" MaxWidth="250"
+                                Command="{Binding AddTextCommand}"
+                                Margin="0,0,0,10" Height="50" Background="#FF1F4A73">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="40"/>
+                                    <ColumnDefinition Width="50*"/>
+                                </Grid.ColumnDefinitions>
+                                <fa:ImageAwesome Grid.Column="0" Height="30" Width="30" Icon="FileText" Margin="10,0,0,0" Foreground="#FFD8ECED"/>
+                                <TextBlock Text="Текст" Grid.Column="1"
+                                           HorizontalAlignment="Left"  VerticalAlignment="Center"
+                                           Margin="10,0,0,0" Foreground="#FFD3D6D7" Width="59"/>
+                            </Grid>
+                        </Button>
+                    </StackPanel>
+                </GroupBox>
 
             </Grid>
 
-            <GridSplitter Grid.Column="0" Width="3" Background="DimGray" Margin="0,5,0,5" HorizontalAlignment="Right"/>
+            <GridSplitter Grid.Column="0" Width="5" Background="#FF1A2E41" Margin="0,5,0,5" HorizontalAlignment="Right">
 
-            <Grid Grid.Column="1" Background="AntiqueWhite" Margin="3,5,3,5">
+            </GridSplitter>
+
+            <Grid Grid.Column="1" Background="#FF1B3044" Margin="3,5,3,5">
+                <ListView ItemsSource="{Binding BotCommands}" 
+                          SelectedItem="{Binding SelectedCommand}">
+                    <ListView.ContextMenu>
+                        <ContextMenu VerticalAlignment="Top"
+                                     Margin="0,0,0,0"  Grid.Row="0" Grid.Column="1"
+                                     FontFamily="{DynamicResource MaterialDesignFont}"
+                                     Foreground="#FFBACED7" FontSize="13">
+                            <MenuItem Header="Добавить" 
+                                      Padding="-13,0,0,0" 
+                                      Margin="4,-12,4,-4" 
+                                      Width="180" Height="25">
+                                <MenuItem Header="Команда" 
+                                          Padding="4,0,0,0" 
+                                          Margin="6,-10,6,0" 
+                                          Width="150" Height="25" Command="{Binding AddCommand}">
+
+                                </MenuItem>
+                                <MenuItem Header="Текст" 
+                                          Padding="4,0,0,0" 
+                                          Margin="6,5,6,-10" 
+                                          Width="150" Height="25">
+
+                                </MenuItem>
+                            </MenuItem>
+                            <Separator/>
+                            <MenuItem Header="Удалить" 
+                                      Padding="-13,0,0,0" 
+                                      Margin="4,-4,4,-10" 
+                                      Width="180" Height="25"
+                                      Command="{Binding DeleteCommand}"
+                                      CommandParameter="{Binding SelectedCommand}">
+                                <MenuItem.Icon>
+                                    <fa:ImageAwesome Icon="Delicious" Foreground="WhiteSmoke" Height="9" Margin="0,0,-35,0"></fa:ImageAwesome>
+                                </MenuItem.Icon>
+                            </MenuItem>
+                        </ContextMenu>
+                    </ListView.ContextMenu>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Width="100">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="10"/>
+                                    <ColumnDefinition Width="87*"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="/" Grid.Column="0" Foreground="WhiteSmoke"/>
+                                <TextBlock Text="{Binding Name}"
+                                           Foreground="WhiteSmoke" Grid.Column="1"
+                                />
+                            </Grid>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
 
             </Grid>
 
-            <Grid Grid.Column="2" Background="Aqua" Margin="6,5,5,5">
+            <Grid Grid.Column="2" Background="#FF1B3044" Margin="8,5,5,5">
+                <Rectangle Stroke="#FF173F65"></Rectangle>
+                <GroupBox FontSize="14" Padding="0,0,0,0"
+                          materialDesign:ColorZoneAssist.Mode="Custom">
+                    <GroupBox.Header>
+                        <TextBlock Foreground="#FFBACED7" Padding="5,0,1,0" 
+                                   Text="Настройки" 
+                                   Background="#FF173F65" Margin="1,1,1.2,1">
+                        </TextBlock>
+                    </GroupBox.Header>
+                    <ScrollViewer Margin="2" HorizontalContentAlignment="Stretch">
+                        <StackPanel Visibility="Visible">
+                            <StackPanel Visibility="{Binding VisibilityBotCommand}">
+                                <StackPanel >
+                                    <TreeViewItem IsExpanded="True" FontSize="12"  Header="Основные" HorizontalContentAlignment="Stretch" Foreground="#FFA1B1D2" Padding="0,8,0,7" ScrollViewer.CanContentScroll="True" Margin="-1,0,0,0" BorderThickness="0,0,0,0">
 
+                                        <Grid Height="25">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="40"/>
+                                                <ColumnDefinition Width="121*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock Text="Имя /" VerticalAlignment="Center"  Grid.Column="0"/>
+                                            <TextBox Text="{Binding BotCommand.Name}" 
+                                                     Grid.Column="1" Style="{DynamicResource MaterialDesignFlatTextBox}"
+                                                     FontFamily="{DynamicResource MaterialDesignFont}"
+                                                     Margin="10,0,0,0"
+                                                     Foreground="WhiteSmoke"  Background="Transparent" 
+                                                     BorderBrush="#FF3D6184" BorderThickness="1,1,1,1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Padding="0,0,0,3" CaretBrush="#FFCFF7F6"/>
+                                        </Grid>
+
+                                        <Grid Height="60">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="40"/>
+                                                <ColumnDefinition Width="121*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock Text="Текст" VerticalAlignment="Top"  Grid.Column="0"/>
+                                            <TextBox Text="{Binding BotCommand.Text}" 
+                                                     Grid.Column="1" Style="{DynamicResource MaterialDesignFlatTextBox}"
+                                                     FontFamily="{DynamicResource MaterialDesignFont}"
+                                                     Margin="10,0,0,0" Height="60"
+                                                     Foreground="WhiteSmoke"  Background="Transparent" 
+                                                     BorderBrush="#FF3D6184" BorderThickness="1,1,1,1" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" Padding="0,0,0,3" CaretBrush="#FFCFF7F6" TextWrapping="Wrap"/>
+                                        </Grid>
+
+                                        <TreeViewItem IsExpanded="False"  Header="Отправить документ" HorizontalContentAlignment="Stretch" Foreground="#FFA1B1D2" Padding="0,8,0,7" ScrollViewer.CanContentScroll="True" Margin="-1,0,0,0" BorderThickness="0,0,0,0">
+
+                                            <Grid Height="25" >
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="50"/>
+                                                    <ColumnDefinition Width="121*"/>
+                                                    <ColumnDefinition Width="35"/>
+                                                </Grid.ColumnDefinitions>
+                                                <TextBlock Text="Файл" VerticalAlignment="Center"  Grid.Column="0"/>
+                                                <TextBox Text="{Binding BotCommand.Document.Path}"
+                                                     Grid.Column="1" Style="{DynamicResource MaterialDesignFlatTextBox}"
+                                                     FontFamily="{DynamicResource MaterialDesignFont}"
+                                                     Margin="10,0,0,0" Height="25" IsEnabled="True"
+                                                     Foreground="WhiteSmoke"  Background="Transparent" 
+                                                     BorderBrush="#FF3D6184" BorderThickness="1,1,1,1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Padding="0,0,0,3" CaretBrush="#FFCFF7F6"/>
+                                                <Button Grid.Column="2" Height="26" Margin="2,0,0, 0" Padding="0" 
+                                                    Style="{DynamicResource MaterialDesignFlatButton}"
+                                                    Command="{Binding ChooseFileBotCommand}"
+                                                    FontFamily="{DynamicResource MaterialDesignFont}"
+                                                    Content="..." FontSize="13"
+                                                    Foreground="#FFBACED7" Cursor="Hand" BorderThickness="1,1,1,1"
+                                            />
+                                            </Grid>
+
+                                            <Grid Height="60">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="50"/>
+                                                    <ColumnDefinition Width="121*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <TextBlock Text="Подпись" VerticalAlignment="Top"  Grid.Column="0"/>
+                                                <TextBox Text="{Binding BotCommand.Document.Caption}" 
+                                                         Grid.Column="1" Style="{DynamicResource MaterialDesignFlatTextBox}"
+                                                         FontFamily="{DynamicResource MaterialDesignFont}"
+                                                         Margin="10,0,0,0" Height="60"
+                                                         Foreground="WhiteSmoke"  Background="Transparent" 
+                                                         BorderBrush="#FF3D6184" BorderThickness="1,1,1,1" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" Padding="0,0,0,3" CaretBrush="#FFCFF7F6" TextWrapping="Wrap"/>
+                                            </Grid>
+
+                                        </TreeViewItem>
+
+                                        <TreeViewItem IsExpanded="False" Header="Отправить изображение" HorizontalContentAlignment="Stretch" Foreground="#FFA1B1D2" Padding="0,8,0,7" ScrollViewer.CanContentScroll="True" Margin="-1,0,0,0" BorderThickness="0,0,0,0">
+
+                                            <Grid Height="25">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="50"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="35"/>
+                                                </Grid.ColumnDefinitions>
+                                                <TextBlock Text="Файл" VerticalAlignment="Center"  Grid.Column="0"/>
+                                                <TextBox Text="{Binding BotCommand.Photo.Path}"
+                                                     Grid.Column="1" Style="{DynamicResource MaterialDesignFlatTextBox}"
+                                                     FontFamily="{DynamicResource MaterialDesignFont}"
+                                                     Margin="10,0,0,0" Height="25" IsEnabled="True"
+                                                     Foreground="WhiteSmoke"  Background="Transparent" 
+                                                     BorderBrush="#FF3D6184" BorderThickness="1,1,1,1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Padding="0,0,0,3" CaretBrush="#FFCFF7F6"/>
+                                                <Button Grid.Column="2" Height="26" Margin="2,0,0, 0" Padding="0" 
+                                                    Style="{DynamicResource MaterialDesignFlatButton}"
+                                                    Command="{Binding ChooseImageBotCommand}"
+                                                    FontFamily="{DynamicResource MaterialDesignFont}"
+                                                    Content="..." FontSize="13"
+                                                    Foreground="#FFBACED7" Cursor="Hand" BorderThickness="1,1,1,1"
+                                            />
+                                            </Grid>
+
+                                            <Grid Height="60">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="50"/>
+                                                    <ColumnDefinition Width="121*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <TextBlock Text="Подпись" VerticalAlignment="Top"  Grid.Column="0"/>
+                                                <TextBox Text="{Binding BotCommand.Photo.Caption}" 
+                                                         Grid.Column="1" Style="{DynamicResource MaterialDesignFlatTextBox}"
+                                                         FontFamily="{DynamicResource MaterialDesignFont}"
+                                                         Margin="10,0,0,0" Height="60"
+                                                         Foreground="WhiteSmoke"  Background="Transparent" 
+                                                         BorderBrush="#FF3D6184" BorderThickness="1,1,1,1" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" Padding="0,0,0,3" CaretBrush="#FFCFF7F6" TextWrapping="Wrap"/>
+                                            </Grid>
+
+                                        </TreeViewItem>
+
+                                    </TreeViewItem>
+                                </StackPanel>
+                            </StackPanel>
+                            <StackPanel Visibility="{Binding VisibilityBotText}">
+                                <StackPanel DataContext="{Binding BotTextProperty}">
+
+                                    <TreeViewItem IsExpanded="True" FontSize="12" Header="Основные" HorizontalContentAlignment="Stretch" Foreground="#FFA1B1D2" Padding="0,8,0,7" ScrollViewer.CanContentScroll="True" Margin="-1,0,0,0" BorderThickness="0,0,0,0">
+
+                                        <Grid Height="25">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="40"/>
+                                                <ColumnDefinition Width="121*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock Text="Имя /" VerticalAlignment="Center"  Grid.Column="0"/>
+                                            <TextBox Text="{Binding Name}" 
+                                                     Grid.Column="1" Style="{DynamicResource MaterialDesignFlatTextBox}"
+                                                     FontFamily="{DynamicResource MaterialDesignFont}"
+                                                     Margin="20,0,0,0"
+                                                     Foreground="WhiteSmoke"  Background="Transparent" 
+                                                     BorderBrush="#FF3D6184" BorderThickness="1,1,1,1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Padding="0,0,0,3" CaretBrush="#FFCFF7F6"/>
+                                        </Grid>
+
+
+
+                                    </TreeViewItem>
+
+                                </StackPanel>
+                            </StackPanel>
+                        </StackPanel>
+                    </ScrollViewer>
+                </GroupBox>
             </Grid>
 
-            <GridSplitter Grid.Column="2" Width="3" Background="DimGray" Margin="0,5,0,5" HorizontalAlignment="Left"/>
+            <GridSplitter Grid.Column="2" Width="5" Background="#FF1A2E41" Margin="0,5,0,5" HorizontalAlignment="Left">
+            </GridSplitter>
         </Grid>
 
     </DockPanel>

@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:ChatbotConstructorTelegram.View.ModalWindow"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
+        
         Title="Изменение токена"   Background="#FF17293A"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
