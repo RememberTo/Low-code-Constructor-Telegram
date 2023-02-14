@@ -19,7 +19,7 @@ namespace ChatbotConstructorTelegram.Resources {
     // с помощью такого средства, как ResGen или Visual Studio.
     // Чтобы добавить или удалить член, измените файл .ResX и снова запустите ResGen
     // с параметром /str или перестройте свой проект VS.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("RuntimeSystem.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class ResourceGlob {
@@ -62,7 +62,8 @@ namespace ChatbotConstructorTelegram.Resources {
         
         /// <summary>
         ///   Ищет локализованную строку, похожую на bot = Bot(token=TOKEN)
-        ///dp = Dispatcher(bot=bot).
+        ///dp = Dispatcher(bot=bot)
+        ///loop = asyncio.get_event_loop().
         /// </summary>
         internal static string CreateBot {
             get {
@@ -71,30 +72,37 @@ namespace ChatbotConstructorTelegram.Resources {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на from aiogram import Bot, Dispatcher, executor, types.
+        ///   Ищет локализованную строку, похожую на async def delay_exit():
+        ///    await loop.run_in_executor(None, input) 
+        ///    dp.stop_polling()
+        ///    await dp.wait_closed()
+        ///    await bot.close().
         /// </summary>
-        internal static string ImportAiogram {
+        internal static string ExitFunc {
             get {
-                return ResourceManager.GetString("ImportAiogram", resourceCulture);
+                return ResourceManager.GetString("ExitFunc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на import asyncio
+        ///
+        ///from aiogram import Bot, Dispatcher, executor, types.
+        /// </summary>
+        internal static string ImportLibrary {
+            get {
+                return ResourceManager.GetString("ImportLibrary", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Ищет локализованную строку, похожую на if __name__ == &apos;__main__&apos;:
-        ///    executor.start_polling(dp).
+        ///    loop.create_task(delay_exit())
+        ///    loop.run_until_complete(dp.start_polling()).
         /// </summary>
         internal static string StartPoll {
             get {
                 return ResourceManager.GetString("StartPoll", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Ищет локализованную строку, похожую на dfsdfsdf.
-        /// </summary>
-        internal static string String1 {
-            get {
-                return ResourceManager.GetString("String1", resourceCulture);
             }
         }
     }

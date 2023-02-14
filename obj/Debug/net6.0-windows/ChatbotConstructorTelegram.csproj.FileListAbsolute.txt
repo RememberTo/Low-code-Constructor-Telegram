@@ -52,3 +52,5 @@ C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotCons
 C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\obj\Debug\net6.0-windows\ChatbotConstructorTelegram_Content.g.cs
 C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\obj\Debug\net6.0-windows\View\ModalWindow\QuestionSaveProject.g.cs
 C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\obj\Debug\net6.0-windows\View\ModalWindow\QuestionSaveProject.baml
+C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\obj\Debug\net6.0-windows\View\Window\StartBotWindow.g.cs
+C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\obj\Debug\net6.0-windows\View\Window\StartBotWindow.baml

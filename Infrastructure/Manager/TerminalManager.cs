@@ -20,20 +20,26 @@ namespace ChatbotConstructorTelegram.Infrastructure.Manager
 
             process.Start();
 
-            using (var writer = process.StandardInput)
+            using var writer = process.StandardInput;
+            if (!writer.BaseStream.CanWrite) return;
+            foreach (var line in commands.Split('\n'))
             {
-                if (writer.BaseStream.CanWrite)
-                {
-                    foreach (var line in commands.Split('\n'))
-                    {
-                        writer.WriteLine(line);
-                        System.Threading.Thread.Sleep(3000);
-                    }
-                }
+                writer.WriteLine(line);
+                System.Threading.Thread.Sleep(3000);
+            }
+        }
 
+        public static StreamWriter ExecuteConsoleCommand(Process process, string commands)
+        {
+            var writer = process.StandardInput;
+            if (!writer.BaseStream.CanWrite) return null;
+            foreach (var line in commands.Split('\n'))
+            {
+                writer.WriteLine(line);
+               // RuntimeSystem.Threading.Thread.Sleep(3000);
             }
 
-            process.WaitForExit();
+            return writer;
         }
 
         public static void StartPythonFile(string path)
@@ -60,6 +66,7 @@ namespace ChatbotConstructorTelegram.Infrastructure.Manager
                     FileName = "cmd.exe",
                     RedirectStandardInput = true,
                     UseShellExecute = false
+
                 }
             };
             process.Start();

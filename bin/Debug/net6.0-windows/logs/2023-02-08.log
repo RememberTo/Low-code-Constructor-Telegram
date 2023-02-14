@@ -1,0 +1,114 @@
+2023-02-08 12:37:05.5130|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-02-08 12:37:09.9113|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-02-08 12:42:25.0393|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-02-08 12:42:27.5748|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-02-08 12:53:15.7866|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-02-08 12:53:20.1415|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-02-08 15:30:10.6668|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-02-08 15:30:14.1403|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-02-08 15:30:18.5344|INFO|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Начальные данные проинициализированны| 
+2023-02-08 15:30:18.5482|INFO|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Процесс запущен| 
+2023-02-08 15:30:18.6269|ERROR|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Ошибка, поптыка остановить пуллинг| 
+2023-02-08 15:30:18.6269|ERROR|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Пуллинг остановлен| 
+2023-02-08 15:31:06.4359|INFO|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Процесс запущен| 
+2023-02-08 15:32:38.5719|ERROR|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Ошибка, поптыка остановить пуллинг| 
+2023-02-08 15:32:38.5719|ERROR|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Пуллинг остановлен| 
+2023-02-08 15:37:51.8849|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-02-08 15:37:54.5381|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-02-08 15:37:55.8380|INFO|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Начальные данные проинициализированны| 
+2023-02-08 15:38:00.4452|INFO|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Процесс запущен| 
+2023-02-08 15:38:10.4833|ERROR|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Ошибка, поптыка остановить пуллинг| 
+2023-02-08 15:38:10.4833|ERROR|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Пуллинг остановлен| 
+2023-02-08 15:38:31.5019|INFO|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Процесс запущен| 
+2023-02-08 15:38:31.5506|ERROR|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Ошибка, поптыка остановить пуллинг| 
+2023-02-08 15:38:31.5506|ERROR|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Пуллинг остановлен| 
+2023-02-08 15:38:50.6432|INFO|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Процесс запущен| 
+2023-02-08 15:39:17.9960|ERROR|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Ошибка, поптыка остановить пуллинг| 
+2023-02-08 15:39:17.9960|ERROR|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Пуллинг остановлен| 
+2023-02-08 15:39:50.0282|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-02-08 15:39:52.1875|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-02-08 15:39:55.0159|INFO|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Начальные данные проинициализированны| 
+2023-02-08 15:40:01.3248|INFO|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Процесс запущен| 
+2023-02-08 15:40:01.4114|ERROR|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Ошибка, поптыка остановить пуллинг| 
+2023-02-08 15:40:01.4114|ERROR|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Пуллинг остановлен| 
+2023-02-08 15:40:36.6366|INFO|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Процесс запущен| 
+2023-02-08 15:41:41.5667|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-02-08 15:41:47.9231|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-02-08 15:41:48.8239|INFO|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Начальные данные проинициализированны| 
+2023-02-08 15:41:48.8239|INFO|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Процесс запущен| 
+2023-02-08 15:42:55.0783|ERROR|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Пуллинг остановлен| 
+2023-02-08 15:43:02.9256|INFO|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Процесс запущен| 
+2023-02-08 15:45:04.4472|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-02-08 15:45:08.7805|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-02-08 15:45:09.6770|INFO|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Начальные данные проинициализированны| 
+2023-02-08 15:45:09.6890|INFO|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Процесс запущен| 
+2023-02-08 15:45:09.7566|ERROR|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Ошибка, поптыка остановить пуллинг| 
+2023-02-08 15:45:09.7566|ERROR|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Пуллинг остановлен| 
+2023-02-08 15:45:20.6960|INFO|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Процесс запущен| 
+2023-02-08 15:45:20.7395|ERROR|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Ошибка, поптыка остановить пуллинг| 
+2023-02-08 15:45:20.7395|ERROR|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Пуллинг остановлен| 
+2023-02-08 15:45:25.2208|INFO|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Процесс запущен| 
+2023-02-08 15:45:25.2672|ERROR|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Ошибка, поптыка остановить пуллинг| 
+2023-02-08 15:45:25.2672|ERROR|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Пуллинг остановлен| 
+2023-02-08 15:45:27.9894|INFO|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Процесс запущен| 
+2023-02-08 15:45:28.0314|ERROR|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Ошибка, поптыка остановить пуллинг| 
+2023-02-08 15:45:28.0314|ERROR|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Пуллинг остановлен| 
+2023-02-08 15:45:28.5516|INFO|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Процесс запущен| 
+2023-02-08 15:45:28.5883|ERROR|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Ошибка, поптыка остановить пуллинг| 
+2023-02-08 15:45:28.5883|ERROR|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Пуллинг остановлен| 
+2023-02-08 15:45:28.8734|INFO|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Процесс запущен| 
+2023-02-08 15:45:28.9050|ERROR|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Ошибка, поптыка остановить пуллинг| 
+2023-02-08 15:45:28.9050|ERROR|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Пуллинг остановлен| 
+2023-02-08 15:46:01.3855|INFO|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Начальные данные проинициализированны| 
+2023-02-08 15:46:01.3855|INFO|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Процесс запущен| 
+2023-02-08 15:46:01.4598|ERROR|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Ошибка, поптыка остановить пуллинг| 
+2023-02-08 15:46:01.4598|ERROR|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Пуллинг остановлен| 
+2023-02-08 15:46:24.9419|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-02-08 15:46:27.7040|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-02-08 15:46:28.7834|INFO|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Начальные данные проинициализированны| 
+2023-02-08 15:46:28.7978|INFO|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Процесс запущен| 
+2023-02-08 15:46:40.7300|ERROR|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Пуллинг остановлен| 
+2023-02-08 15:46:42.3165|INFO|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Процесс запущен| 
+2023-02-08 15:46:55.3483|ERROR|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Пуллинг остановлен| 
+2023-02-08 15:50:03.7646|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-02-08 15:50:19.9544|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-02-08 15:50:22.4357|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-02-08 15:50:23.4325|INFO|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Начальные данные проинициализированны| 
+2023-02-08 15:50:23.4325|INFO|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Процесс запущен| 
+2023-02-08 15:50:46.2523|ERROR|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Пуллинг остановлен| 
+2023-02-08 15:51:05.3296|INFO|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Процесс запущен| 
+2023-02-08 15:51:15.5953|ERROR|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Пуллинг остановлен| 
+2023-02-08 20:41:10.1225|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-02-08 20:41:13.4126|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-02-08 20:41:22.8853|INFO|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Начальные данные проинициализированны| 
+2023-02-08 20:41:22.8999|INFO|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Процесс запущен| 
+2023-02-08 20:42:44.4070|ERROR|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Пуллинг остановлен| 
+2023-02-08 20:44:39.5012|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-02-08 20:44:41.5717|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-02-08 20:44:42.5292|INFO|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Начальные данные проинициализированны| 
+2023-02-08 20:44:42.5292|INFO|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Процесс запущен| 
+2023-02-08 20:49:30.4830|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-02-08 20:49:33.0564|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-02-08 20:49:35.2150|INFO|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Начальные данные проинициализированны| 
+2023-02-08 20:49:35.2150|INFO|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Процесс запущен| 
+2023-02-08 20:50:12.3091|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-02-08 20:50:14.5595|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-02-08 20:50:15.3260|INFO|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Начальные данные проинициализированны| 
+2023-02-08 20:50:15.3260|INFO|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Процесс запущен| 
+2023-02-08 20:51:02.3070|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-02-08 20:51:04.2315|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-02-08 20:51:05.1019|INFO|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Начальные данные проинициализированны| 
+2023-02-08 20:51:05.1116|INFO|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Процесс запущен| 
+2023-02-08 21:03:01.9144|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-02-08 21:03:04.5346|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-02-08 21:03:06.3157|INFO|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Начальные данные проинициализированны| 
+2023-02-08 21:03:06.3265|INFO|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Процесс запущен| 
+2023-02-08 21:05:35.2577|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-02-08 21:05:37.5668|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-02-08 21:05:38.9331|INFO|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Начальные данные проинициализированны| 
+2023-02-08 21:05:38.9488|INFO|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Процесс запущен| 
+2023-02-08 21:05:48.1755|ERROR|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Пуллинг остановлен| 
+2023-02-08 21:08:10.7168|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-02-08 21:08:17.8060|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-02-08 21:08:18.5623|INFO|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Начальные данные проинициализированны| 
+2023-02-08 21:08:18.5771|INFO|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Процесс запущен| 

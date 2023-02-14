@@ -17,7 +17,7 @@ namespace ChatbotConstructorTelegram.View.ModalWindow
         {
             if (TextBox_Token.Text != string.Empty)
             {
-                DataProject.Token = TextBox_Token.Text;
+                DataProject.Instance.Token = TextBox_Token.Text;
                 DialogResult = true;
             }
             else 

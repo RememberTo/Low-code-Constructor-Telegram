@@ -4,6 +4,7 @@ using System;
 using System.IO;
 using System.Xml.Serialization;
 using ChatbotConstructorTelegram.Model.Bot;
+using Microsoft.WindowsAPICodePack.Shell.PropertySystem;
 
 namespace ChatbotConstructorTelegram.Infrastructure.Manager
 {
@@ -15,11 +16,12 @@ namespace ChatbotConstructorTelegram.Infrastructure.Manager
         {
             var xmlSerializer = new XmlSerializer(typeof(WrapperDataBot));
 
-            if (wrapper.Path != null)
+            if (wrapper.DataProject.Path != null)
             {
-                await using var fs = new FileStream(wrapper.Path, FileMode.Truncate);
-                
+                await using var fs = new FileStream(wrapper.DataProject.Path, FileMode.Truncate);
+
                 xmlSerializer.Serialize(fs, wrapper);
+
                 Logger.Info("Проект сериализован");
             }
         }
@@ -47,4 +49,3 @@ namespace ChatbotConstructorTelegram.Infrastructure.Manager
         }
     }
 }
- 

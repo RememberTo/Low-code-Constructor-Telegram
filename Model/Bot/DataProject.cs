@@ -3,14 +3,29 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace ChatbotConstructorTelegram.Model.Bot
 {
-    internal static class DataProject
+    public class DataProject
     {
-        public static string? Name { get; set; }
-        public static string? Description { get; set; }
-        public static string? Token { get; set; }
-        public static string? PathDirectory { get; set; }
-        public static string? Path { get; set; }
-        public static bool IsReadyAiogram { get; set; }
-        public static bool IsReadyPython { get; set; }
+        public string? Name { get; set; }
+        public string? Description { get; set; }
+        public string? Token { get; set; }
+        public string? PathDirectory { get; set; }
+        public string? Path { get; set; }
+        public string? PathLastPythonFile { get; set; }
+        public string? PathEnvironment { get; set; } 
+
+        public bool IsReadyAiogram { get; set; }
+        public bool IsReadyPython { get; set; }
+
+        static DataProject _instance = new DataProject();
+
+        public static DataProject Instance
+        {
+            get => _instance;
+            set => _instance = value;
+        }
+        public DataProject()
+        {
+            
+        }
     }
 }

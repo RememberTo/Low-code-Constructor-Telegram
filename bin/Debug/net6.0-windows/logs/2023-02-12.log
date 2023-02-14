@@ -1,0 +1,5 @@
+2023-02-12 00:01:51.2856|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-02-12 00:02:34.9381|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-02-12 00:02:55.1574|INFO|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Начальные данные проинициализированны| 
+2023-02-12 00:02:55.1691|INFO|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Процесс запущен| 
+2023-02-12 00:04:40.2675|ERROR|ChatbotConstructorTelegram.ViewModels.StartBotWindowViewModel|Пуллинг остановлен| 

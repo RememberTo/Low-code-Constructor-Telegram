@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\App.xaml
-51495063095
+6-1721092235
 1103199032
-40-221391956
+51287735785
 211-204872370
-View\ModalWindow\ChangeTokenModalWindow.xaml;View\ModalWindow\QuestionSaveProject.xaml;View\Window\CreationProjectWindow.xaml;View\Window\MainWindow.xaml;View\Window\ProjectWindow.xaml;
+View\ModalWindow\ChangeTokenModalWindow.xaml;View\ModalWindow\QuestionSaveProject.xaml;View\Window\CreationProjectWindow.xaml;View\Window\MainWindow.xaml;View\Window\ProjectWindow.xaml;View\Window\StartBotWindow.xaml;
 
-True
+False
 

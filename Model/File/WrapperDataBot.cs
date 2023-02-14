@@ -9,25 +9,13 @@ namespace ChatbotConstructorTelegram.Model.File
     [Serializable]
     public class WrapperDataBot
     {
-        public string? Name { get; set; } 
-        public string? Description { get; set; } 
-        public string? Token { get; set; } 
-        public string? PathDirectory { get; set; } 
-        public string? Path { get; set; }
-        public bool IsReadyAiogram { get; set; } 
-        public bool IsReadyPython { get; set; } 
+        public DataProject DataProject { get; set; }
         public List<BotCommandProperty>? CommandProperties { get; set; }
         public List<BotTextProperty>? TextProperties { get; set; } 
 
-        public WrapperDataBot(ObservableCollection<IPropertyBot> properties)
+        public WrapperDataBot(ObservableCollection<IPropertyBot> properties) : base()
         {
-            Name = DataProject.Name;
-            Description = DataProject.Description;
-            Token = DataProject.Token;
-            PathDirectory = DataProject.PathDirectory;
-            Path = DataProject.Path;
-            IsReadyAiogram = DataProject.IsReadyAiogram;
-            IsReadyPython = DataProject.IsReadyPython;
+            DataProject = DataProject.Instance;
             TextProperties = new List<BotTextProperty>();
             CommandProperties = new List<BotCommandProperty>();
 
@@ -39,10 +27,9 @@ namespace ChatbotConstructorTelegram.Model.File
                     TextProperties.Add((BotTextProperty)botCommand);
             }
         }
-
         public WrapperDataBot()
         {
+            
         }
-
     }
 }

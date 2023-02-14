@@ -13,9 +13,11 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
+using System.Threading;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Threading;
+using System.Xml.Serialization;
 
 namespace ChatbotConstructorTelegram.ViewModels
 {
@@ -23,6 +25,8 @@ namespace ChatbotConstructorTelegram.ViewModels
     {
         private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
         private readonly DispatcherTimer _timer;
+
+        public bool IsCancel = false;
 
         #region Binding Params
 
@@ -34,7 +38,6 @@ namespace ChatbotConstructorTelegram.ViewModels
         }
 
         private string _status = "Готово";
-
         public string Status
         {
             get => _status;
@@ -132,7 +135,7 @@ namespace ChatbotConstructorTelegram.ViewModels
         private void OnCloseApplicationCommandExecuted(object p)
         {
             var dialogBox = new QuestionSaveProject();
-
+            IsCancel = false;
             var dialogResult = dialogBox.ShowDialog();
             switch (dialogResult)
             {
@@ -143,6 +146,7 @@ namespace ChatbotConstructorTelegram.ViewModels
                     Application.Current.Shutdown();
                     break;
                 case false:
+                    IsCancel = true;
                     break;
                 default:
                     Logger.Error("Не удалось сохранить файл");
@@ -152,6 +156,23 @@ namespace ChatbotConstructorTelegram.ViewModels
             }
 
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="p"></param>
+        /// <returns></returns>
+        ///
+        public ICommand? Test { get; private set; }
+        private void OnTestExecuted(object p)
+        {
+            
+
+        }
+        ///
+        ///
+        ///
+        ///
+        /// 
         private bool CanAlwaysFullCommandExecute(object p)
         {
             return true;
@@ -186,7 +207,7 @@ namespace ChatbotConstructorTelegram.ViewModels
         {
             FileProjectManager.CreateAndSaveFileSettingsAsync(new WrapperDataBot(BotCommands));
 
-            if (File.Exists(DataProject.PathDirectory + "\\" + DataProject.Name + ".xml"))
+            if (File.Exists(DataProject.Instance.PathDirectory + "\\" + DataProject.Instance.Name + ".xml"))
                 SetStatusStartTimer("Проект сохранен");
             else
                 SetStatusStartTimer("Не удалось сохранить файл");
@@ -205,9 +226,14 @@ namespace ChatbotConstructorTelegram.ViewModels
 
         private void OnCreateBotCommandExecuted(object p)
         {
-            var param = new ParametersBot();
-            var bot = new Bot(BotCommands, param);
-            bot.CreateBot();
+            var thread = new Thread(() =>
+                    {
+                        var bot = new Bot(BotCommands);
+                        bot.CreateBot();
+                    });
+            thread.Start();
+            var startBotWnd = new StartBotWindow();
+            startBotWnd.Show();
         }
 
         public ICommand? ChangeTokenCommand { get; private set; }
@@ -330,6 +356,8 @@ namespace ChatbotConstructorTelegram.ViewModels
             CreateProjectCommand = new LambdaCommand(OnCreateProjectCommandExecuted, CanAlwaysFullCommandExecute);
             SaveProjectCommand = new LambdaCommand(OnSaveProjectCommandExecuted, CanAlwaysFullCommandExecute);
             OpenProjectCommand = new LambdaCommand(OnOpenProjectCommandExecuted, CanAlwaysFullCommandExecute);
+
+            Test = new LambdaCommand(OnTestExecuted, CanAlwaysFullCommandExecute);
         }
 
 
@@ -363,12 +391,7 @@ namespace ChatbotConstructorTelegram.ViewModels
 
             if (wrapperDataBot != null)
             {
-                DataProject.PathDirectory = wrapperDataBot.PathDirectory;
-                DataProject.Name = wrapperDataBot.Name;
-                DataProject.Description = wrapperDataBot.Description;
-                DataProject.Token = wrapperDataBot.Token;
-                DataProject.IsReadyAiogram = wrapperDataBot.IsReadyAiogram;
-                DataProject.IsReadyPython = wrapperDataBot.IsReadyPython;
+                DataProject.Instance = wrapperDataBot.DataProject;
                 var list = new List<IPropertyBot>();
                 if (wrapperDataBot.CommandProperties != null) list.AddRange(wrapperDataBot.CommandProperties);
                 if (wrapperDataBot.TextProperties != null) list.AddRange(wrapperDataBot.TextProperties);

@@ -23,5 +23,11 @@ namespace ChatbotConstructorTelegram.View.Window
         {
             
         }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            ((ProjectWindowViewModel)this.DataContext).CloseApplicationCommand?.Execute(null);
+            e.Cancel = ((ProjectWindowViewModel)this.DataContext).IsCancel;
+        }
     }
 }

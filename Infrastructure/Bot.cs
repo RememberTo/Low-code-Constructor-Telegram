@@ -20,7 +20,7 @@ namespace ChatbotConstructorTelegram.Infrastructure
         private readonly List<BotTextProperty> _botTextList = new();
         private readonly StringBuilder _sbCode = new();
 
-        public Bot(ObservableCollection<IPropertyBot> botCommands, ParametersBot parametersBot)
+        public Bot(ObservableCollection<IPropertyBot> botCommands)
         {
             SplitCommand(botCommands);
         }
@@ -31,15 +31,13 @@ namespace ChatbotConstructorTelegram.Infrastructure
             {
                 CreateIncludeData();
                 GenerateFunctionAsync();
+                CreateExitAndPooling();
 
-                var path = ExplorerManager.LocationProject;
+                var pathPythonFile = DataProject.Instance.PathDirectory + "\\" + DataProject.Instance.Name + ".py";
 
-                path += "\\Test\\test.py";
-
-                _sbCode.AppendLine(ResourceGlob.StartPoll);
-                PythonHelper.WriteCodeFileAsync(path, _sbCode.ToString(), FileMode.Create);
-
-                TerminalManager.ExecuteConsoleCommand(TerminalCommands.TestStart);
+                PythonHelper.WriteCodeFileAsync(pathPythonFile, _sbCode.ToString(), FileMode.Create);
+                DataProject.Instance.PathLastPythonFile = pathPythonFile;
+                //TerminalManager.ExecuteConsoleCommand(TerminalCommands.TestStart);
             }
             catch (Exception e)
             {
@@ -60,9 +58,15 @@ namespace ChatbotConstructorTelegram.Infrastructure
 
         private void CreateIncludeData()
         {
-            _sbCode.AppendLine(ResourceGlob.ImportAiogram);
+            _sbCode.AppendLine(ResourceGlob.ImportLibrary);
             _sbCode.AppendLine(ResourceGlob.CreateBot.Replace("TOKEN", @"'5154449316:AAEE_JeL9Aha81J-jn4anTOkziuCgdM3Q5w'"/*DataProject.Token*/));
             _sbCode.AppendLine("\nprint('Bot start')\n\n");
+        }
+
+        private void CreateExitAndPooling()
+        {
+            _sbCode.AppendLine(ResourceGlob.ExitFunc);
+            _sbCode.AppendLine(ResourceGlob.StartPoll);
         }
 
         private void GenerateFunctionAsync()

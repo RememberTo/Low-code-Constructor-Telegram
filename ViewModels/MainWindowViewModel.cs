@@ -9,6 +9,7 @@ using System.IO;
 using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Input;
+using ChatbotConstructorTelegram.Model.WorkEnvironment;
 
 
 namespace ChatbotConstructorTelegram.ViewModels
@@ -63,7 +64,18 @@ namespace ChatbotConstructorTelegram.ViewModels
 
             #endregion
 
+            try
+            {
+                RuntimeSystemManager.CheckSystem();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+            
+
             RecordsProject = GetParseRecordsProjects();
+
 
             Log.Info("Главное окно успешно запущено");
         }
@@ -75,6 +87,8 @@ namespace ChatbotConstructorTelegram.ViewModels
             CloseApplicationCommand = new LambdaCommand(OnCloseApplicationCommandExecuted, OnCloseApplicationCommandExecute);
 
             #endregion
+
+
 
             RecordsProject = GetParseRecordsProjects();
 

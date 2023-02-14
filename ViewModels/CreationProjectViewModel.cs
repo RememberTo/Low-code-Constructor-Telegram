@@ -90,9 +90,9 @@ namespace ChatbotConstructorTelegram.ViewModels
             if (Directory.Exists(TextPath) && TextToken != string.Empty && TextNameProject != string.Empty)
             {
                 Log.Info("Введенные данные успешно сохранены");
-                DataProject.PathDirectory = TextPath;
-                DataProject.Name = TextNameProject;
-                DataProject.Token = TextToken;
+                DataProject.Instance.PathDirectory = TextPath;
+                DataProject.Instance.Name = TextNameProject;
+                DataProject.Instance.Token = TextToken;
                 WriteProjectInList();
                 CreateFileProjectAsync();
             }
@@ -119,13 +119,13 @@ namespace ChatbotConstructorTelegram.ViewModels
 
         private void WriteProjectInList()
         {
-            var note = "$" + DataProject.PathDirectory + "\\" + DataProject.Name + ".xml" + $"%{DateTime.Now}%";
+            var note = "$" + DataProject.Instance.PathDirectory + "\\" + DataProject.Instance.Name + ".xml" + $"%{DateTime.Now}%";
             FileProjectManager.AppendNoteInFileListProject(ExplorerManager.LocationListProjects, note);
         }
 
         private async void CreateFileProjectAsync()
         {
-            await using var fs = new FileStream(DataProject.PathDirectory + "\\" + DataProject.Name + ".xml", FileMode.Create);
+            await using var fs = new FileStream(DataProject.Instance.PathDirectory + "\\" + DataProject.Instance.Name + ".xml", FileMode.Create);
         }
 
         public CreationProjectViewModel()

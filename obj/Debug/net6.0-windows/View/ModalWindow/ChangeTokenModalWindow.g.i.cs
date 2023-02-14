@@ -64,8 +64,8 @@ namespace ChatbotConstructorTelegram.View.ModalWindow {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ChatbotConstructorTelegram;V1.0.0.0;component/view/modalwindow/changetokenmodalw" +
-                    "indow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ChatbotConstructorTelegram;component/view/modalwindow/changetokenmodalwindow.xam" +
+                    "l", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\View\ModalWindow\ChangeTokenModalWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

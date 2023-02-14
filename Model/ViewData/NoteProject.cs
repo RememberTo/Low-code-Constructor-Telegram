@@ -2,7 +2,7 @@
 using ChatbotConstructorTelegram.View.Window;
 using ChatbotConstructorTelegram.ViewModels.Base;
 using NLog;
-
+using System.IO;
 using System;
 using System.Windows;
 using System.Windows.Input;
@@ -29,9 +29,9 @@ namespace ChatbotConstructorTelegram.Model.ViewData
             try
             {
                 var path = (string)p;
-                DataProject.Name = ProjectName;
-                DataProject.Path = Path;
-                DataProject.PathDirectory = System.IO.Path.GetDirectoryName(Path);
+                DataProject.Instance.Name = ProjectName;
+                DataProject.Instance.Path = Path;
+                DataProject.Instance.PathDirectory = System.IO.Path.GetDirectoryName(Path);
                 var pWnd = new ProjectWindow(path);
                 pWnd.Show();
                 Logger.Info($"Проект {path} передан в окно конструктора");

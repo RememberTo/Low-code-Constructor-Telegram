@@ -81,8 +81,7 @@ namespace ChatbotConstructorTelegram.View.Window {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ChatbotConstructorTelegram;V1.0.0.0;component/view/window/creationprojectwindow." +
-                    "xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ChatbotConstructorTelegram;component/view/window/creationprojectwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\View\Window\CreationProjectWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

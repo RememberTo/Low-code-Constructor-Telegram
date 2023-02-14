@@ -117,18 +117,26 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ImportAiogram" xml:space="preserve">
-    <value>from aiogram import Bot, Dispatcher, executor, types</value>
+  <data name="ImportLibrary" xml:space="preserve">
+    <value>import asyncio
+
+from aiogram import Bot, Dispatcher, executor, types</value>
   </data>
   <data name="CreateBot" xml:space="preserve">
     <value>bot = Bot(token=TOKEN)
-dp = Dispatcher(bot=bot)</value>
+dp = Dispatcher(bot=bot)
+loop = asyncio.get_event_loop()</value>
   </data>
   <data name="StartPoll" xml:space="preserve">
     <value>if __name__ == '__main__':
-    executor.start_polling(dp)</value>
+    loop.create_task(delay_exit())
+    loop.run_until_complete(dp.start_polling())</value>
   </data>
-  <data name="String1" xml:space="preserve">
-    <value>dfsdfsdf</value>
+  <data name="ExitFunc" xml:space="preserve">
+    <value>async def delay_exit():
+    await loop.run_in_executor(None, input) 
+    dp.stop_polling()
+    await dp.wait_closed()
+    await bot.close()</value>
   </data>
 </root>

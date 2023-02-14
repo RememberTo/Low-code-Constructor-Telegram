@@ -1,0 +1,26 @@
+2023-02-03 20:06:43.6618|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-02-03 20:06:46.1274|INFO|ChatbotConstructorTelegram.View.Window.MainWindow|Создание проекта| 
+2023-02-03 20:07:22.6218|INFO|ChatbotConstructorTelegram.View.Window.CreationProjectWindow|Проверка пройдена запущен проект HelloWording путь C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest| 
+2023-02-03 20:07:22.7298|INFO|ChatbotConstructorTelegram.ViewModels.CreationProjectViewModel|Введенные данные успешно сохранены| 
+2023-02-03 20:09:01.0502|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-02-03 20:09:04.6621|ERROR|ChatbotConstructorTelegram.Infrastructure.Manager.FileProjectManager|System.InvalidOperationException: There is an error in XML document (0, 0).| System.InvalidOperationException: There is an error in XML document (0, 0).
+ ---> System.Xml.XmlException: Root element is missing.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderWrapperDataBot.Read10_WrapperDataBot()
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(Stream stream)
+   at ChatbotConstructorTelegram.Infrastructure.Manager.FileProjectManager.GetWrapperDataBot(String pathFile) in C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\Infrastructure\Manager\FileProjectManager.cs:line 34
+2023-02-03 20:09:04.8612|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-02-03 20:09:41.7585|INFO|ChatbotConstructorTelegram.Infrastructure.Manager.FileProjectManager|Проект сериализован| 
+2023-02-03 20:10:11.4814|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-02-03 20:10:13.0851|INFO|ChatbotConstructorTelegram.View.Window.MainWindow|Создание проекта| 
+2023-02-03 20:11:30.4417|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-02-03 20:11:32.4824|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-02-03 20:11:35.4576|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\Treeee.xml передан в окно конструктора| 
+2023-02-03 20:12:46.4273|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-02-03 20:12:48.2589|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-02-03 20:13:12.9357|INFO|ChatbotConstructorTelegram.Infrastructure.Manager.FileProjectManager|Проект сериализован| 
