@@ -15,7 +15,6 @@
   <ItemGroup>
     <Folder Include="Infrastructure\Python\" />
     <Folder Include="View\Page\" />
-    <Folder Include="View\UserControls\" />
   </ItemGroup>
 
   <ItemGroup>

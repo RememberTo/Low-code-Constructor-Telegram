@@ -8,6 +8,8 @@
         xmlns:fa5="http://schemas.fontawesome.com/icons/"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:fa="clr-namespace:FontAwesome.WPF;assembly=FontAwesome.WPF"
+        xmlns:viewData="clr-namespace:ChatbotConstructorTelegram.Model.ViewData"
+        xmlns:contols="clr-namespace:ChatbotConstructorTelegram.View.UserControls.Contols"
         mc:Ignorable="d"
         Title="{Binding Title}" 
 
@@ -20,7 +22,7 @@
         
         FontFamily="{DynamicResource MaterialDesignFont}" WindowStartupLocation="CenterScreen" 
         WindowState="Maximized" MinHeight="200" MinWidth="400" Height="600" Width="1000" Closing="Window_Closing">
-   
+
     <!--Убрать на релизе-->
     <Window.DataContext>
         <vm:ProjectWindowViewModel/>
@@ -209,6 +211,22 @@
                                            Margin="10,0,0,0" Foreground="#FFD3D6D7" Width="59"/>
                             </Grid>
                         </Button>
+                        <Button FontFamily="{DynamicResource MaterialDesignFont}" Cursor="Hand"
+                                Style="{DynamicResource MaterialDesignFlatButton}" HorizontalAlignment="Stretch"
+                                HorizontalContentAlignment="Stretch" Padding="0" MaxWidth="250"
+                                Command="{Binding AddInlineButtonCommand}"
+                                Margin="0,0,0,10" Height="50" Background="#FF1F4A73">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="40"/>
+                                    <ColumnDefinition Width="50*"/>
+                                </Grid.ColumnDefinitions>
+                                <fa:ImageAwesome Grid.Column="0" Height="30" Width="30" Icon="InfoCircle" Margin="10,0,0,0" Foreground="#FFD8ECED"/>
+                                <TextBlock Text="Inline" Grid.Column="1"
+                                           HorizontalAlignment="Left"  VerticalAlignment="Center"
+                                           Margin="10,0,0,0" Foreground="#FFD3D6D7" Width="71"/>
+                            </Grid>
+                        </Button>
                     </StackPanel>
                 </GroupBox>
 
@@ -225,7 +243,37 @@
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="0">
 
-                    <ListView ItemsSource="{Binding BotCommands}" 
+                    <contols:ExtendedTreeView Grid.Row="0" 
+                                              Foreground="#FFA1B1D2"
+                                              SelectedItem_="{Binding SelectedCommand, Mode=TwoWay}"
+                                              ItemsSource="{Binding BotCommands}" Background="#FF1B3044" BorderThickness="0,0,0,0">
+                        <TreeView.Resources>
+                            <HierarchicalDataTemplate DataType="{x:Type viewData:BotCommandProperty}"
+                                                      ItemsSource="{Binding Buttons}">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="21*"/>
+                                        <ColumnDefinition Width="10*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Text="(Команда) /" Foreground="WhiteSmoke" Grid.Column="0" ></TextBlock>
+                                    <TextBlock Text="{Binding Name}" Foreground="WhiteSmoke" Grid.Column="1" ></TextBlock>
+                                </Grid>
+                            </HierarchicalDataTemplate>
+                            <HierarchicalDataTemplate DataType="{x:Type viewData:InlineButtonProperty}" 
+                                                      ItemsSource="{Binding Buttons}">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="21*"/>
+                                        <ColumnDefinition Width="10*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Text="(Inline) Кнопка " Foreground="WhiteSmoke" Grid.Column="0" ></TextBlock>
+                                    <TextBlock Text="{Binding Name}" Foreground="WhiteSmoke" Grid.Column="1" ></TextBlock>
+                                </Grid>
+                            </HierarchicalDataTemplate>
+                        </TreeView.Resources>
+
+                    </contols:ExtendedTreeView>
+                    <!--<ListView ItemsSource="{Binding BotCommands}" 
                           SelectedItem="{Binding SelectedCommand}">
                         <ListView.ContextMenu>
                             <ContextMenu VerticalAlignment="Top"
@@ -264,19 +312,29 @@
                         </ListView.ContextMenu>
                         <ListView.ItemTemplate>
                             <DataTemplate>
-                                <Grid Width="100">
+                                <Grid MinWidth="300">
+                                    <TreeView MinWidth="300">
+                                        -->
+                    <!--<TextBlock Text="/" Grid.Column="0" Foreground="WhiteSmoke"/>
+                                        <TextBlock Text="{Binding Name}"
+                                                   Foreground="WhiteSmoke" Grid.Column="1"
+                                        />-->
+                    <!--
+                                        <TreeView.ItemTemplate>
+                                            <HierarchicalDataTemplate  ItemsSource="{Binding Children}">
+                                                <TextBlock Text="{Binding Name}"/>
+                                            </HierarchicalDataTemplate>
+                                        </TreeView.ItemTemplate>
+                                    </TreeView>
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="10"/>
                                         <ColumnDefinition Width="87*"/>
                                     </Grid.ColumnDefinitions>
-                                    <TextBlock Text="/" Grid.Column="0" Foreground="WhiteSmoke"/>
-                                    <TextBlock Text="{Binding Name}"
-                                           Foreground="WhiteSmoke" Grid.Column="1"
-                                />
+                                    
                                 </Grid>
                             </DataTemplate>
                         </ListView.ItemTemplate>
-                    </ListView>
+                    </ListView>-->
                 </Grid>
 
                 <GridSplitter Grid.ColumnSpan="2" Height="5" Background="#FF1A2E41" HorizontalAlignment="Stretch" VerticalAlignment="Top"  Grid.Row="1"></GridSplitter>
@@ -308,7 +366,7 @@
                                                 <ColumnDefinition Width="121*"/>
                                             </Grid.ColumnDefinitions>
                                             <TextBlock Text="Имя /" VerticalAlignment="Center"  Grid.Column="0"/>
-                                            <TextBox Text="{Binding BotCommand.Name}" 
+                                            <TextBox Text="{Binding SelectedCommand.Name}" 
                                                      Grid.Column="1" Style="{DynamicResource MaterialDesignFlatTextBox}"
                                                      FontFamily="{DynamicResource MaterialDesignFont}"
                                                      Margin="10,0,0,0"
@@ -322,7 +380,7 @@
                                                 <ColumnDefinition Width="121*"/>
                                             </Grid.ColumnDefinitions>
                                             <TextBlock Text="Текст" VerticalAlignment="Top"  Grid.Column="0"/>
-                                            <TextBox Text="{Binding BotCommand.Text}" 
+                                            <TextBox Text="{Binding SelectedCommand.Text}" 
                                                      Grid.Column="1" Style="{DynamicResource MaterialDesignFlatTextBox}"
                                                      FontFamily="{DynamicResource MaterialDesignFont}"
                                                      Margin="10,0,0,0" Height="60"
@@ -339,7 +397,7 @@
                                                     <ColumnDefinition Width="35"/>
                                                 </Grid.ColumnDefinitions>
                                                 <TextBlock Text="Файл" VerticalAlignment="Center"  Grid.Column="0"/>
-                                                <TextBox Text="{Binding BotCommand.Document.Path}"
+                                                <TextBox Text="{Binding SelectedCommand.Document.Path}"
                                                      Grid.Column="1" Style="{DynamicResource MaterialDesignFlatTextBox}"
                                                      FontFamily="{DynamicResource MaterialDesignFont}"
                                                      Margin="10,0,0,0" Height="25" IsEnabled="True"
@@ -350,8 +408,7 @@
                                                     Command="{Binding ChooseFileBotCommand}"
                                                     FontFamily="{DynamicResource MaterialDesignFont}"
                                                     Content="..." FontSize="13"
-                                                    Foreground="#FFBACED7" Cursor="Hand" BorderThickness="1,1,1,1"
-                                            />
+                                                    Foreground="#FFBACED7" Cursor="Hand" BorderThickness="1,1,1,1"/>
                                             </Grid>
 
                                             <Grid Height="60">
@@ -360,13 +417,14 @@
                                                     <ColumnDefinition Width="121*"/>
                                                 </Grid.ColumnDefinitions>
                                                 <TextBlock Text="Подпись" VerticalAlignment="Top"  Grid.Column="0"/>
-                                                <TextBox Text="{Binding BotCommand.Document.Caption}" 
+                                                <TextBox Text="{Binding SelectedCommand.Document.Caption}" 
                                                          Grid.Column="1" Style="{DynamicResource MaterialDesignFlatTextBox}"
                                                          FontFamily="{DynamicResource MaterialDesignFont}"
                                                          Margin="10,0,0,0" Height="60"
                                                          Foreground="WhiteSmoke"  Background="Transparent" 
                                                          BorderBrush="#FF3D6184" BorderThickness="1,1,1,1" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" Padding="0,0,0,3" CaretBrush="#FFCFF7F6" TextWrapping="Wrap"/>
                                             </Grid>
+
 
                                         </TreeViewItem>
 
@@ -379,7 +437,7 @@
                                                     <ColumnDefinition Width="35"/>
                                                 </Grid.ColumnDefinitions>
                                                 <TextBlock Text="Файл" VerticalAlignment="Center"  Grid.Column="0"/>
-                                                <TextBox Text="{Binding BotCommand.Photo.Path}"
+                                                <TextBox Text="{Binding SelectedCommand.Photo.Path}"
                                                      Grid.Column="1" Style="{DynamicResource MaterialDesignFlatTextBox}"
                                                      FontFamily="{DynamicResource MaterialDesignFont}"
                                                      Margin="10,0,0,0" Height="25" IsEnabled="True"
@@ -400,7 +458,7 @@
                                                     <ColumnDefinition Width="121*"/>
                                                 </Grid.ColumnDefinitions>
                                                 <TextBlock Text="Подпись" VerticalAlignment="Top"  Grid.Column="0"/>
-                                                <TextBox Text="{Binding BotCommand.Photo.Caption}" 
+                                                <TextBox Text="{Binding SelectedCommand.Photo.Caption}" 
                                                          Grid.Column="1" Style="{DynamicResource MaterialDesignFlatTextBox}"
                                                          FontFamily="{DynamicResource MaterialDesignFont}"
                                                          Margin="10,0,0,0" Height="60"
@@ -410,9 +468,41 @@
 
                                         </TreeViewItem>
 
+                                        <TreeViewItem IsExpanded="False"  Header="Inline кнопки" HorizontalContentAlignment="Stretch" Foreground="#FFA1B1D2" Padding="0,8,0,7" ScrollViewer.CanContentScroll="True" Margin="-1,0,0,0" BorderThickness="0,0,0,0">
+                                            <Grid Height="30">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="65*"/>
+                                                    <ColumnDefinition Width="77*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <TextBox Text="авыаыа" 
+                                                         Grid.Column="0" Style="{DynamicResource MaterialDesignFlatTextBox}"
+                                                         FontFamily="{DynamicResource MaterialDesignFont}"
+                                                         Margin="0,0,5,0"
+                                                         Foreground="WhiteSmoke"  Background="Transparent" 
+                                                         BorderBrush="#FF3D6184" BorderThickness="1,1,1,1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Padding="0,0,0,3" CaretBrush="#FFCFF7F6"/>
+                                                <Button  Grid.Column="1" Content="Добавить" 
+                                                        CommandParameter="{Binding SelectedCommand}"
+                                                        Command="{Binding AddInlineButtonCommand }"></Button>
+                                            </Grid>
+                                            <Grid Height="100">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="15"/>
+                                                    <RowDefinition Height="*"/>
+                                                </Grid.RowDefinitions>
+                                                <TextBlock Grid.Row="0" VerticalAlignment="Top" Text="Кнопки:" />
+                                                <ListView Grid.Row="1" ItemsSource="{Binding SelectedCommand.Buttons}" >
+                                                    <ListView.ItemTemplate>
+                                                        <DataTemplate>
+                                                            <TextBlock Text="{Binding Name}"></TextBlock>
+                                                        </DataTemplate>
+                                                    </ListView.ItemTemplate>
+                                                </ListView>
+                                            </Grid>
+                                        </TreeViewItem>
                                     </TreeViewItem>
                                 </StackPanel>
                             </StackPanel>
+
                             <StackPanel Visibility="{Binding VisibilityBotText}">
                                 <StackPanel DataContext="{Binding BotTextProperty}">
 

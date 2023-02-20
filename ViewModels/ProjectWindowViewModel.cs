@@ -17,7 +17,6 @@ using System.Threading;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Threading;
-using System.Xml.Serialization;
 
 namespace ChatbotConstructorTelegram.ViewModels
 {
@@ -82,33 +81,62 @@ namespace ChatbotConstructorTelegram.ViewModels
             set => Set(ref _botTextProperty, value);
         }
 
-        private IPropertyBot? _selectedCommand;
+        private InlineButtonProperty? _botInlineButtonProperty;
 
-        public IPropertyBot? SelectedCommand
+        public InlineButtonProperty? BotInlineButtonProperty
+        {
+            get => _botInlineButtonProperty;
+            set => Set(ref _botInlineButtonProperty, value);
+        }
+
+        private IPropertyBot _selectedCommand;
+
+        public IPropertyBot SelectedCommand
         {
             get => _selectedCommand;
             set
             {
-                if (value is BotTextProperty property)
-                {
-                    BotTextProperty = property;
-                    VisibilityBotCommand = Visibility.Collapsed;
-                    VisibilityBotText = Visibility.Visible;
-                }
-                else if (value is BotCommandProperty commandProperty)
-                {
-                    BotCommand = commandProperty;
+                ResetVisibleProperty(value);
+                Set(ref _selectedCommand, value);
+            }
+        }
+
+        private void ResetVisibleProperty(IPropertyBot propertyBot)
+        {
+            switch (propertyBot)
+            {
+                case BotCommandProperty botCommandProperty:
+                    BotCommand = botCommandProperty;
+                    BotTextProperty = null;
+                    BotInlineButtonProperty = null;
                     VisibilityBotCommand = Visibility.Visible;
                     VisibilityBotText = Visibility.Collapsed;
-                }
-                else
-                {
+                    break;
+                case BotTextProperty botTextProperty:
+                    BotTextProperty = botTextProperty;
+                    BotCommand = null;
+                    BotInlineButtonProperty = null;
+                    VisibilityBotText = Visibility.Visible;
+                    VisibilityBotCommand = Visibility.Collapsed;
+                    break;
+                case InlineButtonProperty inlineButtonProperty:
+                    //BotCommand = (BotCommand)inlineButtonProperty;
+                    BotTextProperty = null;
+                    BotInlineButtonProperty = null;
+                    VisibilityBotCommand = Visibility.Visible;
+                    VisibilityBotText = Visibility.Collapsed;
+                    //BotInlineButtonProperty = inlineButtonProperty;
+                    //BotTextProperty = null;
+                    //BotCommand = null;
+                    //VisibilityBotCommand = Visibility.Collapsed;
+                    //VisibilityBotText = Visibility.Collapsed;
+                    break;
+                default:
                     BotCommand = null;
                     BotTextProperty = null;
                     VisibilityBotCommand = Visibility.Collapsed;
                     VisibilityBotText = Visibility.Collapsed;
-                }
-                Set(ref _selectedCommand, value);
+                    break;
             }
         }
 
@@ -117,6 +145,13 @@ namespace ChatbotConstructorTelegram.ViewModels
         {
             get => _visibilityBotCommand;
             set => Set(ref _visibilityBotCommand, value);
+        }
+
+        private Visibility _visibilityInlineButton;
+        public Visibility VisibilityInlineButton
+        {
+            get => _visibilityInlineButton;
+            set => Set(ref _visibilityInlineButton, value);
         }
 
         Visibility _visibilityBotText;
@@ -165,7 +200,7 @@ namespace ChatbotConstructorTelegram.ViewModels
         public ICommand? Test { get; private set; }
         private void OnTestExecuted(object p)
         {
-            
+
 
         }
         ///
@@ -265,6 +300,26 @@ namespace ChatbotConstructorTelegram.ViewModels
             SetStatusStartTimer("Команда добавлена");
         }
 
+        public ICommand? AddInlineButtonCommand { get; private set; }
+
+        private void OnAddInlineButtonCommandExecuted(object p)
+        {
+            try
+            {
+                if (SelectedCommand == null || SelectedCommand is BotTextProperty)
+                    throw new InvalidOperationException();
+                SelectedCommand.Buttons.Add(new InlineButtonProperty() { Name = "Hello" });
+                SetStatusStartTimer("Inline кнопка добавлена");
+            }
+            catch (InvalidOperationException)
+            {
+                MessageBox.Show("Выберите команду или кнопку!");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
 
         public ICommand? AddTextCommand { get; private set; }
 
@@ -356,6 +411,7 @@ namespace ChatbotConstructorTelegram.ViewModels
             CreateProjectCommand = new LambdaCommand(OnCreateProjectCommandExecuted, CanAlwaysFullCommandExecute);
             SaveProjectCommand = new LambdaCommand(OnSaveProjectCommandExecuted, CanAlwaysFullCommandExecute);
             OpenProjectCommand = new LambdaCommand(OnOpenProjectCommandExecuted, CanAlwaysFullCommandExecute);
+            AddInlineButtonCommand = new LambdaCommand(OnAddInlineButtonCommandExecuted, CanAlwaysFullCommandExecute);
 
             Test = new LambdaCommand(OnTestExecuted, CanAlwaysFullCommandExecute);
         }

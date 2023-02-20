@@ -3,11 +3,18 @@ using System;
 
 namespace ChatbotConstructorTelegram.Infrastructure.Python;
 
-internal class InlineButton
+public class InlineButton
 {
+    public string Name { get; set; }
+    public InlineButton()
+    {
+
+    }
+
+
     public int Position
     {
-        get { return Position;}
+        get { return Position; }
         set { if (value < 0) throw new ArgumentException(); }
     }
 

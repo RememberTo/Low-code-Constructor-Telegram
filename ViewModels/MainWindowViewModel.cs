@@ -68,9 +68,9 @@ namespace ChatbotConstructorTelegram.ViewModels
             {
                 RuntimeSystemManager.CheckSystem();
             }
-            catch (Exception e)
+            catch (WorkEnvironmentException e)
             {
-                MessageBox.Show(e.Message);
+                MessageBox.Show(e.SystemState);
             }
             
 
