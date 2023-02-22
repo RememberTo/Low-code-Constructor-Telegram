@@ -270,6 +270,17 @@
                                     <TextBlock Text="{Binding Name}" Foreground="WhiteSmoke" Grid.Column="1" ></TextBlock>
                                 </Grid>
                             </HierarchicalDataTemplate>
+                            <HierarchicalDataTemplate DataType="{x:Type viewData:MarkupButtonProperty}" 
+                                                      ItemsSource="{Binding Buttons}">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="21*"/>
+                                        <ColumnDefinition Width="10*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Text="(Markup) Кнопка " Foreground="WhiteSmoke" Grid.Column="0" ></TextBlock>
+                                    <TextBlock Text="{Binding Name}" Foreground="WhiteSmoke" Grid.Column="1" ></TextBlock>
+                                </Grid>
+                            </HierarchicalDataTemplate>
                         </TreeView.Resources>
 
                     </contols:ExtendedTreeView>
@@ -474,7 +485,7 @@
                                                     <ColumnDefinition Width="65*"/>
                                                     <ColumnDefinition Width="77*"/>
                                                 </Grid.ColumnDefinitions>
-                                                <TextBox Text="авыаыа" 
+                                                <TextBox Text="{Binding NameInlineButton}" 
                                                          Grid.Column="0" Style="{DynamicResource MaterialDesignFlatTextBox}"
                                                          FontFamily="{DynamicResource MaterialDesignFont}"
                                                          Margin="0,0,5,0"
@@ -490,7 +501,39 @@
                                                     <RowDefinition Height="*"/>
                                                 </Grid.RowDefinitions>
                                                 <TextBlock Grid.Row="0" VerticalAlignment="Top" Text="Кнопки:" />
-                                                <ListView Grid.Row="1" ItemsSource="{Binding SelectedCommand.Buttons}" >
+                                                <ListView Grid.Row="1" ItemsSource="{Binding SelectedCommand.InlineButtons}" >
+                                                    <ListView.ItemTemplate>
+                                                        <DataTemplate>
+                                                            <TextBlock Text="{Binding Name}"></TextBlock>
+                                                        </DataTemplate>
+                                                    </ListView.ItemTemplate>
+                                                </ListView>
+                                            </Grid>
+                                        </TreeViewItem>
+                                        <TreeViewItem IsExpanded="False"  Header="Markup кнопки" HorizontalContentAlignment="Stretch" Foreground="#FFA1B1D2" Padding="0,8,0,7" ScrollViewer.CanContentScroll="True" Margin="-1,0,0,0" BorderThickness="0,0,0,0">
+                                            <Grid Height="30">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="65*"/>
+                                                    <ColumnDefinition Width="77*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <TextBox Text="{Binding NameMarkupButton}" 
+                                                         Grid.Column="0" Style="{DynamicResource MaterialDesignFlatTextBox}"
+                                                         FontFamily="{DynamicResource MaterialDesignFont}"
+                                                         Margin="0,0,5,0"
+                                                         Foreground="WhiteSmoke"  Background="Transparent" 
+                                                         BorderBrush="#FF3D6184" BorderThickness="1,1,1,1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Padding="0,0,0,3" CaretBrush="#FFCFF7F6"/>
+                                                <Button  Grid.Column="1" Content="Добавить" 
+                                                        CommandParameter="{Binding SelectedCommand}"
+                                                        Command="{Binding AddMarkupButtonCommand }"></Button>
+                                            </Grid>
+                                            <Grid Height="100">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="15"/>
+                                                    <RowDefinition Height="*"/>
+                                                </Grid.RowDefinitions>
+                                                <TextBlock Grid.Row="0" VerticalAlignment="Top" Text="Кнопки:" />
+                                                <ListView Grid.Row="1"
+                                                          ItemsSource="{Binding SelectedCommand.MarkupButtons}" >
                                                     <ListView.ItemTemplate>
                                                         <DataTemplate>
                                                             <TextBlock Text="{Binding Name}"></TextBlock>

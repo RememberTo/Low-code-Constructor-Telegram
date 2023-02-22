@@ -51,6 +51,22 @@ namespace ChatbotConstructorTelegram.ViewModels
             set => Set(ref _textChangeToken, value);
         }
 
+        private string _nameInlineButton = "Hello";
+
+        public string NameInlineButton
+        {
+            get => _nameInlineButton;
+            set => Set(ref _nameInlineButton, value);
+        }
+
+        private string _nameMarkupButton = "Hello";
+
+        public string NameMarkupButton
+        {
+            get => _nameMarkupButton;
+            set => Set(ref _nameMarkupButton, value);
+        }
+
         #region Document
 
 
@@ -89,6 +105,14 @@ namespace ChatbotConstructorTelegram.ViewModels
             set => Set(ref _botInlineButtonProperty, value);
         }
 
+        private MarkupButtonProperty? _botMarkupButtonProperty;
+
+        public MarkupButtonProperty? BotMarkupButtonProperty
+        {
+            get => _botMarkupButtonProperty;
+            set => Set(ref _botMarkupButtonProperty, value);
+        }
+
         private IPropertyBot _selectedCommand;
 
         public IPropertyBot SelectedCommand
@@ -119,17 +143,15 @@ namespace ChatbotConstructorTelegram.ViewModels
                     VisibilityBotText = Visibility.Visible;
                     VisibilityBotCommand = Visibility.Collapsed;
                     break;
-                case InlineButtonProperty inlineButtonProperty:
-                    //BotCommand = (BotCommand)inlineButtonProperty;
-                    BotTextProperty = null;
-                    BotInlineButtonProperty = null;
+                case InlineButtonProperty botinlineButtonProperty:
+                    BotInlineButtonProperty = botinlineButtonProperty;
                     VisibilityBotCommand = Visibility.Visible;
                     VisibilityBotText = Visibility.Collapsed;
-                    //BotInlineButtonProperty = inlineButtonProperty;
-                    //BotTextProperty = null;
-                    //BotCommand = null;
-                    //VisibilityBotCommand = Visibility.Collapsed;
-                    //VisibilityBotText = Visibility.Collapsed;
+                    break;
+                case MarkupButtonProperty botMarkupButtonProperty:
+                    BotMarkupButtonProperty = botMarkupButtonProperty;
+                    VisibilityBotCommand = Visibility.Visible;
+                    VisibilityBotText = Visibility.Collapsed;
                     break;
                 default:
                     BotCommand = null;
@@ -145,13 +167,6 @@ namespace ChatbotConstructorTelegram.ViewModels
         {
             get => _visibilityBotCommand;
             set => Set(ref _visibilityBotCommand, value);
-        }
-
-        private Visibility _visibilityInlineButton;
-        public Visibility VisibilityInlineButton
-        {
-            get => _visibilityInlineButton;
-            set => Set(ref _visibilityInlineButton, value);
         }
 
         Visibility _visibilityBotText;
@@ -308,7 +323,33 @@ namespace ChatbotConstructorTelegram.ViewModels
             {
                 if (SelectedCommand == null || SelectedCommand is BotTextProperty)
                     throw new InvalidOperationException();
-                SelectedCommand.Buttons.Add(new InlineButtonProperty() { Name = "Hello" });
+                var inlineButton = new InlineButtonProperty() { Name = NameInlineButton };
+                MessageBox.Show(inlineButton.UniqueId);
+                SelectedCommand.InlineButtons.Add(inlineButton);
+                Logger.Info($"Inline Кнопка {inlineButton.Name} ID {inlineButton.UniqueId} добавлена ");
+                SetStatusStartTimer("Inline кнопка добавлена");
+            }
+            catch (InvalidOperationException)
+            {
+                MessageBox.Show("Выберите команду или кнопку!");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
+
+        public ICommand? AddMarkupButtonCommand { get; private set; }
+
+        private void OnAddMarkupButtonCommandExecuted(object p)
+        {
+            try
+            {
+                if (SelectedCommand == null || SelectedCommand is BotTextProperty)
+                    throw new InvalidOperationException();
+                var markupButton = new MarkupButtonProperty() { Name = NameMarkupButton };
+                MessageBox.Show(markupButton.UniqueId);
+                SelectedCommand.MarkupButtons.Add(markupButton);
                 SetStatusStartTimer("Inline кнопка добавлена");
             }
             catch (InvalidOperationException)
@@ -411,7 +452,9 @@ namespace ChatbotConstructorTelegram.ViewModels
             CreateProjectCommand = new LambdaCommand(OnCreateProjectCommandExecuted, CanAlwaysFullCommandExecute);
             SaveProjectCommand = new LambdaCommand(OnSaveProjectCommandExecuted, CanAlwaysFullCommandExecute);
             OpenProjectCommand = new LambdaCommand(OnOpenProjectCommandExecuted, CanAlwaysFullCommandExecute);
+            // Для добавления кнопок можно изменить метод доступа так чтобы если в коллекции 6 элементов нельзя добавлять элементы
             AddInlineButtonCommand = new LambdaCommand(OnAddInlineButtonCommandExecuted, CanAlwaysFullCommandExecute);
+            AddMarkupButtonCommand = new LambdaCommand(OnAddMarkupButtonCommandExecuted, CanAlwaysFullCommandExecute);
 
             Test = new LambdaCommand(OnTestExecuted, CanAlwaysFullCommandExecute);
         }
