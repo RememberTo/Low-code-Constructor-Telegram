@@ -175,10 +175,10 @@ namespace ChatbotConstructorTelegram.ViewModels
             var line = cmdProcess.StandardOutput.ReadLine();
         }
 
-        private void StartPulling()//Что будет если не придет Bot start и будет бесконечные цикл
+        private void StartPulling()//Что будет если не придет BotCodeGenerator start и будет бесконечные цикл
         {
             var line = cmdProcess.StandardOutput.ReadLine();
-            while (line != null && !line.Contains("Bot start"))
+            while (line != null && !line.Contains("BotCodeGenerator start"))
             {
                 line = cmdProcess.StandardOutput.ReadLine();
             }

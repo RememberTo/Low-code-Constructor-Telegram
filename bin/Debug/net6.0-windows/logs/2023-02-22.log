@@ -538,3 +538,253 @@
 2023-02-22 14:26:51.8958|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Мой ID ID e1fcbac1-fafe-45c5-bca4-17f1e71d0917 добавлена | 
 2023-02-22 14:27:00.6386|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Мой Username ID 3af6357a-659c-4c1b-a242-ab5eaf694930 добавлена | 
 2023-02-22 14:27:54.8505|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Text ID a1b7091f-5832-4c6d-a1e4-d50600b37c8a добавлена | 
+2023-02-22 14:30:45.9522|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-02-22 14:30:45.9785|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-02-22 14:31:07.0593|ERROR|ChatbotConstructorTelegram.Infrastructure.Manager.FileProjectManager|System.InvalidOperationException: There was an error reflecting type 'ChatbotConstructorTelegram.Model.File.WrapperDataBot'.| System.InvalidOperationException: There was an error reflecting type 'ChatbotConstructorTelegram.Model.File.WrapperDataBot'.
+ ---> System.InvalidOperationException: There was an error reflecting property 'CommandProperties'.
+ ---> System.InvalidOperationException: There was an error reflecting type 'ChatbotConstructorTelegram.Model.ViewData.BotCommandProperty'.
+ ---> System.InvalidOperationException: Cannot serialize member 'ChatbotConstructorTelegram.Model.ViewData.BotCommandProperty.Buttons' of type 'System.Collections.ObjectModel.ObservableCollection`1[[ChatbotConstructorTelegram.Model.ViewData.IPropertyBot, ChatbotConstructorTelegram, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]', see inner exception for more details.
+ ---> System.NotSupportedException: Cannot serialize member ChatbotConstructorTelegram.Model.ViewData.BotCommandProperty.Buttons of type ChatbotConstructorTelegram.Model.ViewData.IPropertyBot because it is an interface.
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.StructModel.CheckSupportedMember(TypeDesc typeDesc, MemberInfo member, Type type)
+   at System.Xml.Serialization.StructModel.CheckSupportedMember(TypeDesc typeDesc, MemberInfo member, Type type)
+   at System.Xml.Serialization.StructModel.GetPropertyModel(PropertyInfo propertyInfo)
+   at System.Xml.Serialization.StructModel.GetFieldModel(MemberInfo memberInfo)
+   at System.Xml.Serialization.XmlReflectionImporter.InitializeStructMembers(StructMapping mapping, StructModel model, Boolean openModel, String typeName, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportStructLikeMapping(StructModel model, String ns, Boolean openModel, XmlAttributes a, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportTypeMapping(TypeModel model, String ns, ImportContext context, String dataType, XmlAttributes a, Boolean repeats, Boolean openModel, RecursionLimiter limiter)
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlReflectionImporter.ImportTypeMapping(TypeModel model, String ns, ImportContext context, String dataType, XmlAttributes a, Boolean repeats, Boolean openModel, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.CreateArrayElementsFromAttributes(ArrayMapping arrayMapping, XmlArrayItemAttributes attributes, Type arrayElementType, String arrayElementNs, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportArrayLikeMapping(ArrayModel model, String ns, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportAccessorMapping(MemberMapping accessor, FieldModel model, XmlAttributes a, String ns, Type choiceIdentifierType, Boolean rpc, Boolean openModel, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportFieldMapping(StructModel parent, FieldModel model, XmlAttributes a, String ns, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.InitializeStructMembers(StructMapping mapping, StructModel model, Boolean openModel, String typeName, RecursionLimiter limiter)
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlReflectionImporter.InitializeStructMembers(StructMapping mapping, StructModel model, Boolean openModel, String typeName, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportStructLikeMapping(StructModel model, String ns, Boolean openModel, XmlAttributes a, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportTypeMapping(TypeModel model, String ns, ImportContext context, String dataType, XmlAttributes a, Boolean repeats, Boolean openModel, RecursionLimiter limiter)
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlReflectionImporter.ImportTypeMapping(TypeModel model, String ns, ImportContext context, String dataType, XmlAttributes a, Boolean repeats, Boolean openModel, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportElement(TypeModel model, XmlRootAttribute root, String defaultNamespace, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportTypeMapping(Type type, XmlRootAttribute root, String defaultNamespace)
+   at System.Xml.Serialization.XmlSerializer..ctor(Type type, String defaultNamespace)
+   at System.Xml.Serialization.XmlSerializer..ctor(Type type)
+   at ChatbotConstructorTelegram.Infrastructure.Manager.FileProjectManager.GetWrapperDataBot(String pathFile) in C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\Infrastructure\Manager\FileProjectManager.cs:line 33
+2023-02-22 14:31:07.2403|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-02-22 14:31:11.5658|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID e41d40fb-e7e0-43fd-af05-d518483a0ef9 добавлена | 
+2023-02-22 14:31:13.0367|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID 4be1b6f1-6359-4b88-a120-2f10003d6a3f добавлена | 
+2023-02-22 14:31:21.0035|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID 260279ad-478b-40ef-b17d-b48e8485b90a добавлена | 
+2023-02-22 14:35:03.0738|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-02-22 14:35:03.1052|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-02-22 14:35:04.8936|ERROR|ChatbotConstructorTelegram.Infrastructure.Manager.FileProjectManager|System.InvalidOperationException: There was an error reflecting type 'ChatbotConstructorTelegram.Model.File.WrapperDataBot'.| System.InvalidOperationException: There was an error reflecting type 'ChatbotConstructorTelegram.Model.File.WrapperDataBot'.
+ ---> System.InvalidOperationException: There was an error reflecting property 'CommandProperties'.
+ ---> System.InvalidOperationException: There was an error reflecting type 'ChatbotConstructorTelegram.Model.ViewData.BotCommandProperty'.
+ ---> System.InvalidOperationException: Cannot serialize member 'ChatbotConstructorTelegram.Model.ViewData.BotCommandProperty.Buttons' of type 'System.Collections.ObjectModel.ObservableCollection`1[[ChatbotConstructorTelegram.Model.ViewData.IPropertyBot, ChatbotConstructorTelegram, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]', see inner exception for more details.
+ ---> System.NotSupportedException: Cannot serialize member ChatbotConstructorTelegram.Model.ViewData.BotCommandProperty.Buttons of type ChatbotConstructorTelegram.Model.ViewData.IPropertyBot because it is an interface.
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.StructModel.CheckSupportedMember(TypeDesc typeDesc, MemberInfo member, Type type)
+   at System.Xml.Serialization.StructModel.CheckSupportedMember(TypeDesc typeDesc, MemberInfo member, Type type)
+   at System.Xml.Serialization.StructModel.GetPropertyModel(PropertyInfo propertyInfo)
+   at System.Xml.Serialization.StructModel.GetFieldModel(MemberInfo memberInfo)
+   at System.Xml.Serialization.XmlReflectionImporter.InitializeStructMembers(StructMapping mapping, StructModel model, Boolean openModel, String typeName, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportStructLikeMapping(StructModel model, String ns, Boolean openModel, XmlAttributes a, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportTypeMapping(TypeModel model, String ns, ImportContext context, String dataType, XmlAttributes a, Boolean repeats, Boolean openModel, RecursionLimiter limiter)
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlReflectionImporter.ImportTypeMapping(TypeModel model, String ns, ImportContext context, String dataType, XmlAttributes a, Boolean repeats, Boolean openModel, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.CreateArrayElementsFromAttributes(ArrayMapping arrayMapping, XmlArrayItemAttributes attributes, Type arrayElementType, String arrayElementNs, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportArrayLikeMapping(ArrayModel model, String ns, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportAccessorMapping(MemberMapping accessor, FieldModel model, XmlAttributes a, String ns, Type choiceIdentifierType, Boolean rpc, Boolean openModel, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportFieldMapping(StructModel parent, FieldModel model, XmlAttributes a, String ns, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.InitializeStructMembers(StructMapping mapping, StructModel model, Boolean openModel, String typeName, RecursionLimiter limiter)
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlReflectionImporter.InitializeStructMembers(StructMapping mapping, StructModel model, Boolean openModel, String typeName, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportStructLikeMapping(StructModel model, String ns, Boolean openModel, XmlAttributes a, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportTypeMapping(TypeModel model, String ns, ImportContext context, String dataType, XmlAttributes a, Boolean repeats, Boolean openModel, RecursionLimiter limiter)
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlReflectionImporter.ImportTypeMapping(TypeModel model, String ns, ImportContext context, String dataType, XmlAttributes a, Boolean repeats, Boolean openModel, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportElement(TypeModel model, XmlRootAttribute root, String defaultNamespace, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportTypeMapping(Type type, XmlRootAttribute root, String defaultNamespace)
+   at System.Xml.Serialization.XmlSerializer..ctor(Type type, String defaultNamespace)
+   at System.Xml.Serialization.XmlSerializer..ctor(Type type)
+   at ChatbotConstructorTelegram.Infrastructure.Manager.FileProjectManager.GetWrapperDataBot(String pathFile) in C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\Infrastructure\Manager\FileProjectManager.cs:line 33
+2023-02-22 14:35:05.1785|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-02-22 14:35:09.3563|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID 7f92e657-21b6-4756-ac04-e710c055800c добавлена | 
+2023-02-22 14:35:16.4175|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID 16a8a65a-a41f-4acd-875c-c02b9f0f14eb добавлена | 
+2023-02-22 14:38:35.6202|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-02-22 14:38:35.6440|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-02-22 14:38:37.0849|ERROR|ChatbotConstructorTelegram.Infrastructure.Manager.FileProjectManager|System.InvalidOperationException: There was an error reflecting type 'ChatbotConstructorTelegram.Model.File.WrapperDataBot'.| System.InvalidOperationException: There was an error reflecting type 'ChatbotConstructorTelegram.Model.File.WrapperDataBot'.
+ ---> System.InvalidOperationException: There was an error reflecting property 'CommandProperties'.
+ ---> System.InvalidOperationException: There was an error reflecting type 'ChatbotConstructorTelegram.Model.ViewData.BotCommandProperty'.
+ ---> System.InvalidOperationException: There was an error reflecting property 'InlineButtons'.
+ ---> System.InvalidOperationException: There was an error reflecting type 'ChatbotConstructorTelegram.Model.ViewData.InlineButtonProperty'.
+ ---> System.InvalidOperationException: There was an error reflecting property 'Name'.
+ ---> System.InvalidOperationException: The XML element 'Name' from namespace '' is already present in the current scope. Use XML attributes to specify another XML name or namespace for the element.
+   at System.Xml.Serialization.XmlReflectionImporter.AddUniqueAccessor(INameScope scope, Accessor accessor)
+   at System.Xml.Serialization.XmlReflectionImporter.AddUniqueAccessor(MemberMapping member, INameScope elements, INameScope attributes, Boolean isSequence)
+   at System.Xml.Serialization.XmlReflectionImporter.InitializeStructMembers(StructMapping mapping, StructModel model, Boolean openModel, String typeName, RecursionLimiter limiter)
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlReflectionImporter.InitializeStructMembers(StructMapping mapping, StructModel model, Boolean openModel, String typeName, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportStructLikeMapping(StructModel model, String ns, Boolean openModel, XmlAttributes a, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportTypeMapping(TypeModel model, String ns, ImportContext context, String dataType, XmlAttributes a, Boolean repeats, Boolean openModel, RecursionLimiter limiter)
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlReflectionImporter.ImportTypeMapping(TypeModel model, String ns, ImportContext context, String dataType, XmlAttributes a, Boolean repeats, Boolean openModel, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.CreateArrayElementsFromAttributes(ArrayMapping arrayMapping, XmlArrayItemAttributes attributes, Type arrayElementType, String arrayElementNs, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportArrayLikeMapping(ArrayModel model, String ns, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportAccessorMapping(MemberMapping accessor, FieldModel model, XmlAttributes a, String ns, Type choiceIdentifierType, Boolean rpc, Boolean openModel, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportFieldMapping(StructModel parent, FieldModel model, XmlAttributes a, String ns, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.InitializeStructMembers(StructMapping mapping, StructModel model, Boolean openModel, String typeName, RecursionLimiter limiter)
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlReflectionImporter.InitializeStructMembers(StructMapping mapping, StructModel model, Boolean openModel, String typeName, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportStructLikeMapping(StructModel model, String ns, Boolean openModel, XmlAttributes a, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.InitializeStructMembers(StructMapping mapping, StructModel model, Boolean openModel, String typeName, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportStructLikeMapping(StructModel model, String ns, Boolean openModel, XmlAttributes a, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportTypeMapping(TypeModel model, String ns, ImportContext context, String dataType, XmlAttributes a, Boolean repeats, Boolean openModel, RecursionLimiter limiter)
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlReflectionImporter.ImportTypeMapping(TypeModel model, String ns, ImportContext context, String dataType, XmlAttributes a, Boolean repeats, Boolean openModel, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.CreateArrayElementsFromAttributes(ArrayMapping arrayMapping, XmlArrayItemAttributes attributes, Type arrayElementType, String arrayElementNs, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportArrayLikeMapping(ArrayModel model, String ns, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportAccessorMapping(MemberMapping accessor, FieldModel model, XmlAttributes a, String ns, Type choiceIdentifierType, Boolean rpc, Boolean openModel, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportFieldMapping(StructModel parent, FieldModel model, XmlAttributes a, String ns, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.InitializeStructMembers(StructMapping mapping, StructModel model, Boolean openModel, String typeName, RecursionLimiter limiter)
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlReflectionImporter.InitializeStructMembers(StructMapping mapping, StructModel model, Boolean openModel, String typeName, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportStructLikeMapping(StructModel model, String ns, Boolean openModel, XmlAttributes a, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportTypeMapping(TypeModel model, String ns, ImportContext context, String dataType, XmlAttributes a, Boolean repeats, Boolean openModel, RecursionLimiter limiter)
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlReflectionImporter.ImportTypeMapping(TypeModel model, String ns, ImportContext context, String dataType, XmlAttributes a, Boolean repeats, Boolean openModel, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportElement(TypeModel model, XmlRootAttribute root, String defaultNamespace, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportTypeMapping(Type type, XmlRootAttribute root, String defaultNamespace)
+   at System.Xml.Serialization.XmlSerializer..ctor(Type type, String defaultNamespace)
+   at System.Xml.Serialization.XmlSerializer..ctor(Type type)
+   at ChatbotConstructorTelegram.Infrastructure.Manager.FileProjectManager.GetWrapperDataBot(String pathFile) in C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\Infrastructure\Manager\FileProjectManager.cs:line 33
+2023-02-22 14:38:37.2864|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-02-22 14:39:15.5234|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-02-22 14:39:15.5469|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-02-22 14:40:16.7527|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-02-22 14:40:16.7763|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-02-22 14:40:18.4359|ERROR|ChatbotConstructorTelegram.Infrastructure.Manager.FileProjectManager|System.InvalidOperationException: There was an error reflecting type 'ChatbotConstructorTelegram.Model.File.WrapperDataBot'.| System.InvalidOperationException: There was an error reflecting type 'ChatbotConstructorTelegram.Model.File.WrapperDataBot'.
+ ---> System.InvalidOperationException: There was an error reflecting property 'CommandProperties'.
+ ---> System.InvalidOperationException: There was an error reflecting type 'ChatbotConstructorTelegram.Model.ViewData.BotCommandProperty'.
+ ---> System.InvalidOperationException: There was an error reflecting property 'InlineButtons'.
+ ---> System.InvalidOperationException: There was an error reflecting type 'ChatbotConstructorTelegram.Model.ViewData.InlineButtonProperty'.
+ ---> System.InvalidOperationException: There was an error reflecting property 'Name'.
+ ---> System.InvalidOperationException: The XML element 'Name' from namespace '' is already present in the current scope. Use XML attributes to specify another XML name or namespace for the element.
+   at System.Xml.Serialization.XmlReflectionImporter.AddUniqueAccessor(INameScope scope, Accessor accessor)
+   at System.Xml.Serialization.XmlReflectionImporter.AddUniqueAccessor(MemberMapping member, INameScope elements, INameScope attributes, Boolean isSequence)
+   at System.Xml.Serialization.XmlReflectionImporter.InitializeStructMembers(StructMapping mapping, StructModel model, Boolean openModel, String typeName, RecursionLimiter limiter)
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlReflectionImporter.InitializeStructMembers(StructMapping mapping, StructModel model, Boolean openModel, String typeName, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportStructLikeMapping(StructModel model, String ns, Boolean openModel, XmlAttributes a, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportTypeMapping(TypeModel model, String ns, ImportContext context, String dataType, XmlAttributes a, Boolean repeats, Boolean openModel, RecursionLimiter limiter)
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlReflectionImporter.ImportTypeMapping(TypeModel model, String ns, ImportContext context, String dataType, XmlAttributes a, Boolean repeats, Boolean openModel, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.CreateArrayElementsFromAttributes(ArrayMapping arrayMapping, XmlArrayItemAttributes attributes, Type arrayElementType, String arrayElementNs, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportArrayLikeMapping(ArrayModel model, String ns, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportAccessorMapping(MemberMapping accessor, FieldModel model, XmlAttributes a, String ns, Type choiceIdentifierType, Boolean rpc, Boolean openModel, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportFieldMapping(StructModel parent, FieldModel model, XmlAttributes a, String ns, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.InitializeStructMembers(StructMapping mapping, StructModel model, Boolean openModel, String typeName, RecursionLimiter limiter)
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlReflectionImporter.InitializeStructMembers(StructMapping mapping, StructModel model, Boolean openModel, String typeName, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportStructLikeMapping(StructModel model, String ns, Boolean openModel, XmlAttributes a, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.InitializeStructMembers(StructMapping mapping, StructModel model, Boolean openModel, String typeName, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportStructLikeMapping(StructModel model, String ns, Boolean openModel, XmlAttributes a, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportTypeMapping(TypeModel model, String ns, ImportContext context, String dataType, XmlAttributes a, Boolean repeats, Boolean openModel, RecursionLimiter limiter)
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlReflectionImporter.ImportTypeMapping(TypeModel model, String ns, ImportContext context, String dataType, XmlAttributes a, Boolean repeats, Boolean openModel, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.CreateArrayElementsFromAttributes(ArrayMapping arrayMapping, XmlArrayItemAttributes attributes, Type arrayElementType, String arrayElementNs, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportArrayLikeMapping(ArrayModel model, String ns, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportAccessorMapping(MemberMapping accessor, FieldModel model, XmlAttributes a, String ns, Type choiceIdentifierType, Boolean rpc, Boolean openModel, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportFieldMapping(StructModel parent, FieldModel model, XmlAttributes a, String ns, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.InitializeStructMembers(StructMapping mapping, StructModel model, Boolean openModel, String typeName, RecursionLimiter limiter)
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlReflectionImporter.InitializeStructMembers(StructMapping mapping, StructModel model, Boolean openModel, String typeName, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportStructLikeMapping(StructModel model, String ns, Boolean openModel, XmlAttributes a, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportTypeMapping(TypeModel model, String ns, ImportContext context, String dataType, XmlAttributes a, Boolean repeats, Boolean openModel, RecursionLimiter limiter)
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlReflectionImporter.ImportTypeMapping(TypeModel model, String ns, ImportContext context, String dataType, XmlAttributes a, Boolean repeats, Boolean openModel, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportElement(TypeModel model, XmlRootAttribute root, String defaultNamespace, RecursionLimiter limiter)
+   at System.Xml.Serialization.XmlReflectionImporter.ImportTypeMapping(Type type, XmlRootAttribute root, String defaultNamespace)
+   at System.Xml.Serialization.XmlSerializer..ctor(Type type, String defaultNamespace)
+   at System.Xml.Serialization.XmlSerializer..ctor(Type type)
+   at ChatbotConstructorTelegram.Infrastructure.Manager.FileProjectManager.GetWrapperDataBot(String pathFile) in C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\Infrastructure\Manager\FileProjectManager.cs:line 33
+2023-02-22 14:40:18.6693|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-02-22 14:57:31.6209|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-02-22 14:57:31.6505|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-02-22 14:57:33.7555|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-02-22 15:01:01.7872|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-02-22 15:01:01.8137|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-02-22 15:01:03.7149|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-02-22 15:04:37.6875|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-02-22 15:04:37.7158|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-02-22 15:04:39.5690|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-02-22 15:05:49.0767|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-02-22 15:05:49.1042|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-02-22 15:05:50.8050|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-02-22 16:01:10.9915|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-02-22 16:01:11.0298|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-02-22 16:01:13.3150|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-02-22 16:05:22.4701|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-02-22 16:05:22.4978|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-02-22 16:05:24.3263|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-02-22 16:08:21.4899|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-02-22 16:08:21.5289|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-02-22 16:08:23.3459|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-02-22 16:13:52.9486|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-02-22 16:13:52.9768|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-02-22 16:13:54.8652|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-02-22 16:14:05.4050|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID 950225ee-45ef-4edb-9d7c-ed3cdc0787c3 добавлена | 
+2023-02-22 16:18:51.3521|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-02-22 16:18:51.3875|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-02-22 16:18:53.3569|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-02-22 16:18:55.8813|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID c24b73da-6311-474b-86bb-c65ce68e63d4 добавлена | 
+2023-02-22 16:18:57.0869|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID 3da20ca3-44dd-434c-ab9e-ab7f50e19ad8 добавлена | 
+2023-02-22 16:51:41.7032|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-02-22 16:51:41.7319|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-02-22 16:51:43.7511|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-02-22 16:51:46.9060|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID 0834cefb-90b9-4805-a556-4abd22da26bf добавлена | 
+2023-02-22 16:52:03.3456|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID a86c6545-b5a7-4906-ab97-656a970843eb добавлена | 
+2023-02-22 16:52:15.5577|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка dasdasda ID f8deaf36-3f4c-4c1f-9fb9-27b040782cc5 добавлена | 
+2023-02-22 16:52:18.4744|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка dasdasda ID 72691105-0a36-42d1-a565-8d486a77e0fa добавлена | 
+2023-02-22 16:52:18.6199|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка dasdasda ID b41c9905-2995-43bc-b5b7-f84754a46acd добавлена | 
+2023-02-22 16:54:38.3817|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-02-22 16:54:38.4066|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-02-22 16:56:09.9570|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-02-22 16:56:09.9888|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-02-22 16:56:11.8529|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-02-22 16:56:17.3582|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка 111 ID 8f6a11b2-1c5e-497e-a0ce-10b0bc92cd9c добавлена | 
+2023-02-22 16:56:28.8193|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка 111 ID 01e37e4e-b673-4d58-9eb7-a36c4fe47a3d добавлена | 
+2023-02-22 16:56:30.4677|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка 111 ID 7bd33b59-0a2c-4d32-827e-77e1af817b6b добавлена | 
+2023-02-22 17:21:22.2352|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-02-22 17:21:22.2638|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-02-22 17:21:24.0650|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-02-22 17:41:39.2336|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-02-22 17:41:39.2667|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-02-22 17:41:41.5229|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-02-22 17:41:50.4084|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID db1ae462-372f-4d99-9d72-c373c7a53301 добавлена | 
+2023-02-22 17:42:28.9029|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-02-22 17:42:28.9372|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-02-22 17:42:30.9358|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-02-22 17:43:05.5354|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-02-22 17:43:05.5628|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-02-22 17:43:07.4396|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-02-22 17:43:11.9858|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID 2f80948d-b029-41a7-be42-1ca7b0fe7234 добавлена | 
+2023-02-22 17:43:12.6858|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID 5bedf5f4-46e7-447b-9531-f8d4b67beba0 добавлена | 
+2023-02-22 17:43:38.0328|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-02-22 17:43:38.0587|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-02-22 17:44:23.6227|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-02-22 17:44:23.6475|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-02-22 17:44:25.6623|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-02-22 17:44:34.2282|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID 9b03bb70-1979-4c78-8082-42cedf2bd2b8 добавлена | 
+2023-02-22 17:44:43.6298|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID 3e42fbde-7aa8-4579-9e07-5f0ddf769935 добавлена | 
+2023-02-22 17:44:44.9680|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID fcb76fb8-a051-4bd7-9552-f7708978357d добавлена | 
+2023-02-22 17:44:45.1011|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID 25afc91b-96ee-477b-98cb-7ee97df9e50c добавлена | 
+2023-02-22 17:44:51.9090|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID f889f3e1-8f65-49b1-9b51-815d52941b04 добавлена | 
+2023-02-22 17:47:22.0390|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-02-22 17:47:22.0694|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-02-22 17:47:39.3095|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-02-22 17:47:39.3418|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-02-22 17:47:41.3475|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-02-22 17:47:44.2613|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID 7a8e7410-f3f3-4655-b30b-942e946e2838 добавлена | 
+2023-02-22 17:47:48.7283|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID ad756140-eab2-428a-8c81-d4a1d30ae537 добавлена | 
+2023-02-22 17:47:49.1773|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID 1d0a398b-f6dd-4a19-b69e-17ca39218bc1 добавлена | 

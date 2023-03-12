@@ -3,6 +3,8 @@ using ChatbotConstructorTelegram.Model.ViewData;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using ChatbotConstructorTelegram.Model.ViewData.BotView.Command;
+using ChatbotConstructorTelegram.Model.ViewData.BotView.SampleView;
 
 namespace ChatbotConstructorTelegram.Model.File
 {
@@ -13,7 +15,7 @@ namespace ChatbotConstructorTelegram.Model.File
         public List<BotCommandProperty>? CommandProperties { get; set; }
         public List<BotTextProperty>? TextProperties { get; set; } 
 
-        public WrapperDataBot(ObservableCollection<IPropertyBot> properties) : base()
+        public WrapperDataBot(ObservableCollection<IPropertyBot> properties)
         {
             DataProject = DataProject.Instance;
             TextProperties = new List<BotTextProperty>();

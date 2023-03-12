@@ -12,11 +12,16 @@ using NLog;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.IO;
 using System.Threading;
 using System.Windows;
+using System.Windows.Data;
 using System.Windows.Input;
 using System.Windows.Threading;
+using ChatbotConstructorTelegram.Model.ViewData.BotView.Button;
+using ChatbotConstructorTelegram.Model.ViewData.BotView.Command;
+using ChatbotConstructorTelegram.Model.ViewData.BotView.SampleView;
 
 namespace ChatbotConstructorTelegram.ViewModels
 {
@@ -107,6 +112,26 @@ namespace ChatbotConstructorTelegram.ViewModels
 
         private MarkupButtonProperty? _botMarkupButtonProperty;
 
+        public ICollectionView InlineButtonCollectionView
+        {
+            get
+            {
+                var collectionView = CollectionViewSource.GetDefaultView(SelectedCommand.Children);
+                collectionView.Filter = item => item is InlineButtonProperty;
+                return collectionView;
+            }
+        }
+
+        public ICollectionView MarkupButtonCollectionView
+        {
+            get
+            {
+                var collectionView = CollectionViewSource.GetDefaultView(SelectedCommand.Children);
+                collectionView.Filter = item => item is MarkupButtonProperty;
+                return collectionView;
+            }
+        }
+
         public MarkupButtonProperty? BotMarkupButtonProperty
         {
             get => _botMarkupButtonProperty;
@@ -124,6 +149,8 @@ namespace ChatbotConstructorTelegram.ViewModels
                 Set(ref _selectedCommand, value);
             }
         }
+
+
 
         private void ResetVisibleProperty(IPropertyBot propertyBot)
         {
@@ -255,12 +282,20 @@ namespace ChatbotConstructorTelegram.ViewModels
         public ICommand? SaveProjectCommand { get; private set; }
         private void OnSaveProjectCommandExecuted(object p)
         {
-            FileProjectManager.CreateAndSaveFileSettingsAsync(new WrapperDataBot(BotCommands));
+            try
+            {
+                FileProjectManager.CreateAndSaveFileSettingsAsync(new WrapperDataBot(BotCommands));
 
-            if (File.Exists(DataProject.Instance.PathDirectory + "\\" + DataProject.Instance.Name + ".xml"))
-                SetStatusStartTimer("Проект сохранен");
-            else
-                SetStatusStartTimer("Не удалось сохранить файл");
+                if (File.Exists(DataProject.Instance.PathDirectory + "\\" + DataProject.Instance.Name + ".xml"))
+                    SetStatusStartTimer("Проект сохранен");
+                else
+                    SetStatusStartTimer("Не удалось сохранить файл");
+            }
+            catch (Exception e)
+            {
+                Logger.Error(e);
+                MessageBox.Show(e.Message);
+            }
         }
 
         public ICommand? CreateProjectCommand { get; private set; }
@@ -278,12 +313,12 @@ namespace ChatbotConstructorTelegram.ViewModels
         {
             var thread = new Thread(() =>
                     {
-                        var bot = new Bot(BotCommands);
+                        var bot = new BotCodeGenerator(BotCommands);
                         bot.CreateBot();
                     });
             thread.Start();
-            var startBotWnd = new StartBotWindow();
-            startBotWnd.Show();
+            //var startBotWnd = new StartBotWindow();
+            //startBotWnd.Show();
         }
 
         public ICommand? ChangeTokenCommand { get; private set; }
@@ -324,8 +359,7 @@ namespace ChatbotConstructorTelegram.ViewModels
                 if (SelectedCommand == null || SelectedCommand is BotTextProperty)
                     throw new InvalidOperationException();
                 var inlineButton = new InlineButtonProperty() { Name = NameInlineButton };
-                MessageBox.Show(inlineButton.UniqueId);
-                SelectedCommand.InlineButtons.Add(inlineButton);
+                SelectedCommand.Children.Add(inlineButton);
                 Logger.Info($"Inline Кнопка {inlineButton.Name} ID {inlineButton.UniqueId} добавлена ");
                 SetStatusStartTimer("Inline кнопка добавлена");
             }
@@ -333,7 +367,7 @@ namespace ChatbotConstructorTelegram.ViewModels
             {
                 MessageBox.Show("Выберите команду или кнопку!");
             }
-            catch (Exception e)
+             catch (Exception e)
             {
                 MessageBox.Show(e.Message);
             }
@@ -348,8 +382,7 @@ namespace ChatbotConstructorTelegram.ViewModels
                 if (SelectedCommand == null || SelectedCommand is BotTextProperty)
                     throw new InvalidOperationException();
                 var markupButton = new MarkupButtonProperty() { Name = NameMarkupButton };
-                MessageBox.Show(markupButton.UniqueId);
-                SelectedCommand.MarkupButtons.Add(markupButton);
+                SelectedCommand.Children.Add(markupButton);
                 SetStatusStartTimer("Inline кнопка добавлена");
             }
             catch (InvalidOperationException)

@@ -9,7 +9,9 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:fa="clr-namespace:FontAwesome.WPF;assembly=FontAwesome.WPF"
         xmlns:viewData="clr-namespace:ChatbotConstructorTelegram.Model.ViewData"
+        xmlns:viewDataBase="clr-namespace:ChatbotConstructorTelegram.Model.ViewData.BotView.SampleView"
         xmlns:contols="clr-namespace:ChatbotConstructorTelegram.View.UserControls.Contols"
+        xmlns:command="clr-namespace:ChatbotConstructorTelegram.Model.ViewData.BotView.Command"
         mc:Ignorable="d"
         Title="{Binding Title}" 
 
@@ -246,10 +248,25 @@
                     <contols:ExtendedTreeView Grid.Row="0" 
                                               Foreground="#FFA1B1D2"
                                               SelectedItem_="{Binding SelectedCommand, Mode=TwoWay}"
-                                              ItemsSource="{Binding BotCommands}" Background="#FF1B3044" BorderThickness="0,0,0,0">
+                                              ItemsSource="{Binding BotCommands}"
+                                              Background="#FF1B3044" BorderThickness="0,0,0,0">
+
                         <TreeView.Resources>
-                            <HierarchicalDataTemplate DataType="{x:Type viewData:BotCommandProperty}"
-                                                      ItemsSource="{Binding Buttons}">
+
+                            <HierarchicalDataTemplate DataType="{x:Type command:BotCommandProperty}" ItemsSource="{Binding Children}">
+                                <TextBlock Text="{Binding Name}" />
+                            </HierarchicalDataTemplate>
+
+                            <HierarchicalDataTemplate DataType="{x:Type viewDataBase:ButtonBotBase}" ItemsSource="{Binding Children}">
+                                <TextBlock Text="{Binding Name}" />
+                            </HierarchicalDataTemplate>
+
+                        </TreeView.Resources>
+                        <!--<TreeView.Resources>
+
+                            <HierarchicalDataTemplate x:Key="Inline"
+                                                      DataType="{x:Type viewData:BotCommandProperty}"
+                                                      ItemsSource="{Binding InlineButtons}">
                                 <Grid>
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="21*"/>
@@ -259,30 +276,39 @@
                                     <TextBlock Text="{Binding Name}" Foreground="WhiteSmoke" Grid.Column="1" ></TextBlock>
                                 </Grid>
                             </HierarchicalDataTemplate>
-                            <HierarchicalDataTemplate DataType="{x:Type viewData:InlineButtonProperty}" 
-                                                      ItemsSource="{Binding Buttons}">
-                                <Grid>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="21*"/>
-                                        <ColumnDefinition Width="10*"/>
-                                    </Grid.ColumnDefinitions>
-                                    <TextBlock Text="(Inline) Кнопка " Foreground="WhiteSmoke" Grid.Column="0" ></TextBlock>
-                                    <TextBlock Text="{Binding Name}" Foreground="WhiteSmoke" Grid.Column="1" ></TextBlock>
-                                </Grid>
-                            </HierarchicalDataTemplate>
-                            <HierarchicalDataTemplate DataType="{x:Type viewData:MarkupButtonProperty}" 
-                                                      ItemsSource="{Binding Buttons}">
-                                <Grid>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="21*"/>
-                                        <ColumnDefinition Width="10*"/>
-                                    </Grid.ColumnDefinitions>
-                                    <TextBlock Text="(Markup) Кнопка " Foreground="WhiteSmoke" Grid.Column="0" ></TextBlock>
-                                    <TextBlock Text="{Binding Name}" Foreground="WhiteSmoke" Grid.Column="1" ></TextBlock>
-                                </Grid>
-                            </HierarchicalDataTemplate>
-                        </TreeView.Resources>
 
+                            <HierarchicalDataTemplate 
+                                                      DataType="{x:Type viewData:BotCommandProperty}"
+                                                      ItemsSource="{Binding MarkupButtons}">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="21*"/>
+                                        <ColumnDefinition Width="10*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Text="(Команда) /" Foreground="WhiteSmoke" Grid.Column="0" ></TextBlock>
+                                    <TextBlock Text="{Binding Name}" Foreground="WhiteSmoke" Grid.Column="1" ></TextBlock>
+                                </Grid>
+                            </HierarchicalDataTemplate>
+
+                            <DataTemplate DataType="{x:Type viewData:MarkupButtonProperty}">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding Name}" />
+                                </StackPanel>
+                            </DataTemplate>
+
+                            <DataTemplate DataType="{x:Type viewData:InlineButtonProperty}">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding Name}" />
+                                </StackPanel>
+                            </DataTemplate>
+
+                            <DataTemplate x:Key="ke" DataType="{x:Type viewData:BotCommandProperty}">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding Name}" />
+                                </StackPanel>
+                            </DataTemplate>
+
+                        </TreeView.Resources>-->
                     </contols:ExtendedTreeView>
                     <!--<ListView ItemsSource="{Binding BotCommands}" 
                           SelectedItem="{Binding SelectedCommand}">
@@ -501,7 +527,7 @@
                                                     <RowDefinition Height="*"/>
                                                 </Grid.RowDefinitions>
                                                 <TextBlock Grid.Row="0" VerticalAlignment="Top" Text="Кнопки:" />
-                                                <ListView Grid.Row="1" ItemsSource="{Binding SelectedCommand.InlineButtons}" >
+                                                <ListView Grid.Row="1" ItemsSource="{Binding InlineButtonCollectionView}" >
                                                     <ListView.ItemTemplate>
                                                         <DataTemplate>
                                                             <TextBlock Text="{Binding Name}"></TextBlock>
@@ -533,10 +559,10 @@
                                                 </Grid.RowDefinitions>
                                                 <TextBlock Grid.Row="0" VerticalAlignment="Top" Text="Кнопки:" />
                                                 <ListView Grid.Row="1"
-                                                          ItemsSource="{Binding SelectedCommand.MarkupButtons}" >
+                                                          ItemsSource="{Binding MarkupButtonCollectionView}" >
                                                     <ListView.ItemTemplate>
                                                         <DataTemplate>
-                                                            <TextBlock Text="{Binding Name}"></TextBlock>
+                                                            <TextBlock Text="{Binding }"></TextBlock>
                                                         </DataTemplate>
                                                     </ListView.ItemTemplate>
                                                 </ListView>

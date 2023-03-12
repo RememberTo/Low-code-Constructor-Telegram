@@ -1,5 +1,6 @@
 using System.Text;
 using ChatbotConstructorTelegram.Model.ViewData;
+using ChatbotConstructorTelegram.Model.ViewData.BotView.Command;
 using ChatbotConstructorTelegram.Resources;
 using NLog;
 
