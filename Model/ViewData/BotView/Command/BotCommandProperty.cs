@@ -13,10 +13,13 @@ namespace ChatbotConstructorTelegram.Model.ViewData.BotView.Command
         public int? Id { get; set; }
         public string? Name { get; set; }
         public string? Text { get; set; }
+        public int CountButtonInLine { get; set; }
+        public string URL { get; set; }
         public string? Description { get; set; }
         public Photo Photo { get; set; }
         public Document Document { get; set; }
         public ObservableCollection<ButtonBotBase> Children { get; set; }
+        
 
         public BotCommandProperty()
         {

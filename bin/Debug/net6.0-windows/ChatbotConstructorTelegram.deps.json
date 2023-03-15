@@ -10,6 +10,7 @@
         "dependencies": {
           "FontAwesome.WPF": "4.7.0.9",
           "FontAwesome5": "2.1.11",
+          "GraphSharp": "1.1.0",
           "MaterialDesignColors": "2.0.9",
           "MaterialDesignThemes": "4.6.1",
           "NLog.Extensions.Logging": "5.2.0",
@@ -37,6 +38,22 @@
           "lib/net6.0-windows7.0/FontAwesome5.dll": {
             "assemblyVersion": "2.1.11.0",
             "fileVersion": "2.1.11.0"
+          }
+        }
+      },
+      "GraphSharp/1.1.0": {
+        "dependencies": {
+          "QuickGraph": "3.6.61119.7",
+          "WPFExtensions": "1.0.0"
+        },
+        "runtime": {
+          "lib/net40/GraphSharp.Controls.dll": {
+            "assemblyVersion": "1.1.0.0",
+            "fileVersion": "1.1.0.0"
+          },
+          "lib/net40/GraphSharp.dll": {
+            "assemblyVersion": "1.0.2.0",
+            "fileVersion": "1.0.2.0"
           }
         }
       },
@@ -165,6 +182,26 @@
           }
         }
       },
+      "QuickGraph/3.6.61119.7": {
+        "runtime": {
+          "lib/net4/QuickGraph.Data.dll": {
+            "assemblyVersion": "3.6.61114.0",
+            "fileVersion": "3.6.61114.0"
+          },
+          "lib/net4/QuickGraph.Graphviz.dll": {
+            "assemblyVersion": "3.6.61114.0",
+            "fileVersion": "3.6.61114.0"
+          },
+          "lib/net4/QuickGraph.Serialization.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          },
+          "lib/net4/QuickGraph.dll": {
+            "assemblyVersion": "3.6.61114.0",
+            "fileVersion": "3.6.61114.0"
+          }
+        }
+      },
       "System.Diagnostics.DiagnosticSource/6.0.0": {
         "dependencies": {
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
@@ -189,6 +226,14 @@
             "fileVersion": "1.1.0.0"
           }
         }
+      },
+      "WPFExtensions/1.0.0": {
+        "runtime": {
+          "lib/WPFExtensions.dll": {
+            "assemblyVersion": "1.0.3437.34043",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -211,6 +256,13 @@
       "sha512": "sha512-OGwy+ZJoJR7U71eA3BenwP7rdVviVYp8p6ptdBEhoMRuRsSV4vGM/LypVBhonBI43WSxXBysSoE5uQ2SkYKNvA==",
       "path": "fontawesome5/2.1.11",
       "hashPath": "fontawesome5.2.1.11.nupkg.sha512"
+    },
+    "GraphSharp/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fythJ3o5H2Y2hhv4xQ2uzHhcp54aEMQ95Pk+SJfWO02Z02WNWVYloQzERKRJ9uZ7/gRNr8werKhhIj25frxlgA==",
+      "path": "graphsharp/1.1.0",
+      "hashPath": "graphsharp.1.1.0.nupkg.sha512"
     },
     "MaterialDesignColors/2.0.9": {
       "type": "package",
@@ -296,6 +348,13 @@
       "path": "nlog.extensions.logging/5.2.0",
       "hashPath": "nlog.extensions.logging.5.2.0.nupkg.sha512"
     },
+    "QuickGraph/3.6.61119.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-crtYNiFcYFtYbmbEfdYsdGw5M3923OO5ZZD25K+WeLPgTp/q4oq3U/FVrbaOK5+Jg8UJDmoZ6sqAVion4RgXCA==",
+      "path": "quickgraph/3.6.61119.7",
+      "hashPath": "quickgraph.3.6.61119.7.nupkg.sha512"
+    },
     "System.Diagnostics.DiagnosticSource/6.0.0": {
       "type": "package",
       "serviceable": true,
@@ -323,6 +382,13 @@
       "sha512": "sha512-CPFamhL3jPo8O6+ErGsLS4LK3DWP5ncxqhbzpPnYkIW9rjatunUij35iTjprbr9mlYR/5Pbguw21MwSmTOKR4g==",
       "path": "windowsapicodepack-shell/1.1.1",
       "hashPath": "windowsapicodepack-shell.1.1.1.nupkg.sha512"
+    },
+    "WPFExtensions/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-InvlRWFb1ePUvjWsxqUVz3hHw6jHF1Um3LThq72wAXfzwDMMJSyEzjZcCI+fTnaCcJHf59lyhWUc/3GamgGEKQ==",
+      "path": "wpfextensions/1.0.0",
+      "hashPath": "wpfextensions.1.0.0.nupkg.sha512"
     }
   }
 }

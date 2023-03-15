@@ -22,6 +22,21 @@
           "lib/net6.0-windows7.0/FontAwesome5.dll": {}
         }
       },
+      "GraphSharp/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "QuickGraph": "3.6.61119.7",
+          "WPFExtensions": "(, )"
+        },
+        "compile": {
+          "lib/net40/GraphSharp.Controls.dll": {},
+          "lib/net40/GraphSharp.dll": {}
+        },
+        "runtime": {
+          "lib/net40/GraphSharp.Controls.dll": {},
+          "lib/net40/GraphSharp.dll": {}
+        }
+      },
       "MaterialDesignColors/2.0.9": {
         "type": "package",
         "compile": {
@@ -174,6 +189,21 @@
           "lib/net6.0/NLog.Extensions.Logging.dll": {}
         }
       },
+      "QuickGraph/3.6.61119.7": {
+        "type": "package",
+        "compile": {
+          "lib/net4/QuickGraph.Data.dll": {},
+          "lib/net4/QuickGraph.Graphviz.dll": {},
+          "lib/net4/QuickGraph.Serialization.dll": {},
+          "lib/net4/QuickGraph.dll": {}
+        },
+        "runtime": {
+          "lib/net4/QuickGraph.Data.dll": {},
+          "lib/net4/QuickGraph.Graphviz.dll": {},
+          "lib/net4/QuickGraph.Serialization.dll": {},
+          "lib/net4/QuickGraph.dll": {}
+        }
+      },
       "System.Diagnostics.DiagnosticSource/6.0.0": {
         "type": "package",
         "dependencies": {
@@ -220,6 +250,15 @@
         },
         "runtime": {
           "lib/Microsoft.WindowsAPICodePack.Shell.dll": {}
+        }
+      },
+      "WPFExtensions/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/WPFExtensions.dll": {}
+        },
+        "runtime": {
+          "lib/WPFExtensions.dll": {}
         }
       }
     }
@@ -298,6 +337,19 @@
         "lib/uap10.0/FontAwesome5.UWP/Fonts/Font Awesome 5 Free-Solid-900.otf",
         "lib/uap10.0/FontAwesome5.dll",
         "lib/uap10.0/FontAwesome5.xml"
+      ]
+    },
+    "GraphSharp/1.1.0": {
+      "sha512": "fythJ3o5H2Y2hhv4xQ2uzHhcp54aEMQ95Pk+SJfWO02Z02WNWVYloQzERKRJ9uZ7/gRNr8werKhhIj25frxlgA==",
+      "type": "package",
+      "path": "graphsharp/1.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "graphsharp.1.1.0.nupkg.sha512",
+        "graphsharp.nuspec",
+        "lib/net40/GraphSharp.Controls.dll",
+        "lib/net40/GraphSharp.dll"
       ]
     },
     "MaterialDesignColors/2.0.9": {
@@ -626,6 +678,29 @@
         "nlog.extensions.logging.nuspec"
       ]
     },
+    "QuickGraph/3.6.61119.7": {
+      "sha512": "crtYNiFcYFtYbmbEfdYsdGw5M3923OO5ZZD25K+WeLPgTp/q4oq3U/FVrbaOK5+Jg8UJDmoZ6sqAVion4RgXCA==",
+      "type": "package",
+      "path": "quickgraph/3.6.61119.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net4/CodeContracts/QuickGraph.Contracts.dll",
+        "lib/net4/CodeContracts/QuickGraph.Data.Contracts.dll",
+        "lib/net4/CodeContracts/QuickGraph.Graphviz.Contracts.dll",
+        "lib/net4/CodeContracts/QuickGraph.Serialization.Contracts.dll",
+        "lib/net4/QuickGraph.Data.XML",
+        "lib/net4/QuickGraph.Data.dll",
+        "lib/net4/QuickGraph.Graphviz.XML",
+        "lib/net4/QuickGraph.Graphviz.dll",
+        "lib/net4/QuickGraph.Serialization.XML",
+        "lib/net4/QuickGraph.Serialization.dll",
+        "lib/net4/QuickGraph.XML",
+        "lib/net4/QuickGraph.dll",
+        "quickgraph.3.6.61119.7.nupkg.sha512",
+        "quickgraph.nuspec"
+      ]
+    },
     "System.Diagnostics.DiagnosticSource/6.0.0": {
       "sha512": "frQDfv0rl209cKm1lnwTgFPzNigy2EKk1BS3uAvHvlBVKe5cymGyHO+Sj+NLv5VF/AhHsqPIUUwya5oV4CHMUw==",
       "type": "package",
@@ -701,12 +776,25 @@
         "windowsapicodepack-shell.1.1.1.nupkg.sha512",
         "windowsapicodepack-shell.nuspec"
       ]
+    },
+    "WPFExtensions/1.0.0": {
+      "sha512": "InvlRWFb1ePUvjWsxqUVz3hHw6jHF1Um3LThq72wAXfzwDMMJSyEzjZcCI+fTnaCcJHf59lyhWUc/3GamgGEKQ==",
+      "type": "package",
+      "path": "wpfextensions/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/WPFExtensions.dll",
+        "wpfextensions.1.0.0.nupkg.sha512",
+        "wpfextensions.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
       "FontAwesome.WPF >= 4.7.0.9",
       "FontAwesome5 >= 2.1.11",
+      "GraphSharp >= 1.1.0",
       "MaterialDesignColors >= 2.0.9",
       "MaterialDesignThemes >= 4.6.1",
       "NLog.Extensions.Logging >= 5.2.0",
@@ -761,6 +849,10 @@
             "target": "Package",
             "version": "[2.1.11, )"
           },
+          "GraphSharp": {
+            "target": "Package",
+            "version": "[1.1.0, )"
+          },
           "MaterialDesignColors": {
             "target": "Package",
             "version": "[2.0.9, )"
@@ -806,11 +898,41 @@
   },
   "logs": [
     {
+      "code": "NU1602",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "GraphSharp 1.1.0 не задает включенную нижнюю границу для зависимости WPFExtensions. Использовано наилучшее приближенное соответствие WPFExtensions 1.0.0.",
+      "libraryId": "WPFExtensions",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
       "message": "Пакет \"FontAwesome.WPF 4.7.0.9\" был восстановлен с помощью \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\", а не целевой платформы проекта \"net6.0-windows7.0\". Этот пакет может быть не полностью совместим с вашим проектом.",
       "libraryId": "FontAwesome.WPF",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Пакет \"GraphSharp 1.1.0\" был восстановлен с помощью \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\", а не целевой платформы проекта \"net6.0-windows7.0\". Этот пакет может быть не полностью совместим с вашим проектом.",
+      "libraryId": "GraphSharp",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Пакет \"QuickGraph 3.6.61119.7\" был восстановлен с помощью \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\", а не целевой платформы проекта \"net6.0-windows7.0\". Этот пакет может быть не полностью совместим с вашим проектом.",
+      "libraryId": "QuickGraph",
       "targetGraphs": [
         "net6.0-windows7.0"
       ]
@@ -831,6 +953,16 @@
       "warningLevel": 1,
       "message": "Пакет \"WindowsAPICodePack-Shell 1.1.1\" был восстановлен с помощью \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\", а не целевой платформы проекта \"net6.0-windows7.0\". Этот пакет может быть не полностью совместим с вашим проектом.",
       "libraryId": "WindowsAPICodePack-Shell",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Пакет \"WPFExtensions 1.0.0\" был восстановлен с помощью \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\", а не целевой платформы проекта \"net6.0-windows7.0\". Этот пакет может быть не полностью совместим с вашим проектом.",
+      "libraryId": "WPFExtensions",
       "targetGraphs": [
         "net6.0-windows7.0"
       ]

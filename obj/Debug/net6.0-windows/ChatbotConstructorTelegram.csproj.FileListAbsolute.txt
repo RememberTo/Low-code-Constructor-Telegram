@@ -54,3 +54,10 @@ C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotCons
 C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\obj\Debug\net6.0-windows\View\ModalWindow\QuestionSaveProject.baml
 C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\obj\Debug\net6.0-windows\View\Window\StartBotWindow.g.cs
 C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\obj\Debug\net6.0-windows\View\Window\StartBotWindow.baml
+C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\GraphSharp.Controls.dll
+C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\GraphSharp.dll
+C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\QuickGraph.Data.dll
+C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\QuickGraph.Graphviz.dll
+C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\QuickGraph.Serialization.dll
+C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\QuickGraph.dll
+C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\WPFExtensions.dll

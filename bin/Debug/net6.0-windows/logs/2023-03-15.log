@@ -1,0 +1,98 @@
+2023-03-15 00:02:50.4887|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-15 00:02:50.5150|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-15 00:02:52.6775|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-03-15 00:03:40.4973|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-15 00:03:40.5261|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-15 00:03:42.6804|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-03-15 00:04:04.6014|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-15 00:04:04.6467|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-15 00:04:10.8327|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-03-15 00:09:54.0304|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-15 00:09:54.0656|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-15 00:09:56.6509|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-03-15 00:16:16.5412|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-15 00:16:16.5772|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-15 00:16:19.2878|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-03-15 00:17:19.4349|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-15 00:17:19.4624|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-15 00:17:21.8275|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-03-15 00:20:42.0923|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-15 00:20:42.1208|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-15 00:20:43.8825|ERROR|ChatbotConstructorTelegram.Model.ViewData.NoteProject|The given key 'Hello by 15aa5498-71c9-4de2-927a-b0a68dcad277' was not present in the dictionary.| 
+2023-03-15 00:21:22.6688|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-15 00:21:22.6949|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-15 00:21:24.5567|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-03-15 00:22:24.8105|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-15 00:22:24.8623|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-15 00:22:27.1260|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-03-15 00:22:35.8047|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID fd9cdb3d-ba3d-4b4a-b248-aa9ee3e61fe9 добавлена | 
+2023-03-15 00:22:38.1293|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Markup Кнопка Hello ID 7d2150c0-8b03-4801-ae59-39e25559871e добавлена | 
+2023-03-15 00:22:38.6661|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID e373f3dd-b838-4e0e-832b-1b33bef1205b добавлена | 
+2023-03-15 00:22:39.0647|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Markup Кнопка Hello ID 463d6d75-ac5f-404c-8fe5-82b0aa6a6406 добавлена | 
+2023-03-15 12:28:14.4303|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-15 12:28:14.4725|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-15 12:28:17.5836|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-03-15 12:31:35.0237|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-15 12:31:35.0657|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-15 12:31:38.3786|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-03-15 12:31:50.1897|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID a2e8e530-a850-4d42-9e84-7f040b606cf0 добавлена | 
+2023-03-15 12:31:52.0842|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID db58dfb2-3f80-4b60-8a6b-4c0e0e144e1f добавлена | 
+2023-03-15 12:31:54.0596|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID d1d0530e-d5de-48fb-a88e-bc0b6b815440 добавлена | 
+2023-03-15 12:32:06.7195|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID bda8f1e4-711d-48a2-b51b-251710d16013 добавлена | 
+2023-03-15 12:32:06.9644|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID c44788f2-578d-47ca-8f5e-492a4608093a добавлена | 
+2023-03-15 12:32:07.1419|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID 6d9d0dd9-e83e-47a3-aa2b-1b88bba912a9 добавлена | 
+2023-03-15 12:32:07.3031|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID 34cedd3a-3b62-4b3e-96f4-81ed2b380326 добавлена | 
+2023-03-15 12:32:07.5005|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID b7e48041-6f13-4ada-a5d2-4caf933a9bfe добавлена | 
+2023-03-15 12:32:07.6730|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID 65188ac7-1ac1-4d78-8ce9-156d6dcdf9e1 добавлена | 
+2023-03-15 12:32:07.8662|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID 40e1bf76-cee8-469d-be22-ed9d1075daf0 добавлена | 
+2023-03-15 12:32:08.0763|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID 9b95f88a-cac7-4e5d-ba62-9d0065e8d776 добавлена | 
+2023-03-15 12:32:08.3021|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID 96e0ec5d-c817-47a8-8f00-1ea296f80f11 добавлена | 
+2023-03-15 12:32:08.5242|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID eedaabe2-d5d3-42d5-9e16-6a56a813a422 добавлена | 
+2023-03-15 12:32:08.7803|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID 82e42f54-c02b-4215-baee-c13978f3a2ee добавлена | 
+2023-03-15 12:32:09.0553|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID a57f4fe3-13b1-4b7e-8fe3-1d5c7ef29c37 добавлена | 
+2023-03-15 12:32:09.3941|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID e953a68f-28a7-4c1d-8c6f-48aa662c66db добавлена | 
+2023-03-15 12:32:09.7081|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID ccd39270-d6ec-402e-a85e-a1a9fcbf9a41 добавлена | 
+2023-03-15 12:32:10.0319|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID cade3e2d-bedc-4c94-8011-3c9c33de9466 добавлена | 
+2023-03-15 12:32:10.4127|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID a921ee8e-579c-4a84-8733-2e8935a963cf добавлена | 
+2023-03-15 12:32:10.7812|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID 1bf10f3e-1372-42a6-8ad9-22e827e50012 добавлена | 
+2023-03-15 12:32:11.1664|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID 745080c2-d5ef-4de3-9327-9836e490e58f добавлена | 
+2023-03-15 12:32:11.6226|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID b3c180c2-f1df-460b-934d-52c7d69ac444 добавлена | 
+2023-03-15 12:32:12.1415|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID b39cc418-7bbb-468d-8e4c-fa3be8261603 добавлена | 
+2023-03-15 12:32:12.5880|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID 9c7cf397-1d5c-4176-8b47-48dd914edbf2 добавлена | 
+2023-03-15 12:32:13.0582|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID fc1473c5-c445-46b3-8bda-1101a705ef24 добавлена | 
+2023-03-15 12:32:13.5340|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID dc4f60b4-0928-41d9-991f-f22b933409d4 добавлена | 
+2023-03-15 12:32:13.9548|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID 6c6ef27e-bd14-484a-a2ac-a5339b3a1a06 добавлена | 
+2023-03-15 12:32:14.3379|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID 2111119c-d1cc-4b01-b35a-ae6afc7f8ac2 добавлена | 
+2023-03-15 12:32:14.7773|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID 8e7df094-4c1e-4f28-9a6b-57363e19fe39 добавлена | 
+2023-03-15 12:32:15.3002|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID 81a20cec-419a-412b-a3ab-4dead5cf64ed добавлена | 
+2023-03-15 12:32:15.8526|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID 6d1704b2-ee38-4c88-b503-ffd132b5972d добавлена | 
+2023-03-15 12:51:58.1039|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-15 12:51:58.1270|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-15 12:52:00.8760|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-03-15 12:52:37.3168|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID 6ec3573d-c5f4-40f9-be27-cec5dffbe06f добавлена | 
+2023-03-15 12:52:40.6203|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID fc581fbc-dbab-41f1-a7a8-ab747b3e4b40 добавлена | 
+2023-03-15 12:52:40.8734|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID 707cf656-271a-471a-bed5-dfa736992a9c добавлена | 
+2023-03-15 12:52:41.5057|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID 653d5c0f-1489-40be-a322-f1368cd6c037 добавлена | 
+2023-03-15 12:52:41.7047|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID 7cc524ee-023e-4cd8-926f-1c8a9aa26b6f добавлена | 
+2023-03-15 12:52:41.8726|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID d2100099-795e-4e81-86d0-5bc355908a4e добавлена | 
+2023-03-15 12:53:32.0151|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-15 12:53:32.0627|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-15 12:53:34.3052|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-03-15 12:54:49.0806|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-15 12:54:49.1301|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-15 12:54:51.8082|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-03-15 12:56:06.8728|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-15 12:56:06.9198|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-15 12:56:09.9876|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-03-15 12:57:29.5400|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-15 12:57:29.5789|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-15 12:57:32.6515|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-03-15 12:58:14.5481|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-15 12:58:14.5894|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-15 12:58:17.2270|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-03-15 12:59:18.2585|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-15 12:59:18.2948|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-15 12:59:20.5986|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-03-15 13:06:54.2503|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-15 13:06:54.3023|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-15 13:06:57.1809|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 

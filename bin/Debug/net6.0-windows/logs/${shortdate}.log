@@ -5246,3 +5246,715 @@
 2023-03-11 21:02:17.0493 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
 2023-03-11 21:03:26.9775 Info AppDomain Shutting down. LogFactory closing...
 2023-03-11 21:03:26.9913 Info LogFactory has been closed.
+2023-03-13 17:56:57.7315 Info Message Template Auto Format enabled
+2023-03-13 17:56:57.8596 Info Registered target FileTarget(Name=logfile)
+2023-03-13 17:56:57.8596 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-13 17:56:57.9014 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-13 17:56:57.9243 Info Configuration initialized.
+2023-03-13 17:56:57.9400 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-13 17:57:51.8549 Info AppDomain Shutting down. LogFactory closing...
+2023-03-13 17:57:51.8694 Info LogFactory has been closed.
+2023-03-13 18:02:30.3939 Info Message Template Auto Format enabled
+2023-03-13 18:02:30.4867 Info Registered target FileTarget(Name=logfile)
+2023-03-13 18:02:30.4881 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-13 18:02:30.5096 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-13 18:02:30.5325 Info Configuration initialized.
+2023-03-13 18:02:30.5450 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-13 18:08:05.1438 Info Message Template Auto Format enabled
+2023-03-13 18:08:05.2237 Info Registered target FileTarget(Name=logfile)
+2023-03-13 18:08:05.2237 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-13 18:08:05.2416 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-13 18:08:05.2416 Info Configuration initialized.
+2023-03-13 18:08:05.2613 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-13 18:10:29.6610 Info Message Template Auto Format enabled
+2023-03-13 18:10:29.7472 Info Registered target FileTarget(Name=logfile)
+2023-03-13 18:10:29.7472 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-13 18:10:29.7688 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-13 18:10:29.7688 Info Configuration initialized.
+2023-03-13 18:10:29.7917 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-13 18:11:02.7322 Info AppDomain Shutting down. LogFactory closing...
+2023-03-13 18:11:02.7476 Info LogFactory has been closed.
+2023-03-13 18:13:25.4519 Info Message Template Auto Format enabled
+2023-03-13 18:13:25.5292 Info Registered target FileTarget(Name=logfile)
+2023-03-13 18:13:25.5292 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-13 18:13:25.5518 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-13 18:13:25.5683 Info Configuration initialized.
+2023-03-13 18:13:25.5683 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-13 18:16:37.0343 Info Message Template Auto Format enabled
+2023-03-13 18:16:37.0975 Info Registered target FileTarget(Name=logfile)
+2023-03-13 18:16:37.1127 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-13 18:16:37.1308 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-13 18:16:37.1308 Info Configuration initialized.
+2023-03-13 18:16:37.1542 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-13 18:18:41.2123 Info Message Template Auto Format enabled
+2023-03-13 18:18:41.3213 Info Registered target FileTarget(Name=logfile)
+2023-03-13 18:18:41.3213 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-13 18:18:41.3451 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-13 18:18:41.3572 Info Configuration initialized.
+2023-03-13 18:18:41.3695 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-13 18:19:32.4215 Info Message Template Auto Format enabled
+2023-03-13 18:19:32.5201 Info Registered target FileTarget(Name=logfile)
+2023-03-13 18:19:32.5201 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-13 18:19:32.5445 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-13 18:19:32.5594 Info Configuration initialized.
+2023-03-13 18:19:32.5726 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-13 18:21:48.3099 Info Message Template Auto Format enabled
+2023-03-13 18:21:48.3968 Info Registered target FileTarget(Name=logfile)
+2023-03-13 18:21:48.3968 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-13 18:21:48.4151 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-13 18:21:48.4151 Info Configuration initialized.
+2023-03-13 18:21:48.4351 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-13 18:59:28.4302 Info AppDomain Shutting down. LogFactory closing...
+2023-03-13 18:59:28.4481 Info LogFactory has been closed.
+2023-03-13 20:57:21.9653 Info Message Template Auto Format enabled
+2023-03-13 20:57:22.0870 Info Registered target FileTarget(Name=logfile)
+2023-03-13 20:57:22.0870 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-13 20:57:22.1223 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-13 20:57:22.1466 Info Configuration initialized.
+2023-03-13 20:57:22.1609 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-13 20:57:46.5772 Info AppDomain Shutting down. LogFactory closing...
+2023-03-13 20:57:46.5935 Info LogFactory has been closed.
+2023-03-13 21:06:43.3709 Info Message Template Auto Format enabled
+2023-03-13 21:06:43.4664 Info Registered target FileTarget(Name=logfile)
+2023-03-13 21:06:43.4664 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-13 21:06:43.4870 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-13 21:06:43.4984 Info Configuration initialized.
+2023-03-13 21:06:43.5073 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-13 21:07:29.8274 Info AppDomain Shutting down. LogFactory closing...
+2023-03-13 21:07:29.8498 Info LogFactory has been closed.
+2023-03-13 21:13:34.8155 Info Message Template Auto Format enabled
+2023-03-13 21:13:34.9710 Info Registered target FileTarget(Name=logfile)
+2023-03-13 21:13:34.9710 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-13 21:13:35.0013 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-13 21:13:35.0161 Info Configuration initialized.
+2023-03-13 21:13:35.0377 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-13 21:14:10.1720 Info AppDomain Shutting down. LogFactory closing...
+2023-03-13 21:14:10.1942 Info LogFactory has been closed.
+2023-03-14 19:46:27.2417 Info Message Template Auto Format enabled
+2023-03-14 19:46:27.3352 Info Registered target FileTarget(Name=logfile)
+2023-03-14 19:46:27.3352 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 19:46:27.3559 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 19:46:27.3672 Info Configuration initialized.
+2023-03-14 19:46:27.3672 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 19:48:06.3168 Info AppDomain Shutting down. LogFactory closing...
+2023-03-14 19:48:06.3313 Info LogFactory has been closed.
+2023-03-14 19:49:24.5777 Info Message Template Auto Format enabled
+2023-03-14 19:49:24.6618 Info Registered target FileTarget(Name=logfile)
+2023-03-14 19:49:24.6618 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 19:49:24.6826 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 19:49:24.6826 Info Configuration initialized.
+2023-03-14 19:49:24.7051 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 19:50:01.0120 Info Message Template Auto Format enabled
+2023-03-14 19:50:01.0720 Info Registered target FileTarget(Name=logfile)
+2023-03-14 19:50:01.0720 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 19:50:01.1007 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 19:50:01.1094 Info Configuration initialized.
+2023-03-14 19:50:01.1255 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 19:50:18.3790 Info AppDomain Shutting down. LogFactory closing...
+2023-03-14 19:50:18.3937 Info LogFactory has been closed.
+2023-03-14 19:53:36.8421 Info Message Template Auto Format enabled
+2023-03-14 19:53:36.9285 Info Registered target FileTarget(Name=logfile)
+2023-03-14 19:53:36.9285 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 19:53:36.9483 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 19:53:36.9581 Info Configuration initialized.
+2023-03-14 19:53:36.9682 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 20:02:46.6751 Info Message Template Auto Format enabled
+2023-03-14 20:02:46.7752 Info Registered target FileTarget(Name=logfile)
+2023-03-14 20:02:46.7752 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 20:02:46.8080 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 20:02:46.8256 Info Configuration initialized.
+2023-03-14 20:02:46.8256 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 20:03:19.7646 Info AppDomain Shutting down. LogFactory closing...
+2023-03-14 20:03:19.7807 Info LogFactory has been closed.
+2023-03-14 20:03:23.1391 Info Message Template Auto Format enabled
+2023-03-14 20:03:23.2224 Info Registered target FileTarget(Name=logfile)
+2023-03-14 20:03:23.2224 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 20:03:23.2401 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 20:03:23.2561 Info Configuration initialized.
+2023-03-14 20:03:23.2694 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 20:03:49.8738 Info AppDomain Shutting down. LogFactory closing...
+2023-03-14 20:03:49.8878 Info LogFactory has been closed.
+2023-03-14 20:05:59.9004 Info Message Template Auto Format enabled
+2023-03-14 20:06:00.0658 Info Registered target FileTarget(Name=logfile)
+2023-03-14 20:06:00.0658 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 20:06:00.0896 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 20:06:00.1006 Info Configuration initialized.
+2023-03-14 20:06:00.1101 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 20:06:13.0060 Info AppDomain Shutting down. LogFactory closing...
+2023-03-14 20:06:13.0199 Info LogFactory has been closed.
+2023-03-14 20:07:11.8006 Info Message Template Auto Format enabled
+2023-03-14 20:07:11.9019 Info Registered target FileTarget(Name=logfile)
+2023-03-14 20:07:11.9019 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 20:07:11.9290 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 20:07:11.9463 Info Configuration initialized.
+2023-03-14 20:07:11.9558 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 20:07:51.5981 Info AppDomain Shutting down. LogFactory closing...
+2023-03-14 20:07:51.6148 Info LogFactory has been closed.
+2023-03-14 20:09:20.2670 Info Message Template Auto Format enabled
+2023-03-14 20:09:20.3609 Info Registered target FileTarget(Name=logfile)
+2023-03-14 20:09:20.3620 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 20:09:20.3828 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 20:09:20.3977 Info Configuration initialized.
+2023-03-14 20:09:20.4141 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 20:09:31.1829 Info AppDomain Shutting down. LogFactory closing...
+2023-03-14 20:09:31.2005 Info LogFactory has been closed.
+2023-03-14 20:10:40.5942 Info Message Template Auto Format enabled
+2023-03-14 20:10:40.6924 Info Registered target FileTarget(Name=logfile)
+2023-03-14 20:10:40.6924 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 20:10:40.7108 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 20:10:40.7108 Info Configuration initialized.
+2023-03-14 20:10:40.7308 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 20:10:55.9221 Info AppDomain Shutting down. LogFactory closing...
+2023-03-14 20:10:55.9363 Info LogFactory has been closed.
+2023-03-14 20:13:32.3957 Info Message Template Auto Format enabled
+2023-03-14 20:13:32.4777 Info Registered target FileTarget(Name=logfile)
+2023-03-14 20:13:32.4777 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 20:13:32.4977 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 20:13:32.4977 Info Configuration initialized.
+2023-03-14 20:13:32.5434 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 20:13:34.1605 Info AppDomain Shutting down. LogFactory closing...
+2023-03-14 20:13:34.1727 Info LogFactory has been closed.
+2023-03-14 20:16:25.3665 Info Message Template Auto Format enabled
+2023-03-14 20:16:25.4451 Info Registered target FileTarget(Name=logfile)
+2023-03-14 20:16:25.4451 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 20:16:25.4702 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 20:16:25.4815 Info Configuration initialized.
+2023-03-14 20:16:25.4815 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 20:16:33.2550 Info AppDomain Shutting down. LogFactory closing...
+2023-03-14 20:16:33.2679 Info LogFactory has been closed.
+2023-03-14 20:16:45.0957 Info Message Template Auto Format enabled
+2023-03-14 20:16:45.1725 Info Registered target FileTarget(Name=logfile)
+2023-03-14 20:16:45.1725 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 20:16:45.1912 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 20:16:45.2007 Info Configuration initialized.
+2023-03-14 20:16:45.2007 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 20:16:51.2406 Info AppDomain Shutting down. LogFactory closing...
+2023-03-14 20:16:51.2526 Info LogFactory has been closed.
+2023-03-14 20:18:59.2575 Info Message Template Auto Format enabled
+2023-03-14 20:18:59.3423 Info Registered target FileTarget(Name=logfile)
+2023-03-14 20:18:59.3423 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 20:18:59.3664 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 20:18:59.3774 Info Configuration initialized.
+2023-03-14 20:18:59.3879 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 20:19:05.4576 Info AppDomain Shutting down. LogFactory closing...
+2023-03-14 20:19:05.4724 Info LogFactory has been closed.
+2023-03-14 20:19:34.6315 Info Message Template Auto Format enabled
+2023-03-14 20:19:34.7102 Info Registered target FileTarget(Name=logfile)
+2023-03-14 20:19:34.7102 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 20:19:34.7295 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 20:19:34.7420 Info Configuration initialized.
+2023-03-14 20:19:34.7514 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 20:19:55.2711 Info AppDomain Shutting down. LogFactory closing...
+2023-03-14 20:19:55.2859 Info LogFactory has been closed.
+2023-03-14 20:20:03.2166 Info Message Template Auto Format enabled
+2023-03-14 20:20:03.2996 Info Registered target FileTarget(Name=logfile)
+2023-03-14 20:20:03.2996 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 20:20:03.3186 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 20:20:03.3279 Info Configuration initialized.
+2023-03-14 20:20:03.3279 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 20:20:10.6267 Info AppDomain Shutting down. LogFactory closing...
+2023-03-14 20:20:10.6440 Info LogFactory has been closed.
+2023-03-14 20:20:31.1822 Info Message Template Auto Format enabled
+2023-03-14 20:20:31.2587 Info Registered target FileTarget(Name=logfile)
+2023-03-14 20:20:31.2587 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 20:20:31.2759 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 20:20:31.2854 Info Configuration initialized.
+2023-03-14 20:20:31.2951 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 20:20:38.3602 Info AppDomain Shutting down. LogFactory closing...
+2023-03-14 20:20:38.3762 Info LogFactory has been closed.
+2023-03-14 20:29:54.0438 Info Message Template Auto Format enabled
+2023-03-14 20:29:54.1343 Info Registered target FileTarget(Name=logfile)
+2023-03-14 20:29:54.1343 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 20:29:54.1582 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 20:29:54.1707 Info Configuration initialized.
+2023-03-14 20:29:54.1821 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 20:30:23.6693 Info AppDomain Shutting down. LogFactory closing...
+2023-03-14 20:30:23.6853 Info LogFactory has been closed.
+2023-03-14 20:32:54.1232 Info Message Template Auto Format enabled
+2023-03-14 20:32:54.2040 Info Registered target FileTarget(Name=logfile)
+2023-03-14 20:32:54.2040 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 20:32:54.2242 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 20:32:54.2348 Info Configuration initialized.
+2023-03-14 20:32:54.2448 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 20:33:15.0849 Info AppDomain Shutting down. LogFactory closing...
+2023-03-14 20:33:15.0983 Info LogFactory has been closed.
+2023-03-14 20:34:38.2164 Info Message Template Auto Format enabled
+2023-03-14 20:34:38.2930 Info Registered target FileTarget(Name=logfile)
+2023-03-14 20:34:38.2930 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 20:34:38.3113 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 20:34:38.3113 Info Configuration initialized.
+2023-03-14 20:34:38.3288 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 20:34:48.5464 Info AppDomain Shutting down. LogFactory closing...
+2023-03-14 20:34:48.5601 Info LogFactory has been closed.
+2023-03-14 20:35:14.7312 Info Message Template Auto Format enabled
+2023-03-14 20:35:14.8092 Info Registered target FileTarget(Name=logfile)
+2023-03-14 20:35:14.8092 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 20:35:14.8274 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 20:35:14.8369 Info Configuration initialized.
+2023-03-14 20:35:14.8369 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 20:35:54.5178 Info AppDomain Shutting down. LogFactory closing...
+2023-03-14 20:35:54.5319 Info LogFactory has been closed.
+2023-03-14 20:36:03.4105 Info Message Template Auto Format enabled
+2023-03-14 20:36:03.4818 Info Registered target FileTarget(Name=logfile)
+2023-03-14 20:36:03.4818 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 20:36:03.4992 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 20:36:03.5095 Info Configuration initialized.
+2023-03-14 20:36:03.5095 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 20:36:09.6768 Info AppDomain Shutting down. LogFactory closing...
+2023-03-14 20:36:09.6895 Info LogFactory has been closed.
+2023-03-14 20:36:18.4169 Info Message Template Auto Format enabled
+2023-03-14 20:36:18.4784 Info Registered target FileTarget(Name=logfile)
+2023-03-14 20:36:18.4784 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 20:36:18.5092 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 20:36:18.5092 Info Configuration initialized.
+2023-03-14 20:36:18.5262 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 20:36:27.3343 Info AppDomain Shutting down. LogFactory closing...
+2023-03-14 20:36:27.3475 Info LogFactory has been closed.
+2023-03-14 20:36:47.2825 Info Message Template Auto Format enabled
+2023-03-14 20:36:47.3645 Info Registered target FileTarget(Name=logfile)
+2023-03-14 20:36:47.3645 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 20:36:47.3813 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 20:36:47.3900 Info Configuration initialized.
+2023-03-14 20:36:47.3900 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 20:36:59.6567 Info AppDomain Shutting down. LogFactory closing...
+2023-03-14 20:36:59.6706 Info LogFactory has been closed.
+2023-03-14 20:37:13.8244 Info Message Template Auto Format enabled
+2023-03-14 20:37:13.9019 Info Registered target FileTarget(Name=logfile)
+2023-03-14 20:37:13.9019 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 20:37:13.9194 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 20:37:13.9322 Info Configuration initialized.
+2023-03-14 20:37:13.9322 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 20:37:15.8064 Info AppDomain Shutting down. LogFactory closing...
+2023-03-14 20:37:15.8228 Info LogFactory has been closed.
+2023-03-14 20:37:45.2052 Info Message Template Auto Format enabled
+2023-03-14 20:37:45.2781 Info Registered target FileTarget(Name=logfile)
+2023-03-14 20:37:45.2781 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 20:37:45.2948 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 20:37:45.2948 Info Configuration initialized.
+2023-03-14 20:37:45.3112 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 20:37:59.8814 Info AppDomain Shutting down. LogFactory closing...
+2023-03-14 20:37:59.8949 Info LogFactory has been closed.
+2023-03-14 20:38:39.0390 Info Message Template Auto Format enabled
+2023-03-14 20:38:39.1046 Info Registered target FileTarget(Name=logfile)
+2023-03-14 20:38:39.1046 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 20:38:39.1377 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 20:38:39.1532 Info Configuration initialized.
+2023-03-14 20:38:39.1532 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 20:39:06.0829 Info AppDomain Shutting down. LogFactory closing...
+2023-03-14 20:39:06.0984 Info LogFactory has been closed.
+2023-03-14 20:40:11.6128 Info Message Template Auto Format enabled
+2023-03-14 20:40:11.7135 Info Registered target FileTarget(Name=logfile)
+2023-03-14 20:40:11.7143 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 20:40:11.7311 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 20:40:11.7311 Info Configuration initialized.
+2023-03-14 20:40:11.7497 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 20:40:43.6712 Info AppDomain Shutting down. LogFactory closing...
+2023-03-14 20:40:43.6899 Info LogFactory has been closed.
+2023-03-14 21:00:18.3841 Info Message Template Auto Format enabled
+2023-03-14 21:00:18.4720 Info Registered target FileTarget(Name=logfile)
+2023-03-14 21:00:18.4720 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 21:00:18.4918 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 21:00:18.4918 Info Configuration initialized.
+2023-03-14 21:00:18.5160 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 21:13:11.3736 Info Message Template Auto Format enabled
+2023-03-14 21:13:11.4533 Info Registered target FileTarget(Name=logfile)
+2023-03-14 21:13:11.4533 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 21:13:11.4721 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 21:13:11.4812 Info Configuration initialized.
+2023-03-14 21:13:11.4812 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 21:42:44.3673 Info Message Template Auto Format enabled
+2023-03-14 21:42:44.4503 Info Registered target FileTarget(Name=logfile)
+2023-03-14 21:42:44.4503 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 21:42:44.4793 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 21:42:44.4922 Info Configuration initialized.
+2023-03-14 21:42:44.5044 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 21:43:26.2573 Info Message Template Auto Format enabled
+2023-03-14 21:43:26.3394 Info Registered target FileTarget(Name=logfile)
+2023-03-14 21:43:26.3394 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 21:43:26.3575 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 21:43:26.3668 Info Configuration initialized.
+2023-03-14 21:43:26.3761 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 21:50:06.2417 Info Message Template Auto Format enabled
+2023-03-14 21:50:06.3420 Info Registered target FileTarget(Name=logfile)
+2023-03-14 21:50:06.3438 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 21:50:06.3763 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 21:50:06.3763 Info Configuration initialized.
+2023-03-14 21:50:06.3994 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 21:51:07.4379 Info Message Template Auto Format enabled
+2023-03-14 21:51:07.5351 Info Registered target FileTarget(Name=logfile)
+2023-03-14 21:51:07.5351 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 21:51:07.5651 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 21:51:07.5651 Info Configuration initialized.
+2023-03-14 21:51:07.5866 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 21:52:28.9159 Info AppDomain Shutting down. LogFactory closing...
+2023-03-14 21:52:28.9290 Info LogFactory has been closed.
+2023-03-14 21:52:31.4469 Info Message Template Auto Format enabled
+2023-03-14 21:52:31.5259 Info Registered target FileTarget(Name=logfile)
+2023-03-14 21:52:31.5259 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 21:52:31.5435 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 21:52:31.5619 Info Configuration initialized.
+2023-03-14 21:52:31.5728 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 21:54:44.0266 Info AppDomain Shutting down. LogFactory closing...
+2023-03-14 21:54:44.0427 Info LogFactory has been closed.
+2023-03-14 21:57:11.7412 Info Message Template Auto Format enabled
+2023-03-14 21:57:11.8192 Info Registered target FileTarget(Name=logfile)
+2023-03-14 21:57:11.8192 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 21:57:11.8366 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 21:57:11.8461 Info Configuration initialized.
+2023-03-14 21:57:11.8461 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 21:57:24.3162 Info AppDomain Shutting down. LogFactory closing...
+2023-03-14 21:57:24.3298 Info LogFactory has been closed.
+2023-03-14 22:02:54.2900 Info Message Template Auto Format enabled
+2023-03-14 22:02:54.3654 Info Registered target FileTarget(Name=logfile)
+2023-03-14 22:02:54.3654 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 22:02:54.3836 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 22:02:54.3928 Info Configuration initialized.
+2023-03-14 22:02:54.3928 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 22:23:00.2897 Info Message Template Auto Format enabled
+2023-03-14 22:23:00.3649 Info Registered target FileTarget(Name=logfile)
+2023-03-14 22:23:00.3649 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 22:23:00.3845 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 22:23:00.3956 Info Configuration initialized.
+2023-03-14 22:23:00.3956 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 22:23:02.7364 Info AppDomain Shutting down. LogFactory closing...
+2023-03-14 22:23:02.7581 Info LogFactory has been closed.
+2023-03-14 22:27:04.6493 Info Message Template Auto Format enabled
+2023-03-14 22:27:04.7267 Info Registered target FileTarget(Name=logfile)
+2023-03-14 22:27:04.7267 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 22:27:04.7454 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 22:27:04.7548 Info Configuration initialized.
+2023-03-14 22:27:04.7548 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 22:27:20.2142 Info AppDomain Shutting down. LogFactory closing...
+2023-03-14 22:27:20.2285 Info LogFactory has been closed.
+2023-03-14 22:29:19.4194 Info Message Template Auto Format enabled
+2023-03-14 22:29:19.5092 Info Registered target FileTarget(Name=logfile)
+2023-03-14 22:29:19.5092 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 22:29:19.5336 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 22:29:19.5516 Info Configuration initialized.
+2023-03-14 22:29:19.5516 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 22:29:31.2292 Info AppDomain Shutting down. LogFactory closing...
+2023-03-14 22:29:31.2435 Info LogFactory has been closed.
+2023-03-14 22:29:42.2814 Info Message Template Auto Format enabled
+2023-03-14 22:29:42.3668 Info Registered target FileTarget(Name=logfile)
+2023-03-14 22:29:42.3668 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 22:29:42.3900 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 22:29:42.4042 Info Configuration initialized.
+2023-03-14 22:29:42.4160 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 22:30:37.4649 Info AppDomain Shutting down. LogFactory closing...
+2023-03-14 22:30:37.4783 Info LogFactory has been closed.
+2023-03-14 22:32:06.4172 Info Message Template Auto Format enabled
+2023-03-14 22:32:06.5189 Info Registered target FileTarget(Name=logfile)
+2023-03-14 22:32:06.5189 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 22:32:06.5380 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 22:32:06.5499 Info Configuration initialized.
+2023-03-14 22:32:06.5499 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 22:32:15.9531 Info AppDomain Shutting down. LogFactory closing...
+2023-03-14 22:32:15.9655 Info LogFactory has been closed.
+2023-03-14 22:34:52.4617 Info Message Template Auto Format enabled
+2023-03-14 22:34:52.5524 Info Registered target FileTarget(Name=logfile)
+2023-03-14 22:34:52.5524 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 22:34:52.5715 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 22:34:52.5808 Info Configuration initialized.
+2023-03-14 22:34:52.5808 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 22:55:03.3714 Info Message Template Auto Format enabled
+2023-03-14 22:55:03.4922 Info Registered target FileTarget(Name=logfile)
+2023-03-14 22:55:03.4922 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 22:55:03.5098 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 22:55:03.5194 Info Configuration initialized.
+2023-03-14 22:55:03.5194 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 22:55:45.7891 Info AppDomain Shutting down. LogFactory closing...
+2023-03-14 22:55:45.8063 Info LogFactory has been closed.
+2023-03-14 23:03:50.2983 Info Message Template Auto Format enabled
+2023-03-14 23:03:50.3858 Info Registered target FileTarget(Name=logfile)
+2023-03-14 23:03:50.3858 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 23:03:50.4039 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 23:03:50.4130 Info Configuration initialized.
+2023-03-14 23:03:50.4130 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 23:06:07.0060 Info Message Template Auto Format enabled
+2023-03-14 23:06:07.0894 Info Registered target FileTarget(Name=logfile)
+2023-03-14 23:06:07.0894 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 23:06:07.1082 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 23:06:07.1172 Info Configuration initialized.
+2023-03-14 23:06:07.1269 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 23:06:28.1791 Info AppDomain Shutting down. LogFactory closing...
+2023-03-14 23:06:28.1936 Info LogFactory has been closed.
+2023-03-14 23:13:59.1845 Info Message Template Auto Format enabled
+2023-03-14 23:13:59.2552 Info Registered target FileTarget(Name=logfile)
+2023-03-14 23:13:59.2552 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 23:13:59.2719 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 23:13:59.2719 Info Configuration initialized.
+2023-03-14 23:13:59.2880 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 23:14:56.7499 Info Message Template Auto Format enabled
+2023-03-14 23:14:56.8647 Info Registered target FileTarget(Name=logfile)
+2023-03-14 23:14:56.8647 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 23:14:56.8862 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 23:14:56.8979 Info Configuration initialized.
+2023-03-14 23:14:56.8979 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 23:16:53.6296 Info Message Template Auto Format enabled
+2023-03-14 23:16:53.6881 Info Registered target FileTarget(Name=logfile)
+2023-03-14 23:16:53.6881 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 23:16:53.7206 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 23:16:53.7206 Info Configuration initialized.
+2023-03-14 23:16:53.7389 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 23:17:25.6911 Info Message Template Auto Format enabled
+2023-03-14 23:17:25.7729 Info Registered target FileTarget(Name=logfile)
+2023-03-14 23:17:25.7729 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 23:17:25.7899 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 23:17:25.7998 Info Configuration initialized.
+2023-03-14 23:17:25.7998 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 23:18:39.0926 Info Message Template Auto Format enabled
+2023-03-14 23:18:39.1759 Info Registered target FileTarget(Name=logfile)
+2023-03-14 23:18:39.1759 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 23:18:39.1969 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 23:18:39.2079 Info Configuration initialized.
+2023-03-14 23:18:39.2079 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 23:19:23.0111 Info AppDomain Shutting down. LogFactory closing...
+2023-03-14 23:19:23.0250 Info LogFactory has been closed.
+2023-03-14 23:19:27.2269 Info Message Template Auto Format enabled
+2023-03-14 23:19:27.3237 Info Registered target FileTarget(Name=logfile)
+2023-03-14 23:19:27.3237 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 23:19:27.3420 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 23:19:27.3539 Info Configuration initialized.
+2023-03-14 23:19:27.3645 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 23:20:07.6907 Info Message Template Auto Format enabled
+2023-03-14 23:20:07.7790 Info Registered target FileTarget(Name=logfile)
+2023-03-14 23:20:07.7790 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 23:20:07.7978 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 23:20:07.7978 Info Configuration initialized.
+2023-03-14 23:20:07.8187 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 23:20:39.6670 Info Message Template Auto Format enabled
+2023-03-14 23:20:39.7625 Info Registered target FileTarget(Name=logfile)
+2023-03-14 23:20:39.7625 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 23:20:39.7927 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 23:20:39.8071 Info Configuration initialized.
+2023-03-14 23:20:39.8176 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 23:23:11.1938 Info Message Template Auto Format enabled
+2023-03-14 23:23:11.2746 Info Registered target FileTarget(Name=logfile)
+2023-03-14 23:23:11.2746 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 23:23:11.2940 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 23:23:11.3046 Info Configuration initialized.
+2023-03-14 23:23:11.3148 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 23:23:52.1695 Info AppDomain Shutting down. LogFactory closing...
+2023-03-14 23:23:52.1841 Info LogFactory has been closed.
+2023-03-14 23:23:56.1310 Info Message Template Auto Format enabled
+2023-03-14 23:23:56.2205 Info Registered target FileTarget(Name=logfile)
+2023-03-14 23:23:56.2205 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 23:23:56.2421 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 23:23:56.2534 Info Configuration initialized.
+2023-03-14 23:23:56.2670 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 23:25:43.3889 Info AppDomain Shutting down. LogFactory closing...
+2023-03-14 23:25:43.4040 Info LogFactory has been closed.
+2023-03-14 23:26:11.4233 Info Message Template Auto Format enabled
+2023-03-14 23:26:11.5245 Info Registered target FileTarget(Name=logfile)
+2023-03-14 23:26:11.5245 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 23:26:11.5432 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 23:26:11.5552 Info Configuration initialized.
+2023-03-14 23:26:11.5672 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 23:27:01.1387 Info AppDomain Shutting down. LogFactory closing...
+2023-03-14 23:27:01.1545 Info LogFactory has been closed.
+2023-03-14 23:30:08.1079 Info Message Template Auto Format enabled
+2023-03-14 23:30:08.2107 Info Registered target FileTarget(Name=logfile)
+2023-03-14 23:30:08.2107 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 23:30:08.2307 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 23:30:08.2414 Info Configuration initialized.
+2023-03-14 23:30:08.2508 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 23:30:24.1923 Info AppDomain Shutting down. LogFactory closing...
+2023-03-14 23:30:24.2066 Info LogFactory has been closed.
+2023-03-14 23:31:06.4580 Info Message Template Auto Format enabled
+2023-03-14 23:31:06.5499 Info Registered target FileTarget(Name=logfile)
+2023-03-14 23:31:06.5499 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 23:31:06.5757 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 23:31:06.5903 Info Configuration initialized.
+2023-03-14 23:31:06.5990 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 23:32:21.4464 Info AppDomain Shutting down. LogFactory closing...
+2023-03-14 23:32:21.4638 Info LogFactory has been closed.
+2023-03-14 23:32:51.4644 Info Message Template Auto Format enabled
+2023-03-14 23:32:51.5589 Info Registered target FileTarget(Name=logfile)
+2023-03-14 23:32:51.5589 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 23:32:51.5845 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 23:32:51.6009 Info Configuration initialized.
+2023-03-14 23:32:51.6120 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 23:33:02.0876 Info AppDomain Shutting down. LogFactory closing...
+2023-03-14 23:33:02.1063 Info LogFactory has been closed.
+2023-03-14 23:46:33.9959 Info Message Template Auto Format enabled
+2023-03-14 23:46:34.1211 Info Registered target FileTarget(Name=logfile)
+2023-03-14 23:46:34.1211 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 23:46:34.1688 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 23:46:34.1863 Info Configuration initialized.
+2023-03-14 23:46:34.2547 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 23:53:28.6966 Info Message Template Auto Format enabled
+2023-03-14 23:53:28.7801 Info Registered target FileTarget(Name=logfile)
+2023-03-14 23:53:28.7801 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 23:53:28.8008 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 23:53:28.8008 Info Configuration initialized.
+2023-03-14 23:53:28.8174 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 23:53:59.6459 Info Message Template Auto Format enabled
+2023-03-14 23:53:59.7312 Info Registered target FileTarget(Name=logfile)
+2023-03-14 23:53:59.7312 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 23:53:59.7535 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 23:53:59.7535 Info Configuration initialized.
+2023-03-14 23:53:59.7711 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 23:55:03.1195 Info AppDomain Shutting down. LogFactory closing...
+2023-03-14 23:55:03.1338 Info LogFactory has been closed.
+2023-03-14 23:56:30.9897 Info Message Template Auto Format enabled
+2023-03-14 23:56:31.0837 Info Registered target FileTarget(Name=logfile)
+2023-03-14 23:56:31.0837 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 23:56:31.1058 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 23:56:31.1167 Info Configuration initialized.
+2023-03-14 23:56:31.1260 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-14 23:56:39.9954 Info AppDomain Shutting down. LogFactory closing...
+2023-03-14 23:56:40.0084 Info LogFactory has been closed.
+2023-03-14 23:57:25.2875 Info Message Template Auto Format enabled
+2023-03-14 23:57:25.3663 Info Registered target FileTarget(Name=logfile)
+2023-03-14 23:57:25.3663 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-14 23:57:25.3876 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-14 23:57:25.3985 Info Configuration initialized.
+2023-03-14 23:57:25.4096 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-15 00:02:50.2718 Info Message Template Auto Format enabled
+2023-03-15 00:02:50.3518 Info Registered target FileTarget(Name=logfile)
+2023-03-15 00:02:50.3518 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-15 00:02:50.3691 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-15 00:02:50.3784 Info Configuration initialized.
+2023-03-15 00:02:50.3784 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-15 00:03:01.7971 Info AppDomain Shutting down. LogFactory closing...
+2023-03-15 00:03:01.8104 Info LogFactory has been closed.
+2023-03-15 00:03:40.2963 Info Message Template Auto Format enabled
+2023-03-15 00:03:40.3702 Info Registered target FileTarget(Name=logfile)
+2023-03-15 00:03:40.3702 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-15 00:03:40.3866 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-15 00:03:40.3951 Info Configuration initialized.
+2023-03-15 00:03:40.3951 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-15 00:03:45.1517 Info AppDomain Shutting down. LogFactory closing...
+2023-03-15 00:03:45.1644 Info LogFactory has been closed.
+2023-03-15 00:04:04.3645 Info Message Template Auto Format enabled
+2023-03-15 00:04:04.4476 Info Registered target FileTarget(Name=logfile)
+2023-03-15 00:04:04.4476 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-15 00:04:04.4651 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-15 00:04:04.4736 Info Configuration initialized.
+2023-03-15 00:04:04.4736 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-15 00:05:05.4867 Info AppDomain Shutting down. LogFactory closing...
+2023-03-15 00:05:05.4867 Info LogFactory has been closed.
+2023-03-15 00:09:53.7584 Info Message Template Auto Format enabled
+2023-03-15 00:09:53.8472 Info Registered target FileTarget(Name=logfile)
+2023-03-15 00:09:53.8472 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-15 00:09:53.8673 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-15 00:09:53.8777 Info Configuration initialized.
+2023-03-15 00:09:53.8777 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-15 00:11:00.2482 Info AppDomain Shutting down. LogFactory closing...
+2023-03-15 00:11:00.2627 Info LogFactory has been closed.
+2023-03-15 00:16:16.2636 Info Message Template Auto Format enabled
+2023-03-15 00:16:16.3703 Info Registered target FileTarget(Name=logfile)
+2023-03-15 00:16:16.3703 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-15 00:16:16.3970 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-15 00:16:16.4136 Info Configuration initialized.
+2023-03-15 00:16:16.4238 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-15 00:17:19.1823 Info Message Template Auto Format enabled
+2023-03-15 00:17:19.2726 Info Registered target FileTarget(Name=logfile)
+2023-03-15 00:17:19.2726 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-15 00:17:19.2926 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-15 00:17:19.3035 Info Configuration initialized.
+2023-03-15 00:17:19.3139 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-15 00:18:22.9374 Info AppDomain Shutting down. LogFactory closing...
+2023-03-15 00:18:22.9527 Info LogFactory has been closed.
+2023-03-15 00:20:41.8724 Info Message Template Auto Format enabled
+2023-03-15 00:20:41.9483 Info Registered target FileTarget(Name=logfile)
+2023-03-15 00:20:41.9483 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-15 00:20:41.9665 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-15 00:20:41.9755 Info Configuration initialized.
+2023-03-15 00:20:41.9875 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-15 00:21:22.3916 Info Message Template Auto Format enabled
+2023-03-15 00:21:22.4665 Info Registered target FileTarget(Name=logfile)
+2023-03-15 00:21:22.4665 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-15 00:21:22.4843 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-15 00:21:22.4942 Info Configuration initialized.
+2023-03-15 00:21:22.5026 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-15 00:21:42.5751 Info AppDomain Shutting down. LogFactory closing...
+2023-03-15 00:21:42.5883 Info LogFactory has been closed.
+2023-03-15 00:22:24.5617 Info Message Template Auto Format enabled
+2023-03-15 00:22:24.6529 Info Registered target FileTarget(Name=logfile)
+2023-03-15 00:22:24.6529 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-15 00:22:24.6741 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-15 00:22:24.6741 Info Configuration initialized.
+2023-03-15 00:22:24.6935 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-15 00:25:32.3822 Info AppDomain Shutting down. LogFactory closing...
+2023-03-15 00:25:32.3962 Info LogFactory has been closed.
+2023-03-15 12:28:14.1134 Info Message Template Auto Format enabled
+2023-03-15 12:28:14.2117 Info Registered target FileTarget(Name=logfile)
+2023-03-15 12:28:14.2117 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-15 12:28:14.2386 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-15 12:28:14.2503 Info Configuration initialized.
+2023-03-15 12:28:14.2593 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-15 12:28:52.2545 Info AppDomain Shutting down. LogFactory closing...
+2023-03-15 12:28:52.2842 Info LogFactory has been closed.
+2023-03-15 12:31:34.6832 Info Message Template Auto Format enabled
+2023-03-15 12:31:34.8135 Info Registered target FileTarget(Name=logfile)
+2023-03-15 12:31:34.8135 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-15 12:31:34.8442 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-15 12:31:34.8590 Info Configuration initialized.
+2023-03-15 12:31:34.8692 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-15 12:32:33.0520 Info AppDomain Shutting down. LogFactory closing...
+2023-03-15 12:32:33.0718 Info LogFactory has been closed.
+2023-03-15 12:51:57.8645 Info Message Template Auto Format enabled
+2023-03-15 12:51:57.9507 Info Registered target FileTarget(Name=logfile)
+2023-03-15 12:51:57.9661 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-15 12:51:57.9849 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-15 12:51:57.9849 Info Configuration initialized.
+2023-03-15 12:51:58.0018 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-15 12:52:50.5595 Info AppDomain Shutting down. LogFactory closing...
+2023-03-15 12:52:50.5818 Info LogFactory has been closed.
+2023-03-15 12:53:31.6945 Info Message Template Auto Format enabled
+2023-03-15 12:53:31.8169 Info Registered target FileTarget(Name=logfile)
+2023-03-15 12:53:31.8169 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-15 12:53:31.8457 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-15 12:53:31.8601 Info Configuration initialized.
+2023-03-15 12:53:31.8601 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-15 12:54:10.9055 Info AppDomain Shutting down. LogFactory closing...
+2023-03-15 12:54:10.9283 Info LogFactory has been closed.
+2023-03-15 12:54:48.7402 Info Message Template Auto Format enabled
+2023-03-15 12:54:48.8659 Info Registered target FileTarget(Name=logfile)
+2023-03-15 12:54:48.8659 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-15 12:54:48.8999 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-15 12:54:48.9159 Info Configuration initialized.
+2023-03-15 12:54:48.9273 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-15 12:55:04.3629 Info AppDomain Shutting down. LogFactory closing...
+2023-03-15 12:55:04.3831 Info LogFactory has been closed.
+2023-03-15 12:56:06.5337 Info Message Template Auto Format enabled
+2023-03-15 12:56:06.6564 Info Registered target FileTarget(Name=logfile)
+2023-03-15 12:56:06.6564 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-15 12:56:06.6897 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-15 12:56:06.7073 Info Configuration initialized.
+2023-03-15 12:56:06.7183 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-15 12:56:38.8401 Info AppDomain Shutting down. LogFactory closing...
+2023-03-15 12:56:38.8630 Info LogFactory has been closed.
+2023-03-15 12:57:29.2945 Info Message Template Auto Format enabled
+2023-03-15 12:57:29.3846 Info Registered target FileTarget(Name=logfile)
+2023-03-15 12:57:29.3846 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-15 12:57:29.4124 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-15 12:57:29.4249 Info Configuration initialized.
+2023-03-15 12:57:29.4249 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-15 12:57:49.4305 Info AppDomain Shutting down. LogFactory closing...
+2023-03-15 12:57:49.4551 Info LogFactory has been closed.
+2023-03-15 12:58:14.2300 Info Message Template Auto Format enabled
+2023-03-15 12:58:14.3533 Info Registered target FileTarget(Name=logfile)
+2023-03-15 12:58:14.3533 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-15 12:58:14.3847 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-15 12:58:14.3992 Info Configuration initialized.
+2023-03-15 12:58:14.4098 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-15 12:58:43.9746 Info AppDomain Shutting down. LogFactory closing...
+2023-03-15 12:58:44.0001 Info LogFactory has been closed.
+2023-03-15 12:59:17.9170 Info Message Template Auto Format enabled
+2023-03-15 12:59:18.0679 Info Registered target FileTarget(Name=logfile)
+2023-03-15 12:59:18.0679 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-15 12:59:18.0989 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-15 12:59:18.1135 Info Configuration initialized.
+2023-03-15 12:59:18.1249 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-15 12:59:30.5585 Info AppDomain Shutting down. LogFactory closing...
+2023-03-15 12:59:30.5787 Info LogFactory has been closed.
+2023-03-15 13:06:53.9192 Info Message Template Auto Format enabled
+2023-03-15 13:06:54.0434 Info Registered target FileTarget(Name=logfile)
+2023-03-15 13:06:54.0434 Info Registered target ConsoleTarget(Name=logconsole)
+2023-03-15 13:06:54.0776 Info Validating config: TargetNames=logfile, logconsole, ConfigItems=31, FilePath=C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\bin\Debug\net6.0-windows\NLog.config
+2023-03-15 13:06:54.0946 Info Configuration initialized.
+2023-03-15 13:06:54.0946 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.0.1480. Product version: 5.1.0+5e6708d4d288e03b3ddf321838ec14907016f1b8. GlobalAssemblyCache: False
+2023-03-15 13:38:01.0929 Info AppDomain Shutting down. LogFactory closing...
+2023-03-15 13:38:01.1076 Info LogFactory has been closed.

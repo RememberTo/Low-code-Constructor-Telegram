@@ -12,6 +12,8 @@
         xmlns:viewDataBase="clr-namespace:ChatbotConstructorTelegram.Model.ViewData.BotView.SampleView"
         xmlns:contols="clr-namespace:ChatbotConstructorTelegram.View.UserControls.Contols"
         xmlns:command="clr-namespace:ChatbotConstructorTelegram.Model.ViewData.BotView.Command"
+        xmlns:graphsharp="clr-namespace:GraphSharp.Controls;assembly=GraphSharp.Controls"
+        xmlns:button="clr-namespace:ChatbotConstructorTelegram.Model.ViewData.BotView.Button"
         mc:Ignorable="d"
         Title="{Binding Title}" 
 
@@ -30,7 +32,13 @@
         <vm:ProjectWindowViewModel/>
     </Window.DataContext>
     <!--.................-->
-
+    <Window.Resources>
+        <DataTemplate x:Key="VertexTemplate">
+            <Border Background="LightBlue" BorderBrush="Black" BorderThickness="1" Padding="5">
+                <TextBlock Text="{Binding Path=Vertex.Name}" />
+            </Border>
+        </DataTemplate>
+    </Window.Resources>
     <DockPanel LastChildFill="True">
 
         <StatusBar Height="24" DockPanel.Dock="Bottom" Background="#FF263A50">
@@ -229,6 +237,38 @@
                                            Margin="10,0,0,0" Foreground="#FFD3D6D7" Width="71"/>
                             </Grid>
                         </Button>
+                        <Button FontFamily="{DynamicResource MaterialDesignFont}" Cursor="Hand"
+                                Style="{DynamicResource MaterialDesignFlatButton}" HorizontalAlignment="Stretch"
+                                HorizontalContentAlignment="Stretch" Padding="0" MaxWidth="250"
+                                Command="{Binding AddMarkupButtonCommand}"
+                                Margin="0,0,0,10" Height="50" Background="#FF1F4A73">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="40"/>
+                                    <ColumnDefinition Width="50*"/>
+                                </Grid.ColumnDefinitions>
+                                <fa:ImageAwesome Grid.Column="0" Height="30" Width="30" Icon="InfoCircle" Margin="10,0,0,0" Foreground="#FFD8ECED"/>
+                                <TextBlock Text="Markup" Grid.Column="1"
+                                           HorizontalAlignment="Left"  VerticalAlignment="Center"
+                                           Margin="10,0,0,0" Foreground="#FFD3D6D7" Width="71"/>
+                            </Grid>
+                        </Button>
+                        <Button FontFamily="{DynamicResource MaterialDesignFont}" Cursor="Hand"
+                                Style="{DynamicResource MaterialDesignFlatButton}" HorizontalAlignment="Stretch"
+                                HorizontalContentAlignment="Stretch" Padding="0" MaxWidth="250"
+                                Command="{Binding Test}"
+                                Margin="0,0,0,10" Height="50" Background="#FF1F4A73">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="40"/>
+                                    <ColumnDefinition Width="50*"/>
+                                </Grid.ColumnDefinitions>
+                                <fa:ImageAwesome Grid.Column="0" Height="30" Width="30" Icon="Terminal" Margin="10,0,0,0" Foreground="#FFD8ECED"/>
+                                <TextBlock Text="TEST" Grid.Column="1"
+                                           HorizontalAlignment="Left"  VerticalAlignment="Center"
+                                           Margin="10,0,0,0" Foreground="#FFD3D6D7" Width="71"/>
+                            </Grid>
+                        </Button>
                     </StackPanel>
                 </GroupBox>
 
@@ -241,11 +281,11 @@
             <Grid Grid.Column="1" Background="#FF1B3044" Margin="3,5,3,5">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
-                    <RowDefinition Height="40" MinHeight="40"/>
+                    <RowDefinition Height="100" MinHeight="40" MaxHeight="600"/>
                 </Grid.RowDefinitions>
-                <Grid Grid.Row="0">
+                <Grid VerticalAlignment="Top" Grid.Row="0">
 
-                    <contols:ExtendedTreeView Grid.Row="0" 
+                    <contols:ExtendedTreeView Grid.Row="0"
                                               Foreground="#FFA1B1D2"
                                               SelectedItem_="{Binding SelectedCommand, Mode=TwoWay}"
                                               ItemsSource="{Binding BotCommands}"
@@ -254,65 +294,54 @@
                         <TreeView.Resources>
 
                             <HierarchicalDataTemplate DataType="{x:Type command:BotCommandProperty}" ItemsSource="{Binding Children}">
-                                <TextBlock Text="{Binding Name}" />
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Content="Command" BorderThickness="1,1,1,1" BorderBrush="#FF9E5B5B" Padding="2,1,2,1" FontSize="12" Foreground="#FFCCD1DA" ></Label>
+                                    <TextBlock Text="{Binding Name}" Grid.Column="1" Margin="4,0,0,0" />
+                                </Grid>
+                            </HierarchicalDataTemplate>
+
+                            <HierarchicalDataTemplate DataType="{x:Type command:BotTextProperty}" ItemsSource="{Binding Children}">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Content="Text" BorderThickness="1,1,1,1" BorderBrush="#FF3E8383" Padding="2,1,2,1" FontSize="12" Foreground="#FFCCD1DA" ></Label>
+                                    <TextBlock Text="{Binding Name}" Grid.Column="1" Margin="4,0,0,0" />
+                                </Grid>
                             </HierarchicalDataTemplate>
 
                             <HierarchicalDataTemplate DataType="{x:Type viewDataBase:ButtonBotBase}" ItemsSource="{Binding Children}">
                                 <TextBlock Text="{Binding Name}" />
                             </HierarchicalDataTemplate>
+                            <HierarchicalDataTemplate DataType="{x:Type button:MarkupButtonProperty}" ItemsSource="{Binding Children}">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Content="Markup" BorderThickness="1,1,1,1" BorderBrush="#FFAEC578" Padding="2,1,2,1" FontSize="12" Foreground="#FFCCD1DA" ></Label>
+                                    <TextBlock Text="{Binding Name}" Grid.Column="1" Margin="4,0,0,0" />
+                                </Grid>
+                            </HierarchicalDataTemplate>
+                            <HierarchicalDataTemplate DataType="{x:Type button:InlineButtonProperty}" ItemsSource="{Binding Children}">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Content="Inline" BorderThickness="1,1,1,1" BorderBrush="#FFA078C5" Padding="2,1,2,1" FontSize="12" Foreground="#FFCCD1DA" Margin="1,0,1,0" ></Label>
+                                    <TextBlock Text="{Binding Name}" Grid.Column="1" Margin="4,0,0,0" />
+                                </Grid>
+                            </HierarchicalDataTemplate>
 
                         </TreeView.Resources>
-                        <!--<TreeView.Resources>
 
-                            <HierarchicalDataTemplate x:Key="Inline"
-                                                      DataType="{x:Type viewData:BotCommandProperty}"
-                                                      ItemsSource="{Binding InlineButtons}">
-                                <Grid>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="21*"/>
-                                        <ColumnDefinition Width="10*"/>
-                                    </Grid.ColumnDefinitions>
-                                    <TextBlock Text="(Команда) /" Foreground="WhiteSmoke" Grid.Column="0" ></TextBlock>
-                                    <TextBlock Text="{Binding Name}" Foreground="WhiteSmoke" Grid.Column="1" ></TextBlock>
-                                </Grid>
-                            </HierarchicalDataTemplate>
-
-                            <HierarchicalDataTemplate 
-                                                      DataType="{x:Type viewData:BotCommandProperty}"
-                                                      ItemsSource="{Binding MarkupButtons}">
-                                <Grid>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="21*"/>
-                                        <ColumnDefinition Width="10*"/>
-                                    </Grid.ColumnDefinitions>
-                                    <TextBlock Text="(Команда) /" Foreground="WhiteSmoke" Grid.Column="0" ></TextBlock>
-                                    <TextBlock Text="{Binding Name}" Foreground="WhiteSmoke" Grid.Column="1" ></TextBlock>
-                                </Grid>
-                            </HierarchicalDataTemplate>
-
-                            <DataTemplate DataType="{x:Type viewData:MarkupButtonProperty}">
-                                <StackPanel Orientation="Horizontal">
-                                    <TextBlock Text="{Binding Name}" />
-                                </StackPanel>
-                            </DataTemplate>
-
-                            <DataTemplate DataType="{x:Type viewData:InlineButtonProperty}">
-                                <StackPanel Orientation="Horizontal">
-                                    <TextBlock Text="{Binding Name}" />
-                                </StackPanel>
-                            </DataTemplate>
-
-                            <DataTemplate x:Key="ke" DataType="{x:Type viewData:BotCommandProperty}">
-                                <StackPanel Orientation="Horizontal">
-                                    <TextBlock Text="{Binding Name}" />
-                                </StackPanel>
-                            </DataTemplate>
-
-                        </TreeView.Resources>-->
-                    </contols:ExtendedTreeView>
-                    <!--<ListView ItemsSource="{Binding BotCommands}" 
-                          SelectedItem="{Binding SelectedCommand}">
-                        <ListView.ContextMenu>
+                        <contols:ExtendedTreeView.ContextMenu>
                             <ContextMenu VerticalAlignment="Top"
                                      Margin="0,0,0,0"  Grid.Row="0" Grid.Column="1"
                                      FontFamily="{DynamicResource MaterialDesignFont}"
@@ -346,45 +375,36 @@
                                     </MenuItem.Icon>
                                 </MenuItem>
                             </ContextMenu>
-                        </ListView.ContextMenu>
-                        <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <Grid MinWidth="300">
-                                    <TreeView MinWidth="300">
-                                        -->
-                    <!--<TextBlock Text="/" Grid.Column="0" Foreground="WhiteSmoke"/>
-                                        <TextBlock Text="{Binding Name}"
-                                                   Foreground="WhiteSmoke" Grid.Column="1"
-                                        />-->
-                    <!--
-                                        <TreeView.ItemTemplate>
-                                            <HierarchicalDataTemplate  ItemsSource="{Binding Children}">
-                                                <TextBlock Text="{Binding Name}"/>
-                                            </HierarchicalDataTemplate>
-                                        </TreeView.ItemTemplate>
-                                    </TreeView>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="10"/>
-                                        <ColumnDefinition Width="87*"/>
-                                    </Grid.ColumnDefinitions>
-                                    
-                                </Grid>
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>-->
+                        </contols:ExtendedTreeView.ContextMenu>
+
+                    </contols:ExtendedTreeView>
                 </Grid>
 
                 <GridSplitter Grid.ColumnSpan="2" Height="5" Background="#FF1A2E41" HorizontalAlignment="Stretch" VerticalAlignment="Top"  Grid.Row="1"></GridSplitter>
 
-                <Grid Grid.Row="1">
+                <Grid Grid.Row="1" Background="#FF122231" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,5,0,0">
+                    <graphsharp:GraphLayout x:Name="graphLayout" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                                            AsyncCompute="True" ForceCursor="True"
+                                            Graph="{Binding Graph}"
+                                            LayoutAlgorithmType="Tree" Background="#FF122231">
+                    </graphsharp:GraphLayout>
 
                 </Grid>
             </Grid>
 
             <Grid Grid.Column="2" Background="#FF1B3044" Margin="8,5,5,5">
-                <Rectangle Stroke="#FF173F65"></Rectangle>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="221*"/>
+                    <RowDefinition Height="19*"/>
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Row="1" Orientation="Horizontal">
+                    <Button Content="Удалить" Command="{Binding DeleteCommand}" CommandParameter="{Binding SelectedCommand}"/>
+                </StackPanel>
+
+                <Rectangle Stroke="#FF173F65" Grid.Row="0"></Rectangle>
                 <GroupBox FontSize="14" Padding="0,0,0,0"
-                          materialDesign:ColorZoneAssist.Mode="Custom">
+                          materialDesign:ColorZoneAssist.Mode="Custom" Grid.Row="0">
                     <GroupBox.Header>
                         <TextBlock Foreground="#FFBACED7" Padding="5,0,1,0" 
                                    Text="Настройки" 
@@ -394,182 +414,214 @@
                     <ScrollViewer Margin="2" HorizontalContentAlignment="Stretch">
                         <StackPanel Visibility="Visible">
                             <StackPanel Visibility="{Binding VisibilityBotCommand}">
-                                <StackPanel >
-                                    <TreeViewItem IsExpanded="True" FontSize="12"  Header="Основные" HorizontalContentAlignment="Stretch" Foreground="#FFA1B1D2" Padding="0,8,0,7" ScrollViewer.CanContentScroll="True" Margin="-1,0,0,0" BorderThickness="0,0,0,0">
+                                <TreeViewItem IsExpanded="True" FontSize="12"  Header="Основные" HorizontalContentAlignment="Stretch" Foreground="#FFA1B1D2" Padding="0,8,0,7" ScrollViewer.CanContentScroll="True" Margin="-1,0,0,0" BorderThickness="0,0,0,0">
 
-                                        <Grid Height="25">
-                                            <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="40"/>
-                                                <ColumnDefinition Width="121*"/>
-                                            </Grid.ColumnDefinitions>
-                                            <TextBlock Text="Имя /" VerticalAlignment="Center"  Grid.Column="0"/>
-                                            <TextBox Text="{Binding SelectedCommand.Name}" 
+                                    <Grid Height="25">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="40"/>
+                                            <ColumnDefinition Width="121*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock Text="Имя /" VerticalAlignment="Center"  Grid.Column="0"/>
+                                        <TextBox Text="{Binding SelectedCommand.Name}" 
                                                      Grid.Column="1" Style="{DynamicResource MaterialDesignFlatTextBox}"
                                                      FontFamily="{DynamicResource MaterialDesignFont}"
                                                      Margin="10,0,0,0"
                                                      Foreground="WhiteSmoke"  Background="Transparent" 
                                                      BorderBrush="#FF3D6184" BorderThickness="1,1,1,1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Padding="0,0,0,3" CaretBrush="#FFCFF7F6"/>
-                                        </Grid>
+                                    </Grid>
 
-                                        <Grid Height="60">
-                                            <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="40"/>
-                                                <ColumnDefinition Width="121*"/>
-                                            </Grid.ColumnDefinitions>
-                                            <TextBlock Text="Текст" VerticalAlignment="Top"  Grid.Column="0"/>
-                                            <TextBox Text="{Binding SelectedCommand.Text}" 
+                                    <Grid Height="60">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="40"/>
+                                            <ColumnDefinition Width="121*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock Text="Текст" VerticalAlignment="Top"  Grid.Column="0"/>
+                                        <TextBox Text="{Binding SelectedCommand.Text}" 
                                                      Grid.Column="1" Style="{DynamicResource MaterialDesignFlatTextBox}"
                                                      FontFamily="{DynamicResource MaterialDesignFont}"
                                                      Margin="10,0,0,0" Height="60"
                                                      Foreground="WhiteSmoke"  Background="Transparent" 
                                                      BorderBrush="#FF3D6184" BorderThickness="1,1,1,1" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" Padding="0,0,0,3" CaretBrush="#FFCFF7F6" TextWrapping="Wrap"/>
-                                        </Grid>
+                                    </Grid>
 
-                                        <TreeViewItem IsExpanded="False"  Header="Отправить документ" HorizontalContentAlignment="Stretch" Foreground="#FFA1B1D2" Padding="0,8,0,7" ScrollViewer.CanContentScroll="True" Margin="-1,0,0,0" BorderThickness="0,0,0,0">
+                                    <TreeViewItem IsExpanded="False"  Header="Отправить документ" HorizontalContentAlignment="Stretch" Foreground="#FFA1B1D2" Padding="0,8,0,7" ScrollViewer.CanContentScroll="True" Margin="-1,0,0,0" BorderThickness="0,0,0,0">
 
-                                            <Grid Height="25" >
-                                                <Grid.ColumnDefinitions>
-                                                    <ColumnDefinition Width="50"/>
-                                                    <ColumnDefinition Width="121*"/>
-                                                    <ColumnDefinition Width="35"/>
-                                                </Grid.ColumnDefinitions>
-                                                <TextBlock Text="Файл" VerticalAlignment="Center"  Grid.Column="0"/>
-                                                <TextBox Text="{Binding SelectedCommand.Document.Path}"
+                                        <Grid Height="25" >
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="50"/>
+                                                <ColumnDefinition Width="121*"/>
+                                                <ColumnDefinition Width="35"/>
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock Text="Файл" VerticalAlignment="Center"  Grid.Column="0"/>
+                                            <TextBox Text="{Binding SelectedCommand.Document.Path}"
                                                      Grid.Column="1" Style="{DynamicResource MaterialDesignFlatTextBox}"
                                                      FontFamily="{DynamicResource MaterialDesignFont}"
                                                      Margin="10,0,0,0" Height="25" IsEnabled="True"
                                                      Foreground="WhiteSmoke"  Background="Transparent" 
                                                      BorderBrush="#FF3D6184" BorderThickness="1,1,1,1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Padding="0,0,0,3" CaretBrush="#FFCFF7F6"/>
-                                                <Button Grid.Column="2" Height="26" Margin="2,0,0, 0" Padding="0" 
+                                            <Button Grid.Column="2" Height="26" Margin="2,0,0, 0" Padding="0" 
                                                     Style="{DynamicResource MaterialDesignFlatButton}"
                                                     Command="{Binding ChooseFileBotCommand}"
                                                     FontFamily="{DynamicResource MaterialDesignFont}"
                                                     Content="..." FontSize="13"
                                                     Foreground="#FFBACED7" Cursor="Hand" BorderThickness="1,1,1,1"/>
-                                            </Grid>
+                                        </Grid>
 
-                                            <Grid Height="60">
-                                                <Grid.ColumnDefinitions>
-                                                    <ColumnDefinition Width="50"/>
-                                                    <ColumnDefinition Width="121*"/>
-                                                </Grid.ColumnDefinitions>
-                                                <TextBlock Text="Подпись" VerticalAlignment="Top"  Grid.Column="0"/>
-                                                <TextBox Text="{Binding SelectedCommand.Document.Caption}" 
+                                        <Grid Height="60">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="50"/>
+                                                <ColumnDefinition Width="121*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock Text="Подпись" VerticalAlignment="Top"  Grid.Column="0"/>
+                                            <TextBox Text="{Binding SelectedCommand.Document.Caption}" 
                                                          Grid.Column="1" Style="{DynamicResource MaterialDesignFlatTextBox}"
                                                          FontFamily="{DynamicResource MaterialDesignFont}"
                                                          Margin="10,0,0,0" Height="60"
                                                          Foreground="WhiteSmoke"  Background="Transparent" 
                                                          BorderBrush="#FF3D6184" BorderThickness="1,1,1,1" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" Padding="0,0,0,3" CaretBrush="#FFCFF7F6" TextWrapping="Wrap"/>
-                                            </Grid>
+                                        </Grid>
 
 
-                                        </TreeViewItem>
+                                    </TreeViewItem>
 
-                                        <TreeViewItem IsExpanded="False" Header="Отправить изображение" HorizontalContentAlignment="Stretch" Foreground="#FFA1B1D2" Padding="0,8,0,7" ScrollViewer.CanContentScroll="True" Margin="-1,0,0,0" BorderThickness="0,0,0,0">
+                                    <TreeViewItem IsExpanded="False" Header="Отправить изображение" HorizontalContentAlignment="Stretch" Foreground="#FFA1B1D2" Padding="0,8,0,7" ScrollViewer.CanContentScroll="True" Margin="-1,0,0,0" BorderThickness="0,0,0,0">
 
-                                            <Grid Height="25">
-                                                <Grid.ColumnDefinitions>
-                                                    <ColumnDefinition Width="50"/>
-                                                    <ColumnDefinition Width="*"/>
-                                                    <ColumnDefinition Width="35"/>
-                                                </Grid.ColumnDefinitions>
-                                                <TextBlock Text="Файл" VerticalAlignment="Center"  Grid.Column="0"/>
-                                                <TextBox Text="{Binding SelectedCommand.Photo.Path}"
+                                        <Grid Height="25">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="50"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="35"/>
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock Text="Файл" VerticalAlignment="Center"  Grid.Column="0"/>
+                                            <TextBox Text="{Binding SelectedCommand.Photo.Path}"
                                                      Grid.Column="1" Style="{DynamicResource MaterialDesignFlatTextBox}"
                                                      FontFamily="{DynamicResource MaterialDesignFont}"
                                                      Margin="10,0,0,0" Height="25" IsEnabled="True"
                                                      Foreground="WhiteSmoke"  Background="Transparent" 
                                                      BorderBrush="#FF3D6184" BorderThickness="1,1,1,1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Padding="0,0,0,3" CaretBrush="#FFCFF7F6"/>
-                                                <Button Grid.Column="2" Height="26" Margin="2,0,0, 0" Padding="0" 
+                                            <Button Grid.Column="2" Height="26" Margin="2,0,0, 0" Padding="0" 
                                                     Style="{DynamicResource MaterialDesignFlatButton}"
                                                     Command="{Binding ChooseImageBotCommand}"
                                                     FontFamily="{DynamicResource MaterialDesignFont}"
                                                     Content="..." FontSize="13"
                                                     Foreground="#FFBACED7" Cursor="Hand" BorderThickness="1,1,1,1"
                                             />
-                                            </Grid>
+                                        </Grid>
 
-                                            <Grid Height="60">
-                                                <Grid.ColumnDefinitions>
-                                                    <ColumnDefinition Width="50"/>
-                                                    <ColumnDefinition Width="121*"/>
-                                                </Grid.ColumnDefinitions>
-                                                <TextBlock Text="Подпись" VerticalAlignment="Top"  Grid.Column="0"/>
-                                                <TextBox Text="{Binding SelectedCommand.Photo.Caption}" 
+                                        <Grid Height="60">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="50"/>
+                                                <ColumnDefinition Width="121*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock Text="Подпись" VerticalAlignment="Top"  Grid.Column="0"/>
+                                            <TextBox Text="{Binding SelectedCommand.Photo.Caption}" 
                                                          Grid.Column="1" Style="{DynamicResource MaterialDesignFlatTextBox}"
                                                          FontFamily="{DynamicResource MaterialDesignFont}"
                                                          Margin="10,0,0,0" Height="60"
                                                          Foreground="WhiteSmoke"  Background="Transparent" 
                                                          BorderBrush="#FF3D6184" BorderThickness="1,1,1,1" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" Padding="0,0,0,3" CaretBrush="#FFCFF7F6" TextWrapping="Wrap"/>
-                                            </Grid>
+                                        </Grid>
 
-                                        </TreeViewItem>
+                                    </TreeViewItem>
 
-                                        <TreeViewItem IsExpanded="False"  Header="Inline кнопки" HorizontalContentAlignment="Stretch" Foreground="#FFA1B1D2" Padding="0,8,0,7" ScrollViewer.CanContentScroll="True" Margin="-1,0,0,0" BorderThickness="0,0,0,0">
-                                            <Grid Height="30">
-                                                <Grid.ColumnDefinitions>
-                                                    <ColumnDefinition Width="65*"/>
-                                                    <ColumnDefinition Width="77*"/>
-                                                </Grid.ColumnDefinitions>
-                                                <TextBox Text="{Binding NameInlineButton}" 
-                                                         Grid.Column="0" Style="{DynamicResource MaterialDesignFlatTextBox}"
+                                    <TreeViewItem IsExpanded="False"   Header="Inline кнопки" HorizontalContentAlignment="Stretch" Foreground="#FFA1B1D2" Padding="0,8,0,7" ScrollViewer.CanContentScroll="True" Margin="-1,0,0,0" BorderThickness="0,0,0,0">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="25"/>
+                                                <RowDefinition Height="40"/>
+                                                <RowDefinition Height="25"/>
+                                                <RowDefinition Height="35"/>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition MinWidth="67" MaxWidth="180"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock Grid.Column="0" VerticalAlignment="Center" Text="Название" Grid.ColumnSpan="2" Margin="0,0,71,0"/>
+                                            <TextBox Text="{Binding NameInlineButton}" 
+                                                         Grid.Column="1" Style="{DynamicResource MaterialDesignFlatTextBox}"
                                                          FontFamily="{DynamicResource MaterialDesignFont}"
-                                                         Margin="0,0,5,0"
+                                                         Margin="0,0,5,0" Grid.Row="0"
                                                          Foreground="WhiteSmoke"  Background="Transparent" 
-                                                         BorderBrush="#FF3D6184" BorderThickness="1,1,1,1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Padding="0,0,0,3" CaretBrush="#FFCFF7F6"/>
-                                                <Button  Grid.Column="1" Content="Добавить" 
-                                                        CommandParameter="{Binding SelectedCommand}"
-                                                        Command="{Binding AddInlineButtonCommand }"></Button>
-                                            </Grid>
-                                            <Grid Height="100">
-                                                <Grid.RowDefinitions>
-                                                    <RowDefinition Height="15"/>
-                                                    <RowDefinition Height="*"/>
-                                                </Grid.RowDefinitions>
-                                                <TextBlock Grid.Row="0" VerticalAlignment="Top" Text="Кнопки:" />
-                                                <ListView Grid.Row="1" ItemsSource="{Binding InlineButtonCollectionView}" >
-                                                    <ListView.ItemTemplate>
-                                                        <DataTemplate>
-                                                            <TextBlock Text="{Binding Name}"></TextBlock>
-                                                        </DataTemplate>
-                                                    </ListView.ItemTemplate>
-                                                </ListView>
-                                            </Grid>
-                                        </TreeViewItem>
-                                        <TreeViewItem IsExpanded="False"  Header="Markup кнопки" HorizontalContentAlignment="Stretch" Foreground="#FFA1B1D2" Padding="0,8,0,7" ScrollViewer.CanContentScroll="True" Margin="-1,0,0,0" BorderThickness="0,0,0,0">
-                                            <Grid Height="30">
-                                                <Grid.ColumnDefinitions>
-                                                    <ColumnDefinition Width="65*"/>
-                                                    <ColumnDefinition Width="77*"/>
-                                                </Grid.ColumnDefinitions>
-                                                <TextBox Text="{Binding NameMarkupButton}" 
-                                                         Grid.Column="0" Style="{DynamicResource MaterialDesignFlatTextBox}"
-                                                         FontFamily="{DynamicResource MaterialDesignFont}"
-                                                         Margin="0,0,5,0"
-                                                         Foreground="WhiteSmoke"  Background="Transparent" 
-                                                         BorderBrush="#FF3D6184" BorderThickness="1,1,1,1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Padding="0,0,0,3" CaretBrush="#FFCFF7F6"/>
-                                                <Button  Grid.Column="1" Content="Добавить" 
-                                                        CommandParameter="{Binding SelectedCommand}"
-                                                        Command="{Binding AddMarkupButtonCommand }"></Button>
-                                            </Grid>
-                                            <Grid Height="100">
-                                                <Grid.RowDefinitions>
-                                                    <RowDefinition Height="15"/>
-                                                    <RowDefinition Height="*"/>
-                                                </Grid.RowDefinitions>
-                                                <TextBlock Grid.Row="0" VerticalAlignment="Top" Text="Кнопки:" />
-                                                <ListView Grid.Row="1"
-                                                          ItemsSource="{Binding MarkupButtonCollectionView}" >
-                                                    <ListView.ItemTemplate>
-                                                        <DataTemplate>
-                                                            <TextBlock Text="{Binding }"></TextBlock>
-                                                        </DataTemplate>
-                                                    </ListView.ItemTemplate>
-                                                </ListView>
-                                            </Grid>
+                                                         BorderBrush="#FF3D6184" BorderThickness="1,1,1,1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Padding="0,0,0,3" CaretBrush="#FFCFF7F6" />
+                                            <TextBlock Grid.Column="0" Text="Количество кнопок в строке" TextWrapping="Wrap" Margin="0,12,0,0" Grid.Row="1"/>
+                                            <TextBox Text="{Binding CountButtonInStrInlineButton}" 
+                                                     Grid.Column="1" Style="{DynamicResource MaterialDesignFlatTextBox}"
+                                                     FontFamily="{DynamicResource MaterialDesignFont}"
+                                                     Margin="0,8,5,8" Grid.Row="1"
+                                                     Foreground="WhiteSmoke"  Background="Transparent" 
+                                                     BorderBrush="#FF3D6184" BorderThickness="1,1,1,1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" 
+                                                     Padding="0,0,0,3" CaretBrush="#FFCFF7F6" />
+                                            <TextBlock Grid.Column="0" Grid.Row="2" VerticalAlignment="Center" Text="Cылка"></TextBlock>
+                                            <TextBox Text="{Binding URLForInlineButton}" 
+                                                     Grid.Column="1" Style="{DynamicResource MaterialDesignFlatTextBox}"
+                                                     FontFamily="{DynamicResource MaterialDesignFont}"
+                                                     Margin="0,1,5,1" Grid.Row="2"
+                                                     Foreground="WhiteSmoke"  Background="Transparent" 
+                                                     BorderBrush="#FF3D6184" BorderThickness="1,1,1,1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Padding="0,0,0,3" CaretBrush="#FFCFF7F6" />
+                                            <Button  Grid.Column="0" Content="Добавить" FontSize="12" Grid.ColumnSpan="2" Background="#FF1A2E41" Foreground="#FFA1B1D2"
+                                                     MaxWidth="200" HorizontalAlignment="Right" MinWidth="100"
+                                                     CommandParameter="{Binding SelectedCommand}" Padding="0,0,0,1" Height="25"
+                                                     Command="{Binding AddInlineButtonCommand }" Margin="4,4,4,4" Grid.Row="3" />
+
+                                        </Grid>
+                                        <TreeViewItem Grid.Row="1" Header="Кнопки" Foreground="#FFA1B1D2" ItemsSource="{Binding InlineButtonCollectionView}" Padding="0,0,0,0" >
+                                            <TreeViewItem.ItemTemplate>
+                                                <DataTemplate DataType="button:InlineButtonProperty">
+                                                    <TextBlock FontSize="12" Foreground="#FFA1B1D2" Text="{Binding Name}"></TextBlock>
+                                                </DataTemplate>
+                                            </TreeViewItem.ItemTemplate>
                                         </TreeViewItem>
                                     </TreeViewItem>
-                                </StackPanel>
+                                    <TreeViewItem IsExpanded="True"  Header="Markup кнопки" HorizontalContentAlignment="Stretch" Foreground="#FFA1B1D2" Padding="0,8,0,7" ScrollViewer.CanContentScroll="True" Margin="-1,0,0,0" BorderThickness="0,0,0,0">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="25"/>
+                                                <RowDefinition Height="40"/>
+                                                <RowDefinition Height="25"/>
+                                                <RowDefinition Height="35"/>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition MinWidth="67" MaxWidth="180"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock Grid.Column="0" VerticalAlignment="Center" Text="Название" Grid.ColumnSpan="2" Margin="0,0,71,0"/>
+                                            <TextBox Text="{Binding NameMarkupButton}" 
+                                                         Grid.Column="1" Style="{DynamicResource MaterialDesignFlatTextBox}"
+                                                         FontFamily="{DynamicResource MaterialDesignFont}"
+                                                         Margin="0,0,5,0" Grid.Row="0"
+                                                         Foreground="WhiteSmoke"  Background="Transparent" 
+                                                         BorderBrush="#FF3D6184" BorderThickness="1,1,1,1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Padding="0,0,0,3" CaretBrush="#FFCFF7F6" />
+                                            <TextBlock Grid.Column="0" Text="Количество кнопок в строке" TextWrapping="Wrap" Margin="0,12,0,0" Grid.Row="1"/>
+                                            <TextBox Text="{Binding CountButtonInStrMarkupButton}" 
+                                                     Grid.Column="1" Style="{DynamicResource MaterialDesignFlatTextBox}"
+                                                     FontFamily="{DynamicResource MaterialDesignFont}"
+                                                     Margin="0,8,5,8" Grid.Row="1"
+                                                     Foreground="WhiteSmoke"  Background="Transparent" 
+                                                     BorderBrush="#FF3D6184" BorderThickness="1,1,1,1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" 
+                                                     Padding="0,0,0,3" CaretBrush="#FFCFF7F6" />
+                                            <TextBlock Grid.Column="0" Grid.Row="2" VerticalAlignment="Center" Text="Cылка"></TextBlock>
+                                            <TextBox Text="{Binding URLMarkupButton}" 
+                                                     Grid.Column="1" Style="{DynamicResource MaterialDesignFlatTextBox}"
+                                                     FontFamily="{DynamicResource MaterialDesignFont}"
+                                                     Margin="0,1,5,1" Grid.Row="2"
+                                                     Foreground="WhiteSmoke"  Background="Transparent" 
+                                                     BorderBrush="#FF3D6184" BorderThickness="1,1,1,1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Padding="0,0,0,3" CaretBrush="#FFCFF7F6" />
+                                            <Button  Grid.Column="0" Content="Добавить" FontSize="12" Grid.ColumnSpan="2" Background="#FF1A2E41" Foreground="#FFA1B1D2"
+                                                     MaxWidth="200" HorizontalAlignment="Right" MinWidth="100"
+                                                     CommandParameter="{Binding SelectedCommand}" Padding="0,0,0,1" Height="25"
+                                                     Command="{Binding AddMarkupButtonCommand }" Margin="4,4,4,4" Grid.Row="3" />
+
+                                        </Grid>
+                                        <TreeViewItem Grid.Row="1" Header="Кнопки" Foreground="#FFA1B1D2" ItemsSource="{Binding MarkupButtonCollectionView}" Padding="0,0,0,0" >
+                                            <TreeViewItem.ItemTemplate>
+                                                <DataTemplate DataType="button:MarkupButtonProperty">
+                                                    <TextBlock FontSize="12" Foreground="#FFA1B1D2" Text="{Binding Name}"></TextBlock>
+                                                </DataTemplate>
+                                            </TreeViewItem.ItemTemplate>
+                                        </TreeViewItem>
+                                    </TreeViewItem>
+                                </TreeViewItem>
+
                             </StackPanel>
 
                             <StackPanel Visibility="{Binding VisibilityBotText}">
@@ -600,6 +652,7 @@
                         </StackPanel>
                     </ScrollViewer>
                 </GroupBox>
+
             </Grid>
 
             <GridSplitter Grid.Column="2" Width="5" Background="#FF1A2E41" Margin="0,5,0,5" HorizontalAlignment="Left">

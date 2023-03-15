@@ -13,7 +13,9 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Diagnostics.Eventing.Reader;
 using System.IO;
+using System.Linq;
 using System.Threading;
 using System.Windows;
 using System.Windows.Data;
@@ -22,6 +24,8 @@ using System.Windows.Threading;
 using ChatbotConstructorTelegram.Model.ViewData.BotView.Button;
 using ChatbotConstructorTelegram.Model.ViewData.BotView.Command;
 using ChatbotConstructorTelegram.Model.ViewData.BotView.SampleView;
+using QuickGraph;
+using ChatbotConstructorTelegram.Model.ViewData.BotView.PropertiesView;
 
 namespace ChatbotConstructorTelegram.ViewModels
 {
@@ -112,24 +116,18 @@ namespace ChatbotConstructorTelegram.ViewModels
 
         private MarkupButtonProperty? _botMarkupButtonProperty;
 
-        public ICollectionView InlineButtonCollectionView
+        private ObservableCollection<InlineButtonProperty> _inlineButtonCollectionView;
+        public ObservableCollection<InlineButtonProperty> InlineButtonCollectionView
         {
-            get
-            {
-                var collectionView = CollectionViewSource.GetDefaultView(SelectedCommand.Children);
-                collectionView.Filter = item => item is InlineButtonProperty;
-                return collectionView;
-            }
+            get => _inlineButtonCollectionView;
+            set => Set(ref _inlineButtonCollectionView, value);
         }
 
-        public ICollectionView MarkupButtonCollectionView
+        private ObservableCollection<MarkupButtonProperty> _markupButtonCollectionView;
+        public ObservableCollection<MarkupButtonProperty> MarkupButtonCollectionView
         {
-            get
-            {
-                var collectionView = CollectionViewSource.GetDefaultView(SelectedCommand.Children);
-                collectionView.Filter = item => item is MarkupButtonProperty;
-                return collectionView;
-            }
+            get => _markupButtonCollectionView;
+            set => Set(ref _markupButtonCollectionView, value);
         }
 
         public MarkupButtonProperty? BotMarkupButtonProperty
@@ -145,11 +143,23 @@ namespace ChatbotConstructorTelegram.ViewModels
             get => _selectedCommand;
             set
             {
+                ResetGraph();
                 ResetVisibleProperty(value);
+                ResetValueButtonProperty(value);
                 Set(ref _selectedCommand, value);
             }
         }
 
+        private void ResetValueButtonProperty(IPropertyBot? buttonBot)
+        {
+            if (buttonBot != null)
+            {
+                MarkupButtonCollectionView =
+                    new ObservableCollection<MarkupButtonProperty>(buttonBot.Children.OfType<MarkupButtonProperty>());
+                InlineButtonCollectionView =
+                    new ObservableCollection<InlineButtonProperty>(buttonBot.Children.OfType<InlineButtonProperty>());
+            }
+        }
 
 
         private void ResetVisibleProperty(IPropertyBot propertyBot)
@@ -197,6 +207,7 @@ namespace ChatbotConstructorTelegram.ViewModels
         }
 
         Visibility _visibilityBotText;
+
         public Visibility VisibilityBotText
         {
             get => _visibilityBotText;
@@ -242,8 +253,9 @@ namespace ChatbotConstructorTelegram.ViewModels
         public ICommand? Test { get; private set; }
         private void OnTestExecuted(object p)
         {
-
-
+            var tmp = new ObservableCollection<MarkupButtonProperty>(SelectedCommand.Children.OfType<MarkupButtonProperty>());
+            MarkupButtonCollectionView = tmp;
+            InlineButtonCollectionView = new ObservableCollection<InlineButtonProperty>(SelectedCommand.Children.OfType<InlineButtonProperty>());
         }
         ///
         ///
@@ -346,8 +358,30 @@ namespace ChatbotConstructorTelegram.ViewModels
 
         private void OnAddCommandExecuted(object p)
         {
-            BotCommands.Add(new BotCommandProperty() { Id = 0, Description = "", Name = "newCommand" });
-            SetStatusStartTimer("Команда добавлена");
+            for (int i = 0; i < BotCommands.Count; i++)
+            {
+                if (IsNameCommandAndButtonUnique("newCommand" + i))
+                {
+                    BotCommands.Add(new BotCommandProperty() { Id = 0, Description = "", Name = "newCommand" + i });
+                    SetStatusStartTimer("Команда добавлена");
+                    break;
+                }
+            }
+        }
+
+        public ICommand? AddTextCommand { get; private set; }
+
+        private void OnAddTextCommandExecuted(object p)
+        {
+            for (int i = 0; i < BotCommands.Count; i++)
+            {
+                if (IsNameCommandAndButtonUnique("newText" + i))
+                {
+                    BotCommands.Add(new BotTextProperty() { Name = "newText" + i });
+                    SetStatusStartTimer("Команда добавлена");
+                    break;
+                }
+            }
         }
 
         public ICommand? AddInlineButtonCommand { get; private set; }
@@ -358,8 +392,10 @@ namespace ChatbotConstructorTelegram.ViewModels
             {
                 if (SelectedCommand == null || SelectedCommand is BotTextProperty)
                     throw new InvalidOperationException();
+
                 var inlineButton = new InlineButtonProperty() { Name = NameInlineButton };
                 SelectedCommand.Children.Add(inlineButton);
+                SelectedCommand = SelectedCommand; //обновление данных
                 Logger.Info($"Inline Кнопка {inlineButton.Name} ID {inlineButton.UniqueId} добавлена ");
                 SetStatusStartTimer("Inline кнопка добавлена");
             }
@@ -367,7 +403,7 @@ namespace ChatbotConstructorTelegram.ViewModels
             {
                 MessageBox.Show("Выберите команду или кнопку!");
             }
-             catch (Exception e)
+            catch (Exception e)
             {
                 MessageBox.Show(e.Message);
             }
@@ -381,9 +417,13 @@ namespace ChatbotConstructorTelegram.ViewModels
             {
                 if (SelectedCommand == null || SelectedCommand is BotTextProperty)
                     throw new InvalidOperationException();
+
                 var markupButton = new MarkupButtonProperty() { Name = NameMarkupButton };
                 SelectedCommand.Children.Add(markupButton);
-                SetStatusStartTimer("Inline кнопка добавлена");
+                SelectedCommand = SelectedCommand;//Обновление данных
+                Logger.Info($"Markup Кнопка {markupButton.Name} ID {markupButton.UniqueId} добавлена ");
+                SetStatusStartTimer("Markup кнопка добавлена");
+
             }
             catch (InvalidOperationException)
             {
@@ -395,27 +435,117 @@ namespace ChatbotConstructorTelegram.ViewModels
             }
         }
 
-        public ICommand? AddTextCommand { get; private set; }
-
-        private void OnAddTextCommandExecuted(object p)
+        private bool IsNameCommandAndButtonUnique(string name)
         {
-            BotCommands.Add(new BotTextProperty() { Name = "Text" });
+            foreach (var item in BotCommands)
+            {
+                if (!IsNameUnique(item, name))
+                    return false;
+            }
+
+            return true;
+        }
+
+        private bool IsNameUnique(IPropertyBot item, string name)
+        {
+
+            if (item == null)
+                return true;
+
+            if (item.Name == name)
+                return false;
+
+            foreach (var child in item.Children)
+            {
+                if (!IsNameUnique(child, name))
+                    return false;
+            }
+
+            return true;
         }
 
         public ICommand? DeleteCommand { get; private set; }
 
         private bool CanDeleteCommandExecute(object p)
         {
-            return p is BotCommandProperty cmd && BotCommands.Contains(cmd);
+            var resultSearch = false;
+            if (p is not IPropertyBot bot) return resultSearch;
+
+            if (p is BotCommandProperty || p is BotTextProperty)
+            {
+                resultSearch = BotCommands.Contains(bot);
+            }
+
+            else if (bot is not InlineButtonProperty && bot is not MarkupButtonProperty) return resultSearch;
+
+            IPropertyBot parent = null;
+
+            foreach (var item in BotCommands)
+            {
+                if (parent != null)
+                    break;
+                if (item.Children.Contains(bot))
+                {
+                    parent = bot;
+                    break;
+                }
+
+                parent = FindParent(bot, item.Children);
+            }
+
+            if (parent != null)
+                resultSearch = true;
+
+            return resultSearch;
         }
 
         private void OnDeleteCommandExecuted(object p)
         {
             if (p is not IPropertyBot cmd) return;
-            SetStatusStartTimer("Элемент " + cmd.Name + " удален");
-            BotCommands.Remove(cmd);
+
+            RemoveItemFromTree(cmd);
             SelectedCommand = null;
-            SetStatusStartTimer("");
+            SetStatusStartTimer("Элемент " + cmd.Name + " удален");
+        }
+
+        public void RemoveItemFromTree(IPropertyBot itemSearch)
+        {
+            IPropertyBot parent = null;
+
+            foreach (var item in BotCommands)
+            {
+                if (parent != null)
+                    break;
+                if (item.Children.Contains(itemSearch))
+                {
+                    parent = item;
+                    break;
+                }
+                parent = FindParent(itemSearch, item.Children);
+            }
+
+            parent.Children.Remove((ButtonBotBase)itemSearch);
+        }
+
+        private IPropertyBot FindParent(IPropertyBot item, ObservableCollection<ButtonBotBase> tree)
+        {
+            // Найти родительский элемент
+            foreach (var parent in tree)
+            {
+                if (parent.Children.Contains(item))
+                {
+                    return parent;
+                }
+                else if (parent.Children.Count > 0)
+                {
+                    var result = FindParent(item, parent.Children);
+                    if (result != null)
+                    {
+                        return result;
+                    }
+                }
+            }
+            return null;
         }
 
         public ICommand? ChooseFileBotCommand { get; private set; }
@@ -499,8 +629,9 @@ namespace ChatbotConstructorTelegram.ViewModels
             #region Inicialization
             //VisibilityBotCommand = Visibility.Hidden;
             //VisibilityBotText = Visibility.Hidden;
-            BotCommands = new ObservableCollection<IPropertyBot>() { new BotCommandProperty() { Id = 0, Description = "Начальная команда", Name = "start" } };
-
+            BotCommands = new ObservableCollection<IPropertyBot>() { new BotCommandProperty() { Id = 0, Description = "Начальная команда", Name = "start", Children = new ObservableCollection<ButtonBotBase>() { new InlineButtonProperty() { Name = "Inline Button" }, new MarkupButtonProperty() { Name = "Markup Button" } } } };
+            InlineButtonCollectionView = new ObservableCollection<InlineButtonProperty>() { new InlineButtonProperty() { Name = "TEST" } };
+            MarkupButtonCollectionView = new ObservableCollection<MarkupButtonProperty>();
             #endregion
 
             #region Command
@@ -509,9 +640,18 @@ namespace ChatbotConstructorTelegram.ViewModels
 
             #endregion
 
+            ResetGraph();
+
             _timer = new DispatcherTimer();
             _timer.Tick += Timer_Tick;
             _timer.Interval = new TimeSpan(0, 0, 5);
+        }
+
+        private BidirectionalGraph<object, IEdge<object>> _graph;
+        public BidirectionalGraph<object, IEdge<object>> Graph
+        {
+            get => _graph;
+            set => Set(ref _graph, value);
         }
 
         public ProjectWindowViewModel(string path)
@@ -519,6 +659,9 @@ namespace ChatbotConstructorTelegram.ViewModels
             #region Inicialization
             //VisibilityBotCommand = Visibility.Hidden;
             //VisibilityBotText = Visibility.Hidden;
+            InlineButtonCollectionView = new ObservableCollection<InlineButtonProperty>();
+            MarkupButtonCollectionView = new ObservableCollection<MarkupButtonProperty>();
+
             WrapperDataBot? wrapperDataBot = FileProjectManager.GetWrapperDataBot(path);
 
             if (wrapperDataBot != null)
@@ -542,9 +685,64 @@ namespace ChatbotConstructorTelegram.ViewModels
 
             #endregion
 
+            ResetGraph();
+
+
             _timer = new DispatcherTimer();
             _timer.Tick += Timer_Tick;
             _timer.Interval = new TimeSpan(0, 0, 5);
+        }
+
+        private void ResetGraph()
+        {
+            var graph = new BidirectionalGraph<object, IEdge<object>>();
+            var retru = new Retru() { Children = BotCommands };
+            AddTreeNode(retru, graph);
+            Graph = graph;
+        }
+        private void AddTreeNode(Retru node, BidirectionalGraph<object, IEdge<object>> graph)
+        {
+            //graph.AddVertex(node.Name);
+
+            foreach (var childNode in node.Children)
+            {
+                // graph.AddVertex(childNode.Name);
+                //graph.AddEdge(new Edge<object>(node.Name, childNode.Name));
+                AddTreeNodeToGraph(childNode, graph);
+            }
+        }
+
+        private void AddTreeNodeToGraph(IPropertyBot node, BidirectionalGraph<object, IEdge<object>> graph)
+        {
+            if (node is InlineButtonProperty || node is MarkupButtonProperty)
+            {
+                var button = (ButtonBotBase)node;
+                graph.AddVertex(node.Name + " by " + button.UniqueId.Substring(0, 5));
+
+                foreach (var childNode in node.Children)
+                {
+                    graph.AddVertex(childNode.Name + " by " + childNode.UniqueId.Substring(0, 5));
+                    graph.AddEdge(new Edge<object>(node.Name + " by " + button.UniqueId.Substring(0, 5), childNode.Name + " by " + childNode.UniqueId.Substring(0, 5)));
+                    AddTreeNodeToGraph(childNode, graph);
+                }
+            }
+            else
+            {
+                graph.AddVertex(node.Name);
+
+                foreach (var childNode in node.Children)
+                {
+                    graph.AddVertex(childNode.Name + " by " + childNode.UniqueId.Substring(0, 5));
+                    graph.AddEdge(new Edge<object>(node.Name, childNode.Name + " by " + childNode.UniqueId.Substring(0, 5)));
+                    AddTreeNodeToGraph(childNode, graph);
+                }
+            }
+        }
+
+        public class Retru
+        {
+            public string Name { get; set; }
+            public ObservableCollection<IPropertyBot> Children { get; set; }
         }
     }
 }
