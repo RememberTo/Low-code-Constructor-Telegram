@@ -1,0 +1,99 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\fdkir\\OneDrive\\Рабочий стол\\Диплом\\Project\\ChatbotConstructorTelegram\\ChatbotConstructorTelegram\\ChatbotConstructorTelegram.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\fdkir\\OneDrive\\Рабочий стол\\Диплом\\Project\\ChatbotConstructorTelegram\\ChatbotConstructorTelegram\\ChatbotConstructorTelegram.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\fdkir\\OneDrive\\Рабочий стол\\Диплом\\Project\\ChatbotConstructorTelegram\\ChatbotConstructorTelegram\\ChatbotConstructorTelegram.csproj",
+        "projectName": "ChatbotConstructorTelegram",
+        "projectPath": "C:\\Users\\fdkir\\OneDrive\\Рабочий стол\\Диплом\\Project\\ChatbotConstructorTelegram\\ChatbotConstructorTelegram\\ChatbotConstructorTelegram.csproj",
+        "packagesPath": "C:\\Users\\fdkir\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\fdkir\\OneDrive\\Рабочий стол\\Диплом\\Project\\ChatbotConstructorTelegram\\ChatbotConstructorTelegram\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\fdkir\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0-windows7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0-windows7.0": {
+            "targetAlias": "net6.0-windows",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
+          "dependencies": {
+            "FontAwesome.WPF": {
+              "target": "Package",
+              "version": "[4.7.0.9, )"
+            },
+            "FontAwesome5": {
+              "target": "Package",
+              "version": "[2.1.11, )"
+            },
+            "GraphSharp": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "MaterialDesignColors": {
+              "target": "Package",
+              "version": "[2.0.9, )"
+            },
+            "MaterialDesignThemes": {
+              "target": "Package",
+              "version": "[4.6.1, )"
+            },
+            "NLog.Extensions.Logging": {
+              "target": "Package",
+              "version": "[5.2.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.2, )"
+            },
+            "WindowsAPICodePack-Shell": {
+              "target": "Package",
+              "version": "[1.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

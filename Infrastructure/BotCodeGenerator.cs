@@ -117,20 +117,20 @@ namespace ChatbotConstructorTelegram.Infrastructure
         {
             foreach (var botCommand in _botCommandList)
             {
-                string result = GenerateCodeForFunction(botCommand);
-                
-                _sbCode.Append(result);
+                _sbCode.Append(GenerateCodeForFunction(botCommand));
                 GenerateButtonParallel(botCommand.Children);
             }
         }
 
         private string GenerateCodeForFunction(BotCommandProperty item)
         {
-            var decorator = new Decorator(ResourceFunc.Message, ResourceFunc.ParamCommand, item.Name);
-            var funcPy = new FunctionPy(decorator, item.Name + "_handler", true, "message");
-            var body = funcPy.GeneratedBody(item);
+            var command = new BotCommand(item);
+            return command.GenerateFunc();
+            //var decorator = new Decorator(ResourceFunc.Message, ResourceFunc.ParamCommand, item.Name);
+            //var funcPy = new FunctionPy(decorator, item.Name + "_handler", true, "message");
+            //var body = funcPy.GeneratedBody(item);
 
-            return funcPy.GeneratedFunction() + "\n" + body + "\n";
+            //return funcPy.GeneratedFunction() + "\n" + body + "\n";
         }
        
     }

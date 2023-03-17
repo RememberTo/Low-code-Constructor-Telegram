@@ -3,26 +3,26 @@ using ChatbotConstructorTelegram.ViewModels.Base;
 
 namespace ChatbotConstructorTelegram.Model.ViewData.BotView.PropertiesView
 {
-    public class Photo : ViewModel
+    public class Photo : ViewModel, IPropertyFile
     {
         private string? _path;
         public string? Path
         {
             get
             {
-                if (string.IsNullOrEmpty(_path) == false)
-                {
-                    var sb = new StringBuilder();
-                    foreach (var t in _path)
-                    {
-                        if (t == '\\')
-                            sb.Append(@"\\\\");
-                        else
-                            sb.Append(t);
-                    }
+                //if (string.IsNullOrEmpty(_path) == false)
+                //{
+                //    var sb = new StringBuilder();
+                //    foreach (var t in _path)
+                //    {
+                //        if (t == '\\')
+                //            sb.Append(@"\\");
+                //        else
+                //            sb.Append(t);
+                //    }
 
-                    return sb.ToString();
-                }
+                //    return sb.ToString();
+                //}
 
                 return _path;
             }

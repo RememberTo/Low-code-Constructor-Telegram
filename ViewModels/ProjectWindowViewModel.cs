@@ -76,15 +76,195 @@ namespace ChatbotConstructorTelegram.ViewModels
             set => Set(ref _nameMarkupButton, value);
         }
 
+
+
         #region Document
 
+        private string _pathDocument;
+        public string PathDocument
+        {
+            get => _pathDocument;
+            set
+            {
+                if (SelectedCommand == null)
+                {
+                    MessageBox.Show("Выберите команду или кнопку"); 
+                    return;
+                }
+                if(SelectedCommand.Documents.Count == 0)
+                    SelectedCommand.Documents.Add(new Document());
+                SelectedCommand.Documents[0].Path=value;
+                Set(ref _pathDocument, value);
+            }
+        }
 
+
+        private string _captionDocument;
+        public string CaptionDocument
+        {
+            get => _captionDocument;
+            set
+            {
+                if (SelectedCommand == null)
+                {
+                    MessageBox.Show("Выберите команду или кнопку");
+                    return;
+                }
+                if (SelectedCommand.Documents.Count == 0)
+                    SelectedCommand.Documents.Add(new Document());
+                SelectedCommand.Documents[0].Caption = value;
+                Set(ref _captionDocument, value);
+            }
+        }
 
         #endregion
 
         #region Photo
 
+        private string _captionPhoto;
+        public string CaptionPhoto
+        {
+            get => _captionPhoto;
+            set
+            {
+                if (SelectedCommand == null)
+                {
+                    MessageBox.Show("Выберите команду или кнопку");
+                    return;
+                }
+                if (SelectedCommand.Photos.Count == 0)
+                    SelectedCommand.Photos.Add(new Photo());
+                SelectedCommand.Photos[0].Caption = value;
+                Set(ref _captionPhoto, value);
+            }
+        }
 
+        private string _pathPhoto;
+        public string PathPhoto
+        {
+            get => _pathPhoto;
+            set
+            {
+                if (SelectedCommand == null)
+                {
+                    MessageBox.Show("Выберите команду или кнопку");
+                    return;
+                }
+                if (SelectedCommand.Photos.Count == 0)
+                    SelectedCommand.Photos.Add(new Photo());
+                SelectedCommand.Photos[0].Path = value;
+                Set(ref _pathPhoto, value);
+            }
+        }
+
+        #endregion
+
+        #region RadioButton
+
+        private bool _atachMarkupButtonMessageDefault;
+        public bool AtachMarkupButtonMessageDefault
+        {
+            get => _atachMarkupButtonMessageDefault;
+            set
+            {
+                if (SelectedCommand == null)
+                    return;
+                SelectedCommand.AtachMarkupButtonMessage.Default = value;
+                Set(ref _atachMarkupButtonMessageDefault, value);
+            }
+        }
+
+        private bool _atachMarkupButtonMessageText;
+        public bool AtachMarkupButtonMessageText
+        {
+            get => _atachMarkupButtonMessageText;
+            set
+            {
+                if (SelectedCommand == null)
+                    return;
+                SelectedCommand.AtachMarkupButtonMessage.Text = value;
+                Set(ref _atachMarkupButtonMessageText, value);
+            }
+        }
+
+        private bool _atachMarkupButtonMessagePhoto;
+        public bool AtachMarkupButtonMessagePhoto
+        {
+            get => _atachMarkupButtonMessagePhoto;
+            set
+            {
+                if (SelectedCommand == null)
+                    return;
+                
+                SelectedCommand.AtachMarkupButtonMessage.Photo = value;
+                Set(ref _atachMarkupButtonMessagePhoto, value);
+            }
+        }
+
+        private bool _atachMarkupButtonMessageDocument;
+        public bool AtachMarkupButtonMessageDocument
+        {
+            get => _atachMarkupButtonMessageDocument;
+            set
+            {
+                if (SelectedCommand == null)
+                    return;
+                SelectedCommand.AtachMarkupButtonMessage.Document = value;
+                Set(ref _atachMarkupButtonMessageDocument, value);
+            }
+        }
+
+        private bool _atachInlineButtonMessageDefault;
+        public bool AtachInlineButtonMessageDefault
+        {
+            get => _atachInlineButtonMessageDefault;
+            set
+            {
+                if (SelectedCommand == null)
+                    return;
+                SelectedCommand.AtachInlineButtonMessage.Default = value;
+                Set(ref _atachInlineButtonMessageDefault, value);
+            }
+        }
+
+        private bool _atachInlineButtonMessageText;
+        public bool AtachInlineButtonMessageText
+        {
+            get => _atachInlineButtonMessageText;
+            set
+            {
+                if (SelectedCommand == null)
+                    return;
+                SelectedCommand.AtachInlineButtonMessage.Text = value;
+                Set(ref _atachInlineButtonMessageText, value);
+            }
+        }
+
+        private bool _atachInlineButtonMessagePhoto;
+        public bool AtachInlineButtonMessagePhoto
+        {
+            get => _atachInlineButtonMessagePhoto;
+            set
+            {
+                if (SelectedCommand == null)
+                    return;
+                SelectedCommand.AtachInlineButtonMessage.Photo = value;
+                Set(ref _atachInlineButtonMessagePhoto, value);
+            }
+        }
+
+        private bool _atachInlineButtonMessageDocument;
+        public bool AtachInlineButtonMessageDocument
+        {
+            get => _atachInlineButtonMessageDocument;
+            set
+            {
+                if (SelectedCommand == null)
+                    return;
+                SelectedCommand.AtachMarkupButtonMessage.Document = value;
+                Set(ref _atachMarkupButtonMessageDocument, value);
+            }
+        }
 
         #endregion
 
@@ -147,6 +327,25 @@ namespace ChatbotConstructorTelegram.ViewModels
                 ResetVisibleProperty(value);
                 ResetValueButtonProperty(value);
                 Set(ref _selectedCommand, value);
+
+                if (value.Documents.Count == 0)
+                    value.Documents.Add(new Document());
+                if (value.Photos.Count == 0)
+                    value.Photos.Add(new Photo());
+
+                PathDocument = value.Documents[0].Path;
+                CaptionDocument = value.Documents[0].Caption;
+                PathPhoto = value.Photos[0].Path;
+                CaptionPhoto = value.Photos[0].Caption;
+                AtachInlineButtonMessageDocument = value.AtachInlineButtonMessage.Document;
+                AtachInlineButtonMessagePhoto = value.AtachInlineButtonMessage.Photo;
+                AtachInlineButtonMessageText = value.AtachInlineButtonMessage.Text;
+                AtachMarkupButtonMessageDocument = value.AtachMarkupButtonMessage.Document;
+                AtachMarkupButtonMessagePhoto = value.AtachMarkupButtonMessage.Photo;
+                AtachMarkupButtonMessageText = value.AtachMarkupButtonMessage.Text;
+                AtachInlineButtonMessageDefault = value.AtachInlineButtonMessage.Default;
+                AtachMarkupButtonMessageDefault = value.AtachMarkupButtonMessage.Default;
+
             }
         }
 
@@ -318,21 +517,6 @@ namespace ChatbotConstructorTelegram.ViewModels
             crWnd.Show();
         }
 
-        public ICommand? CreateBotCommand { get; private set; }
-
-
-        private void OnCreateBotCommandExecuted(object p)
-        {
-            var thread = new Thread(() =>
-                    {
-                        var bot = new BotCodeGenerator(BotCommands);
-                        bot.CreateBot();
-                    });
-            thread.Start();
-            //var startBotWnd = new StartBotWindow();
-            //startBotWnd.Show();
-        }
-
         public ICommand? ChangeTokenCommand { get; private set; }
 
         private void OnChangeTokenCommandExecuted(object p)
@@ -417,6 +601,8 @@ namespace ChatbotConstructorTelegram.ViewModels
             {
                 if (SelectedCommand == null || SelectedCommand is BotTextProperty)
                     throw new InvalidOperationException();
+                if (IsNameCommandAndButtonUnique(NameMarkupButton))
+                { MessageBox.Show("Название Markup кнопки должно быть уникальным"); return;}
 
                 var markupButton = new MarkupButtonProperty() { Name = NameMarkupButton };
                 SelectedCommand.Children.Add(markupButton);
@@ -452,13 +638,19 @@ namespace ChatbotConstructorTelegram.ViewModels
             if (item == null)
                 return true;
 
-            if (item.Name == name)
-                return false;
+            if (item is MarkupButtonProperty)
+            {
+                if (item.Name == name)
+                    return false;
+            }
 
             foreach (var child in item.Children)
             {
-                if (!IsNameUnique(child, name))
-                    return false;
+                if (child is MarkupButtonProperty)
+                {
+                    if (!IsNameUnique(child, name))
+                        return false;
+                }
             }
 
             return true;
@@ -554,11 +746,12 @@ namespace ChatbotConstructorTelegram.ViewModels
         {
             try
             {
+
                 var ofd = new OpenFileDialog();
 
                 if (ofd.ShowDialog() != true) return;
                 if (BotCommand != null)
-                    BotCommand.Document.Path = ofd.FileName;
+                    PathDocument = ofd.FileName;
             }
             catch (Exception ex)
             {
@@ -580,13 +773,142 @@ namespace ChatbotConstructorTelegram.ViewModels
                 if (ofd.ShowDialog() == true)
                 {
                     if (BotCommand != null)
-                        BotCommand.Photo.Path = ofd.FileName;
+                        PathPhoto = ofd.FileName;
                 }
             }
             catch (Exception ex)
             {
                 Logger.Error(ex);
             }
+        }
+
+        public ICommand? AddDocumentsCommand { get; private set; }
+
+        private void OnAddDocumentsCommandExecuted(object p)
+        {
+            try
+            {
+                if (SelectedCommand == null)
+                {
+                    MessageBox.Show("Выберите комманду или кнопку");
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(SelectedCommand.Documents[0].Path) ||
+                    string.IsNullOrEmpty(SelectedCommand.Documents[0].Caption))
+                {
+                    MessageBox.Show("Обязательно добавьте путь и описание к первому файлу, далее вы сможете повоторить попытку");
+                    return;
+                }
+                var acM = new AddContentMessage();
+                var viewModel = new AddContentMessageViewModel(SelectedCommand.Documents);
+                acM.DataContext = viewModel;
+
+                if (acM.ShowDialog() == true)
+                {
+                    SelectedCommand.Documents = new ObservableCollection<Document>(viewModel.ContentMessageCollection.OfType<Document>());
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.Error(ex);
+            }
+        }
+
+        public ICommand? AddPhotosCommand { get; private set; }
+
+        private void OnAddPhotosCommandExecuted(object p)
+        {
+            try
+            {
+                if (SelectedCommand == null)
+                {
+                    MessageBox.Show("Выберите комманду или кнопку");
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(SelectedCommand.Photos[0].Path) ||
+                    string.IsNullOrEmpty(SelectedCommand.Photos[0].Caption))
+                {
+                    MessageBox.Show("Обязательно добавьте путь и описание к первому изобрадению, далее вы сможете повоторить попытку");
+                    return;
+                }
+                var acM = new AddContentMessage();
+                var viewModel = new AddContentMessageViewModel(SelectedCommand.Photos);
+                acM.DataContext = viewModel;
+
+                if (acM.ShowDialog() == true)
+                {
+                    SelectedCommand.Photos = new ObservableCollection<Photo>(viewModel.ContentMessageCollection.OfType<Photo>());
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.Error(ex);
+            }
+        }
+
+        
+        public ICommand? ChoseAttachButtonCommand { get; private set; }
+
+        private void OnChoseAttachButtonCommandExecuted(object p)
+        {
+            try
+            {
+                if (SelectedCommand == null)
+                {
+                    MessageBox.Show("Выберите команду или кнопку");
+                    return;
+                }
+
+                Random random = new Random();
+                bool value = random.Next(2) == 0;
+
+                if (AtachInlineButtonMessageDocument == true &&
+                    AtachMarkupButtonMessageDocument == true)
+                {
+                    MessageBox.Show("Выберите разные типы сообщения");
+                    if(value)
+                        AtachInlineButtonMessageDocument = false;
+                    else
+                        AtachMarkupButtonMessageDocument = false;
+                }
+                if (AtachInlineButtonMessageText == true &&
+                    AtachMarkupButtonMessageText == true)
+                {
+                    MessageBox.Show("Выберите разные типы сообщения");
+                    if (value)
+                        AtachInlineButtonMessageText = false;
+                    else
+                        AtachMarkupButtonMessageText = false;
+                }
+                if (AtachInlineButtonMessagePhoto == true &&
+                    AtachMarkupButtonMessagePhoto == true)
+                {
+                    MessageBox.Show("Выберите разные типы сообщения");
+                    if (value)
+                        AtachInlineButtonMessagePhoto = false;
+                    else
+                        AtachMarkupButtonMessagePhoto = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.Error(ex);
+            }
+        }
+
+        public ICommand? CreateBotCommand { get; private set; }
+        private void OnCreateBotCommandExecuted(object p)
+        {
+            var thread = new Thread(() =>
+            {
+                var bot = new BotCodeGenerator(BotCommands);
+                bot.CreateBot();
+            });
+            thread.Start();
+            //var startBotWnd = new StartBotWindow();
+            //startBotWnd.Show();
         }
 
         #endregion
@@ -615,9 +937,12 @@ namespace ChatbotConstructorTelegram.ViewModels
             CreateProjectCommand = new LambdaCommand(OnCreateProjectCommandExecuted, CanAlwaysFullCommandExecute);
             SaveProjectCommand = new LambdaCommand(OnSaveProjectCommandExecuted, CanAlwaysFullCommandExecute);
             OpenProjectCommand = new LambdaCommand(OnOpenProjectCommandExecuted, CanAlwaysFullCommandExecute);
+            AddDocumentsCommand = new LambdaCommand(OnAddDocumentsCommandExecuted, CanAlwaysFullCommandExecute);
+            AddPhotosCommand = new LambdaCommand(OnAddPhotosCommandExecuted, CanAlwaysFullCommandExecute);
             // Для добавления кнопок можно изменить метод доступа так чтобы если в коллекции 6 элементов нельзя добавлять элементы
             AddInlineButtonCommand = new LambdaCommand(OnAddInlineButtonCommandExecuted, CanAlwaysFullCommandExecute);
             AddMarkupButtonCommand = new LambdaCommand(OnAddMarkupButtonCommandExecuted, CanAlwaysFullCommandExecute);
+            ChoseAttachButtonCommand = new LambdaCommand(OnChoseAttachButtonCommandExecuted, CanAlwaysFullCommandExecute);
 
             Test = new LambdaCommand(OnTestExecuted, CanAlwaysFullCommandExecute);
         }
@@ -639,7 +964,7 @@ namespace ChatbotConstructorTelegram.ViewModels
             InitializationCommand();
 
             #endregion
-
+            //SaveProjectCommand.Execute(null);
             ResetGraph();
 
             _timer = new DispatcherTimer();
@@ -659,8 +984,6 @@ namespace ChatbotConstructorTelegram.ViewModels
             #region Inicialization
             //VisibilityBotCommand = Visibility.Hidden;
             //VisibilityBotText = Visibility.Hidden;
-            InlineButtonCollectionView = new ObservableCollection<InlineButtonProperty>();
-            MarkupButtonCollectionView = new ObservableCollection<MarkupButtonProperty>();
 
             WrapperDataBot? wrapperDataBot = FileProjectManager.GetWrapperDataBot(path);
 
@@ -676,7 +999,8 @@ namespace ChatbotConstructorTelegram.ViewModels
             {
                 BotCommands = new ObservableCollection<IPropertyBot>();
             }
-
+            InlineButtonCollectionView = new ObservableCollection<InlineButtonProperty>();
+            MarkupButtonCollectionView = new ObservableCollection<MarkupButtonProperty>();
             #endregion
 
             #region Command

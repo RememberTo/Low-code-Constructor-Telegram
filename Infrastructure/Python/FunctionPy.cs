@@ -1,5 +1,6 @@
 using System.Text;
 using ChatbotConstructorTelegram.Model.ViewData;
+using ChatbotConstructorTelegram.Model.ViewData.BotView.Button;
 using ChatbotConstructorTelegram.Model.ViewData.BotView.Command;
 using ChatbotConstructorTelegram.Resources;
 using NLog;
@@ -14,6 +15,10 @@ namespace ChatbotConstructorTelegram.Infrastructure.Python
         public bool isAsync { get; set; }
         public string Parameter { get; set; }
 
+
+        private string SendText = "await bot.send_message(call.message.chat.id, text='name', caption='TEXT' reply_markup=markup_inline)";
+        private string SendPhoto = "await bot.send_photo(call.message.chat.id, photo='PHOTO', caption='name' reply_markup = markup_inline)";
+        private string SendDocument = "await bot.send_document(call.message.chat.id, open(('PATH'), 'rb'), caption='name', reply_markup = markup_inline)";
 
         private readonly Logger _logger = LogManager.GetCurrentClassLogger();
 
@@ -39,16 +44,29 @@ namespace ChatbotConstructorTelegram.Infrastructure.Python
         {
             var sb = new StringBuilder();
 
-            if (string.IsNullOrEmpty(bcp.Text) == false)
-                sb.AppendLine("\t" + ResourceFunc.BotSendMessage.Replace("name", bcp.Text));
-            if (string.IsNullOrEmpty(bcp.Document.Path) == false)
-                sb.AppendLine("\t" +
-                              (ResourceFunc.BotSendDocument.Replace("PATH", bcp.Document.Path)).Replace("name",
-                                  bcp.Document.Caption));
-            if (string.IsNullOrEmpty(bcp.Photo.Path) == false)
-                sb.AppendLine("\t" +
-                              (ResourceFunc.BotSendPhoto.Replace("PATH", bcp.Photo.Path)).Replace("name",
-                                  bcp.Photo.Caption));
+            //foreach (var item in bcp.Children)
+            //{
+            //    if (item is InlineButtonProperty inlineButton)
+            //    {
+            //        var inline = new InlineButton((InlineButtonProperty)bcp);
+            //        sb.AppendLine(inline.GenerateButton());
+            //    }
+            //    else if (item is MarkupButtonProperty markupButton)
+            //    {
+
+            //    }
+            //}
+
+            //if (string.IsNullOrEmpty(bcp.Text) == false)
+            //    sb.AppendLine("\t" + ResourceFunc.BotSendMessage.Replace("name", bcp.Text));
+            //if (string.IsNullOrEmpty(bcp.Document.Path) == false)
+            //    sb.AppendLine("\t" +
+            //                  (ResourceFunc.BotSendDocument.Replace("PATH", bcp.Document.Path)).Replace("name",
+            //                      bcp.Document.Caption));
+            //if (string.IsNullOrEmpty(bcp.Photo.Path) == false)
+            //    sb.AppendLine("\t" +
+            //                  (ResourceFunc.BotSendPhoto.Replace("PATH", bcp.Photo.Path)).Replace("name",
+            //                      bcp.Photo.Caption));
 
             return sb.ToString();
         }

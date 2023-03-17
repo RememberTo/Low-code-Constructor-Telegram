@@ -1,4 +1,6 @@
-﻿using ChatbotConstructorTelegram.Model.ViewData.BotView.PropertiesView;
+﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using ChatbotConstructorTelegram.Model.ViewData.BotView.PropertiesView;
 
 namespace ChatbotConstructorTelegram.Model.ViewData.BotView.SampleView
 {
@@ -9,7 +11,9 @@ namespace ChatbotConstructorTelegram.Model.ViewData.BotView.SampleView
         public int CountButtonInLine { get; set; }
         public string URL { get; set; }
         public string? Description { get; set; }
-        public Photo Photo { get; set; }
-        public Document Document { get; set; }
+        public TypeMessage AtachInlineButtonMessage { get; set; }
+        public TypeMessage AtachMarkupButtonMessage { get; set; }
+        public ObservableCollection<Photo> Photos { get; set; }
+        public ObservableCollection<Document> Documents { get; set; }
     }
 }

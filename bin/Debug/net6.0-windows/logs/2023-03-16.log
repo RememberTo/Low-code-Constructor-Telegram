@@ -1,0 +1,109 @@
+2023-03-16 12:09:25.1549|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-16 12:09:25.2250|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-16 12:09:28.8961|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-03-16 13:22:07.3877|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-16 13:22:07.4389|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-16 13:22:10.8783|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-03-16 13:22:38.2073|ERROR|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|System.InvalidOperationException: Нельзя задать Visibility или вызвать Show, ShowDialog или WindowInteropHelper.EnsureHandle после закрытия окна.| System.InvalidOperationException: Нельзя задать Visibility или вызвать Show, ShowDialog или WindowInteropHelper.EnsureHandle после закрытия окна.
+   at System.Windows.Window.VerifyCanShow()
+   at System.Windows.Window.ShowDialog()
+   at ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel.OnAddPhotosCommandExecuted(Object p) in C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\ViewModels\ProjectWindowViewModel.cs:line 628
+2023-03-16 13:36:01.1679|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-16 13:36:01.2302|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-16 13:36:05.2297|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-03-16 13:37:48.8310|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-16 13:37:48.9177|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-16 13:37:53.4583|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-03-16 13:38:26.0271|ERROR|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|System.InvalidOperationException: Нельзя задать Visibility или вызвать Show, ShowDialog или WindowInteropHelper.EnsureHandle после закрытия окна.| System.InvalidOperationException: Нельзя задать Visibility или вызвать Show, ShowDialog или WindowInteropHelper.EnsureHandle после закрытия окна.
+   at System.Windows.Window.VerifyCanShow()
+   at System.Windows.Window.ShowDialog()
+   at ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel.OnAddDocumentsCommandExecuted(Object p) in C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\ViewModels\ProjectWindowViewModel.cs:line 609
+2023-03-16 13:42:08.6479|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-16 13:42:08.7149|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-16 13:42:12.7749|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-03-16 13:42:51.1020|ERROR|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|System.InvalidOperationException: Нельзя задать Visibility или вызвать Show, ShowDialog или WindowInteropHelper.EnsureHandle после закрытия окна.| System.InvalidOperationException: Нельзя задать Visibility или вызвать Show, ShowDialog или WindowInteropHelper.EnsureHandle после закрытия окна.
+   at System.Windows.Window.VerifyCanShow()
+   at System.Windows.Window.ShowDialog()
+   at ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel.OnAddDocumentsCommandExecuted(Object p) in C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\ViewModels\ProjectWindowViewModel.cs:line 609
+2023-03-16 13:44:41.4835|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-16 13:44:41.5434|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-16 13:44:45.1553|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-03-16 13:46:26.9537|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-16 13:46:27.0326|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-16 13:46:31.1417|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-03-16 13:48:03.2685|ERROR|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|System.InvalidOperationException: Нельзя задать Visibility или вызвать Show, ShowDialog или WindowInteropHelper.EnsureHandle после закрытия окна.| System.InvalidOperationException: Нельзя задать Visibility или вызвать Show, ShowDialog или WindowInteropHelper.EnsureHandle после закрытия окна.
+   at System.Windows.Window.VerifyCanShow()
+   at System.Windows.Window.ShowDialog()
+   at ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel.OnAddDocumentsCommandExecuted(Object p) in C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\ViewModels\ProjectWindowViewModel.cs:line 609
+2023-03-16 13:48:27.9893|ERROR|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|System.InvalidOperationException: Нельзя задать Visibility или вызвать Show, ShowDialog или WindowInteropHelper.EnsureHandle после закрытия окна.| System.InvalidOperationException: Нельзя задать Visibility или вызвать Show, ShowDialog или WindowInteropHelper.EnsureHandle после закрытия окна.
+   at System.Windows.Window.VerifyCanShow()
+   at System.Windows.Window.ShowDialog()
+   at ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel.OnAddDocumentsCommandExecuted(Object p) in C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\ViewModels\ProjectWindowViewModel.cs:line 609
+2023-03-16 13:51:02.5280|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-16 13:51:02.5562|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-16 13:51:06.2504|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-03-16 13:51:55.5034|ERROR|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|System.InvalidOperationException: Нельзя задать Visibility или вызвать Show, ShowDialog или WindowInteropHelper.EnsureHandle после закрытия окна.| System.InvalidOperationException: Нельзя задать Visibility или вызвать Show, ShowDialog или WindowInteropHelper.EnsureHandle после закрытия окна.
+   at System.Windows.Window.VerifyCanShow()
+   at System.Windows.Window.ShowDialog()
+   at ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel.OnAddDocumentsCommandExecuted(Object p) in C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\ViewModels\ProjectWindowViewModel.cs:line 615
+2023-03-16 13:52:12.0596|ERROR|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|System.InvalidOperationException: Нельзя задать Visibility или вызвать Show, ShowDialog или WindowInteropHelper.EnsureHandle после закрытия окна.| System.InvalidOperationException: Нельзя задать Visibility или вызвать Show, ShowDialog или WindowInteropHelper.EnsureHandle после закрытия окна.
+   at System.Windows.Window.VerifyCanShow()
+   at System.Windows.Window.ShowDialog()
+   at ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel.OnAddPhotosCommandExecuted(Object p) in C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\ViewModels\ProjectWindowViewModel.cs:line 645
+2023-03-16 16:10:16.9063|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-16 16:10:16.9461|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-16 16:10:20.0001|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-03-16 16:11:16.2947|ERROR|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|System.InvalidOperationException: Нельзя задать Visibility или вызвать Show, ShowDialog или WindowInteropHelper.EnsureHandle после закрытия окна.| System.InvalidOperationException: Нельзя задать Visibility или вызвать Show, ShowDialog или WindowInteropHelper.EnsureHandle после закрытия окна.
+   at System.Windows.Window.VerifyCanShow()
+   at System.Windows.Window.ShowDialog()
+   at ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel.OnAddPhotosCommandExecuted(Object p) in C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\ViewModels\ProjectWindowViewModel.cs:line 645
+2023-03-16 17:41:28.2401|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-16 17:41:28.2771|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-16 17:41:30.6488|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-03-16 17:41:55.6147|ERROR|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|System.InvalidOperationException: Нельзя задать Visibility или вызвать Show, ShowDialog или WindowInteropHelper.EnsureHandle после закрытия окна.| System.InvalidOperationException: Нельзя задать Visibility или вызвать Show, ShowDialog или WindowInteropHelper.EnsureHandle после закрытия окна.
+   at System.Windows.Window.VerifyCanShow()
+   at System.Windows.Window.ShowDialog()
+   at ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel.OnAddDocumentsCommandExecuted(Object p) in C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\ViewModels\ProjectWindowViewModel.cs:line 616
+2023-03-16 17:43:06.0479|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-16 17:43:06.0775|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-16 17:43:08.1721|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-03-16 17:43:54.2377|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-03-16 17:43:56.5818|ERROR|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Не удалось сохранить файл| 
+2023-03-16 17:45:53.4290|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-16 17:45:53.4682|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-16 17:45:55.4683|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-03-16 17:51:07.0774|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-16 17:51:07.1041|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-16 17:51:09.1296|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-03-16 17:53:01.5475|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-16 17:53:01.5793|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-16 17:53:03.6798|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-03-16 17:55:55.1882|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-16 17:55:55.2129|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-16 17:55:57.4665|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-03-16 17:57:03.4865|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID 17f09eb8-183c-455c-9b59-907ce9557212 добавлена | 
+2023-03-16 17:57:04.7345|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID 12596da7-3919-485e-869d-f4dda79fe5ee добавлена | 
+2023-03-16 17:57:05.6048|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID b2a60181-d4f7-4059-b419-ca65b5471a2f добавлена | 
+2023-03-16 17:57:06.4615|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID a59d8155-a417-4182-b6a0-dba553055960 добавлена | 
+2023-03-16 17:57:07.1896|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID 165f6230-4066-4cef-98a9-b2e1bd69291d добавлена | 
+2023-03-16 17:57:08.0457|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID cc15359f-4ad2-402d-a35b-af17e96152b1 добавлена | 
+2023-03-16 18:03:38.5146|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-16 18:03:38.5401|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-16 18:03:40.5181|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-03-16 18:08:26.9429|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-16 18:08:26.9694|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-16 18:08:28.9917|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-03-16 18:09:37.7612|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-16 18:09:37.7941|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-16 18:09:39.7333|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-03-16 18:17:58.4701|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-16 18:17:58.4978|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-16 18:18:00.4858|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-03-16 18:18:22.1732|ERROR|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|System.NullReferenceException: Object reference not set to an instance of an object.| System.NullReferenceException: Object reference not set to an instance of an object.
+   at ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel.OnChoseAttachButtonCommandExecuted(Object p) in C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\ViewModels\ProjectWindowViewModel.cs:line 706
+2023-03-16 18:45:59.6369|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-16 18:45:59.6822|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-16 18:46:42.5927|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-03-16 19:27:20.1191|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-16 19:27:20.1464|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-16 19:27:22.2498|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 

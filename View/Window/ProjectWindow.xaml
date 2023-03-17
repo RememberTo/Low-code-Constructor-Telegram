@@ -399,7 +399,7 @@
                 </Grid.RowDefinitions>
 
                 <StackPanel Grid.Row="1" Orientation="Horizontal">
-                    <Button Content="Удалить" Command="{Binding DeleteCommand}" CommandParameter="{Binding SelectedCommand}"/>
+                    <Button Content="Удалить" Margin="10,5,0,5" Command="{Binding DeleteCommand}" CommandParameter="{Binding SelectedCommand}"/>
                 </StackPanel>
 
                 <Rectangle Stroke="#FF173F65" Grid.Row="0"></Rectangle>
@@ -453,7 +453,7 @@
                                                 <ColumnDefinition Width="35"/>
                                             </Grid.ColumnDefinitions>
                                             <TextBlock Text="Файл" VerticalAlignment="Center"  Grid.Column="0"/>
-                                            <TextBox Text="{Binding SelectedCommand.Document.Path}"
+                                            <TextBox Text="{Binding PathDocument}"
                                                      Grid.Column="1" Style="{DynamicResource MaterialDesignFlatTextBox}"
                                                      FontFamily="{DynamicResource MaterialDesignFont}"
                                                      Margin="10,0,0,0" Height="25" IsEnabled="True"
@@ -473,14 +473,19 @@
                                                 <ColumnDefinition Width="121*"/>
                                             </Grid.ColumnDefinitions>
                                             <TextBlock Text="Подпись" VerticalAlignment="Top"  Grid.Column="0"/>
-                                            <TextBox Text="{Binding SelectedCommand.Document.Caption}" 
+                                            <TextBox Text="{Binding CaptionDocument}" 
                                                          Grid.Column="1" Style="{DynamicResource MaterialDesignFlatTextBox}"
                                                          FontFamily="{DynamicResource MaterialDesignFont}"
                                                          Margin="10,0,0,0" Height="60"
                                                          Foreground="WhiteSmoke"  Background="Transparent" 
                                                          BorderBrush="#FF3D6184" BorderThickness="1,1,1,1" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" Padding="0,0,0,3" CaretBrush="#FFCFF7F6" TextWrapping="Wrap"/>
                                         </Grid>
-
+                                        <Grid>
+                                            <Button  Grid.Column="0" Content="Добавить файлы" FontSize="12" Background="#FF1A2E41" Foreground="#FFA1B1D2"
+                                                MaxWidth="200" HorizontalAlignment="Right" MinWidth="120"
+                                                CommandParameter="{Binding SelectedCommand}" Padding="0,0,0,1" Height="25"
+                                                Command="{Binding AddDocumentsCommand}" Margin="4,4,4,4"/>
+                                        </Grid>
 
                                     </TreeViewItem>
 
@@ -493,7 +498,7 @@
                                                 <ColumnDefinition Width="35"/>
                                             </Grid.ColumnDefinitions>
                                             <TextBlock Text="Файл" VerticalAlignment="Center"  Grid.Column="0"/>
-                                            <TextBox Text="{Binding SelectedCommand.Photo.Path}"
+                                            <TextBox Text="{Binding PathPhoto}"
                                                      Grid.Column="1" Style="{DynamicResource MaterialDesignFlatTextBox}"
                                                      FontFamily="{DynamicResource MaterialDesignFont}"
                                                      Margin="10,0,0,0" Height="25" IsEnabled="True"
@@ -514,12 +519,19 @@
                                                 <ColumnDefinition Width="121*"/>
                                             </Grid.ColumnDefinitions>
                                             <TextBlock Text="Подпись" VerticalAlignment="Top"  Grid.Column="0"/>
-                                            <TextBox Text="{Binding SelectedCommand.Photo.Caption}" 
+                                            <TextBox Text="{Binding CaptionPhoto}" 
                                                          Grid.Column="1" Style="{DynamicResource MaterialDesignFlatTextBox}"
                                                          FontFamily="{DynamicResource MaterialDesignFont}"
                                                          Margin="10,0,0,0" Height="60"
                                                          Foreground="WhiteSmoke"  Background="Transparent" 
                                                          BorderBrush="#FF3D6184" BorderThickness="1,1,1,1" VerticalContentAlignment="Top" HorizontalContentAlignment="Left" Padding="0,0,0,3" CaretBrush="#FFCFF7F6" TextWrapping="Wrap"/>
+                                        </Grid>
+
+                                        <Grid>
+                                            <Button  Grid.Column="0" Content="Добавить файлы" FontSize="12" Background="#FF1A2E41" Foreground="#FFA1B1D2"
+                                                     MaxWidth="200" HorizontalAlignment="Right" MinWidth="120"
+                                                     CommandParameter="{Binding SelectedCommand}" Padding="0,0,0,1" Height="25"
+                                                     Command="{Binding AddPhotosCommand }" Margin="4,4,4,4"/>
                                         </Grid>
 
                                     </TreeViewItem>
@@ -528,9 +540,9 @@
                                         <Grid>
                                             <Grid.RowDefinitions>
                                                 <RowDefinition Height="25"/>
-                                                <RowDefinition Height="40"/>
                                                 <RowDefinition Height="25"/>
                                                 <RowDefinition Height="35"/>
+                                                <RowDefinition Height="40"/>
                                             </Grid.RowDefinitions>
                                             <Grid.ColumnDefinitions>
                                                 <ColumnDefinition MinWidth="67" MaxWidth="180"/>
@@ -540,31 +552,38 @@
                                             <TextBox Text="{Binding NameInlineButton}" 
                                                          Grid.Column="1" Style="{DynamicResource MaterialDesignFlatTextBox}"
                                                          FontFamily="{DynamicResource MaterialDesignFont}"
-                                                         Margin="0,0,5,0" Grid.Row="0"
+                                                         Margin="0,0,5,1" Grid.Row="0"
                                                          Foreground="WhiteSmoke"  Background="Transparent" 
                                                          BorderBrush="#FF3D6184" BorderThickness="1,1,1,1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Padding="0,0,0,3" CaretBrush="#FFCFF7F6" />
-                                            <TextBlock Grid.Column="0" Text="Количество кнопок в строке" TextWrapping="Wrap" Margin="0,12,0,0" Grid.Row="1"/>
-                                            <TextBox Text="{Binding CountButtonInStrInlineButton}" 
-                                                     Grid.Column="1" Style="{DynamicResource MaterialDesignFlatTextBox}"
-                                                     FontFamily="{DynamicResource MaterialDesignFont}"
-                                                     Margin="0,8,5,8" Grid.Row="1"
-                                                     Foreground="WhiteSmoke"  Background="Transparent" 
-                                                     BorderBrush="#FF3D6184" BorderThickness="1,1,1,1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" 
-                                                     Padding="0,0,0,3" CaretBrush="#FFCFF7F6" />
-                                            <TextBlock Grid.Column="0" Grid.Row="2" VerticalAlignment="Center" Text="Cылка"></TextBlock>
+                                            <TextBlock Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" Text="Cылка"></TextBlock>
                                             <TextBox Text="{Binding URLForInlineButton}" 
                                                      Grid.Column="1" Style="{DynamicResource MaterialDesignFlatTextBox}"
                                                      FontFamily="{DynamicResource MaterialDesignFont}"
-                                                     Margin="0,1,5,1" Grid.Row="2"
+                                                     Margin="0,2,5,1" Grid.Row="1"
                                                      Foreground="WhiteSmoke"  Background="Transparent" 
                                                      BorderBrush="#FF3D6184" BorderThickness="1,1,1,1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Padding="0,0,0,3" CaretBrush="#FFCFF7F6" />
                                             <Button  Grid.Column="0" Content="Добавить" FontSize="12" Grid.ColumnSpan="2" Background="#FF1A2E41" Foreground="#FFA1B1D2"
                                                      MaxWidth="200" HorizontalAlignment="Right" MinWidth="100"
                                                      CommandParameter="{Binding SelectedCommand}" Padding="0,0,0,1" Height="25"
-                                                     Command="{Binding AddInlineButtonCommand }" Margin="4,4,4,4" Grid.Row="3" />
+                                                     Command="{Binding AddInlineButtonCommand }" Margin="4,4,4,4" Grid.Row="2" />
+
+                                            <TextBlock Grid.Column="0" Text="Количество кнопок в строке" TextWrapping="Wrap" Margin="0,12,0,0" Grid.Row="3"/>
+                                            <TextBox Text="{Binding CountButtonInStrInlineButton}" 
+                                                     Grid.Column="1" Style="{DynamicResource MaterialDesignFlatTextBox}"
+                                                     FontFamily="{DynamicResource MaterialDesignFont}"
+                                                     Margin="0,8,5,8" Grid.Row="3"
+                                                     Foreground="WhiteSmoke"  Background="Transparent" 
+                                                     BorderBrush="#FF3D6184" BorderThickness="1,1,1,1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" 
+                                                     Padding="0,0,0,3" CaretBrush="#FFCFF7F6" />
 
                                         </Grid>
-                                        <TreeViewItem Grid.Row="1" Header="Кнопки" Foreground="#FFA1B1D2" ItemsSource="{Binding InlineButtonCollectionView}" Padding="0,0,0,0" >
+                                        <TreeViewItem Header="Прикрепить Inline кнопки к " Padding="0,8,0,7" Foreground="#FFA1B1D2" Margin="-2,0,0,0">
+                                            <RadioButton Content="Тексту" Command="{Binding ChoseAttachButtonCommand}"  IsChecked="{Binding AtachInlineButtonMessageText}" Margin="0"/>
+                                            <RadioButton Content="Картинке" Command="{Binding ChoseAttachButtonCommand}" IsChecked="{Binding AtachInlineButtonMessagePhoto}" Margin="0"/>
+                                            <RadioButton Content="Документу" Command="{Binding ChoseAttachButtonCommand}" IsChecked="{Binding tachInlineButtonMessageDocument}" Margin="0"/>
+                                            <RadioButton Content="Не прикреплять" Command="{Binding ChoseAttachButtonCommand}" IsChecked="{Binding AtachInlineButtonMessageDefault}" Margin="0"/>
+                                        </TreeViewItem>
+                                        <TreeViewItem Grid.Row="1" Header="Кнопки" Foreground="#FFA1B1D2" ItemsSource="{Binding InlineButtonCollectionView}" Padding="0,3,0,3" >
                                             <TreeViewItem.ItemTemplate>
                                                 <DataTemplate DataType="button:InlineButtonProperty">
                                                     <TextBlock FontSize="12" Foreground="#FFA1B1D2" Text="{Binding Name}"></TextBlock>
@@ -572,13 +591,13 @@
                                             </TreeViewItem.ItemTemplate>
                                         </TreeViewItem>
                                     </TreeViewItem>
-                                    <TreeViewItem IsExpanded="True"  Header="Markup кнопки" HorizontalContentAlignment="Stretch" Foreground="#FFA1B1D2" Padding="0,8,0,7" ScrollViewer.CanContentScroll="True" Margin="-1,0,0,0" BorderThickness="0,0,0,0">
+                                    <TreeViewItem IsExpanded="False"  Header="Markup кнопки" HorizontalContentAlignment="Stretch" Foreground="#FFA1B1D2" Padding="0,8,0,7" ScrollViewer.CanContentScroll="True" Margin="-1,0,0,0" BorderThickness="0,0,0,0">
                                         <Grid>
                                             <Grid.RowDefinitions>
                                                 <RowDefinition Height="25"/>
-                                                <RowDefinition Height="40"/>
                                                 <RowDefinition Height="25"/>
                                                 <RowDefinition Height="35"/>
+                                                <RowDefinition Height="40"/>
                                             </Grid.RowDefinitions>
                                             <Grid.ColumnDefinitions>
                                                 <ColumnDefinition MinWidth="67" MaxWidth="180"/>
@@ -588,37 +607,57 @@
                                             <TextBox Text="{Binding NameMarkupButton}" 
                                                          Grid.Column="1" Style="{DynamicResource MaterialDesignFlatTextBox}"
                                                          FontFamily="{DynamicResource MaterialDesignFont}"
-                                                         Margin="0,0,5,0" Grid.Row="0"
+                                                         Margin="0,0,5,1" Grid.Row="0"
                                                          Foreground="WhiteSmoke"  Background="Transparent" 
                                                          BorderBrush="#FF3D6184" BorderThickness="1,1,1,1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Padding="0,0,0,3" CaretBrush="#FFCFF7F6" />
-                                            <TextBlock Grid.Column="0" Text="Количество кнопок в строке" TextWrapping="Wrap" Margin="0,12,0,0" Grid.Row="1"/>
-                                            <TextBox Text="{Binding CountButtonInStrMarkupButton}" 
+
+                                            <TextBlock Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" Text="Cылка"></TextBlock>
+                                            <TextBox Text="{Binding SelectedCommand.URL}" 
                                                      Grid.Column="1" Style="{DynamicResource MaterialDesignFlatTextBox}"
                                                      FontFamily="{DynamicResource MaterialDesignFont}"
-                                                     Margin="0,8,5,8" Grid.Row="1"
-                                                     Foreground="WhiteSmoke"  Background="Transparent" 
-                                                     BorderBrush="#FF3D6184" BorderThickness="1,1,1,1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" 
-                                                     Padding="0,0,0,3" CaretBrush="#FFCFF7F6" />
-                                            <TextBlock Grid.Column="0" Grid.Row="2" VerticalAlignment="Center" Text="Cылка"></TextBlock>
-                                            <TextBox Text="{Binding URLMarkupButton}" 
-                                                     Grid.Column="1" Style="{DynamicResource MaterialDesignFlatTextBox}"
-                                                     FontFamily="{DynamicResource MaterialDesignFont}"
-                                                     Margin="0,1,5,1" Grid.Row="2"
+                                                     Margin="0,2,5,1" Grid.Row="1"
                                                      Foreground="WhiteSmoke"  Background="Transparent" 
                                                      BorderBrush="#FF3D6184" BorderThickness="1,1,1,1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Padding="0,0,0,3" CaretBrush="#FFCFF7F6" />
                                             <Button  Grid.Column="0" Content="Добавить" FontSize="12" Grid.ColumnSpan="2" Background="#FF1A2E41" Foreground="#FFA1B1D2"
                                                      MaxWidth="200" HorizontalAlignment="Right" MinWidth="100"
                                                      CommandParameter="{Binding SelectedCommand}" Padding="0,0,0,1" Height="25"
-                                                     Command="{Binding AddMarkupButtonCommand }" Margin="4,4,4,4" Grid.Row="3" />
+                                                     Command="{Binding AddMarkupButtonCommand }" Margin="4,4,4,4" Grid.Row="2" />
 
+                                            <TextBlock Grid.Column="0" Text="Количество кнопок в строке" TextWrapping="Wrap" Margin="0,12,0,0" Grid.Row="3"/>
+                                            <TextBox Text="{Binding SelectedCommand.CountButtonInLine}" 
+                                                     Grid.Column="1" Style="{DynamicResource MaterialDesignFlatTextBox}"
+                                                     FontFamily="{DynamicResource MaterialDesignFont}"
+                                                     Margin="0,8,5,8" Grid.Row="3"
+                                                     Foreground="WhiteSmoke"  Background="Transparent" 
+                                                     BorderBrush="#FF3D6184" BorderThickness="1,1,1,1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" 
+                                                     Padding="0,0,0,3" CaretBrush="#FFCFF7F6" />
                                         </Grid>
-                                        <TreeViewItem Grid.Row="1" Header="Кнопки" Foreground="#FFA1B1D2" ItemsSource="{Binding MarkupButtonCollectionView}" Padding="0,0,0,0" >
+                                        <TreeViewItem Header="Прикрепить Markup кнопки к " Padding="0,8,0,7" Foreground="#FFA1B1D2" Margin="-2,0,0,0">
+                                            <RadioButton Content="Тексту" Command="{Binding ChoseAttachButtonCommand}"  IsChecked="{Binding AtachMarkupButtonMessageText}" Margin="0"/>
+                                            <RadioButton Content="Изображению" Command="{Binding ChoseAttachButtonCommand}" IsChecked="{Binding AtachMarkupButtonMessagePhoto}" Margin="0"/>
+                                            <RadioButton Content="Документу" Command="{Binding ChoseAttachButtonCommand}" IsChecked="{Binding AtachMarkupButtonMessageDocument}" Margin="0"/>
+                                            <RadioButton Content="Не прикреплять" Command="{Binding ChoseAttachButtonCommand}" IsChecked="{Binding AtachMarkupButtonMessageDefault}" Margin="0"/>
+                                        </TreeViewItem>
+                                        <TreeViewItem Grid.Row="1" Header="Кнопки" Foreground="#FFA1B1D2" ItemsSource="{Binding MarkupButtonCollectionView}" Padding="0,3,0,3" >
                                             <TreeViewItem.ItemTemplate>
                                                 <DataTemplate DataType="button:MarkupButtonProperty">
                                                     <TextBlock FontSize="12" Foreground="#FFA1B1D2" Text="{Binding Name}"></TextBlock>
                                                 </DataTemplate>
                                             </TreeViewItem.ItemTemplate>
                                         </TreeViewItem>
+                                    </TreeViewItem>
+                                </TreeViewItem>
+
+                                <TreeViewItem Header="Дополнительные" IsExpanded="True" FontSize="12" HorizontalContentAlignment="Stretch" Foreground="#FFA1B1D2" Padding="0,8,0,7" ScrollViewer.CanContentScroll="True" Margin="-1,0,0,0" BorderThickness="0,0,0,0">
+                                    <TreeViewItem Header="Прикрепить Inline кнопки к " Padding="0,8,0,7" Foreground="#FFA1B1D2" Margin="-2,0,0,0">
+                                        <RadioButton Content="Тексту" IsChecked="{Binding SelectedCommand.AtachButtonMessage.Text}" Margin="0"/>
+                                        <RadioButton Content="Картинке" IsChecked="{Binding SelectedCommand.AtachButtonMessage.Photo}" Margin="0"/>
+                                        <RadioButton Content="Документу" IsChecked="{Binding SelectedCommand.AtachButtonMessage.Document}" Margin="0"/>
+                                    </TreeViewItem>
+                                    <TreeViewItem Header="Прикрепить Markup кнопки к " Padding="0,8,0,7" Foreground="#FFA1B1D2" Margin="-2,0,0,0">
+                                        <RadioButton Content="Тексту" IsChecked="{Binding SelectedCommand.AtachButtonMessage.Text}" Margin="0"/>
+                                        <RadioButton Content="Картинке" IsChecked="{Binding SelectedCommand.AtachButtonMessage.Photo}" Margin="0"/>
+                                        <RadioButton Content="Документу" IsChecked="{Binding SelectedCommand.AtachButtonMessage.Document}" Margin="0"/>
                                     </TreeViewItem>
                                 </TreeViewItem>
 

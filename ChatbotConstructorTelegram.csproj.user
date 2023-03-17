@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="View\ModalWindow\AddContentMessage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\ModalWindow\ChangeTokenModalWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -24,6 +27,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="View\ModalWindow\AddContentMessage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="View\ModalWindow\ChangeTokenModalWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
