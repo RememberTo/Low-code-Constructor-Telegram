@@ -10,7 +10,7 @@ namespace ChatbotConstructorTelegram.View.Window
         public ProjectWindow()
         {
             InitializeComponent();
-            //this.DataContext = new ProjectWindowViewModel();
+            this.DataContext = new ProjectWindowViewModel();
         }
 
         public ProjectWindow(string path)

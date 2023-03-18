@@ -216,3 +216,100 @@
 2023-03-17 22:06:44.0723|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
 2023-03-17 22:06:44.1054|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
 2023-03-17 22:06:46.4902|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-03-17 22:12:14.5171|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-17 22:12:14.5425|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-17 22:12:18.4096|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-03-17 22:12:25.1382|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-17 22:12:25.1676|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-17 22:12:28.3344|INFO|ChatbotConstructorTelegram.View.Window.MainWindow|Создание проекта| 
+2023-03-17 22:12:52.5479|INFO|ChatbotConstructorTelegram.View.Window.CreationProjectWindow|Проверка пройдена запущен проект Testss111 путь C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\Tww| 
+2023-03-17 22:12:52.6705|INFO|ChatbotConstructorTelegram.ViewModels.CreationProjectViewModel|Введенные данные успешно сохранены| 
+2023-03-17 22:13:35.7202|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-17 22:13:35.7501|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-17 22:13:38.0697|ERROR|ChatbotConstructorTelegram.Infrastructure.Manager.FileProjectManager|System.InvalidOperationException: There is an error in XML document (0, 0).| System.InvalidOperationException: There is an error in XML document (0, 0).
+ ---> System.Xml.XmlException: Root element is missing.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderWrapperDataBot.Read14_WrapperDataBot()
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(Stream stream)
+   at ChatbotConstructorTelegram.Infrastructure.Manager.FileProjectManager.GetWrapperDataBot(String pathFile) in C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\Infrastructure\Manager\FileProjectManager.cs:line 35
+2023-03-17 22:13:38.3835|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\Tww\Testss111.xml передан в окно конструктора| 
+2023-03-17 22:13:59.3147|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-17 22:13:59.3442|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-17 22:14:01.3661|ERROR|ChatbotConstructorTelegram.Infrastructure.Manager.FileProjectManager|System.InvalidOperationException: There is an error in XML document (0, 0).| System.InvalidOperationException: There is an error in XML document (0, 0).
+ ---> System.Xml.XmlException: Root element is missing.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderWrapperDataBot.Read14_WrapperDataBot()
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(Stream stream)
+   at ChatbotConstructorTelegram.Infrastructure.Manager.FileProjectManager.GetWrapperDataBot(String pathFile) in C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\Infrastructure\Manager\FileProjectManager.cs:line 35
+2023-03-17 22:14:01.6857|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\Tww\Testss111.xml передан в окно конструктора| 
+2023-03-17 22:14:09.5733|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-17 22:14:09.6063|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-17 22:14:11.7701|INFO|ChatbotConstructorTelegram.View.Window.MainWindow|Создание проекта| 
+2023-03-17 22:14:31.9742|INFO|ChatbotConstructorTelegram.View.Window.CreationProjectWindow|Проверка пройдена запущен проект wwwww1 путь C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\Tww| 
+2023-03-17 22:14:32.2305|INFO|ChatbotConstructorTelegram.ViewModels.CreationProjectViewModel|Введенные данные успешно сохранены| 
+2023-03-17 22:14:46.4256|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-17 22:14:46.4574|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-17 22:14:48.6457|ERROR|ChatbotConstructorTelegram.Infrastructure.Manager.FileProjectManager|System.InvalidOperationException: There is an error in XML document (0, 0).| System.InvalidOperationException: There is an error in XML document (0, 0).
+ ---> System.Xml.XmlException: Root element is missing.
+   at System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderWrapperDataBot.Read14_WrapperDataBot()
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(Stream stream)
+   at ChatbotConstructorTelegram.Infrastructure.Manager.FileProjectManager.GetWrapperDataBot(String pathFile) in C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\Infrastructure\Manager\FileProjectManager.cs:line 35
+2023-03-17 22:14:48.9475|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\Tww\wwwww1.xml передан в окно конструктора| 
+2023-03-17 22:16:26.3965|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-17 22:16:26.4349|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-17 22:16:28.6737|INFO|ChatbotConstructorTelegram.View.Window.MainWindow|Создание проекта| 
+2023-03-17 22:16:36.9797|INFO|ChatbotConstructorTelegram.View.Window.CreationProjectWindow|Проверка пройдена запущен проект rererererer путь C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\Tww| 
+2023-03-17 22:16:37.2113|INFO|ChatbotConstructorTelegram.ViewModels.CreationProjectViewModel|Введенные данные успешно сохранены| 
+2023-03-17 22:17:17.3886|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-17 22:17:17.4205|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-17 22:17:19.5265|INFO|ChatbotConstructorTelegram.View.Window.MainWindow|Создание проекта| 
+2023-03-17 22:19:08.8320|INFO|ChatbotConstructorTelegram.View.Window.CreationProjectWindow|Проверка пройдена запущен проект ertttttttttyt путь C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\Tww| 
+2023-03-17 22:19:09.0650|INFO|ChatbotConstructorTelegram.ViewModels.CreationProjectViewModel|Введенные данные успешно сохранены| 
+2023-03-17 22:21:15.6344|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-17 22:21:15.6695|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-17 22:21:18.2875|INFO|ChatbotConstructorTelegram.View.Window.MainWindow|Создание проекта| 
+2023-03-17 22:36:36.4685|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-17 22:36:36.4981|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-17 22:36:39.7358|INFO|ChatbotConstructorTelegram.View.Window.MainWindow|Создание проекта| 
+2023-03-17 22:36:49.3452|INFO|ChatbotConstructorTelegram.View.Window.CreationProjectWindow|Проверка пройдена запущен проект 444441324seqweqw путь C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\Tww| 
+2023-03-17 22:36:57.3406|INFO|ChatbotConstructorTelegram.ViewModels.CreationProjectViewModel|Введенные данные успешно сохранены| 
+2023-03-17 22:37:35.2896|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-17 22:37:35.3257|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-17 22:37:39.4252|INFO|ChatbotConstructorTelegram.View.Window.MainWindow|Создание проекта| 
+2023-03-17 22:37:45.6121|INFO|ChatbotConstructorTelegram.View.Window.CreationProjectWindow|Проверка пройдена запущен проект 1231231231eqweqw путь C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\Tww| 
+2023-03-17 22:37:47.5098|INFO|ChatbotConstructorTelegram.ViewModels.CreationProjectViewModel|Введенные данные успешно сохранены| 
+2023-03-17 22:38:07.6756|INFO|ChatbotConstructorTelegram.Infrastructure.Manager.FileProjectManager|Проект сериализован| 
+2023-03-17 22:38:14.2836|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-17 22:38:14.3143|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-17 22:38:17.3332|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\Tww\1231231231eqweqw.xml передан в окно конструктора| 
+2023-03-17 22:44:35.1354|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID 883e6b54-169f-4c57-8504-49c367e50318 добавлена | 
+2023-03-17 22:44:36.7247|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID 92a1717f-18a2-4bce-ab7c-c63de3c60d66 добавлена | 
+2023-03-17 22:44:36.8623|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID aad38156-a331-4143-83ff-047512d1b41b добавлена | 
+2023-03-17 22:44:49.3231|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID 87a96d78-b316-455c-aa58-6d9efc30af14 добавлена | 
+2023-03-17 22:44:49.4672|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID 38a3658d-e198-419a-9341-46a1120b9195 добавлена | 
+2023-03-17 22:44:51.9310|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID f21fd182-1f08-4a41-9e88-691ffd48f7c6 добавлена | 
+2023-03-17 22:44:52.0579|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID 7b9f3832-75bd-46c8-b0f8-d35a2a3695ce добавлена | 
+2023-03-17 22:44:55.4110|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID 983ef476-2194-42b9-8668-c1c303bf702c добавлена | 
+2023-03-17 22:44:55.5448|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID 8ed02260-784e-4e10-a2fe-01f5a26b8101 добавлена | 
+2023-03-17 22:45:44.5704|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID 41b9fc03-80c6-4662-bdea-020933a2303c добавлена | 
+2023-03-17 22:45:44.7004|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID 90c835ca-9744-43cb-be3d-256c3a7acb19 добавлена | 
+2023-03-17 22:45:44.8269|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID 4b6ac130-4c48-4feb-8c0b-ccb2ba546d85 добавлена | 
+2023-03-17 22:45:50.2398|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID 6d011b80-ad65-4035-a918-29082176b05f добавлена | 
+2023-03-17 22:45:51.7672|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID c0ff12ef-67c6-4c27-8919-8a05dde758d9 добавлена | 
+2023-03-17 22:45:51.8940|INFO|ChatbotConstructorTelegram.ViewModels.ProjectWindowViewModel|Inline Кнопка Hello ID 8dec385b-18f0-4a39-b2d2-306a1f480c21 добавлена | 

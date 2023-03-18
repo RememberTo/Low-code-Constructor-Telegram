@@ -28,9 +28,9 @@
         WindowState="Maximized" MinHeight="200" MinWidth="400" Height="600" Width="1000" Closing="Window_Closing">
 
     <!--Убрать на релизе-->
-    <Window.DataContext>
+    <!--<Window.DataContext>
         <vm:ProjectWindowViewModel/>
-    </Window.DataContext>
+    </Window.DataContext>-->
     <!--.................-->
     <Window.Resources>
         <DataTemplate x:Key="VertexTemplate">

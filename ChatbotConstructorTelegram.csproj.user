@@ -27,6 +27,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Update="Resources\ResourceFunc.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
     <Page Update="View\ModalWindow\AddContentMessage.xaml">
       <SubType>Designer</SubType>
     </Page>

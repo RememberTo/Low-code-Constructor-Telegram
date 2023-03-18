@@ -1,6 +1,7 @@
 ﻿using NLog;
 using System.IO;
 using System.Windows;
+using ChatbotConstructorTelegram.ViewModels;
 
 namespace ChatbotConstructorTelegram.View.Window
 {
@@ -13,6 +14,9 @@ namespace ChatbotConstructorTelegram.View.Window
         public CreationProjectWindow()
         {
             InitializeComponent();
+            var viewModel = new CreationProjectViewModel();
+            viewModel.RequestClose += (s, e) => Close();
+            DataContext = viewModel;
         }
 
         private void ButtonCreate_OnClick(object sender, RoutedEventArgs e)
@@ -21,10 +25,7 @@ namespace ChatbotConstructorTelegram.View.Window
                   TextBox_Token.Text != string.Empty &&
                   TextBox_NameProject.Text != string.Empty)
             {
-                var projWnd = new ProjectWindow();
                 Log.Info($"Проверка пройдена запущен проект {TextBox_NameProject.Text} путь {TextBox_Path.Text}");
-                projWnd.Show();
-                this.Close();
             }
         }
 

@@ -16,10 +16,6 @@
         TextOptions.TextFormattingMode="Ideal"
         TextOptions.TextRenderingMode="Auto" Height="500" Width="700" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
 
-    <Window.DataContext>
-        <vm:CreationProjectViewModel/>
-    </Window.DataContext>
-    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>

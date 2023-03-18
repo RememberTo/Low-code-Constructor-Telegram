@@ -1,10 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Printing;
 using ChatbotConstructorTelegram.Model.ViewData.BotView.PropertiesView;
 
 namespace ChatbotConstructorTelegram.Model.ViewData.BotView.SampleView
 {
+    [Serializable]
     public abstract class ButtonBotBase : IPropertyBot
     {
         public string? Name { get; set; }

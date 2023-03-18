@@ -9,6 +9,7 @@ using System.Windows;
 using System.Windows.Input;
 using System.Windows.Threading;
 using ChatbotConstructorTelegram.Infrastructure.Manager;
+using ChatbotConstructorTelegram.View.Window;
 
 namespace ChatbotConstructorTelegram.ViewModels
 {
@@ -77,6 +78,8 @@ namespace ChatbotConstructorTelegram.ViewModels
             }
         }
 
+        public event EventHandler RequestClose;
+
         public ICommand CreateProject { get; }
 
         private bool CanCreateProjectCommandExecute(object p)
@@ -91,10 +94,15 @@ namespace ChatbotConstructorTelegram.ViewModels
             {
                 Log.Info("Введенные данные успешно сохранены");
                 DataProject.Instance.PathDirectory = TextPath;
+                DataProject.Instance.Path = TextPath + "\\" + TextNameProject+".xml";
                 DataProject.Instance.Name = TextNameProject;
                 DataProject.Instance.Token = TextToken;
                 WriteProjectInList();
                 CreateFileProjectAsync();
+
+                var projWnd = new ProjectWindow();
+              
+                projWnd.Show();
             }
             else
             {
@@ -108,6 +116,8 @@ namespace ChatbotConstructorTelegram.ViewModels
 
                 Log.Error("Введенные данные не сохранены, неправильно заполнены поля");
             }
+
+            RequestClose?.Invoke(this, EventArgs.Empty);
         }
 
         #endregion

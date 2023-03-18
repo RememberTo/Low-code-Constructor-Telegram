@@ -18,7 +18,7 @@ namespace ChatbotConstructorTelegram.Infrastructure.Python.Literals
         public static string SendPhoto = "await bot.send_photo(call.message.chat.id, open(('PATH'), 'rb'), caption='name', reply_markup = markup_inline)";
         public static string SendDocument = "await bot.send_document(call.message.chat.id, open(('PATH'), 'rb'), caption='name', reply_markup = markup_inline)";
         public static string DecoratorFunction = "@dp.callback_query_handler(text='UNIQUEID')";
-        public static string HeadFunction = "async def answer(call: types.CallbackQuery):";
+        public static string HeadFunction = "async def FUNC(call: types.CallbackQuery):";
 
 
     }

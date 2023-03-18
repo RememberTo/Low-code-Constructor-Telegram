@@ -14,6 +14,8 @@ internal class GeneratorButtons
 
         sb.Append("\t"+InlineButtonLiterals.InizializeOpen);
 
+        if (countButtonInLine <= 0) countButtonInLine = 1;
+
         for (var i = 0; i < inlineButtons.Count; i += countButtonInLine)
         {
             sb.Append(InlineButtonLiterals.LinebuttonsOpen);
@@ -62,6 +64,8 @@ internal class GeneratorButtons
         var sb = new StringBuilder();
 
         sb.Append("\t"+MarkupButtonLiterals.InizializeOpen);
+
+        if (countButtonInLine <= 0) countButtonInLine = 1;
 
         for (var i = 0; i < markupButtons.Count; i += countButtonInLine)
         {

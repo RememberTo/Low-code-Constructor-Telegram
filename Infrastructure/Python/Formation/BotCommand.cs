@@ -12,7 +12,7 @@ using ChatbotConstructorTelegram.Model.ViewData.BotView.Command;
 using ChatbotConstructorTelegram.Model.ViewData.BotView.SampleView;
 using ChatbotConstructorTelegram.Resources;
 
-namespace ChatbotConstructorTelegram.Infrastructure.Python
+namespace ChatbotConstructorTelegram.Infrastructure.Python.Formation
 {
     internal class BotCommand
     {
@@ -39,12 +39,8 @@ namespace ChatbotConstructorTelegram.Infrastructure.Python
 
             sb.AppendLine(funcPy.GeneratedFunction());
 
-            if (ButtonProperty.Children.Count > 0)
-            {
-                sb.AppendLine(GenerateButtons());
-                sb.AppendLine(GenerateSendMessages());
-            }
-
+            sb.AppendLine(GenerateButtons());
+            sb.AppendLine(GenerateSendMessages());
 
             return sb.ToString();
         }
@@ -167,7 +163,7 @@ namespace ChatbotConstructorTelegram.Infrastructure.Python
                                       .Replace("name", document.Caption));
                     else
                         sb.AppendLine("\t" +
-                                      (InlineButtonLiterals.SendDocument.Replace("call.","").Replace("PATH", document.Path))
+                                      (InlineButtonLiterals.SendDocument.Replace("call.", "").Replace("PATH", document.Path))
                                       .Replace("name", document.Caption));
 
                 }
@@ -201,10 +197,10 @@ namespace ChatbotConstructorTelegram.Infrastructure.Python
         private string GenerateSendMessageText(bool isInline = true)
         {
             var sb = new StringBuilder();
-            if(isInline)
+            if (isInline)
                 sb.AppendLine("\t" + ResourceFunc.BotSendMessage.Replace("name", ButtonProperty.Text));
             else
-                sb.AppendLine("\t"+ InlineButtonLiterals.SendText.Replace("call.", "").Replace("name", ButtonProperty.Text));
+                sb.AppendLine("\t" + InlineButtonLiterals.SendText.Replace("call.", "").Replace("name", ButtonProperty.Text));
             return sb.ToString();
         }
 
@@ -259,43 +255,9 @@ namespace ChatbotConstructorTelegram.Infrastructure.Python
             if (isMarkup)
                 sb.AppendLine("\t" + ResourceFunc.BotSendMessage.Replace("name", ButtonProperty.Text));
             else
-                sb.AppendLine("\t"+ MarkupButtonLiterals.SendText.Replace("name", ButtonProperty.Text));
+                sb.AppendLine("\t" + MarkupButtonLiterals.SendText.Replace("name", ButtonProperty.Text));
             return sb.ToString();
         }
-
-        //switch (ButtonProperty.AtachButtonMessage.GetTrueTypeMessage())
-        //{
-        //    case "Text":
-        //        if (string.IsNullOrEmpty(ButtonProperty.Document.Path) == false)
-        //            sb.AppendLine("\t" + (ResourceFunc.BotSendDocument.Replace("message", "call.message").Replace("PATH", ButtonProperty.Document.Path)).Replace("name", ButtonProperty.Document.Caption));
-        //        if (string.IsNullOrEmpty(ButtonProperty.Photo.Path) == false)
-        //            sb.AppendLine("\t" + (ResourceFunc.BotSendPhoto.Replace("message", "call.message").Replace("PATH", ButtonProperty.Photo.Path)).Replace("name", ButtonProperty.Photo.Caption));
-        //        if (string.IsNullOrEmpty(ButtonProperty.Text) == false)
-        //            sb.AppendLine("\t" + SendText.Replace("name", ButtonProperty.Text));
-        //        break;
-        //    case "Photo":
-        //        if (string.IsNullOrEmpty(ButtonProperty.Text) == false)
-        //            sb.AppendLine("\t" + ResourceFunc.BotSendMessage.Replace("message", "call.message").Replace("name", ButtonProperty.Text));
-        //        if (string.IsNullOrEmpty(ButtonProperty.Document.Path) == false)
-        //            sb.AppendLine("\t" + (ResourceFunc.BotSendDocument.Replace("message", "call.message").Replace("PATH", ButtonProperty.Document.Path)).Replace("name", ButtonProperty.Document.Caption));
-        //        if (string.IsNullOrEmpty(ButtonProperty.Photo.Path) == false)
-        //            sb.AppendLine("\t" + (SendPhoto.Replace("PATH", ButtonProperty.Photo.Path)).Replace("name", ButtonProperty.Photo.Caption));
-        //        break;
-        //    case "Document":
-        //        if (string.IsNullOrEmpty(ButtonProperty.Text) == false)
-        //            sb.AppendLine("\t" + ResourceFunc.BotSendMessage.Replace("message", "call.message").Replace("name", ButtonProperty.Text));
-        //        if (string.IsNullOrEmpty(ButtonProperty.Document.Path) == false)
-        //            sb.AppendLine("\t" + (SendDocument.Replace("PATH", ButtonProperty.Document.Path)).Replace("name", ButtonProperty.Document.Caption));
-        //        if (string.IsNullOrEmpty(ButtonProperty.Photo.Path) == false)
-        //            sb.AppendLine("\t" + (ResourceFunc.BotSendPhoto.Replace("message", "call.message").Replace("PATH", ButtonProperty.Photo.Path)).Replace("name", ButtonProperty.Photo.Caption));
-        //        break;
-        //    case "Default":
-        //        break;
-        //}
-        // return sb.ToString();
-
-
-
 
         public string GenerateButtons()
         {

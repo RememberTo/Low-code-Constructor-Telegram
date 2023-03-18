@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace ChatbotConstructorTelegram.Model.ViewData.BotView.SampleView
 {
+    [Serializable]
     public class TypeMessage
     {
         public bool Text { get; set; }

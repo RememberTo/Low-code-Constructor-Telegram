@@ -964,12 +964,13 @@ namespace ChatbotConstructorTelegram.ViewModels
             InitializationCommand();
 
             #endregion
-            //SaveProjectCommand.Execute(null);
             ResetGraph();
 
             _timer = new DispatcherTimer();
             _timer.Tick += Timer_Tick;
             _timer.Interval = new TimeSpan(0, 0, 5);
+
+            SaveProjectCommand.Execute(null);
         }
 
         private BidirectionalGraph<object, IEdge<object>> _graph;

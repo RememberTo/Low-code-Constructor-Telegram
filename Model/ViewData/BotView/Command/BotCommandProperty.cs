@@ -1,4 +1,5 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.ObjectModel;
 using System.Xml.Serialization;
 using ChatbotConstructorTelegram.Model.ViewData.BotView.Button;
 using ChatbotConstructorTelegram.Model.ViewData.BotView.PropertiesView;
@@ -8,6 +9,8 @@ namespace ChatbotConstructorTelegram.Model.ViewData.BotView.Command
 {
     [XmlInclude(typeof(InlineButtonProperty))]
     [XmlInclude(typeof(MarkupButtonProperty))]
+
+    [Serializable]
     public class BotCommandProperty : IPropertyBot
     {
         public int? Id { get; set; }

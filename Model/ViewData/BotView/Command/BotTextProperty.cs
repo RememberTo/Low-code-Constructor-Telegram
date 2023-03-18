@@ -1,9 +1,11 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.ObjectModel;
 using ChatbotConstructorTelegram.Model.ViewData.BotView.PropertiesView;
 using ChatbotConstructorTelegram.Model.ViewData.BotView.SampleView;
 
 namespace ChatbotConstructorTelegram.Model.ViewData.BotView.Command
 {
+    [Serializable]
     public class BotTextProperty : IPropertyBot
     {
         public string? Name { get; set; }

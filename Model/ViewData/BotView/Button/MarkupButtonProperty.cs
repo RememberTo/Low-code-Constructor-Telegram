@@ -5,6 +5,7 @@ using ChatbotConstructorTelegram.Model.ViewData.BotView.SampleView;
 
 namespace ChatbotConstructorTelegram.Model.ViewData.BotView.Button
 {
+    [Serializable]
     public class MarkupButtonProperty : ButtonBotBase
     {
         public MarkupButtonProperty()

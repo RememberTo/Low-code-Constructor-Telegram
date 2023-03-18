@@ -1,8 +1,10 @@
-﻿using System.Text;
+﻿using System;
+using System.Text;
 using ChatbotConstructorTelegram.ViewModels.Base;
 
 namespace ChatbotConstructorTelegram.Model.ViewData.BotView.PropertiesView
 {
+    [Serializable]
     public class Document : ViewModel, IPropertyFile
     {
         private string? _path;

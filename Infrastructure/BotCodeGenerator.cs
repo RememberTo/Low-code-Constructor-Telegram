@@ -1,20 +1,19 @@
-﻿using ChatbotConstructorTelegram.Infrastructure.Manager;
+﻿using ChatbotConstructorTelegram.Infrastructure.Python;
+using ChatbotConstructorTelegram.Infrastructure.Python.Formation;
 using ChatbotConstructorTelegram.Model.Bot;
-using ChatbotConstructorTelegram.Model.StaticData;
-using ChatbotConstructorTelegram.Model.ViewData;
+using ChatbotConstructorTelegram.Model.ViewData.BotView.Button;
+using ChatbotConstructorTelegram.Model.ViewData.BotView.Command;
+using ChatbotConstructorTelegram.Model.ViewData.BotView.SampleView;
 using ChatbotConstructorTelegram.Resources;
 using NLog;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
+using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
-using ChatbotConstructorTelegram.Infrastructure.Commands.Base;
-using ChatbotConstructorTelegram.Infrastructure.Python;
-using ChatbotConstructorTelegram.Model.ViewData.BotView.Button;
-using ChatbotConstructorTelegram.Model.ViewData.BotView.Command;
-using ChatbotConstructorTelegram.Model.ViewData.BotView.SampleView;
 
 namespace ChatbotConstructorTelegram.Infrastructure
 {
@@ -23,11 +22,35 @@ namespace ChatbotConstructorTelegram.Infrastructure
         private readonly Logger _logger  = LogManager.GetCurrentClassLogger();
         private readonly List<BotCommandProperty> _botCommandList = new();
         private readonly List<BotTextProperty> _botTextList = new();
+        private List<IPropertyBot> BotCommands;
         private readonly StringBuilder _sbCode = new();
 
         public BotCodeGenerator(ObservableCollection<IPropertyBot> botCommands)
         {
-            SplitCommand(botCommands);
+            BotCommands = DeepCopy(botCommands.ToList());
+            
+            SplitCommand(BotCommands);
+
+            foreach (var item in _botCommandList)
+            {
+                ReplaceEscapedChar(item);
+            }
+            foreach (var item in _botTextList)
+            {
+                ReplaceEscapedChar(item);
+            }
+
+        }
+
+        public static List<T> DeepCopy<T>(List<T> list)
+        {
+            using (var ms = new MemoryStream())
+            {
+                var formatter = new BinaryFormatter();
+                formatter.Serialize(ms, list);
+                ms.Position = 0;
+                return (List<T>)formatter.Deserialize(ms);
+            }
         }
 
         public void CreateBot()
@@ -50,7 +73,28 @@ namespace ChatbotConstructorTelegram.Infrastructure
             }
         }
 
-        private void SplitCommand(ObservableCollection<IPropertyBot> botCommands)
+        private void ReplaceEscapedChar(IPropertyBot buttonProperty)
+        {
+            if (buttonProperty == null)
+                return;
+
+            foreach (var item in buttonProperty.Documents)
+            {
+                item.Path = item.Path.Replace("\\", "\\\\");
+            }
+
+            foreach (var item in buttonProperty.Photos)
+            {
+                item.Path = item.Path.Replace("\\", "\\\\");
+            }
+
+            foreach (var child in buttonProperty.Children)
+            {
+                ReplaceEscapedChar(child);
+            }
+        }
+
+        private void SplitCommand(List<IPropertyBot> botCommands)
         {
             foreach (var botCommand in botCommands)
             {
@@ -92,19 +136,17 @@ namespace ChatbotConstructorTelegram.Infrastructure
 
                 if (button is InlineButtonProperty inlineButton)
                 {
-                    result = "print('InlineButton "+inlineButton.UniqueId+" | "+inlineButton.Name+"')\n\n";
+                    var inline = new InlineButton(inlineButton);
+                    result = inline.GenerateFunc();
                 }
 
                 else if (button is MarkupButtonProperty markupButton)
                 {
-                    result = "print('MarkupButton " + markupButton.UniqueId+" | "+markupButton.Name + "')\n\n";
+                    var markup = new MarkupButton(markupButton);
+                    result = markup.GenerateFunc();
                 }
 
                 _sbCode.Append(result);
-                // Генерация кода для Inline кнопки
-                // ...
-                // Генерация кода для Markup кнопки
-                // ...
                 // Рекурсивный вызов генерации кода для вложенных команд
                 if (button.Children.Count > 0)
                 {
