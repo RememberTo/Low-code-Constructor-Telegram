@@ -5,11 +5,10 @@ namespace ChatbotConstructorTelegram.Model.StaticData
     internal static class TerminalCommands
     {
         public static readonly string StartPythonFile =
-                 "cd " + "%PATH%" + "\n" +
-                 "python %NAME%.py";
+                 "\"%PATHENV%\\Scripts\\python.exe\" " + "\"%PATH%" + "\\%NAME%.py\"";
 
         public static readonly string CommandsActivateEnvironment =
-            "chcp 1251\n" + "cd "  + "%PATH%"+"\n" + "\\Scripts\\activate";
+            "chcp 1251\n" + "cd "  + "%PATH%\\Scripts" + "\n" + "activate";
 
     }
 }

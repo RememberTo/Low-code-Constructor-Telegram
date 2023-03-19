@@ -25,6 +25,7 @@ namespace ChatbotConstructorTelegram.Infrastructure
         private List<IPropertyBot> BotCommands;
         private readonly StringBuilder _sbCode = new();
 
+        [Obsolete("Obsolete")]
         public BotCodeGenerator(ObservableCollection<IPropertyBot> botCommands)
         {
             BotCommands = DeepCopy(botCommands.ToList());
@@ -42,13 +43,19 @@ namespace ChatbotConstructorTelegram.Infrastructure
 
         }
 
+        [Obsolete("Obsolete")]
         public static List<T> DeepCopy<T>(List<T> list)
         {
             using (var ms = new MemoryStream())
             {
                 var formatter = new BinaryFormatter();
+
                 formatter.Serialize(ms, list);
-                ms.Position = 0;
+
+                // Устанавливаем позицию в MemoryStream в начало потока
+                ms.Seek(0, SeekOrigin.Begin);
+
+                // Десериализуем список из MemoryStream
                 return (List<T>)formatter.Deserialize(ms);
             }
         }
@@ -65,7 +72,6 @@ namespace ChatbotConstructorTelegram.Infrastructure
 
                 PythonHelper.WriteCodeFileAsync(pathPythonFile, _sbCode.ToString(), FileMode.Create);
                 DataProject.Instance.PathLastPythonFile = pathPythonFile;
-                //TerminalManager.ExecuteConsoleCommand(TerminalCommands.TestStart);
             }
             catch (Exception e)
             {
@@ -75,17 +81,16 @@ namespace ChatbotConstructorTelegram.Infrastructure
 
         private void ReplaceEscapedChar(IPropertyBot buttonProperty)
         {
-            if (buttonProperty == null)
-                return;
-
             foreach (var item in buttonProperty.Documents)
             {
-                item.Path = item.Path.Replace("\\", "\\\\");
+                if(!string.IsNullOrEmpty(item.Path))
+                    item.Path = item.Path.Replace("\\", "\\\\");
             }
 
             foreach (var item in buttonProperty.Photos)
             {
-                item.Path = item.Path.Replace("\\", "\\\\");
+                if (!string.IsNullOrEmpty(item.Path))
+                    item.Path = item.Path.Replace("\\", "\\\\");
             }
 
             foreach (var child in buttonProperty.Children)
@@ -148,7 +153,7 @@ namespace ChatbotConstructorTelegram.Infrastructure
 
                 _sbCode.Append(result);
                 // Рекурсивный вызов генерации кода для вложенных команд
-                if (button.Children.Count > 0)
+                if (button.Children?.Count > 0)
                 {
                     GenerateButtonParallel(button.Children);
                 }

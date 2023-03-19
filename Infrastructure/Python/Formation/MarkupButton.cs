@@ -14,17 +14,17 @@ namespace ChatbotConstructorTelegram.Infrastructure.Python.Formation;
 internal class MarkupButton
 {
     public MarkupButtonProperty ButtonProperty { get; set; }
-    public List<InlineButtonProperty> InlineButtons { get; set; }
-    public List<MarkupButtonProperty> MarkupButtons { get; set; }
-    public int CountNestedButton { get; set; }
+    public List<InlineButtonProperty>? InlineButtons { get; set; }
+    public List<MarkupButtonProperty>? MarkupButtons { get; set; }
+    public int? CountNestedButton { get; set; }
 
     public MarkupButton(MarkupButtonProperty buttonProperty)
     {
         ButtonProperty = buttonProperty ?? throw new ArgumentNullException(nameof(buttonProperty));
-        CountNestedButton = buttonProperty.Children.Count;
+        CountNestedButton = buttonProperty.Children?.Count;
 
-        InlineButtons = ButtonProperty.Children.OfType<InlineButtonProperty>().ToList();
-        MarkupButtons = ButtonProperty.Children.OfType<MarkupButtonProperty>().ToList();
+        InlineButtons = ButtonProperty.Children?.OfType<InlineButtonProperty>().ToList();
+        MarkupButtons = ButtonProperty.Children?.OfType<MarkupButtonProperty>().ToList();
     }
 
     public string GenerateFunc()
@@ -45,7 +45,7 @@ internal class MarkupButton
         var sb = new StringBuilder();
         var typemsg = new TypeMessage();
 
-        switch (ButtonProperty.AtachInlineButtonMessage.GetTrueTypeMessage())
+        switch (ButtonProperty.AtachInlineButtonMessage?.GetTrueTypeMessage())
         {
             case "Text":
                 if (!string.IsNullOrEmpty(ButtonProperty.Text))
@@ -55,14 +55,14 @@ internal class MarkupButton
                 }
                 break;
             case "Document":
-                if (!string.IsNullOrEmpty(ButtonProperty.Documents[0].Path))
+                if (!string.IsNullOrEmpty(ButtonProperty.Documents?[0].Path))
                 {
                     sb.AppendLine(GenerateSendMessageDocuments(false));
                     typemsg.Document = true;
                 }
                 break;
             case "Photo":
-                if (!string.IsNullOrEmpty(ButtonProperty.Photos[0].Path))
+                if (!string.IsNullOrEmpty(ButtonProperty.Photos?[0].Path))
                 {
                     sb.AppendLine(GenerateSendMessagePhotos(false));
                     typemsg.Photo = true;
@@ -70,7 +70,7 @@ internal class MarkupButton
                 break;
         }
 
-        switch (ButtonProperty.AtachMarkupButtonMessage.GetTrueTypeMessage())
+        switch (ButtonProperty.AtachMarkupButtonMessage?.GetTrueTypeMessage())
         {
             case "Text":
                 if (!string.IsNullOrEmpty(ButtonProperty.Text))
@@ -80,14 +80,14 @@ internal class MarkupButton
                 }
                 break;
             case "Document":
-                if (!string.IsNullOrEmpty(ButtonProperty.Documents[0].Path))
+                if (!string.IsNullOrEmpty(ButtonProperty.Documents?[0].Path))
                 {
                     sb.AppendLine(GenerateSendMessageDocumentsMarkup(false));
                     typemsg.Document = true;
                 }
                 break;
             case "Photo":
-                if (!string.IsNullOrEmpty(ButtonProperty.Photos[0].Path))
+                if (!string.IsNullOrEmpty(ButtonProperty.Photos?[0].Path))
                 {
                     sb.AppendLine(GenerateSendMessagePhotosMarkup(false));
                     typemsg.Photo = true;
@@ -97,12 +97,12 @@ internal class MarkupButton
 
         if (typemsg.Text && typemsg.Document)
         {
-            if (!string.IsNullOrEmpty(ButtonProperty.Photos[0].Path))
+            if (!string.IsNullOrEmpty(ButtonProperty.Photos?[0].Path))
                 sb.AppendLine(GenerateSendMessagePhotosMarkup());
         }
         if (typemsg.Text && typemsg.Photo)
         {
-            if (!string.IsNullOrEmpty(ButtonProperty.Documents[0].Path))
+            if (!string.IsNullOrEmpty(ButtonProperty.Documents?[0].Path))
                 sb.AppendLine(GenerateSendMessageDocumentsMarkup());
         }
         if (typemsg.Document && typemsg.Photo)
@@ -112,32 +112,32 @@ internal class MarkupButton
         }
         if (typemsg.Text && !typemsg.Document && !typemsg.Photo)
         {
-            if (!string.IsNullOrEmpty(ButtonProperty.Photos[0].Path))
+            if (!string.IsNullOrEmpty(ButtonProperty.Photos?[0].Path))
                 sb.AppendLine(GenerateSendMessagePhotosMarkup());
-            if (!string.IsNullOrEmpty(ButtonProperty.Documents[0].Path))
+            if (!string.IsNullOrEmpty(ButtonProperty.Documents?[0].Path))
                 sb.AppendLine(GenerateSendMessageDocumentsMarkup());
         }
         if (!typemsg.Text && typemsg.Document && !typemsg.Photo)
         {
-            if (!string.IsNullOrEmpty(ButtonProperty.Photos[0].Path))
+            if (!string.IsNullOrEmpty(ButtonProperty.Photos?[0].Path))
                 sb.AppendLine(GenerateSendMessagePhotosMarkup());
             if (!string.IsNullOrEmpty(ButtonProperty.Text))
                 sb.AppendLine(GenerateSendMessageTextMarkup());
         }
         if (!typemsg.Text && !typemsg.Document && typemsg.Photo)
         {
-            if (!string.IsNullOrEmpty(ButtonProperty.Documents[0].Path))
+            if (!string.IsNullOrEmpty(ButtonProperty.Documents?[0].Path))
                 sb.AppendLine(GenerateSendMessageDocumentsMarkup());
             if (!string.IsNullOrEmpty(ButtonProperty.Text))
                 sb.AppendLine(GenerateSendMessageTextMarkup());
         }
         if (!typemsg.Text && !typemsg.Document && !typemsg.Photo)
         {
-            if (!string.IsNullOrEmpty(ButtonProperty.Documents[0].Path))
+            if (!string.IsNullOrEmpty(ButtonProperty.Documents?[0].Path))
                 sb.AppendLine(GenerateSendMessageDocumentsMarkup());
             if (!string.IsNullOrEmpty(ButtonProperty.Text))
                 sb.AppendLine(GenerateSendMessageTextMarkup());
-            if (!string.IsNullOrEmpty(ButtonProperty.Photos[0].Path))
+            if (!string.IsNullOrEmpty(ButtonProperty.Photos?[0].Path))
                 sb.AppendLine(GenerateSendMessagePhotosMarkup());
         }
 
@@ -148,6 +148,7 @@ internal class MarkupButton
     {
         var sb = new StringBuilder();
 
+        if (ButtonProperty.Documents == null) return sb.ToString();
         foreach (var document in ButtonProperty.Documents)
         {
             if (File.Exists(document.Path))
@@ -158,9 +159,10 @@ internal class MarkupButton
                                   .Replace("name", document.Caption));
                 else
                     sb.AppendLine("\t" +
-                                  (MarkupButtonLiterals.SendDocument.Replace("call.message.chat.id", "message.chat.id").Replace("PATH", document.Path))
+                                  (MarkupButtonLiterals.SendDocument
+                                      .Replace("call.message.chat.id", "message.chat.id")
+                                      .Replace("PATH", document.Path))
                                   .Replace("name", document.Caption));
-
             }
         }
 
@@ -171,18 +173,20 @@ internal class MarkupButton
     {
         var sb = new StringBuilder();
 
+        if (ButtonProperty.Photos == null) return sb.ToString();
         foreach (var photo in ButtonProperty.Photos)
         {
             if (File.Exists(photo.Path))
             {
                 if (isInline)
                     sb.AppendLine("\t" +
-                              (ResourceFunc.BotSendPhoto.Replace("PATH", photo.Path))
-                              .Replace("name", photo.Caption));
+                                  (ResourceFunc.BotSendPhoto.Replace("PATH", photo.Path))
+                                  .Replace("name", photo.Caption));
                 else
                     sb.AppendLine("\t" +
-                              (InlineButtonLiterals.SendPhoto.Replace("call.message.chat.id", "message.chat.id").Replace("PATH", photo.Path))
-                              .Replace("name", photo.Caption));
+                                  (InlineButtonLiterals.SendPhoto.Replace("call.message.chat.id", "message.chat.id")
+                                      .Replace("PATH", photo.Path))
+                                  .Replace("name", photo.Caption));
             }
         }
 
@@ -203,21 +207,21 @@ internal class MarkupButton
     {
         var sb = new StringBuilder();
 
-        foreach (var document in ButtonProperty.Documents)
-        {
-            if (File.Exists(document.Path))
+        if (ButtonProperty.Documents != null)
+            foreach (var document in ButtonProperty.Documents)
             {
-                if (isMarkup)
-                    sb.AppendLine("\t" +
-                                  (ResourceFunc.BotSendDocument.Replace("PATH", document.Path))
-                                  .Replace("name", document.Caption));
-                else
-                    sb.AppendLine("\t" +
-                                  (MarkupButtonLiterals.SendDocument.Replace("PATH", document.Path))
-                                  .Replace("name", document.Caption));
-
+                if (File.Exists(document.Path))
+                {
+                    if (isMarkup)
+                        sb.AppendLine("\t" +
+                                      (ResourceFunc.BotSendDocument.Replace("PATH", document.Path))
+                                      .Replace("name", document.Caption));
+                    else
+                        sb.AppendLine("\t" +
+                                      (MarkupButtonLiterals.SendDocument.Replace("PATH", document.Path))
+                                      .Replace("name", document.Caption));
+                }
             }
-        }
 
         return sb.ToString();
     }
@@ -226,18 +230,19 @@ internal class MarkupButton
     {
         var sb = new StringBuilder();
 
+        if (ButtonProperty.Photos == null) return sb.ToString();
         foreach (var photo in ButtonProperty.Photos)
         {
             if (File.Exists(photo.Path))
             {
                 if (isMarkup)
                     sb.AppendLine("\t" +
-                              (ResourceFunc.BotSendPhoto.Replace("PATH", photo.Path))
-                              .Replace("name", photo.Caption));
+                                  (ResourceFunc.BotSendPhoto.Replace("PATH", photo.Path))
+                                  .Replace("name", photo.Caption));
                 else
                     sb.AppendLine("\t" +
-                              (MarkupButtonLiterals.SendPhoto.Replace("PATH", photo.Path))
-                              .Replace("name", photo.Caption));
+                                  (MarkupButtonLiterals.SendPhoto.Replace("PATH", photo.Path))
+                                  .Replace("name", photo.Caption));
             }
         }
 
@@ -256,7 +261,9 @@ internal class MarkupButton
 
     public string GenerateButtons()
     {
-        return GeneratorButtons.GetCodeInlineButtons(InlineButtons, ButtonProperty.CountButtonInLine) +
-               "\n" + GeneratorButtons.GetCodeMarkupButtons(MarkupButtons, ButtonProperty.CountButtonInLine);
+        if (InlineButtons != null && MarkupButtons != null)
+            return GeneratorButtons.GetCodeInlineButtons(InlineButtons, ButtonProperty.CountButtonInLine) +
+                   "\n" + GeneratorButtons.GetCodeMarkupButtons(MarkupButtons, ButtonProperty.CountButtonInLine);
+        return "";
     }
 }

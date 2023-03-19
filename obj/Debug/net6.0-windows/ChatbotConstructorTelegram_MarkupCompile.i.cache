@@ -12,9 +12,9 @@ TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\ChatbotConstructorTelegram\ChatbotConstructorTelegram\App.xaml
 7819347976
 1103199032
-65870003975
+64-156396728
 2181215945125
 View\ModalWindow\AddContentMessage.xaml;View\ModalWindow\ChangeTokenModalWindow.xaml;View\ModalWindow\QuestionSaveProject.xaml;View\Window\CreationProjectWindow.xaml;View\Window\MainWindow.xaml;View\Window\ProjectWindow.xaml;View\Window\StartBotWindow.xaml;
 
-False
+True
 

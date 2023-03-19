@@ -51,7 +51,7 @@
                                      FontFamily="{DynamicResource MaterialDesignFont}"
                                      Foreground="#FFBACED7" FontSize="13">
                             <MenuItem Header="Удалить" 
-                                      Padding="-13,0,0,0" 
+                                      Padding="0,0,0,0" 
                                       Margin="4,-4,4,-10" 
                                       Width="180" Height="25"
                                       Command="{Binding DeleteCommand}"

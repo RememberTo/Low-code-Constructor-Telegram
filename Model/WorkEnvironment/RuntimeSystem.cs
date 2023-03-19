@@ -36,21 +36,8 @@ namespace ChatbotConstructorTelegram.Model.WorkEnvironment
                 Environment = new Environment();
                 PythonInfo = new PythonInformation();
                 PythonLibraryInfo = new PythonLibraryInformation();
-
-                //PythonInfo.IsInstalled = true;
-                //PythonLibraryInfo.IsInstalled = true;
-                //PythonInfo.PipVersion = "Pip None";
-                //PythonInfo.Version = "Python None";
-                //Environment.Name = ".bot";
-                //Environment.Path = "C:\\user";
-                //PythonLibraryInfo.NameLibrary = "aiogramm";
-                //PythonLibraryInfo.Version = "None";
-
-                // check python 
-                // create or check env
-                // add or check librarry aiogramm
             }
-            catch (WorkEnvironmentException e)
+            catch (WorkEnvironmentException)
             {
 
             }

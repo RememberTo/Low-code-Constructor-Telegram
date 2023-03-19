@@ -15,11 +15,6 @@ namespace ChatbotConstructorTelegram.Infrastructure.Python
         public bool isAsync { get; set; }
         public string Parameter { get; set; }
 
-
-        private string SendText = "await bot.send_message(call.message.chat.id, text='name', caption='TEXT' reply_markup=markup_inline)";
-        private string SendPhoto = "await bot.send_photo(call.message.chat.id, photo='PHOTO', caption='name' reply_markup = markup_inline)";
-        private string SendDocument = "await bot.send_document(call.message.chat.id, open(('PATH'), 'rb'), caption='name', reply_markup = markup_inline)";
-
         private readonly Logger _logger = LogManager.GetCurrentClassLogger();
 
         public FunctionPy(Decorator Decorator, string Name, bool isAsync, string Parameter)

@@ -17,7 +17,7 @@ namespace ChatbotConstructorTelegram.Model.ViewData.BotView.Command
         public string? Name { get; set; }
         public string? Text { get; set; }
         public int CountButtonInLine { get; set; }
-        public string URL { get; set; }
+        public string? URL { get; set; }
         public TypeMessage AtachInlineButtonMessage { get; set; }
         public TypeMessage AtachMarkupButtonMessage { get; set; }
         public string? Description { get; set; }

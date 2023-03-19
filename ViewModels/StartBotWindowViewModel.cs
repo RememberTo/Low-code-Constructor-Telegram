@@ -5,10 +5,8 @@ using ChatbotConstructorTelegram.Model.ViewData;
 using ChatbotConstructorTelegram.ViewModels.Base;
 using NLog;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
@@ -93,9 +91,15 @@ namespace ChatbotConstructorTelegram.ViewModels
                 Logger.Info("Процесс запущен");
                 Messages.AddInfo("Запуск бота");
 
-                await Task.Run(() => InputCommandsTerminal(TerminalCommands.CommandsActivateEnvironment.Replace("%PATH%", DataProject.Instance.PathEnvironment) + "\n" + TerminalCommands.StartPythonFile
-                    .Replace("%PATH%", DataProject.Instance.PathDirectory)
-                    .Replace("%NAME%", DataProject.Instance.Name)));
+                var a = TerminalCommands.CommandsActivateEnvironment.Replace("%PATH%", DataProject.Instance.PathEnvironment);
+                var b = TerminalCommands.StartPythonFile.Replace("%PATHENV%", DataProject.Instance.PathEnvironment).Replace("%PATH%", DataProject.Instance.PathDirectory).Replace("%NAME%", DataProject.Instance.Name);
+
+                await Task.Run(() => InputCommandsTerminal(TerminalCommands.CommandsActivateEnvironment
+                                                               .Replace("%PATH%", DataProject.Instance.PathEnvironment) 
+                                                           + "\n" + TerminalCommands.StartPythonFile
+                                                               .Replace("%PATHENV%", DataProject.Instance.PathEnvironment)
+                                                               .Replace("%PATH%", DataProject.Instance.PathDirectory)
+                                                               .Replace("%NAME%", DataProject.Instance.Name)));
 
                 await Task.Run(StartPulling);
 
@@ -105,7 +109,7 @@ namespace ChatbotConstructorTelegram.ViewModels
                 IsPool = true;
 
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 Messages.AddInfo("Ошибка, завершение работы бота");
                 Logger.Error("Ошибка, поптыка остановить пуллинг");
@@ -141,7 +145,7 @@ namespace ChatbotConstructorTelegram.ViewModels
                 Messages.AddInfo("Бот выключен");
                 Logger.Error("Пуллинг остановлен");
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 Messages.AddInfo("Ошибка при отключении бота");
                 Logger.Error("Пуллинг не удалось остановить");
@@ -178,7 +182,7 @@ namespace ChatbotConstructorTelegram.ViewModels
         private void StartPulling()//Что будет если не придет BotCodeGenerator start и будет бесконечные цикл
         {
             var line = cmdProcess.StandardOutput.ReadLine();
-            while (line != null && !line.Contains("BotCodeGenerator start"))
+            while (line != null && !line.Contains("Bot start"))
             {
                 line = cmdProcess.StandardOutput.ReadLine();
             }

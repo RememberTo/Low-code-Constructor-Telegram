@@ -8,13 +8,13 @@ namespace ChatbotConstructorTelegram.Model.WorkEnvironment
     public class PythonInformation
     {
         [DataMember]
-        public bool IsInstalled { get; set; }
+        public bool? IsInstalled { get; set; }
 
         [DataMember]
-        public string Version { get; set; }
+        public string? Version { get; set; }
 
         [DataMember]
-        public string PipVersion { get; set; }
+        public string? PipVersion { get; set; }
 
         public PythonInformation()
         {

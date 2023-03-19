@@ -40,7 +40,7 @@ namespace ChatbotConstructorTelegram.Model.WorkEnvironment
                 if (runtimeSystem.IsExistLibrary == false)
                 {
                     PythonLibraryInstaller.InstallLibrary(ExplorerManager.LocationArchiveAiogram,
-                        ExplorerManager.NameArchiveAiogram, runtimeSystem.Environment.Path);
+                        ExplorerManager.NameArchiveAiogram, runtimeSystem.Environment?.Path!);
 
                     if (runtimeSystem.PythonLibraryInfo != null)
                     {
@@ -53,7 +53,7 @@ namespace ChatbotConstructorTelegram.Model.WorkEnvironment
                     }
                 }
 
-                DataProject.Instance.PathEnvironment = runtimeSystem.Environment.Path;
+                DataProject.Instance.PathEnvironment = runtimeSystem.Environment?.Path;
 
                 SaveConfigSystem(runtimeSystem);
 
@@ -70,9 +70,9 @@ namespace ChatbotConstructorTelegram.Model.WorkEnvironment
             var isPythonVersion = true;
             var isPipVersion = true;
 
-            if (info.Version.Contains("3.9") || info.Version.Contains("3.10"))
+            if (info.Version != null && (info.Version.Contains("3.9") || info.Version.Contains("3.10")))
                 isPythonVersion = false;
-            if (info.PipVersion.Contains("22") || info.PipVersion.Contains("23"))
+            if (info.PipVersion != null && (info.PipVersion.Contains("22") || info.PipVersion.Contains("23")))
                 isPipVersion = false;
 
             return isPythonVersion && isPipVersion;

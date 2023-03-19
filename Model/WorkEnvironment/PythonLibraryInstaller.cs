@@ -36,7 +36,7 @@ namespace ChatbotConstructorTelegram.Model.WorkEnvironment
                     }
                 }
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 throw new WorkEnvironmentException("Библиотека aiogram не установлена");
             }
@@ -59,7 +59,7 @@ namespace ChatbotConstructorTelegram.Model.WorkEnvironment
             process.Start();
             var pythonPath = process.StandardOutput.ReadLine();
             process.WaitForExit();
-            return pythonPath;
+            return pythonPath ?? string.Empty;
         }
     }
 }

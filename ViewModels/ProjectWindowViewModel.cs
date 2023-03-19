@@ -3,29 +3,24 @@ using ChatbotConstructorTelegram.Infrastructure.Commands;
 using ChatbotConstructorTelegram.Infrastructure.Manager;
 using ChatbotConstructorTelegram.Model.Bot;
 using ChatbotConstructorTelegram.Model.File;
-using ChatbotConstructorTelegram.Model.ViewData;
+using ChatbotConstructorTelegram.Model.ViewData.BotView.Button;
+using ChatbotConstructorTelegram.Model.ViewData.BotView.Command;
+using ChatbotConstructorTelegram.Model.ViewData.BotView.PropertiesView;
+using ChatbotConstructorTelegram.Model.ViewData.BotView.SampleView;
 using ChatbotConstructorTelegram.View.ModalWindow;
 using ChatbotConstructorTelegram.View.Window;
 using ChatbotConstructorTelegram.ViewModels.Base;
 using Microsoft.Win32;
 using NLog;
+using QuickGraph;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Diagnostics.Eventing.Reader;
 using System.IO;
 using System.Linq;
-using System.Threading;
 using System.Windows;
-using System.Windows.Data;
 using System.Windows.Input;
 using System.Windows.Threading;
-using ChatbotConstructorTelegram.Model.ViewData.BotView.Button;
-using ChatbotConstructorTelegram.Model.ViewData.BotView.Command;
-using ChatbotConstructorTelegram.Model.ViewData.BotView.SampleView;
-using QuickGraph;
-using ChatbotConstructorTelegram.Model.ViewData.BotView.PropertiesView;
 
 namespace ChatbotConstructorTelegram.ViewModels
 {
@@ -44,6 +39,14 @@ namespace ChatbotConstructorTelegram.ViewModels
             get => _title;
             set => Set(ref _title, value);
         }
+
+        private string _graphChangeVisibleText = "Убрать график";
+        public string GraphChangeVisibleText
+        {
+            get => _graphChangeVisibleText;
+            set => Set(ref _graphChangeVisibleText, value);
+        }
+
 
         private string _status = "Готово";
         public string Status
@@ -76,8 +79,6 @@ namespace ChatbotConstructorTelegram.ViewModels
             set => Set(ref _nameMarkupButton, value);
         }
 
-
-
         #region Document
 
         private string _pathDocument;
@@ -88,12 +89,12 @@ namespace ChatbotConstructorTelegram.ViewModels
             {
                 if (SelectedCommand == null)
                 {
-                    MessageBox.Show("Выберите команду или кнопку"); 
+                    MessageBox.Show("Выберите команду или кнопку");
                     return;
                 }
-                if(SelectedCommand.Documents.Count == 0)
+                if (SelectedCommand.Documents.Count == 0)
                     SelectedCommand.Documents.Add(new Document());
-                SelectedCommand.Documents[0].Path=value;
+                SelectedCommand.Documents[0].Path = value;
                 Set(ref _pathDocument, value);
             }
         }
@@ -195,7 +196,7 @@ namespace ChatbotConstructorTelegram.ViewModels
             {
                 if (SelectedCommand == null)
                     return;
-                
+
                 SelectedCommand.AtachMarkupButtonMessage.Photo = value;
                 Set(ref _atachMarkupButtonMessagePhoto, value);
             }
@@ -261,8 +262,8 @@ namespace ChatbotConstructorTelegram.ViewModels
             {
                 if (SelectedCommand == null)
                     return;
-                SelectedCommand.AtachMarkupButtonMessage.Document = value;
-                Set(ref _atachMarkupButtonMessageDocument, value);
+                SelectedCommand.AtachInlineButtonMessage.Document = value;
+                Set(ref _atachInlineButtonMessageDocument, value);
             }
         }
 
@@ -284,6 +285,13 @@ namespace ChatbotConstructorTelegram.ViewModels
         {
             get => _botTextProperty;
             set => Set(ref _botTextProperty, value);
+        }
+
+        private BidirectionalGraph<object, IEdge<object>> _graph;
+        public BidirectionalGraph<object, IEdge<object>> Graph
+        {
+            get => _graph;
+            set => Set(ref _graph, value);
         }
 
         private InlineButtonProperty? _botInlineButtonProperty;
@@ -316,37 +324,56 @@ namespace ChatbotConstructorTelegram.ViewModels
             set => Set(ref _botMarkupButtonProperty, value);
         }
 
-        private IPropertyBot _selectedCommand;
+        private IPropertyBot? _selectedCommand;
 
-        public IPropertyBot SelectedCommand
+        public IPropertyBot? SelectedCommand
         {
             get => _selectedCommand;
             set
             {
-                ResetGraph();
-                ResetVisibleProperty(value);
-                ResetValueButtonProperty(value);
-                Set(ref _selectedCommand, value);
+                if (value == null)
+                    Set(ref _selectedCommand, value);
+                else
+                {
+                    ResetGraph();
+                    ResetVisibleProperty(value);
+                    ResetValueButtonProperty(value);
+                    Set(ref _selectedCommand, value);
 
-                if (value.Documents.Count == 0)
-                    value.Documents.Add(new Document());
-                if (value.Photos.Count == 0)
-                    value.Photos.Add(new Photo());
+                    if (value.Documents.Count == 0)
+                        value.Documents.Add(new Document());
+                    if (value.Photos.Count == 0)
+                        value.Photos.Add(new Photo());
 
-                PathDocument = value.Documents[0].Path;
-                CaptionDocument = value.Documents[0].Caption;
-                PathPhoto = value.Photos[0].Path;
-                CaptionPhoto = value.Photos[0].Caption;
-                AtachInlineButtonMessageDocument = value.AtachInlineButtonMessage.Document;
-                AtachInlineButtonMessagePhoto = value.AtachInlineButtonMessage.Photo;
-                AtachInlineButtonMessageText = value.AtachInlineButtonMessage.Text;
-                AtachMarkupButtonMessageDocument = value.AtachMarkupButtonMessage.Document;
-                AtachMarkupButtonMessagePhoto = value.AtachMarkupButtonMessage.Photo;
-                AtachMarkupButtonMessageText = value.AtachMarkupButtonMessage.Text;
-                AtachInlineButtonMessageDefault = value.AtachInlineButtonMessage.Default;
-                AtachMarkupButtonMessageDefault = value.AtachMarkupButtonMessage.Default;
-
+                    SetFieldValues(value);
+                }
             }
+        }
+
+        #region SelectedCommandMethods
+
+        private void SetFieldValues(IPropertyBot value)
+        {
+            var pathDocument = value.Documents[0].Path;
+            if (pathDocument != null) PathDocument = pathDocument;
+
+            var captionDocument = value.Documents[0].Caption;
+            if (captionDocument != null) CaptionDocument = captionDocument;
+
+            var pathPhoto = value.Photos[0].Path;
+            if (pathPhoto != null) PathPhoto = pathPhoto;
+
+            var captionPhoto = value.Photos[0].Caption;
+            if (captionPhoto != null) CaptionPhoto = captionPhoto;
+
+            AtachInlineButtonMessageDocument = value.AtachInlineButtonMessage.Document;
+            AtachInlineButtonMessagePhoto = value.AtachInlineButtonMessage.Photo;
+            AtachInlineButtonMessageText = value.AtachInlineButtonMessage.Text;
+            AtachMarkupButtonMessageDocument = value.AtachMarkupButtonMessage.Document;
+            AtachMarkupButtonMessagePhoto = value.AtachMarkupButtonMessage.Photo;
+            AtachMarkupButtonMessageText = value.AtachMarkupButtonMessage.Text;
+            AtachInlineButtonMessageDefault = value.AtachInlineButtonMessage.Default;
+            AtachMarkupButtonMessageDefault = value.AtachMarkupButtonMessage.Default;
         }
 
         private void ResetValueButtonProperty(IPropertyBot? buttonBot)
@@ -359,7 +386,6 @@ namespace ChatbotConstructorTelegram.ViewModels
                     new ObservableCollection<InlineButtonProperty>(buttonBot.Children.OfType<InlineButtonProperty>());
             }
         }
-
 
         private void ResetVisibleProperty(IPropertyBot propertyBot)
         {
@@ -398,6 +424,15 @@ namespace ChatbotConstructorTelegram.ViewModels
             }
         }
 
+        #endregion
+
+        private Visibility _visabilityGraph;
+        public Visibility VisabilityGraph
+        {
+            get => _visabilityGraph;
+            set => Set(ref _visabilityGraph, value);
+        }
+
         private Visibility _visibilityBotCommand;
         public Visibility VisibilityBotCommand
         {
@@ -429,8 +464,7 @@ namespace ChatbotConstructorTelegram.ViewModels
                 case true:
                     if (dialogBox.IsSaveAsFile)
                         SaveProjectCommand?.Execute(null); // Сохраняем модель в файл
-                                                           // Не сохраняем
-                    Application.Current.Shutdown();
+                    // Не сохраняем
                     break;
                 case false:
                     IsCancel = true;
@@ -443,24 +477,7 @@ namespace ChatbotConstructorTelegram.ViewModels
             }
 
         }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="p"></param>
-        /// <returns></returns>
-        ///
-        public ICommand? Test { get; private set; }
-        private void OnTestExecuted(object p)
-        {
-            var tmp = new ObservableCollection<MarkupButtonProperty>(SelectedCommand.Children.OfType<MarkupButtonProperty>());
-            MarkupButtonCollectionView = tmp;
-            InlineButtonCollectionView = new ObservableCollection<InlineButtonProperty>(SelectedCommand.Children.OfType<InlineButtonProperty>());
-        }
-        ///
-        ///
-        ///
-        ///
-        /// 
+
         private bool CanAlwaysFullCommandExecute(object p)
         {
             return true;
@@ -542,15 +559,21 @@ namespace ChatbotConstructorTelegram.ViewModels
 
         private void OnAddCommandExecuted(object p)
         {
-            for (int i = 0; i < BotCommands.Count; i++)
+            if (BotCommands.Count == 0)
+                BotCommands.Add(new BotCommandProperty() { Id = 0, Description = "", Name = "newCommand" + 0 });
+            else
             {
-                if (IsNameCommandAndButtonUnique("newCommand" + i))
+                for (int i = 0; i < BotCommands.Count+1; i++)
                 {
-                    BotCommands.Add(new BotCommandProperty() { Id = 0, Description = "", Name = "newCommand" + i });
-                    SetStatusStartTimer("Команда добавлена");
-                    break;
+                    if (IsNameCommandUnique("newCommand" + i))
+                    {
+                        BotCommands.Add(new BotCommandProperty() { Id = 0, Description = "", Name = "newCommand" + i });
+                        break;
+                    }
                 }
             }
+
+            SetStatusStartTimer("Команда добавлена");
         }
 
         public ICommand? AddTextCommand { get; private set; }
@@ -601,8 +624,8 @@ namespace ChatbotConstructorTelegram.ViewModels
             {
                 if (SelectedCommand == null || SelectedCommand is BotTextProperty)
                     throw new InvalidOperationException();
-                if (IsNameCommandAndButtonUnique(NameMarkupButton))
-                { MessageBox.Show("Название Markup кнопки должно быть уникальным"); return;}
+                if (!IsNameCommandAndButtonUnique(NameMarkupButton))
+                { MessageBox.Show("Название Markup кнопки должно быть уникальным"); return; }
 
                 var markupButton = new MarkupButtonProperty() { Name = NameMarkupButton };
                 SelectedCommand.Children.Add(markupButton);
@@ -619,6 +642,17 @@ namespace ChatbotConstructorTelegram.ViewModels
             {
                 MessageBox.Show(e.Message);
             }
+        }
+
+        private bool IsNameCommandUnique(string name)
+        {
+            foreach (var item in BotCommands)
+            {
+                if (item.Name == name)
+                    return false;
+            }
+
+            return true;
         }
 
         private bool IsNameCommandAndButtonUnique(string name)
@@ -638,22 +672,25 @@ namespace ChatbotConstructorTelegram.ViewModels
             if (item == null)
                 return true;
 
-            if (item is MarkupButtonProperty)
-            {
-                if (item.Name == name)
-                    return false;
-            }
+            if (item.Name == name && item is MarkupButtonProperty)
+                return false;
 
             foreach (var child in item.Children)
             {
-                if (child is MarkupButtonProperty)
-                {
-                    if (!IsNameUnique(child, name))
-                        return false;
-                }
+                if (!IsNameUnique(child, name))
+                    return false;
             }
 
             return true;
+
+        }
+
+        public ICommand? ChangeGraphCommand { get; private set; }
+
+        private void OnChangeGraphCommandExecuted(object p)
+        {
+            GraphChangeVisibleText = VisabilityGraph == Visibility.Visible ? "Показать график" : "Убрать график";
+            VisabilityGraph = VisabilityGraph == Visibility.Visible ? Visibility.Collapsed : Visibility.Visible;
         }
 
         public ICommand? DeleteCommand { get; private set; }
@@ -694,50 +731,14 @@ namespace ChatbotConstructorTelegram.ViewModels
         private void OnDeleteCommandExecuted(object p)
         {
             if (p is not IPropertyBot cmd) return;
+            
+            if(cmd is BotCommandProperty)
+                BotCommands.Remove(cmd);
+            else
+                RemoveItemFromTree(cmd);
 
-            RemoveItemFromTree(cmd);
             SelectedCommand = null;
             SetStatusStartTimer("Элемент " + cmd.Name + " удален");
-        }
-
-        public void RemoveItemFromTree(IPropertyBot itemSearch)
-        {
-            IPropertyBot parent = null;
-
-            foreach (var item in BotCommands)
-            {
-                if (parent != null)
-                    break;
-                if (item.Children.Contains(itemSearch))
-                {
-                    parent = item;
-                    break;
-                }
-                parent = FindParent(itemSearch, item.Children);
-            }
-
-            parent.Children.Remove((ButtonBotBase)itemSearch);
-        }
-
-        private IPropertyBot FindParent(IPropertyBot item, ObservableCollection<ButtonBotBase> tree)
-        {
-            // Найти родительский элемент
-            foreach (var parent in tree)
-            {
-                if (parent.Children.Contains(item))
-                {
-                    return parent;
-                }
-                else if (parent.Children.Count > 0)
-                {
-                    var result = FindParent(item, parent.Children);
-                    if (result != null)
-                    {
-                        return result;
-                    }
-                }
-            }
-            return null;
         }
 
         public ICommand? ChooseFileBotCommand { get; private set; }
@@ -746,10 +747,10 @@ namespace ChatbotConstructorTelegram.ViewModels
         {
             try
             {
-
                 var ofd = new OpenFileDialog();
 
                 if (ofd.ShowDialog() != true) return;
+
                 if (BotCommand != null)
                     PathDocument = ofd.FileName;
             }
@@ -770,11 +771,10 @@ namespace ChatbotConstructorTelegram.ViewModels
                     Filter = "Файлы изображений (*.bmp, *.jpg, *.png)|*.bmp;*.jpg;*.png",
                 };
 
-                if (ofd.ShowDialog() == true)
-                {
-                    if (BotCommand != null)
-                        PathPhoto = ofd.FileName;
-                }
+                if (ofd.ShowDialog() != true) return;
+
+                if (BotCommand != null)
+                    PathPhoto = ofd.FileName;
             }
             catch (Exception ex)
             {
@@ -833,6 +833,7 @@ namespace ChatbotConstructorTelegram.ViewModels
                     MessageBox.Show("Обязательно добавьте путь и описание к первому изобрадению, далее вы сможете повоторить попытку");
                     return;
                 }
+
                 var acM = new AddContentMessage();
                 var viewModel = new AddContentMessageViewModel(SelectedCommand.Photos);
                 acM.DataContext = viewModel;
@@ -848,7 +849,6 @@ namespace ChatbotConstructorTelegram.ViewModels
             }
         }
 
-        
         public ICommand? ChoseAttachButtonCommand { get; private set; }
 
         private void OnChoseAttachButtonCommandExecuted(object p)
@@ -861,36 +861,9 @@ namespace ChatbotConstructorTelegram.ViewModels
                     return;
                 }
 
-                Random random = new Random();
-                bool value = random.Next(2) == 0;
-
-                if (AtachInlineButtonMessageDocument == true &&
-                    AtachMarkupButtonMessageDocument == true)
-                {
-                    MessageBox.Show("Выберите разные типы сообщения");
-                    if(value)
-                        AtachInlineButtonMessageDocument = false;
-                    else
-                        AtachMarkupButtonMessageDocument = false;
-                }
-                if (AtachInlineButtonMessageText == true &&
-                    AtachMarkupButtonMessageText == true)
-                {
-                    MessageBox.Show("Выберите разные типы сообщения");
-                    if (value)
-                        AtachInlineButtonMessageText = false;
-                    else
-                        AtachMarkupButtonMessageText = false;
-                }
-                if (AtachInlineButtonMessagePhoto == true &&
-                    AtachMarkupButtonMessagePhoto == true)
-                {
-                    MessageBox.Show("Выберите разные типы сообщения");
-                    if (value)
-                        AtachInlineButtonMessagePhoto = false;
-                    else
-                        AtachMarkupButtonMessagePhoto = false;
-                }
+                CheckMessageTypes(AtachInlineButtonMessageDocument, AtachMarkupButtonMessageDocument, "Document");
+                CheckMessageTypes(AtachInlineButtonMessageText, AtachMarkupButtonMessageText, "Text");
+                CheckMessageTypes(AtachInlineButtonMessagePhoto, AtachMarkupButtonMessagePhoto, "Photo");
             }
             catch (Exception ex)
             {
@@ -899,63 +872,25 @@ namespace ChatbotConstructorTelegram.ViewModels
         }
 
         public ICommand? CreateBotCommand { get; private set; }
+        [Obsolete("Obsolete")]
         private void OnCreateBotCommandExecuted(object p)
         {
-            var thread = new Thread(() =>
-            {
-                var bot = new BotCodeGenerator(BotCommands);
-                bot.CreateBot();
-            });
-            thread.Start();
-            //var startBotWnd = new StartBotWindow();
-            //startBotWnd.Show();
+            var bot = new BotCodeGenerator(BotCommands);
+            bot.CreateBot();
+
+            var startBotWnd = new StartBotWindow();
+            startBotWnd.Show();
         }
 
         #endregion
 
-        private void Timer_Tick(object? sender, EventArgs e)
-        {
-            Status = "Готово";
-        }
-
-        private void SetStatusStartTimer(string s)
-        {
-            Status = s;
-            _timer.Start();
-        }
-
-        private void InitializationCommand()
-        {
-            ChangeTokenCommand = new LambdaCommand(OnChangeTokenCommandExecuted, CanAlwaysFullCommandExecute);
-            AddCommand = new LambdaCommand(OnAddCommandExecuted, CanAlwaysFullCommandExecute);
-            AddTextCommand = new LambdaCommand(OnAddTextCommandExecuted, CanAlwaysFullCommandExecute);
-            CreateBotCommand = new LambdaCommand(OnCreateBotCommandExecuted, CanAlwaysFullCommandExecute);
-            ChooseFileBotCommand = new LambdaCommand(OnChooseFileBotCommandExecuted, CanAlwaysFullCommandExecute);
-            ChooseImageBotCommand = new LambdaCommand(OnChooseImageBotCommandExecuted, CanAlwaysFullCommandExecute);
-            CloseApplicationCommand = new LambdaCommand(OnCloseApplicationCommandExecuted, CanAlwaysFullCommandExecute);
-            DeleteCommand = new LambdaCommand(OnDeleteCommandExecuted, CanDeleteCommandExecute);
-            CreateProjectCommand = new LambdaCommand(OnCreateProjectCommandExecuted, CanAlwaysFullCommandExecute);
-            SaveProjectCommand = new LambdaCommand(OnSaveProjectCommandExecuted, CanAlwaysFullCommandExecute);
-            OpenProjectCommand = new LambdaCommand(OnOpenProjectCommandExecuted, CanAlwaysFullCommandExecute);
-            AddDocumentsCommand = new LambdaCommand(OnAddDocumentsCommandExecuted, CanAlwaysFullCommandExecute);
-            AddPhotosCommand = new LambdaCommand(OnAddPhotosCommandExecuted, CanAlwaysFullCommandExecute);
-            // Для добавления кнопок можно изменить метод доступа так чтобы если в коллекции 6 элементов нельзя добавлять элементы
-            AddInlineButtonCommand = new LambdaCommand(OnAddInlineButtonCommandExecuted, CanAlwaysFullCommandExecute);
-            AddMarkupButtonCommand = new LambdaCommand(OnAddMarkupButtonCommandExecuted, CanAlwaysFullCommandExecute);
-            ChoseAttachButtonCommand = new LambdaCommand(OnChoseAttachButtonCommandExecuted, CanAlwaysFullCommandExecute);
-
-            Test = new LambdaCommand(OnTestExecuted, CanAlwaysFullCommandExecute);
-        }
-
-
-
         public ProjectWindowViewModel()
         {
             #region Inicialization
-            //VisibilityBotCommand = Visibility.Hidden;
-            //VisibilityBotText = Visibility.Hidden;
-            BotCommands = new ObservableCollection<IPropertyBot>() { new BotCommandProperty() { Id = 0, Description = "Начальная команда", Name = "start", Children = new ObservableCollection<ButtonBotBase>() { new InlineButtonProperty() { Name = "Inline Button" }, new MarkupButtonProperty() { Name = "Markup Button" } } } };
-            InlineButtonCollectionView = new ObservableCollection<InlineButtonProperty>() { new InlineButtonProperty() { Name = "TEST" } };
+            VisibilityBotCommand = Visibility.Hidden;
+            VisibilityBotText = Visibility.Hidden;
+            BotCommands = new ObservableCollection<IPropertyBot>();
+            InlineButtonCollectionView = new ObservableCollection<InlineButtonProperty>();
             MarkupButtonCollectionView = new ObservableCollection<MarkupButtonProperty>();
             #endregion
 
@@ -964,27 +899,21 @@ namespace ChatbotConstructorTelegram.ViewModels
             InitializationCommand();
 
             #endregion
+
             ResetGraph();
 
             _timer = new DispatcherTimer();
             _timer.Tick += Timer_Tick;
             _timer.Interval = new TimeSpan(0, 0, 5);
 
-            SaveProjectCommand.Execute(null);
-        }
-
-        private BidirectionalGraph<object, IEdge<object>> _graph;
-        public BidirectionalGraph<object, IEdge<object>> Graph
-        {
-            get => _graph;
-            set => Set(ref _graph, value);
+            SaveProjectCommand?.Execute(null);
         }
 
         public ProjectWindowViewModel(string path)
         {
             #region Inicialization
-            //VisibilityBotCommand = Visibility.Hidden;
-            //VisibilityBotText = Visibility.Hidden;
+            VisibilityBotCommand = Visibility.Hidden;
+            VisibilityBotText = Visibility.Hidden;
 
             WrapperDataBot? wrapperDataBot = FileProjectManager.GetWrapperDataBot(path);
 
@@ -1012,60 +941,151 @@ namespace ChatbotConstructorTelegram.ViewModels
 
             ResetGraph();
 
-
             _timer = new DispatcherTimer();
             _timer.Tick += Timer_Tick;
             _timer.Interval = new TimeSpan(0, 0, 5);
+        }
+        private void Timer_Tick(object? sender, EventArgs e)
+        {
+            Status = "Готово";
+        }
+
+        private void SetStatusStartTimer(string s)
+        {
+            Status = s;
+            _timer.Start();
+        }
+
+        private void InitializationCommand()
+        {
+            ChangeTokenCommand = new LambdaCommand(OnChangeTokenCommandExecuted, CanAlwaysFullCommandExecute);
+            AddCommand = new LambdaCommand(OnAddCommandExecuted, CanAlwaysFullCommandExecute);
+            AddTextCommand = new LambdaCommand(OnAddTextCommandExecuted, CanAlwaysFullCommandExecute);
+            CreateBotCommand = new LambdaCommand(OnCreateBotCommandExecuted, CanAlwaysFullCommandExecute);
+            ChooseFileBotCommand = new LambdaCommand(OnChooseFileBotCommandExecuted, CanAlwaysFullCommandExecute);
+            ChooseImageBotCommand = new LambdaCommand(OnChooseImageBotCommandExecuted, CanAlwaysFullCommandExecute);
+            CloseApplicationCommand = new LambdaCommand(OnCloseApplicationCommandExecuted, CanAlwaysFullCommandExecute);
+            DeleteCommand = new LambdaCommand(OnDeleteCommandExecuted, CanDeleteCommandExecute);
+            CreateProjectCommand = new LambdaCommand(OnCreateProjectCommandExecuted, CanAlwaysFullCommandExecute);
+            SaveProjectCommand = new LambdaCommand(OnSaveProjectCommandExecuted, CanAlwaysFullCommandExecute);
+            OpenProjectCommand = new LambdaCommand(OnOpenProjectCommandExecuted, CanAlwaysFullCommandExecute);
+            AddDocumentsCommand = new LambdaCommand(OnAddDocumentsCommandExecuted, CanAlwaysFullCommandExecute);
+            AddPhotosCommand = new LambdaCommand(OnAddPhotosCommandExecuted, CanAlwaysFullCommandExecute);
+            AddInlineButtonCommand = new LambdaCommand(OnAddInlineButtonCommandExecuted, CanAlwaysFullCommandExecute);
+            AddMarkupButtonCommand = new LambdaCommand(OnAddMarkupButtonCommandExecuted, CanAlwaysFullCommandExecute);
+            ChoseAttachButtonCommand = new LambdaCommand(OnChoseAttachButtonCommandExecuted, CanAlwaysFullCommandExecute);
+            ChangeGraphCommand = new LambdaCommand(OnChangeGraphCommandExecuted, CanAlwaysFullCommandExecute);
+        }
+
+        public void RemoveItemFromTree(IPropertyBot itemSearch)
+        {
+            IPropertyBot parent = null;
+
+            foreach (var item in BotCommands)
+            {
+                if (parent != null)
+                    break;
+                if (item.Children.Contains(itemSearch))
+                {
+                    parent = item;
+                    break;
+                }
+                parent = FindParent(itemSearch, item.Children);
+            }
+
+            parent?.Children.Remove((ButtonBotBase)itemSearch);
+        }
+
+        private IPropertyBot FindParent(IPropertyBot item, ObservableCollection<ButtonBotBase> tree)
+        {
+            // Найти родительский элемент
+            foreach (var parent in tree)
+            {
+                if (parent.Children != null && parent.Children.Contains(item))
+                {
+                    return parent;
+                }
+                else if (parent.Children != null && parent.Children.Count > 0)
+                {
+                    var result = FindParent(item, parent.Children);
+
+                    if (result != null)
+                    {
+                        return result;
+                    }
+                }
+            }
+
+            return null!;
+        }
+
+        private void CheckMessageTypes(bool inlineMsgType, bool markupMsgType, string msgTypeName)
+        {
+            if (inlineMsgType && markupMsgType)
+            {
+                var random = new Random();
+                var value = random.Next(2) == 0;
+
+                MessageBox.Show("Выберите разные типы сообщения");
+                if (value)
+                    AtachInlineButtonMessageDocument = false;
+                else
+                    AtachMarkupButtonMessageDocument = false;
+            }
         }
 
         private void ResetGraph()
         {
             var graph = new BidirectionalGraph<object, IEdge<object>>();
-            var retru = new Retru() { Children = BotCommands };
-            AddTreeNode(retru, graph);
+            var collection = new CollectionGraph() { Children = BotCommands };
+            AddTreeNode(collection, graph);
             Graph = graph;
         }
-        private void AddTreeNode(Retru node, BidirectionalGraph<object, IEdge<object>> graph)
+        private void AddTreeNode(CollectionGraph node, BidirectionalGraph<object, IEdge<object>> graph)
         {
-            //graph.AddVertex(node.Name);
-
             foreach (var childNode in node.Children)
             {
-                // graph.AddVertex(childNode.Name);
-                //graph.AddEdge(new Edge<object>(node.Name, childNode.Name));
                 AddTreeNodeToGraph(childNode, graph);
             }
         }
 
         private void AddTreeNodeToGraph(IPropertyBot node, BidirectionalGraph<object, IEdge<object>> graph)
         {
-            if (node is InlineButtonProperty || node is MarkupButtonProperty)
+            if (node is InlineButtonProperty or MarkupButtonProperty)
             {
                 var button = (ButtonBotBase)node;
-                graph.AddVertex(node.Name + " by " + button.UniqueId.Substring(0, 5));
+                graph.AddVertex(node.Name + " by " + button.UniqueId?[..5]);
 
                 foreach (var childNode in node.Children)
                 {
-                    graph.AddVertex(childNode.Name + " by " + childNode.UniqueId.Substring(0, 5));
-                    graph.AddEdge(new Edge<object>(node.Name + " by " + button.UniqueId.Substring(0, 5), childNode.Name + " by " + childNode.UniqueId.Substring(0, 5)));
+                    graph.AddVertex(childNode.Name + " by " + childNode.UniqueId?[..5]);
+                    graph.AddEdge(new Edge<object>(node.Name + " by " + button.UniqueId?[..5],
+                        childNode.Name + " by " + childNode.UniqueId?[..5]));
                     AddTreeNodeToGraph(childNode, graph);
                 }
             }
             else
             {
+                if (node.Name == null) return;
                 graph.AddVertex(node.Name);
 
                 foreach (var childNode in node.Children)
                 {
-                    graph.AddVertex(childNode.Name + " by " + childNode.UniqueId.Substring(0, 5));
-                    graph.AddEdge(new Edge<object>(node.Name, childNode.Name + " by " + childNode.UniqueId.Substring(0, 5)));
+                    graph.AddVertex(childNode.Name + " by " + childNode.UniqueId?[..5]);
+                    graph.AddEdge(new Edge<object>(node.Name, childNode.Name + " by " + childNode.UniqueId?[..5]));
                     AddTreeNodeToGraph(childNode, graph);
                 }
             }
         }
 
-        public class Retru
+        public class CollectionGraph
         {
+            public CollectionGraph()
+            {
+                Children = new ObservableCollection<IPropertyBot>();
+                Name = "Default";
+            }
+
             public string Name { get; set; }
             public ObservableCollection<IPropertyBot> Children { get; set; }
         }

@@ -10,18 +10,15 @@ namespace ChatbotConstructorTelegram.View.Window
         public ProjectWindow()
         {
             InitializeComponent();
-            this.DataContext = new ProjectWindowViewModel();
+            var viewModel = new ProjectWindowViewModel();
+            DataContext = viewModel;
         }
 
         public ProjectWindow(string path)
         {
             InitializeComponent();
-            this.DataContext = new ProjectWindowViewModel(path);
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            
+            var viewModel = new ProjectWindowViewModel(path);
+            DataContext = viewModel;
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)

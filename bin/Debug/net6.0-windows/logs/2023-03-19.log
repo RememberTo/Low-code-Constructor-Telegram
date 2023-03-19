@@ -1,0 +1,148 @@
+2023-03-19 00:00:24.8567|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-19 00:00:24.8847|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-19 00:01:42.5380|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-19 00:01:42.5655|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-19 00:05:23.2026|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-19 00:05:23.2362|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-19 00:06:09.2102|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-19 00:07:51.3452|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-19 00:07:51.3694|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-19 00:09:02.5257|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-19 00:09:02.5658|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-19 00:10:04.3695|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-19 00:10:04.4066|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-19 00:11:07.1092|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-19 00:11:07.1326|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-19 00:11:09.1852|INFO|ChatbotConstructorTelegram.View.Window.MainWindow|Создание проекта| 
+2023-03-19 00:11:21.1151|INFO|ChatbotConstructorTelegram.View.Window.CreationProjectWindow|Проверка пройдена запущен проект wqeqweqwe путь C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\Tww| 
+2023-03-19 00:11:21.1151|INFO|ChatbotConstructorTelegram.ViewModels.CreationProjectViewModel|Введенные данные успешно сохранены| 
+2023-03-19 00:11:21.2667|INFO|ChatbotConstructorTelegram.Infrastructure.Manager.FileProjectManager|Проект сериализован| 
+2023-03-19 00:11:37.6892|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-19 00:11:37.7205|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-19 00:14:48.6689|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-19 00:14:48.6925|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-19 00:14:50.9757|INFO|ChatbotConstructorTelegram.View.Window.MainWindow|Создание проекта| 
+2023-03-19 00:14:56.2753|INFO|ChatbotConstructorTelegram.View.Window.CreationProjectWindow|Проверка пройдена запущен проект sdasdasd путь C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\Tww| 
+2023-03-19 00:14:56.2753|INFO|ChatbotConstructorTelegram.ViewModels.CreationProjectViewModel|Введенные данные успешно сохранены| 
+2023-03-19 00:14:56.4204|INFO|ChatbotConstructorTelegram.Infrastructure.Manager.FileProjectManager|Проект сериализован| 
+2023-03-19 00:15:08.7627|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-19 00:15:08.8057|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-19 00:17:15.1890|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-19 00:17:15.2135|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-19 00:17:17.0936|INFO|ChatbotConstructorTelegram.View.Window.MainWindow|Создание проекта| 
+2023-03-19 00:17:25.3310|INFO|ChatbotConstructorTelegram.View.Window.CreationProjectWindow|Проверка пройдена запущен проект 1111 путь C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\Tww| 
+2023-03-19 00:17:25.3319|INFO|ChatbotConstructorTelegram.ViewModels.CreationProjectViewModel|Введенные данные успешно сохранены| 
+2023-03-19 00:17:25.4932|INFO|ChatbotConstructorTelegram.Infrastructure.Manager.FileProjectManager|Проект сериализован| 
+2023-03-19 00:17:36.6093|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-19 00:17:36.6410|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-19 00:17:50.2497|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-03-19 00:22:07.6649|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-19 00:22:07.6889|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-19 00:22:11.1961|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-03-19 00:22:32.5699|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-19 00:22:32.6246|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-19 00:22:35.4335|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-03-19 00:22:41.8979|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-03-19 00:26:33.3794|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-19 00:26:33.4129|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-19 00:26:35.5597|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-03-19 00:28:01.0651|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-19 00:28:01.0896|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-19 00:29:03.7631|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-19 00:29:03.7918|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-19 00:29:06.8405|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-03-19 00:30:15.6992|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-19 00:30:15.7356|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-19 00:30:18.3703|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-03-19 00:30:42.9503|INFO|ChatbotConstructorTelegram.Infrastructure.Manager.FileProjectManager|Проект сериализован| 
+2023-03-19 00:30:57.5178|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-03-19 00:32:29.9211|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-19 00:32:29.9539|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-19 00:32:31.9604|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-03-19 00:34:24.6790|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-19 00:34:24.7153|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-19 00:34:27.2327|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-03-19 00:37:46.3038|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-19 00:37:46.3373|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-19 00:38:08.1723|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-03-19 11:57:20.3961|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-19 11:57:20.4262|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-19 11:58:17.3445|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-19 11:58:17.3715|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-19 12:08:24.5506|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-19 12:08:24.5834|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-19 12:10:20.3171|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-19 12:10:20.3451|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-19 12:23:24.5541|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-19 12:23:24.5869|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-19 12:23:54.6519|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-19 12:23:54.6825|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-19 12:30:47.2585|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-19 12:30:47.2845|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-19 12:32:03.0213|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-19 12:32:03.0452|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-19 12:34:42.0160|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-19 12:34:42.0398|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-19 12:35:17.8570|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-19 12:35:17.8851|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-19 12:37:49.7910|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-19 12:37:49.8160|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-19 12:38:48.0069|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-19 12:38:48.0303|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-19 12:41:19.6063|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-19 12:41:19.6364|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-19 12:48:34.6967|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-19 12:48:34.7248|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-19 12:49:30.2887|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-19 12:49:30.3209|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-19 12:53:34.2288|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-19 12:53:34.2538|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-19 12:55:06.3984|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-19 12:55:06.4298|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-19 12:58:12.1713|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-19 12:58:12.2007|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-19 12:58:52.1369|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-19 12:58:52.1621|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-19 12:59:25.2034|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-19 12:59:25.2374|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-19 13:00:50.9174|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-19 13:00:50.9402|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-19 13:01:28.7946|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-19 13:01:28.8181|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-19 13:01:56.0360|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-19 13:01:56.0678|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-19 13:02:05.1963|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-03-19 13:03:51.7500|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-19 13:03:51.7836|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-19 13:03:55.1052|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-03-19 13:04:19.1640|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-19 13:04:19.1977|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-19 13:04:22.6871|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-03-19 13:06:12.0221|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-19 13:06:12.0564|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-19 13:06:14.2747|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-03-19 13:06:41.5368|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-19 13:06:41.5677|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-19 13:06:43.6214|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\NewDataProjTest\HelloWording.xml передан в окно конструктора| 
+2023-03-19 13:10:55.6164|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-19 13:10:55.6479|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-19 13:10:59.5263|INFO|ChatbotConstructorTelegram.View.Window.MainWindow|Создание проекта| 
+2023-03-19 13:11:05.0243|INFO|ChatbotConstructorTelegram.View.Window.CreationProjectWindow|Проверка пройдена запущен проект 23123123 путь C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\Tww| 
+2023-03-19 13:11:05.0243|INFO|ChatbotConstructorTelegram.ViewModels.CreationProjectViewModel|Введенные данные успешно сохранены| 
+2023-03-19 13:11:57.4891|INFO|ChatbotConstructorTelegram.Infrastructure.Manager.FileProjectManager|Проект сериализован| 
+2023-03-19 13:14:04.9399|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-19 13:14:04.9792|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-19 13:14:11.5445|INFO|ChatbotConstructorTelegram.View.Window.MainWindow|Создание проекта| 
+2023-03-19 13:14:15.6057|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-19 13:14:15.6057|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-19 13:14:17.7431|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\Tww\23123123.xml передан в окно конструктора| 
+2023-03-19 13:15:15.7385|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-19 13:15:15.7991|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-19 13:15:18.1000|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\Tww\23123123.xml передан в окно конструктора| 
+2023-03-19 13:18:04.9796|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-19 13:18:05.0036|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-19 13:18:07.6939|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\Tww\23123123.xml передан в окно конструктора| 
+2023-03-19 13:19:55.1795|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\Tww\23123123.xml передан в окно конструктора| 
+2023-03-19 13:20:59.9555|INFO|ChatbotConstructorTelegram.Model.WorkEnvironment.RuntimeSystemManager|Статус рабочей среды сериализован| 
+2023-03-19 13:20:59.9849|INFO|ChatbotConstructorTelegram.ViewModels.MainWindowViewModel|Главное окно успешно запущено| 
+2023-03-19 13:21:02.3630|INFO|ChatbotConstructorTelegram.Model.ViewData.NoteProject|Проект C:\Users\fdkir\OneDrive\Рабочий стол\Диплом\Project\TestProject\Tww\23123123.xml передан в окно конструктора| 

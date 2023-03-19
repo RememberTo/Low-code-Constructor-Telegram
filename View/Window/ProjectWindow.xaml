@@ -27,11 +27,6 @@
         FontFamily="{DynamicResource MaterialDesignFont}" WindowStartupLocation="CenterScreen" 
         WindowState="Maximized" MinHeight="200" MinWidth="400" Height="600" Width="1000" Closing="Window_Closing">
 
-    <!--Убрать на релизе-->
-    <!--<Window.DataContext>
-        <vm:ProjectWindowViewModel/>
-    </Window.DataContext>-->
-    <!--.................-->
     <Window.Resources>
         <DataTemplate x:Key="VertexTemplate">
             <Border Background="LightBlue" BorderBrush="Black" BorderThickness="1" Padding="5">
@@ -39,6 +34,7 @@
             </Border>
         </DataTemplate>
     </Window.Resources>
+
     <DockPanel LastChildFill="True">
 
         <StatusBar Height="24" DockPanel.Dock="Bottom" Background="#FF263A50">
@@ -68,7 +64,7 @@
                    FontFamily="{DynamicResource MaterialDesignFont}"
                    Foreground="#FFBACED7" FontSize="13">
 
-                <MenuItem Header="File" Height="22" 
+                <MenuItem Header="Файл" Height="22" 
                           FontFamily="{DynamicResource MaterialDesignFont}" Padding="16,0,16,0" Margin="2,2,0,2">
                     <MenuItem Header="Создать проект" 
                               Padding="-13,0,0,0" 
@@ -93,15 +89,15 @@
                             <fa:ImageAwesome Icon="Save" Height="9" Foreground="WhiteSmoke" Margin="0,0,-35,0" ></fa:ImageAwesome>
                         </MenuItem.Icon>
                     </MenuItem>
-                    <MenuItem Header="Item" Padding="-13,0,0,0"  Cursor="Hand"
+                    <!--<MenuItem Header="Item" Padding="-13,0,0,0"  Cursor="Hand"
                               Command="{Binding Test}"
                               Margin="4,0,4,-4" Width="200" Height="25">
                         <MenuItem.Icon>
                             <fa:ImageAwesome Foreground="WhiteSmoke" Height="9" Margin="0,0,-35,0" Icon="Battery1"></fa:ImageAwesome>
                         </MenuItem.Icon>
-                    </MenuItem>
+                    </MenuItem>-->
                     <Separator />
-                    <MenuItem Header="Exit" Padding="-13,0,0,0" Cursor="Hand" Margin="4,-3,4,-12" Width="200" Height="25"
+                    <MenuItem Header="Выход" Padding="-13,0,0,0" Cursor="Hand" Margin="4,-3,4,-12" Width="200" Height="25"
                               Command="{Binding CloseApplicationCommand}">
                         <MenuItem.Icon>
                             <fa:ImageAwesome Icon="Close" Foreground="WhiteSmoke" Height="9" Margin="0,0,-35,0" ></fa:ImageAwesome>
@@ -109,8 +105,8 @@
                     </MenuItem>
                 </MenuItem>
 
-                <MenuItem Height="25" Header="Edit" >
-                    <MenuItem Header="Item" 
+                <MenuItem Height="25" Header="Изменить" >
+                    <!--<MenuItem Header="Item" 
                               Padding="-13,0,0,0" 
                               Margin="4,-12,4,1" 
                               Width="230" Height="25" >
@@ -118,9 +114,10 @@
                             <fa:ImageAwesome  Icon="ProductHunt" Foreground="WhiteSmoke" Height="9" Margin="0,0,-35,0"></fa:ImageAwesome>
                         </MenuItem.Icon>
                     </MenuItem>
-                    <MenuItem Padding="-13,0,0,0" 
+                    <MenuItem Header="Item"
+                              Padding="-13,0,0,0" 
                               Margin="4,1,4,1" 
-                              Width="230" Height="25" Header="Item">
+                              Width="230" Height="25" >
                         <MenuItem.Icon>
                             <fa:ImageAwesome Height="9" Foreground="WhiteSmoke" Margin="0,0,-35,0" Icon="Battery1"></fa:ImageAwesome>
                         </MenuItem.Icon>
@@ -130,13 +127,27 @@
                         <MenuItem.Icon>
                             <fa:ImageAwesome Foreground="WhiteSmoke" Height="9" Margin="0,0,-35,0" Icon="Battery1"></fa:ImageAwesome>
                         </MenuItem.Icon>
+                    </MenuItem>-->
+                    <MenuItem Header="{Binding TextChangeToken}" Padding="-13,0,0,0" 
+                              Margin="4,-12,4,-12" 
+                              Width="230" Height="25"
+                              Command="{Binding ChangeTokenCommand}">
+                        <MenuItem.Icon>
+                            <fa:ImageAwesome Foreground="WhiteSmoke" Height="9" Margin="0,0,-35,0" Icon="Telegram"></fa:ImageAwesome>
+                        </MenuItem.Icon>
                     </MenuItem>
-                    <Separator />
-                    <MenuItem Header="Изменить токен" Padding="-13,0,0,0"  Margin="4,-3,4,-12" Width="230" Height="25"
-                              Command="{Binding ChangeTokenCommand}"/>
                 </MenuItem>
 
-                <MenuItem Height="25" Header="View" ></MenuItem>
+                <MenuItem Height="25" Header="Вид" >
+                    <MenuItem Header="{Binding GraphChangeVisibleText}" Padding="-13,0,0,0" 
+                              Margin="4,-12,4,-12" 
+                              Width="230" Height="25"
+                              Command="{Binding ChangeGraphCommand}">
+                        <MenuItem.Icon>
+                            <fa:ImageAwesome Foreground="WhiteSmoke" Height="9" Margin="0,0,-35,0" Icon="LineChart"></fa:ImageAwesome>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
             </Menu>
 
             <StackPanel Orientation="Horizontal" Margin="0,0,0,2" Grid.Row="1" Grid.Column="1">
@@ -205,7 +216,7 @@
                                            Margin="10,0,0,0" Foreground="#FFD3D6D7" Width="59"/>
                             </Grid>
                         </Button>
-                        <Button FontFamily="{DynamicResource MaterialDesignFont}" Cursor="Hand"
+                        <!--<Button FontFamily="{DynamicResource MaterialDesignFont}" Cursor="Hand"
                                 Style="{DynamicResource MaterialDesignFlatButton}" HorizontalAlignment="Stretch"
                                 HorizontalContentAlignment="Stretch" Padding="0" MaxWidth="250"
                                 Command="{Binding AddTextCommand}"
@@ -220,7 +231,7 @@
                                            HorizontalAlignment="Left"  VerticalAlignment="Center"
                                            Margin="10,0,0,0" Foreground="#FFD3D6D7" Width="59"/>
                             </Grid>
-                        </Button>
+                        </Button>-->
                         <Button FontFamily="{DynamicResource MaterialDesignFont}" Cursor="Hand"
                                 Style="{DynamicResource MaterialDesignFlatButton}" HorizontalAlignment="Stretch"
                                 HorizontalContentAlignment="Stretch" Padding="0" MaxWidth="250"
@@ -231,7 +242,7 @@
                                     <ColumnDefinition Width="40"/>
                                     <ColumnDefinition Width="50*"/>
                                 </Grid.ColumnDefinitions>
-                                <fa:ImageAwesome Grid.Column="0" Height="30" Width="30" Icon="InfoCircle" Margin="10,0,0,0" Foreground="#FFD8ECED"/>
+                                <fa:ImageAwesome Grid.Column="0" Height="30" Width="30" Icon="LastfmSquare" Margin="10,0,0,0" Foreground="#FFD8ECED"/>
                                 <TextBlock Text="Inline" Grid.Column="1"
                                            HorizontalAlignment="Left"  VerticalAlignment="Center"
                                            Margin="10,0,0,0" Foreground="#FFD3D6D7" Width="71"/>
@@ -247,24 +258,8 @@
                                     <ColumnDefinition Width="40"/>
                                     <ColumnDefinition Width="50*"/>
                                 </Grid.ColumnDefinitions>
-                                <fa:ImageAwesome Grid.Column="0" Height="30" Width="30" Icon="InfoCircle" Margin="10,0,0,0" Foreground="#FFD8ECED"/>
+                                <fa:ImageAwesome Grid.Column="0" Height="30" Width="30" Icon="KeyboardOutline" Margin="10,0,0,0" Foreground="#FFD8ECED"/>
                                 <TextBlock Text="Markup" Grid.Column="1"
-                                           HorizontalAlignment="Left"  VerticalAlignment="Center"
-                                           Margin="10,0,0,0" Foreground="#FFD3D6D7" Width="71"/>
-                            </Grid>
-                        </Button>
-                        <Button FontFamily="{DynamicResource MaterialDesignFont}" Cursor="Hand"
-                                Style="{DynamicResource MaterialDesignFlatButton}" HorizontalAlignment="Stretch"
-                                HorizontalContentAlignment="Stretch" Padding="0" MaxWidth="250"
-                                Command="{Binding Test}"
-                                Margin="0,0,0,10" Height="50" Background="#FF1F4A73">
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="40"/>
-                                    <ColumnDefinition Width="50*"/>
-                                </Grid.ColumnDefinitions>
-                                <fa:ImageAwesome Grid.Column="0" Height="30" Width="30" Icon="Terminal" Margin="10,0,0,0" Foreground="#FFD8ECED"/>
-                                <TextBlock Text="TEST" Grid.Column="1"
                                            HorizontalAlignment="Left"  VerticalAlignment="Center"
                                            Margin="10,0,0,0" Foreground="#FFD3D6D7" Width="71"/>
                             </Grid>
@@ -380,9 +375,11 @@
                     </contols:ExtendedTreeView>
                 </Grid>
 
-                <GridSplitter Grid.ColumnSpan="2" Height="5" Background="#FF1A2E41" HorizontalAlignment="Stretch" VerticalAlignment="Top"  Grid.Row="1"></GridSplitter>
+                <GridSplitter Visibility="{Binding VisabilityGraph}" Grid.ColumnSpan="2" Height="5" Background="#FF1A2E41" HorizontalAlignment="Stretch" VerticalAlignment="Top"  Grid.Row="1"></GridSplitter>
 
-                <Grid Grid.Row="1" Background="#FF122231" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,5,0,0">
+                <Grid Grid.Row="1" Background="#FF122231"
+                      Visibility="{Binding VisabilityGraph}"
+                      HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,5,0,0">
                     <graphsharp:GraphLayout x:Name="graphLayout" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                                             AsyncCompute="True" ForceCursor="True"
                                             Graph="{Binding Graph}"
@@ -399,7 +396,7 @@
                 </Grid.RowDefinitions>
 
                 <StackPanel Grid.Row="1" Orientation="Horizontal">
-                    <Button Content="Удалить" Margin="10,5,0,5" Command="{Binding DeleteCommand}" CommandParameter="{Binding SelectedCommand}"/>
+                    <!--<Button Content="Удалить" Margin="10,5,0,5" Command="{Binding DeleteCommand}" CommandParameter="{Binding SelectedCommand}"/>-->
                 </StackPanel>
 
                 <Rectangle Stroke="#FF173F65" Grid.Row="0"></Rectangle>

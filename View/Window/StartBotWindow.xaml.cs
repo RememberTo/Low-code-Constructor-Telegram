@@ -14,12 +14,10 @@ namespace ChatbotConstructorTelegram.View.Window
             //this.DataContext = new StartBotWindowViewModel();
         }
 
-        private async void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             if (((StartBotWindowViewModel)this.DataContext).IsPool)
             {
-                //MessageBox.Show()
-                //e.Cancel = true;//Запрещает закрывать окно
                 ((StartBotWindowViewModel)this.DataContext).StopPollingCommand?.Execute(null);
             }
         }

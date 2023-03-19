@@ -15,10 +15,10 @@ namespace ChatbotConstructorTelegram.Model.WorkEnvironment
         public bool IsInstalled { get; set; }
 
         [DataMember]
-        public string NameLibrary { get; set; }
+        public string? NameLibrary { get; set; }
         
         [DataMember]
-        public string Version { get; set; }
+        public string? Version { get; set; }
 
         public PythonLibraryInformation(string env, string nameLibrary)
         {
@@ -63,7 +63,7 @@ namespace ChatbotConstructorTelegram.Model.WorkEnvironment
 
                     var output = process.StandardOutput.ReadToEnd();
 
-                    if (output.Contains(NameLibrary))
+                    if (output.Contains(NameLibrary ?? throw new InvalidOperationException()))
                     {
                         IsInstalled = true;
                         foreach (var item in output.Split('\r'))

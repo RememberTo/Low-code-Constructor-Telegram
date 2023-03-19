@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:ChatbotConstructorTelegram.View.Window"
         xmlns:cmd ="clr-namespace:ChatbotConstructorTelegram.Infrastructure.Commands"
         xmlns:fa ="http://schemas.fontawesome.com/icons/"
+        xmlns:fa5="clr-namespace:FontAwesome.WPF;assembly=FontAwesome.WPF"
         xmlns:vm ="clr-namespace:ChatbotConstructorTelegram.ViewModels"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         Title="{Binding Title}" 
@@ -18,7 +19,7 @@
         TextOptions.TextRenderingMode="Auto"
         
         FontFamily="{DynamicResource MaterialDesignFont}" WindowStartupLocation="CenterScreen" 
-        WindowState="Maximized" MinHeight="600" MinWidth="900" Height="600" Width="900">
+        MinHeight="600" MinWidth="900" Height="600" Width="850">
 
     <Window.DataContext>
         <vm:MainWindowViewModel/>
@@ -57,12 +58,12 @@
                 >
                     <Grid Width="274">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="59*"/>
-                            <ColumnDefinition Width="215*"/>
+                            <ColumnDefinition Width="59"/>
+                            <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
                         <fa:ImageAwesome Grid.Column="0"
                                          Icon="Regular_FolderOpen" Foreground="#FF00BEFF" Margin="0,5,16,5"/>
-                        <TextBlock Grid.Column="1" HorizontalAlignment="Center" Margin="0,0,60,0"
+                        <TextBlock Grid.Column="1" HorizontalAlignment="Stretch" Margin="10,2,40,0" FontSize="18"
                                    VerticalAlignment="Center">Открыть проект</TextBlock>
                     </Grid>
                 </Button>
@@ -74,72 +75,94 @@
                 >
                     <Grid Width="274">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="59*"/>
-                            <ColumnDefinition Width="215*"/>
+                            <ColumnDefinition Width="59"/>
+                            <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
                         <fa:ImageAwesome Grid.Column="0"
                                          Icon="Solid_ProjectDiagram" Foreground="#FF00BEFF" Margin="0,5,16,5"/>
-                        <TextBlock Grid.Column="1" HorizontalAlignment="Center" Margin="0,0,60,0"
+                        <TextBlock Grid.Column="1" Margin="10,0,30,0" FontSize="18"
                                    VerticalAlignment="Center">Создание проекта</TextBlock>
                     </Grid>
                 </Button>
             </StackPanel>
 
-            <StackPanel Orientation="Vertical" Grid.Row="0" Grid.Column="0" Margin="0,0,50,0">
+            <Grid Grid.Row="0" Grid.Column="0" Margin="0,0,10,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
                 <TextBlock  Text="Открыть последние" VerticalAlignment="Top" HorizontalAlignment="Left"
-                            Margin="80,50,0,0" FontSize="22"
+                            Margin="80,50,0,0" FontSize="24"
                             Foreground="#FFB2DFF3">
 
                 </TextBlock>
-                <ListView ItemsSource="{Binding RecordsProject}" HorizontalContentAlignment="Stretch" HorizontalAlignment="Stretch"
-                          Margin="30,30,0,0" Padding="0" ScrollViewer.VerticalScrollBarVisibility="Disabled" 
+                <ListView ItemsSource="{Binding RecordsProject}"
+                          SelectedItem="{Binding SelectedNoteProject}"
+                          VerticalAlignment="Stretch" HorizontalContentAlignment="Stretch"
+                          ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                          Margin="70,10,0,0" Padding="0,0,0,0" 
+                          Grid.Row="1" x:Name="listView"
                 >
-                    
-                    <ListView.ItemsPanel>
-                        <ItemsPanelTemplate>
-                            <StackPanel Margin="0,0,0,0" OpacityMask="#CCFF0000" Background="#FF1B3558" >
-                            </StackPanel>
-                        </ItemsPanelTemplate>
-                    </ListView.ItemsPanel>
                     <ListView.ItemTemplate>
-                        <DataTemplate >
-                            <Button Style="{DynamicResource MaterialDesignFlatButton}"  
-                                HorizontalAlignment="Stretch" MinWidth="200" MaxWidth="1800" Height="50" 
-                                   Margin="0" HorizontalContentAlignment="Stretch"
-                                 Cursor="Hand" Command="{Binding OpenProjectCommand }"
-                                CommandParameter="{Binding Path}"
-                            >
+                        <DataTemplate>
+                            <Border Style="{DynamicResource MaterialDesignToolBarMainPanelBorderStyle}" Height="50" 
+                                     Margin="0,0,0,0" ClipToBounds="False" Cursor="Hand" ToolTip="{Binding Path}">
 
-                                <Grid Margin="-11,0,0,0">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="30"/>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="110"/>
-                                </Grid.ColumnDefinitions>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="1*"/>
-                                    <RowDefinition Height="1*"/>
-                                </Grid.RowDefinitions>
+                                <Border.InputBindings>
+                                    <MouseBinding Gesture="LeftDoubleClick" Command="{Binding OpenProjectCommand }"
+                                                  CommandParameter="{Binding Path}"></MouseBinding>
+                                </Border.InputBindings>
+                                <DockPanel Cursor="Hand" ToolTip="{Binding Path}" Background="Transparent">
+                                    <Grid DockPanel.Dock="Left">
+                                        <fa5:ImageAwesome Icon="Gears"  Height="30" 
+                                                          Foreground="#FF8F8FC5" Grid.Column="0"/>
+                                        <fa5:ImageAwesome Icon="Telegram"  Height="10" HorizontalAlignment="Left" VerticalAlignment="Bottom"
+                                                          Margin="0,0,0,4"
+                                                          Foreground="#FFF7F7FF" Grid.Column="0"/>
+                                    </Grid>
+                                    <Grid DockPanel.Dock="Top">
+                                        <TextBlock Foreground="GhostWhite" FontSize="19" 
+                                                   Margin="15,0,0,0" VerticalAlignment="Top" 
+                                                   HorizontalAlignment="Left"
+                                                   Text="{Binding ProjectName, StringFormat=#.###.##}" 
+                                                   FontFamily="Bahnschrift SemiLight" />
+                                        <TextBlock Foreground="#FFB2DFF3" VerticalAlignment="Top" 
+                                                   FontSize="12" HorizontalAlignment="Stretch"
 
-                                <fa:ImageAwesome Grid.RowSpan="2" Icon="Brands_FacebookMessenger" Height="30" Foreground="#FF6060CE"/>
-                                <TextBlock Grid.Column="1" Grid.Row="0" Foreground="GhostWhite" FontSize="19" 
-                                           Margin="15,0,0,0" VerticalAlignment="Bottom"
-                                           Text="{Binding ProjectName, StringFormat=#.###.##}" 
-                                           FontFamily="Bahnschrift SemiLight" 
-                                />
-                                <TextBlock Foreground="#FFB2DFF3" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2"
-                                           Margin="15,0,0,0" VerticalAlignment="Bottom"
-                                           Text="{Binding Path}" FontFamily="Calibri" />
-                                    <TextBlock Grid.Column="2" Grid.Row="0" Foreground="#FFB2DFF3" VerticalAlignment="Top" 
-                                           FontSize="12"
-                                           HorizontalAlignment="Right"
-                                           Text="{Binding Date, StringFormat=dd.MM.yyyy HH:mm}" FontFamily="Bahnschrift SemiLight" />
-                                </Grid>
-                            </Button>
+                                                   Margin="0,0,10,0"
+                                                   Text="{Binding Date, StringFormat=dd.MM.yyyy HH:mm}" 
+                                                   FontFamily="Bahnschrift SemiLight" FlowDirection="RightToLeft"  />
+                                    </Grid>
+                                    <Grid DockPanel.Dock="Bottom">
+                                        <TextBlock TextWrapping="NoWrap" ClipToBounds="True" 
+                                                   MaxWidth="{Binding ActualWidth, ElementName=listView}"
+                                                   Foreground="#FFB2DFF3" TextTrimming="CharacterEllipsis"
+                                                   Margin="15,0,0,0" VerticalAlignment="Bottom"
+                                                   HorizontalAlignment="Left" 
+                                                   Text="{Binding Path}" FontFamily="Calibri" />
+                                    </Grid>
+                                </DockPanel>
+                            </Border>
                         </DataTemplate>
                     </ListView.ItemTemplate>
+                    <ListView.ContextMenu>
+                        <ContextMenu VerticalAlignment="Top"
+                                     Margin="0,0,0,0"  Grid.Row="0" Grid.Column="1"
+                                     FontFamily="{DynamicResource MaterialDesignFont}"
+                                     Foreground="#FFBACED7" FontSize="13">
+                            <MenuItem Header="Удалить" 
+                                      Padding="0,0,0,0" 
+                                      Margin="4,-4,4,-10" 
+                                      Width="180" Height="25"
+                                      Command="{Binding DeleteCommand}"
+                                      CommandParameter="{Binding SelectedNoteProject}">
+
+                            </MenuItem>
+                        </ContextMenu>
+                    </ListView.ContextMenu>
                 </ListView>
-            </StackPanel>
+
+            </Grid>
 
         </Grid>
 
